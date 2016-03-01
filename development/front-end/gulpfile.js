@@ -1,16 +1,22 @@
 "use strict";
 
 var gulp = require("gulp"),
-    sass = require("gulp-sass");
+    compass = require('gulp-compass'),
+    sassSourcefiles = "./scss/**/*.scss";
 
-gulp.task("sass", function () {
-    return gulp.src("./scss/**/*.scss")
-        .pipe(sass().on("error", sass.logError))
-        .pipe(gulp.dest("./css"));
+gulp.task("compass", function () {
+    gulp.src(sassSourcefiles)
+        .pipe(compass({
+            // The `css` and `sass` directories must be specified both here and in the config.rb file.
+            config_file: "./config.rb",
+            css: "css",
+            sass: "scss"
+        }))
+        .pipe(gulp.dest("app/assets/temp"));
 });
 
-gulp.task("sass:watch", function () {
-    gulp.watch("./scss/**/*.scss", ["sass"]);
+gulp.task("compass:watch", function () {
+    gulp.watch(sassSourcefiles, ["compass"]);
 });
 
 gulp.task("default", function () {});
