@@ -12,6 +12,8 @@ gulp.task("compass", function () {
             css: "css",
             sass: "scss"
         }))
+        .on("error", function (error) {
+        })
         .pipe(gulp.dest("app/assets/temp"));
 });
 
