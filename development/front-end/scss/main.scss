@@ -1,4 +1,21 @@
+$entry-header: #1d8cbf;
+$body: #1a3c44;
+
+html {
+    font-size: 16px;
+}
+
 body {
-    font-family: sans-serif;
-    background-color: #000;
+    font: 200 1.25rem/1.5 "Source Sans Pro", sans-serif;
+    color: $body;
+    
+    > header {
+        text-transform: uppercase;
+    }
+}
+
+header,
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", "Source Sans Pro", sans-serif;
+    font-weight: 200;
 }
