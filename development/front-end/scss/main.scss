@@ -1,7 +1,10 @@
 // Colour
-$body: #1a3c44;
+$body: #747474;
 $body-border: #1a3c44;
-$entry-header: #1d8cbf;
+$entry-header-link: #1d8cbf;
+$entry-header: #205a67;
+$header: #205a67;
+
 
 html {
     font-size: 16px;
@@ -9,18 +12,31 @@ html {
 }
 
 body {
-    height: 100%;
     color: $body;
     display: flex;
     flex-flow: column;
-    font: 200 1.25rem/1.5 "Source Sans Pro", sans-serif;
+    font: 300 1.25rem/1.5 "Source Sans Pro", sans-serif;
+    height: 100%;
     
     > header {
-        background-color: aliceblue;
         border-top: 6px solid $body-border;
+        color: $header;
+        line-height: 1;
         text-transform: uppercase;
-        height: 150px;
         width: 100%;
+        -moz-osx-font-smoothing: grayscale;
+        
+        h1 {
+            font-size: 35px;
+            margin: 0 0 5px;
+            
+            + span {
+                color: rgba($header, 0.65);
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 1px;
+            }
+        }
         
         + div {
             display: flex;
@@ -40,7 +56,7 @@ body {
 header,
 h1, h2, h3, h4, h5, h6 {
     font-family: "Lato", "Source Sans Pro", sans-serif;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 nav {
