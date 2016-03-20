@@ -1,77 +1,135 @@
-// Colour
-$body: #747474;
-$body-border: #1a3c44;
-$entry-header-link: #1d8cbf;
-$entry-header: #205a67;
-$header: #205a67;
+@import "compass/css3";
+@import "compass/css3/selection";
 
+// Colour
+$body-colour: #4a4a4a;
+$body-border-colour: #1a3c44;
+$link-colour: #1d8cbf;
+$navigation-link-colour: #205a67; 
+$header-colour: #205a67;
+$selection-colour: rgb(218, 244, 255);
+
+
+// Layout
+$navigation-width: 355px;
+
+// Typography
+$base-font-stack: "Hind", sans-serif;
+$section-header-font-stack: "Lato", sans-serif;
 
 html {
     font-size: 16px;
     height: 100%;
 }
 
+* {
+    @include selection($selection-colour);
+}
+
 body {
-    color: $body;
-    display: flex;
-    flex-flow: column;
-    font: 300 1.25rem/1.5 "Source Sans Pro", sans-serif;
+    color: $body-colour;
+    font: 300 1.25rem/1.5 $base-font-stack;
     height: 100%;
     
     > header {
-        border-top: 6px solid $body-border;
-        color: $header;
-        line-height: 1;
-        text-transform: uppercase;
-        width: 100%;
+        border-top: 6px solid $body-border-colour;
+        color: $header-colour;
         -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1;
+        padding-left: $navigation-width;
+        
+        a:link {
+            color: $header-colour;
+        }
         
         h1 {
-            font-size: 35px;
+            font-size: 50px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
             margin: 0 0 5px;
             
             + span {
-                color: rgba($header, 0.65);
-                font-size: 15px;
-                font-weight: 400;
-                letter-spacing: 1px;
+                //color: transparentize($header-colour, 0.36);
+                font-family: $section-header-font-stack;
+                font-size: 14px;
+                font-weight: 300;
+                letter-spacing: 0.7px;
+                text-transform: uppercase;
             }
         }
         
         + div {
-            display: flex;
-            flex: 1;
+            display: inline-flex;
         }
-    }
-    
-    > nav {
-        flex: 2;
-    }
-    
-    main {
-        flex: 3;
     }
 }
 
-header,
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Lato", "Source Sans Pro", sans-serif;
-    font-weight: 300;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    
+    &:link,
+    &:visited {
+        color: $link-colour;
+    }
+}
+
+section {
+    
+    h1 {
+        color: transparentize($header-colour, 0.36);
+        font-family: $section-header-font-stack;
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+    }
 }
 
 nav {
-    font-family: "Lato", "Source Sans Pro", sans-serif;
-    background-color: beige;
-    width: 200px;
+    width: $navigation-width;
+    @include user-select(none);
     
     ul {
         list-style: none;
         margin: 0;
-        padding: 0;
+        padding: 100px 150px 0 0;
         text-align: right;
     }
     
-    a {
-        text-decoration: none;
+    li {
+        color: $header-colour;
+        cursor: default;
+        font-size: 35px;
+        line-height: 45px;
+        margin-bottom: 15px;
+        
+        &.selected {
+            font-weight: 600;
+        }
     }
+    
+    a {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        text-decoration: none;
+        
+        &:link,
+        &:visited {
+            color: $header-colour;
+        }
+        
+        &:hover,
+        &:active {
+            color: $link-colour;
+        }
+    }
+}
+
+main {
+    width: 725px;
 }
