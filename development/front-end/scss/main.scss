@@ -1,12 +1,33 @@
 @import "compass/css3";
 @import "compass/css3/selection";
 
+/* 
+    Table of Contents
+    -----------------
+
+    * Notes
+    * Variables
+    * Mixins
+    * Styles
+
+*/
+
+/* 
+    Notes
+    -----
+
+    We're using a baseline grid of 15px when layout the type. This means vertical padding/margins need to sum to a
+    multiple of 15.
+
+/* Variables */
+
 // Colour
 $body-colour: #4a4a4a;
 $body-border-colour: #1a3c44;
 $link-colour: #1d8cbf;
 $navigation-link-colour: #205a67; 
-$header-colour: #205a67;
+$header-colour: #1a3c44;
+$horizontal-break-colour: #dedede;
 $selection-colour: rgb(218, 244, 255);
 
 
@@ -16,6 +37,25 @@ $navigation-width: 355px;
 // Typography
 $base-font-stack: "Hind", sans-serif;
 $decorative-font-stack: "Lato", sans-serif;
+
+/* Mixins */
+
+/*
+    Mixin: offscreen
+    Visually hides content while ensuring screenreaders will announce text.
+*/
+@mixin offscreen {
+    border: 0;
+    clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Styles */
 
 html {
     font-size: 16px;
@@ -47,7 +87,8 @@ body {
             font-size: 50px;
             font-weight: 700;
             letter-spacing: -0.5px;
-            margin: 0 0 5px;
+            line-height: 1.2;
+            margin: 65px 0 -8px;
             
             + span {
                 //color: transparentize($header-colour, 0.36);
@@ -55,6 +96,7 @@ body {
                 font-size: 14px;
                 font-weight: 300;
                 letter-spacing: 0.7px;
+                line-height: 2.143;
                 text-transform: uppercase;
             }
         }
@@ -79,14 +121,27 @@ a {
 }
 
 section {
+    $horizontal-break-height: 2px;
+    margin-bottom: -$horizontal-break-height;
+    
+    &:not(:last-of-type) {
+        border-bottom: $horizontal-break-height solid $horizontal-break-colour;
+    }
     
     h1 {
         color: transparentize($header-colour, 0.36);
-        font-family: $decorative-font-stack;
-        font-size: 15px;
+        font: 15px/2 $decorative-font-stack;
         font-weight: 300;
         letter-spacing: 0.8px;
+        margin: 30px 0 15px;
         text-transform: uppercase;
+    }
+    
+    h2 {
+        font-size: 37px;
+        line-height: 45px;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 }
 
@@ -94,11 +149,24 @@ nav {
     @include user-select(none);
     width: $navigation-width;
     
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 100px 150px 0 0;
-        text-align: right;
+    a {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        text-decoration: none;
+        
+        &:link,
+        &:visited {
+            color: $link-colour;
+        }
+        
+        &:hover,
+        &:active {
+            color: $link-colour;
+        }
+    }
+    
+    h1 {
+        @include offscreen;
     }
     
     li {
@@ -113,20 +181,11 @@ nav {
         }
     }
     
-    a {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        text-decoration: none;
-        
-        &:link,
-        &:visited {
-            color: $header-colour;
-        }
-        
-        &:hover,
-        &:active {
-            color: $link-colour;
-        }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 100px 150px 0 0;
+        text-align: right;
     }
 }
 
@@ -135,26 +194,62 @@ main {
 }
 
 p {
+    hyphens: auto;
+    margin-bottom: 15px;
+    margin-top: 0;
     
     .action {         
         @include user-select(none);
         font-family: $decorative-font-stack;
-        font-size: 15px;
+        font-size: 13px;
+        font-weight: 700;
+        hyphens: none;
         letter-spacing: 0.8px;
         text-transform: uppercase;
     }
 }
 
 .heading-list {
+    align-content: space-between;
+    display: flex;
+    flex-flow: column wrap;
+    height: 220px;
     list-style: none;
     padding: 0;
     
     h2 {
-        margin: 0;
+        font-size: 25px;
+        font-weight: 200;
+        line-height: 1.2;
+        margin: 10px 0 2.5px;
         padding: 0;
         
         + p {
+            font-size: 17px;
+            line-height: 30px;
             margin-top: 0;
+            margin-bottom: 18px;
+        }
+    }
+    
+    li {
+        width: 340px;
+    }
+}
+
+.image-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 55px;
+    
+    li {
+        margin: 0;
+        padding: 0;
+        
+        img {
+            vertical-align: bottom;
         }
     }
 }
