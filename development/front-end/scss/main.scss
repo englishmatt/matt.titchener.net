@@ -55,6 +55,15 @@ $decorative-font-stack: "Lato", sans-serif;
     width: 1px;
 }
 
+/*
+    Mixin: greyscaleFontSmoothing
+    Sets greyscale/antialiased font smoothing for webkit and firefox
+*/
+@mixin greyscale-font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 /* Styles */
 
 html {
@@ -72,10 +81,9 @@ body {
     height: 100%;
     
     > header {
+        @include greyscale-font-smoothing;
         border-top: 6px solid $body-border-colour;
         color: $header-colour;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
         line-height: 1;
         padding-left: $navigation-width;
         
@@ -120,28 +128,32 @@ a {
     }
 }
 
-section {
-    $horizontal-break-height: 2px;
-    margin-bottom: -$horizontal-break-height;
-    
-    &:not(:last-of-type) {
-        border-bottom: $horizontal-break-height solid $horizontal-break-colour;
-    }
+article {
     
     h1 {
-        color: transparentize($header-colour, 0.36);
-        font: 15px/2 $decorative-font-stack;
-        font-weight: 300;
-        letter-spacing: 0.8px;
-        margin: 30px 0 15px;
-        text-transform: uppercase;
+        font-size: 35px;
+        line-height: 45px;
+        margin: 50px 0 10px;   
     }
     
-    h2 {
-        font-size: 37px;
-        line-height: 45px;
-        margin-top: 20px;
-        margin-bottom: 10px;
+    section {
+        
+        h2 {
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 30px;
+            margin: 29px 0 16px;
+        }
+    }
+
+    time {
+        color: transparentize($header-colour, 0.36);
+        display: block;
+        font: 15px/2 $decorative-font-stack;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        margin: 0px 0 15px;
+        text-transform: uppercase;
     }
 }
 
@@ -150,8 +162,7 @@ nav {
     width: $navigation-width;
     
     a {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
+        @include greyscale-font-smoothing;
         text-decoration: none;
         
         &:link,
@@ -165,7 +176,7 @@ nav {
         }
     }
     
-    h1 {
+    h2 {
         @include offscreen;
     }
     
@@ -191,9 +202,35 @@ nav {
 
 main {
     width: 725px;
+    
+    > section {
+        $horizontal-break-height: 2px;
+        margin-bottom: -$horizontal-break-height;
+
+        &:not(:last-of-type) {
+            border-bottom: $horizontal-break-height solid $horizontal-break-colour;
+        }
+
+        h2 {
+            color: transparentize($header-colour, 0.36);
+            font: 15px/2 $decorative-font-stack;
+            font-weight: 300;
+            letter-spacing: 0.8px;
+            margin: 30px 0 0;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 37px;
+            line-height: 45px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    }
 }
 
 p {
+    @include greyscale-font-smoothing;
     hyphens: auto;
     margin-bottom: 15px;
     margin-top: 0;
@@ -217,7 +254,7 @@ p {
     list-style: none;
     padding: 0;
     
-    h2 {
+    h3 {
         font-size: 25px;
         font-weight: 200;
         line-height: 1.2;
@@ -242,7 +279,7 @@ p {
     justify-content: space-between;
     list-style: none;
     padding: 0;
-    margin-bottom: 55px;
+    margin-bottom: 25px;
     
     li {
         margin: 0;
@@ -252,4 +289,10 @@ p {
             vertical-align: bottom;
         }
     }
+}
+
+.lede {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
 }
