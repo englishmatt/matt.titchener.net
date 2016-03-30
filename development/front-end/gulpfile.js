@@ -12,9 +12,9 @@ gulp.task("compass", function () {
             css: "css",
             sass: "scss"
         }))
-        .on("error", function (error) {
-        })
-        .pipe(gulp.dest("app/assets/temp"));
+        .on('error', function(error) {
+            // Do nothing; prevent the gulp task from exiting.
+        });
 });
 
 gulp.task("compass:watch", function () {
