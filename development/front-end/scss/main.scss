@@ -1,7 +1,7 @@
 @import "compass/css3";
 @import "compass/css3/selection";
 
-/* 
+/*
     Table of Contents
     -----------------
 
@@ -12,7 +12,7 @@
 
 */
 
-/* 
+/*
     Notes
     -----
 
@@ -25,7 +25,7 @@
 $body-colour: #4a4a4a;
 $body-border-colour: #1a3c44;
 $link-colour: #1d8cbf;
-$navigation-link-colour: #205a67; 
+$navigation-link-colour: #205a67;
 $header-colour: #1a3c44;
 $horizontal-break-colour: #dedede;
 $selection-colour: rgb(218, 244, 255);
@@ -79,25 +79,25 @@ body {
     color: $body-colour;
     font: 300 1.25rem/1.5 $base-font-stack;
     height: 100%;
-    
+
     > header {
         @include greyscale-font-smoothing;
         border-top: 6px solid $body-border-colour;
         color: $header-colour;
         line-height: 1;
         padding-left: $navigation-width;
-        
+
         a:link {
             color: $header-colour;
         }
-        
+
         h1 {
             font-size: 50px;
             font-weight: 700;
             letter-spacing: -0.5px;
             line-height: 1.2;
             margin: 65px 0 -8px;
-            
+
             + span {
                 //color: transparentize($header-colour, 0.36);
                 font-family: $decorative-font-stack;
@@ -108,7 +108,7 @@ body {
                 text-transform: uppercase;
             }
         }
-        
+
         + div {
             display: inline-flex;
         }
@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
-    
+
     &:link,
     &:visited {
         color: $link-colour;
@@ -129,15 +129,16 @@ a {
 }
 
 article {
-    
+    margin-top: 60px;
+
     h1 {
         font-size: 35px;
         line-height: 45px;
-        margin: 50px 0 10px;   
+        margin: 65px 0 10px;
     }
-    
+
     section {
-        
+
         h2 {
             font-size: 25px;
             font-weight: 500;
@@ -155,43 +156,48 @@ article {
         margin: 0px 0 15px;
         text-transform: uppercase;
     }
+
+    > img {
+        float: left;
+        margin-right: 30px;
+    }
 }
 
 nav {
     @include user-select(none);
     width: $navigation-width;
-    
+
     a {
         @include greyscale-font-smoothing;
         text-decoration: none;
-        
+
         &:link,
         &:visited {
             color: $link-colour;
         }
-        
+
         &:hover,
         &:active {
             color: $link-colour;
         }
     }
-    
+
     h2 {
         @include offscreen;
     }
-    
+
     li {
         color: $header-colour;
         cursor: default;
         font-size: 35px;
         line-height: 45px;
         margin-bottom: 15px;
-        
+
         &.selected {
             font-weight: 600;
         }
     }
-    
+
     ul {
         list-style: none;
         margin: 0;
@@ -202,7 +208,7 @@ nav {
 
 main {
     width: 725px;
-    
+
     > section {
         $horizontal-break-height: 2px;
         margin-bottom: -$horizontal-break-height;
@@ -234,8 +240,8 @@ p {
     hyphens: auto;
     margin-bottom: 15px;
     margin-top: 0;
-    
-    .action {         
+
+    .action {
         @include user-select(none);
         font-family: $decorative-font-stack;
         font-size: 13px;
@@ -253,14 +259,14 @@ p {
     height: 220px;
     list-style: none;
     padding: 0;
-    
+
     h3 {
         font-size: 25px;
         font-weight: 200;
         line-height: 1.2;
         margin: 10px 0 2.5px;
         padding: 0;
-        
+
         + p {
             font-size: 17px;
             line-height: 30px;
@@ -268,7 +274,7 @@ p {
             margin-bottom: 18px;
         }
     }
-    
+
     li {
         width: 340px;
     }
@@ -280,11 +286,11 @@ p {
     list-style: none;
     padding: 0;
     margin-bottom: 25px;
-    
+
     li {
         margin: 0;
         padding: 0;
-        
+
         img {
             vertical-align: bottom;
         }
