@@ -16,8 +16,8 @@
     Notes
     -----
 
-    We're using a baseline grid of 15px when layout the type. This means vertical padding/margins need to sum to a
-    multiple of 15.
+    We're using a baseline grid of 15px when layout the type. This means vertical padding/margins need to sum to
+    multiples of 15.
 
 /* Variables */
 
@@ -57,7 +57,7 @@ $decorative-font-stack: "Lato", sans-serif;
 
 /*
     Mixin: greyscaleFontSmoothing
-    Sets greyscale/antialiased font smoothing for webkit and firefox
+    Sets greyscale/antialiased font smoothing for webkit and firefox.
 */
 @mixin greyscale-font-smoothing {
     -webkit-font-smoothing: antialiased;
@@ -87,7 +87,8 @@ body {
         line-height: 1;
         padding-left: $navigation-width;
 
-        a:link {
+        a:link,
+        a:visited {
             color: $header-colour;
         }
 
@@ -95,8 +96,8 @@ body {
             font-size: 50px;
             font-weight: 700;
             letter-spacing: -0.5px;
-            line-height: 1.2;
-            margin: 65px 0 -8px;
+            line-height: 45px;
+            margin: 60px 0 0;
 
             + span {
                 //color: transparentize($header-colour, 0.36);
@@ -116,6 +117,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    color: $header-colour;
     font-weight: 600;
 }
 
@@ -129,12 +131,11 @@ a {
 }
 
 article {
-    margin-top: 60px;
 
     h1 {
         font-size: 35px;
         line-height: 45px;
-        margin: 65px 0 10px;
+        margin: 5px 0 10px;
     }
 
     section {
@@ -173,7 +174,7 @@ nav {
 
         &:link,
         &:visited {
-            color: $link-colour;
+            color: $header-colour;
         }
 
         &:hover,
@@ -200,18 +201,23 @@ nav {
 
     ul {
         list-style: none;
-        margin: 0;
-        padding: 100px 150px 0 0;
+        margin: 65px 0 10px;
+        padding: 0 150px 0 0;
         text-align: right;
     }
 }
 
 main {
+    margin-top: 60px;
     width: 725px;
 
     > section {
         $horizontal-break-height: 2px;
         margin-bottom: -$horizontal-break-height;
+
+        &:first-of-type h2 {
+            @include offscreen;
+        }
 
         &:not(:last-of-type) {
             border-bottom: $horizontal-break-height solid $horizontal-break-colour;
@@ -229,8 +235,8 @@ main {
         h3 {
             font-size: 37px;
             line-height: 45px;
-            margin-top: 20px;
             margin-bottom: 10px;
+            margin-top: 5px;
         }
     }
 }
@@ -270,8 +276,8 @@ p {
         + p {
             font-size: 17px;
             line-height: 30px;
-            margin-top: 0;
             margin-bottom: 18px;
+            margin-top: 0;
         }
     }
 
@@ -284,8 +290,8 @@ p {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding: 0;
     margin-bottom: 25px;
+    padding: 0;
 
     li {
         margin: 0;
