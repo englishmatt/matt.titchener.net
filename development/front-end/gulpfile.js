@@ -1,8 +1,10 @@
 "use strict";
 
 var gulp = require("gulp"),
-    compass = require('gulp-compass'),
-    sassSourcefiles = "./scss/**/*.scss";
+    typogr = require("gulp-typogr"),
+    compass = require("gulp-compass"),
+    sassSourcefiles = "./scss/**/*.scss",
+    htmlFiles = "./**/*.htm";
 
 gulp.task("compass", function () {
     gulp.src(sassSourcefiles)
@@ -12,9 +14,17 @@ gulp.task("compass", function () {
             css: "css",
             sass: "scss"
         }))
-        .on('error', function(error) {
+        .on('error', function (error) {
             // Do nothing; prevent the gulp task from exiting.
         });
+});
+
+gulp.task("typeset", function () {
+    gulp.src(htmlFiles)
+        .pipe(typogr({
+            only: ["smartypants"]
+        }))
+        .pipe(gulp.dest("./"));
 });
 
 gulp.task("compass:watch", function () {
