@@ -9,7 +9,6 @@
     * Variables
     * Mixins
     * Styles
-
 */
 
 /*
@@ -82,7 +81,7 @@ body {
 
     > header {
         @include greyscale-font-smoothing;
-        border-top: 6px solid $body-border-colour;
+        border-top: 10px solid $body-border-colour;
         color: $header-colour;
         line-height: 1;
         padding-left: $navigation-width;
@@ -97,7 +96,7 @@ body {
             font-weight: 700;
             letter-spacing: -0.5px;
             line-height: 45px;
-            margin: 60px 0 0;
+            margin: 90px 0 0;
 
             + span {
                 //color: transparentize($header-colour, 0.36);
@@ -136,6 +135,10 @@ article {
         font-size: 35px;
         line-height: 45px;
         margin: 5px 0 10px;
+    }
+
+    h2 {
+        @include offscreen;
     }
 
     section {
