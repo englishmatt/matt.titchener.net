@@ -29,7 +29,7 @@
             <nav>
                 <h2 class="nocontent">Main navigation</h2>
                 <ul>
-                    <li class="selected">Journal</li>
+                    <li class="selected"><a href="journal.htm">Journal</a></li>
                     <li><a href="#">Work</a></li>
                     <li><a href="about.htm">About</a></li>
                 </ul>
@@ -41,59 +41,59 @@
                         <h1>Indexing the HTML DOM for Fun and Profit with a Super-Long Title</h1>
                         <time datetime="2016-01-21T00:00Z">21 January, 2016</time>
                     </header>
-                    
+
                     <p class="lede">
-                        ElasticSearch and Apache Solr were both designed as powerful, full-text search engines. But 
-                        what if you want to index and quickly search over <i>more structured text&#8208;based content, 
-                        say, the HTML DOM, across a large number of documents? We turned to</i> Lux—built on top of 
+                        ElasticSearch and Apache Solr were both designed as powerful, full-text search engines. But
+                        what if you want to index and quickly search over <i>more structured text&#8208;based content,
+                        say, the HTML DOM, across a large number of documents? We turned to</i> Lux—built on top of
                         Apache Solr and Saxon—to do just that.
                     </p>
-                    
+
                     <p>
-                        Working as a Software Developer for a university often results in being set oddball tasks to 
+                        Working as a Software Developer for a university often results in being set oddball tasks to
                         fulfill some esoteric criteria for a research project or inquiry from the executive leadership.
-                        In this case,  we had initially been asked to determine the number of links in our Learning 
+                        In this case,  we had initially been asked to determine the number of links in our Learning
                         Management System (LMS), pointing to a set of external resources. Our LMS contains in excess of
-                        20,000 courses, each with tens of course pages; with only web pages and a corresponding 
+                        20,000 courses, each with tens of course pages; with only web pages and a corresponding
                         RESTful API to access content, this was never going to easy.
                     </p>
-                    
+
                     <section>
                         <h2>A First Attempt</h2>
                         <p>
-                            Our initial approach took the form of a Casper-based web scraper. First, generating a URL 
-                            digest, then scraping the content page by page, augmenting the digest as we go. When it 
-                            encountered a DOM element that matched our query (in this case a link with a particular 
+                            Our initial approach took the form of a Casper-based web scraper. First, generating a URL
+                            digest, then scraping the content page by page, augmenting the digest as we go. When it
+                            encountered a DOM element that matched our query (in this case a link with a particular
                             href value) it logged it to a result set.
                         </p>
-                        
+
                         <p>
-                            We contined to tweak this approach over a two week period, and ended up in a Casper 
+                            We contined to tweak this approach over a two week period, and ended up in a Casper
                             master-slave configuration (a single Casper process would spin up additional Casper process
-                            as needed). This ran for 12 hours before running out of memory. We managed to scrape, 
+                            as needed). This ran for 12 hours before running out of memory. We managed to scrape,
                             perhaps 10-15% of the course content material in the LMS before our proof-of-concept died.
                         </p>
-                        
+
                         <p>
-                            Casper is neat, but on the scale we were scraping, proved too slow and a memory hog. It 
-                            also turns out that scraping the entire content-base per query, using a headless browser, 
+                            Casper is neat, but on the scale we were scraping, proved too slow and a memory hog. It
+                            also turns out that scraping the entire content-base per query, using a headless browser,
                             isn’t the smartest move. We finally abandoned Casper for a more powerful solution.
                         </p>
                     </section>
-                    
+
                     <section>
                         <h2>Indexing the DOM</h2>
-                        
+
                         <p>
-                            Casper is neat, but on the scale we were scraping, proved too slow and a memory hog. It 
-                            also turns out that scraping the entire content-base per query, using a headless browser, 
+                            Casper is neat, but on the scale we were scraping, proved too slow and a memory hog. It
+                            also turns out that scraping the entire content-base per query, using a headless browser,
                             isn’t the smartest move. We finally abandoned Casper for a more powerful solution.
                         </p>
                     </section>
                 </article>
             </main>
         </div>
-        
+
         <footer>
         </footer>
     </body>
