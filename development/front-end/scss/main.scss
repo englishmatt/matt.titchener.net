@@ -64,6 +64,17 @@ $header-font-size: 37px;
     -moz-osx-font-smoothing: grayscale;
 }
 
+@mixin image-list-item-width($items-count: 1, $gutter: 0) {
+    $item-width: percentage(1 / $items-count);
+    $gutter-adjust: ($gutter * ($items-count - 1)) / $items-count;
+
+    @if $gutter == 0 {
+        width: $item-width;
+    } @else {
+        width: calc(#{$item-width} - #{$gutter-adjust});
+    }
+}
+
 /* Styles */
 
 html {
@@ -107,6 +118,27 @@ body {
                 letter-spacing: 0.7px;
                 line-height: 2.143;
                 text-transform: uppercase;
+            }
+
+            a {
+
+                &:before {
+                    content: url("../images/monogram.svg");
+                    display: block;
+                    left: 100px;
+                    position: fixed;
+                    top: 60px;
+                    transition: transform 200ms;
+                    z-index: 10000;
+
+                }
+
+                &:hover {
+
+                    &:before {
+                        transform: rotate(4.35deg);
+                    }
+                }
             }
         }
 
@@ -176,7 +208,6 @@ article {
         font: 15px/2 $decorative-font-stack;
         font-weight: 700;
         letter-spacing: 0.8px;
-        margin: 0;
         padding: 0px 0 15px;
         text-transform: uppercase;
     }
@@ -190,6 +221,7 @@ article {
 nav {
     @include greyscale-font-smoothing;
     @include user-select(none);
+    position: relative;
     width: $navigation-width;
 
     a {
@@ -232,13 +264,17 @@ nav {
 
             &.selected {
 
+                a {
+                    color: $header-colour;
+                }
+
                 &:after {
                     color: $navigation-bullet-colour;
                     content: "・";
+                    font-size: 20px;
                     position: absolute;
                     right: -25px;
                     top: 2px;
-                    font-size: 20px;
                 }
             }
         }
@@ -257,12 +293,11 @@ nav {
     > ul {
         position: -webkit-sticky;
         position: sticky;
-        top: 0;
+        top: 175px;
     }
 }
 
 main {
-    margin: 0;
     padding: 60px 0 0;
     width: 725px;
 
@@ -282,7 +317,6 @@ main {
         + section:not(.excerpt) {
             $horizontal-break-height: 2px;
             border-top: $horizontal-break-height solid $horizontal-break-colour;
-            margin: 0;
             padding-top: 30px - $horizontal-break-height;
         }
 
@@ -302,6 +336,8 @@ main {
 }
 
 .excerpt {
+    padding-bottom: 0;
+
     h2 {
         font-size: $header-font-size;
         line-height: 45px;
@@ -310,8 +346,7 @@ main {
     }
 
     + .excerpt {
-        margin: 0;
-        padding: 45px 0 0;
+        padding-top: 45px;
     }
 }
 
@@ -363,17 +398,25 @@ p {
 .image-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     list-style: none;
     margin: 0;
     padding: 15px 0;
 
     li {
+        $gutter: 20px;
+        $item-count: 3;
+        @include image-list-item-width($item-count, $gutter);
         margin: 0;
-        padding: 0 0 15px;
+        padding: 0 $gutter 15px 0;
+        position: relative;
+
+        &:nth-child(3n) {
+            padding-right: 0;
+        }
 
         img {
             vertical-align: bottom;
+            width: 100%;
         }
     }
 }
