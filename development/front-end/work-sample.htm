@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Indexing the HTML DOM for Fun and Profit with a Super-Long Title &#183; Matt Titchener</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3a400,700%7cHind%3a300,400,500,600,700" type="text/css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+            <h1><a href="front-page.htm">Matt Titchener</a></h1>
+            <span>UX Designer &#x30fb; Full Stack Web Developer</span>
+        </header>
+
+        <div>
+            <nav>
+                <h2 class="nocontent">Main navigation</h2>
+                <ul>
+                    <li class="selected"><a href="journal.htm">Journal</a></li>
+                    <li><a href="work.htm">Work</a></li>
+                    <li><a href="about.htm">About</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <article>
+                    <h1>SimplePromises.js</h1>
+
+                    <p>
+                        Simple-Promises is a super-bare-bones implementation of the Promises/A specification proposal,
+                        written mainly as a learning exercise—there are better implementations out there, suitable
+                        for real-world use.
+                    </p>
+
+                    <p>
+                        I have heavily commented the code as it took me far longer to figure this out than it should,
+                        and I have a pernicious habit of forgetting the subtleties of such code. Hopefully, these
+                        comments might also provide insight to others.
+                    </p>
+
+                    <section>
+                        <h2>The ELI5 Version</h2>
+
+                        <p>
+                            Promises allow us to write asynchronous code to appear more synchronous, leading to code
+                            that is easier to read and write. They effectively prevent the <a href="#">pyramid of
+                            doom</a>!
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Example</h2>
+
+                        <p>Simple-Promises allow us to write our asynchronous code in the form:</p>
+
+                        <pre><code>foobar()
+    .then(foo)
+    .then(bar)
+    .then(function () {
+        return baz();    // Where `baz` is a predefined promise instance
+    })
+    .then(function () {
+        return fooBaz();
+    })
+    .then(bar);</code></pre>
+
+                        <p>
+                            Where <code>foobar</code>, <code>baz</code> and <code>fooBaz</code> are predefined Promise
+                            instances.
+                        </p>
+                    </section>
+
+
+
+                    <section>
+                        <h2>Licence</h2>
+
+                        <p>
+                            This code is licenced under the MIT licence. Please see LICENSE for licence information.
+                        </p>
+                    </section>
+                </article>
+            </main>
+        </div>
+
+        <footer>
+            <p>
+                <small>This site is available on GitLab under the MIT licence.</small>
+            </p>
+        </footer>
+    </body>
+</html>
