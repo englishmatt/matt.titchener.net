@@ -41,7 +41,7 @@ $main-width: 725px;
 $base-font-stack: "Hind", sans-serif;
 $code-font-stack: "Source Code Pro", "Consolas", monospace;
 $decorative-font-stack: "Lato", sans-serif;
-$header-font-size: 37px;
+$header-font-size: 34px;
 
 /* Mixins */
 
@@ -186,7 +186,7 @@ h3 {
     font-weight: 200;
     line-height: 30px;
     margin: 0;
-    padding: 13px 0 2px;
+    padding: 14px 0 1px;
 }
 
 a {
@@ -255,10 +255,9 @@ article {
     }
 
     time {
-        color: transparentize($header-colour, 0.36);
+        color: transparentize($header-colour, 0.5);
         display: block;
-        font: 15px/2 $decorative-font-stack;
-        font-weight: 700;
+        font: 13px/30px $decorative-font-stack;
         letter-spacing: 0.8px;
         padding: 0px 0 15px;
         text-transform: uppercase;
@@ -312,7 +311,7 @@ nav {
     li {
         color: $header-colour;
         cursor: default;
-        font-size: 35px;
+        font-size: 34px;
         line-height: 45px;
         margin: 0;
         padding: 0 0 15px 0;
@@ -379,7 +378,7 @@ main {
     > section {
 
         + section:not(.excerpt) {
-            $horizontal-break-height: 2px;
+            $horizontal-break-height: 1px;
             border-top: $horizontal-break-height solid $horizontal-break-colour;
             padding-top: 30px - $horizontal-break-height;
         }
@@ -463,7 +462,7 @@ p {
             font-size: 17px;
             line-height: 30px;
             margin: 0;
-            padding: 0 0 15px 0;
+            padding: 2px 0 13px 0;
         }
     }
 }
@@ -480,6 +479,7 @@ p {
         $item-count: 3;
         @include image-list-item-width($item-count, $gutter);
         margin: 0;
+        min-height: 240px;
         padding: 0 $gutter 15px 0;
         position: relative;
 
@@ -492,10 +492,4 @@ p {
             width: 100%;
         }
     }
-}
-
-.lede {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 30px;
 }
