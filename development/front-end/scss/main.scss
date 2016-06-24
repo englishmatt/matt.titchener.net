@@ -1,5 +1,8 @@
 @import "compass/css3";
+@import "compass/css3/columns";
+@import "compass/css3/images";
 @import "compass/css3/selection";
+@import "compass/css3/transition";
 
 /*
     Table of Contents
@@ -22,6 +25,7 @@
 
 // Colour
 $body-colour: #4a4a4a;
+$body-background-colour: #fff;
 $body-border-colour: #1a3c44;
 $link-colour: #1d8cbf;
 $small-print-colour: #9b9b9b;
@@ -29,13 +33,21 @@ $navigation-link-colour: #205a67;
 $navigation-bullet-colour: #4a4a4a;
 $header-colour: #1a3c44;
 $horizontal-break-colour: #dedede;
-$selection-colour: rgb(218, 244, 255);
-$focussed-link-colour: rgb(218, 244, 255);
-$end-article-icon-colour: #771c1c;
+$selection-colour: rgba(134, 221, 255, 0.31);
+$focussed-link-colour: rgba(134, 221, 255, 0.31);
+$end-article-icon-colour: #871f1f;
 
 // Layout
+$content-linearised-margin-widths: 20px;
 $navigation-width: 355px;
+$narrowed-navigation-width: 240px;
+$slim-navigation-width: 195px;
+$linearised-navigation-width: 70px;
 $main-width: 725px;
+$main-navigation-narrowed-breakpoint: 1150px;
+$pre-content-linearised-breakpoint: 760px;
+$content-linearised-breakpoint: 650px;
+$breakpoint-transition-duration: 200ms;
 
 // Typography
 $base-font-stack: "Hind", sans-serif;
@@ -83,23 +95,25 @@ $header-font-size: 34px;
 /* Styles */
 
 html {
-    font-size: 16px;
-    height: 100%;
-}
-
-* {
-    @include selection($selection-colour);
-}
+    background-color: $body-border-colour;  // [1] Sets elastic scroll background appropriately.
+    font-size: 16px;    // Explicity set default font size.
+    height: 100%;       // [2] Required to maintain footer content at the bottom of the viewport when the content does
+}                       //     not fill the viewport height.
 
 body {
+    // [1] A hack to set the body background colour back to white for webkit/blink (without overriding the HTML
+    //     background).
+    @include background(linear-gradient(top, $body-background-colour 0%, $body-background-colour 100%));  // [1]
     color: $body-colour;
-    display: flex;
-    flex-direction: column;
-    font: 300 1.25rem/1.5 $base-font-stack;
-    height: 100%;
+    display: flex;                          // [3] Layout using flexbox.
+    flex-direction: column;                 // [3] Flex boxes down the page.
+    font: 300 20px/30px $base-font-stack;   // We do not use relative line heights as we use a fixed baseline grid.
+    min-height: 100%;                       // [2]
 
     > header {
-        @include greyscale-font-smoothing;
+        @include greyscale-font-smoothing;  // Provides better rendering in some browsers---perhaps.
+        @include transition(padding-left $breakpoint-transition-duration,
+                            border-top-width $breakpoint-transition-duration);
         border-top: 10px solid $body-border-colour;
         color: $header-colour;
         line-height: 1;
@@ -111,6 +125,7 @@ body {
         }
 
         h1 {
+            @include transition(font-size $breakpoint-transition-duration, padding $breakpoint-transition-duration);
             font-size: 50px;
             font-weight: 700;
             letter-spacing: -0.5px;
@@ -119,30 +134,86 @@ body {
             white-space: nowrap;
 
             + span {
+                @include transition(font-size $breakpoint-transition-duration);
                 font-family: $decorative-font-stack;
                 font-size: 14px;
                 font-weight: 300;
                 letter-spacing: 0.7px;
-                line-height: 2.143;
+                line-height: 30px;
                 text-transform: uppercase;
             }
 
             a {
+                $on-hover-rotation: 4.35deg;
 
                 &:before {
+                    @include transition(transform $breakpoint-transition-duration,
+                                        top $breakpoint-transition-duration,
+                                        left $breakpoint-transition-duration);
                     content: url("../images/monogram.svg");
                     display: block;
                     left: 100px;
                     position: fixed;
                     top: 60px;
-                    transition: transform 100ms;
                     z-index: 10000;
                 }
 
                 &:hover {
 
                     &:before {
-                        transform: rotate(4.35deg);
+                        transform: rotate($on-hover-rotation);
+                    }
+                }
+
+                @media (max-width: $main-navigation-narrowed-breakpoint) {
+                    $scale: 0.8;
+
+                    &:before {
+                        left: 60px;
+                        top: 70px;
+                        transform: scale($scale);
+                    }
+
+                    &:hover {
+
+                        &:before {
+                            transform: scale($scale) rotate($on-hover-rotation);
+                        }
+                    }
+                }
+
+                @media (max-width: $pre-content-linearised-breakpoint) {
+                    $scale: 0.8;
+
+                    &:before {
+                        left: 50px;
+                        top: 40px;
+                        transform: scale($scale);
+                    }
+
+                    &:hover {
+
+                        &:before {
+                            transform: scale($scale) rotate($on-hover-rotation);
+                        }
+                    }
+                }
+
+                @media (max-width: $content-linearised-breakpoint) {
+                    $scale: 0.3;
+
+                    &:before {
+                        left: -25px;
+                        position: absolute;
+                        top: -32px;
+                        transform: scale($scale);
+                    }
+
+                    &:hover {
+
+                        &:before {
+                            transform: scale($scale) rotate($on-hover-rotation);
+                        }
                     }
                 }
             }
@@ -152,7 +223,41 @@ body {
             display: flex;
             flex: 1;
         }
+
+        @media (max-width: $main-navigation-narrowed-breakpoint) {
+            padding-left: $narrowed-navigation-width;
+        }
+
+        @media (max-width: $pre-content-linearised-breakpoint) {
+            padding-left: $slim-navigation-width;
+
+            h1 {
+                padding-top: 60px;
+            }
+        }
+
+        @media (max-width: $content-linearised-breakpoint) {
+            border-top-width: 0;
+            padding-left: $linearised-navigation-width;
+
+            h1 {
+                font-size: 34px;
+                padding-top: 15px;
+
+                + span {
+                    @include offscreen;
+                }
+            }
+
+            + div {
+                flex-direction: column;
+            }
+        }
     }
+}
+
+* {
+    @include selection($selection-colour);
 }
 
 code {
@@ -182,7 +287,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h3 {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 200;
     line-height: 30px;
     margin: 0;
@@ -190,9 +295,9 @@ h3 {
 }
 
 a {
+    @include transition(color 200ms, background-color 200ms);
     border-radius: 2px;
     text-decoration: none;
-    transition: color 200ms, background-color 200ms;
 
     &:link,
     &:visited {
@@ -205,9 +310,15 @@ a {
     }
 
 
-    &:focus {
+    &:focus,
+    &:active {
         background-color: $focussed-link-colour;
+        border-color: darken($focussed-link-colour, 10%);
         outline: 0;
+
+        img {
+            outline: 5px solid $focussed-link-colour;
+        }
     }
 }
 
@@ -267,12 +378,28 @@ article {
         float: left;
         margin-right: 30px;
     }
+
+    @media (max-width: 880px) {
+
+        img {
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 500px) {
+
+        img {
+            height: 450px;
+            margin-bottom: 30px;
+        }
+    }
 }
 
 nav {
     $horizontal-link-padding: 15px;
     @include greyscale-font-smoothing;
     @include user-select(none);
+    @include transition(min-width $breakpoint-transition-duration);
     min-width: $navigation-width;
     position: relative;
 
@@ -292,6 +419,7 @@ nav {
 
 
     ul {
+        @include transition(padding $breakpoint-transition-duration);
         list-style: none;
         margin: 0;
         padding: 65px (150 - $horizontal-link-padding) 10px 0;
@@ -309,6 +437,7 @@ nav {
     }
 
     li {
+        @include transition(font-size $breakpoint-transition-duration, line-height $breakpoint-transition-duration);
         color: $header-colour;
         cursor: default;
         font-size: 34px;
@@ -332,7 +461,12 @@ nav {
             padding-right: $horizontal-link-padding;
         }
 
+        &.selected > a {
+            margin-right: -$horizontal-link-padding;
+        }
+
         li {
+            @include transition(font-size $breakpoint-transition-duration);
             font-size: 19px;
             font-weight: 200;
             line-height: 30px;
@@ -358,9 +492,116 @@ nav {
             }
         }
     }
+
+    @media (max-width: $main-navigation-narrowed-breakpoint) {
+        min-width: $narrowed-navigation-width;
+
+        ul {
+            padding: 65px (80 - $horizontal-link-padding) 10px 0;
+        }
+    }
+
+    @media (max-width: $pre-content-linearised-breakpoint) {
+        min-width: $slim-navigation-width;
+
+        ul {
+            padding: 35px (50 - $horizontal-link-padding) 10px 0;
+        }
+
+        li {
+            font-size: 27px;
+            line-height: 30px;
+
+            li {
+                font-size: 17px;
+            }
+        }
+    }
+
+    @media (max-width: $content-linearised-breakpoint) {
+        $horizontal-link-padding: 20px;
+        color: #fff;
+        margin-top: 15px;
+
+        ul {
+            background-color: $body-border-colour;
+            padding: 15px 0 15px;
+            position: static;
+
+            ul {
+                margin: 0;
+                padding: 10px 0 5px 0;
+            }
+        }
+
+        li {
+            color: inherit;
+            line-height: 45px;
+            padding: 0;
+            text-align: left;
+
+            > span {
+                padding-left: $horizontal-link-padding;
+            }
+
+            a {
+                padding: 0 $horizontal-link-padding 0;
+            }
+
+            a,
+            &.selected {
+                border-radius: 0;
+                margin: 0;
+            }
+
+            &.selected {
+                color: #fff;
+                padding: 0;
+            }
+
+            &.selected > a {
+            margin-right: 0;
+            }
+
+            li {
+
+                a,
+                &.selected {
+                    $highlight-offset: 3px;
+                    margin-top: -$highlight-offset;
+                    padding: $highlight-offset 0 0 (2 * $horizontal-link-padding);
+                }
+
+                &.selected {
+                    color: #fff;
+
+                    &:after {
+                        content: "";
+                    }
+                }
+            }
+        }
+
+        a {
+            display: block;
+
+            &:link,
+            &:visited,
+            &:hover,
+            &:visited:hover {
+                color: lighten($body-border-colour, 50%);
+            }
+
+            &:focus,
+            &:visited:focus {
+                color: #fff;
+            }
+        }
+    }
 }
 
 main {
+    margin-right: 70px;
     padding: 60px 0 0;
     width: $main-width;
 
@@ -396,26 +637,78 @@ main {
             }
         }
     }
+
+    @media (max-width: $pre-content-linearised-breakpoint) {
+        margin-right: 40px;
+    }
+
+    @media (max-width: $content-linearised-breakpoint) {
+        margin-left: $content-linearised-margin-widths;
+        margin-right: $content-linearised-margin-widths;
+        padding-top: 30px;
+        width: auto;
+
+        > section,
+        .excerpt {
+            padding-bottom: 2px;
+            padding-top: 13px;
+
+            h2 {
+                padding: 0 0 15px 0;
+            }
+        }
+    }
 }
 
 footer {
+    @include transition(padding $breakpoint-transition-duration);
     padding-left: $navigation-width;
     padding-top: 30px;
-    width: $main-width;
+
+    @media (max-width: $main-navigation-narrowed-breakpoint) {
+        padding-left: $narrowed-navigation-width;
+    }
+
+    @media (max-width: $pre-content-linearised-breakpoint) {
+        padding-left: $slim-navigation-width;
+    }
+
+    @media (max-width: $content-linearised-breakpoint) {
+        padding-left: 20px;
+
+        P {
+            line-height: 15px;
+        }
+    }
 }
 
 small {
     color: $small-print-colour;
     font-size: 16px;
+
+    @media (max-width: $content-linearised-breakpoint) {
+        font-size: 13px;
+    }
 }
 
 .excerpt {
+    position: relative;
 
     h2 {
+        @include transition(font-size, $breakpoint-transition-duration);
         font-size: $header-font-size;
         line-height: 45px;
         margin: 0;
         padding: 5px 0 10px;
+
+        @media (max-width: 900px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: $pre-content-linearised-breakpoint) {
+            font-size: 23px;
+            line-height: 30px;
+        }
     }
 
     + .excerpt {
@@ -431,29 +724,36 @@ p {
     h1 + & {
         padding-top: 15px;
     }
+}
 
-    .action {
-        @include user-select(none);
-        font-family: $decorative-font-stack;
-        font-size: 13px;
-        font-weight: 700;
-        hyphens: none;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
+.action {
+    @include user-select(none);
+    font-family: $decorative-font-stack;
+    font-size: 13px;
+    font-weight: 700;
+    hyphens: none;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+
+    @media (max-width: $pre-content-linearised-breakpoint) {
+        border: 1px solid $horizontal-break-colour;
+        border-radius: 2px;
+        display: table;
+        margin: 30px auto 0;
+        padding: 0 10%;
     }
 }
 
 .heading-list {
-    align-content: space-between;
-    display: flex;
-    flex-flow: column wrap;
-    height: 180px;
+    @include column-count(2);
+    @include column-fill(balance);
+    @include column-gap(20px);
     list-style: none;
     margin: 0;
     padding: 15px 0;
 
     li {
-        width: 340px;
+        max-width: 340px;
     }
 
     h3 {
@@ -465,31 +765,111 @@ p {
             padding: 2px 0 13px 0;
         }
     }
+
+    @media (max-width: $pre-content-linearised-breakpoint) {
+        @include column-count(1);
+    }
+
+    @media (max-width: $content-linearised-breakpoint) {
+        padding: 0;
+    }
 }
 
 .image-list {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin: 0;
+    min-height: 180px;
     padding: 15px 0;
 
     li {
         $gutter: 20px;
         $item-count: 3;
         @include image-list-item-width($item-count, $gutter);
-        margin: 0;
-        min-height: 240px;
-        padding: 0 $gutter 15px 0;
+        margin: 0 $gutter 0 0;
+        overflow: hidden;
+        padding: 0 0 15px 0;
         position: relative;
 
-        &:nth-child(3n) {
-            padding-right: 0;
+        &:nth-child(#{$item-count}n) {
+            margin-right: 0;
         }
 
         img {
+            height: 225px;
             vertical-align: bottom;
-            width: 100%;
         }
+
+        @media (max-width: 920px) {
+            $item-count: 2;
+            @include image-list-item-width($item-count, $gutter);
+
+            // Undo nth-child in non-media query layout
+            &:nth-child(1n) {
+                margin: 0 $gutter 0 0;
+            }
+
+            &:nth-child(#{$item-count}n) {
+                margin-right: 0;
+            }
+
+            &:nth-child(2n-1):last-child {
+
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        @media (max-width: 920px) and (min-width: 700px) {
+
+            img {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: $content-linearised-breakpoint) {
+
+            img {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            $item-count: 1;
+            @include image-list-item-width($item-count, $gutter);
+
+            // Undo nth-child in non-media query layout
+            &:nth-child(1n) {
+                margin: 0 $gutter 0 0;
+            }
+
+            &:nth-child(#{$item-count}n) {
+                margin-right: 0;
+            }
+
+            img {
+                height: 465px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            img {
+                height: 360px;
+            }
+        }
+
+        @media (max-width: 340px) {
+
+            img {
+                height: 300px;
+            }
+        }
+    }
+
+    @media (max-width: $content-linearised-breakpoint) {
+        margin: 0;
+        padding: 0;
     }
 }
