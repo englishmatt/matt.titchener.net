@@ -645,7 +645,8 @@ main {
     @media (max-width: $content-linearised-breakpoint) {
         margin-left: $content-linearised-margin-widths;
         margin-right: $content-linearised-margin-widths;
-        padding-top: 30px;
+        padding-top: 25px;
+        padding-bottom: 5px;
         width: auto;
 
         > section,
@@ -783,12 +784,12 @@ p {
     padding: 15px 0;
 
     li {
-        $gutter: 20px;
+        $gutter: 25px;
         $item-count: 3;
         @include image-list-item-width($item-count, $gutter);
         margin: 0 $gutter 0 0;
         overflow: hidden;
-        padding: 0 0 15px 0;
+        padding: 0 0 30px 0;
         position: relative;
 
         &:nth-child(#{$item-count}n) {
