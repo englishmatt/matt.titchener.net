@@ -118,6 +118,7 @@ body {
         color: $header-colour;
         line-height: 1;
         padding-left: $navigation-width;
+        padding-top: 90px;
 
         a:link,
         a:visited {
@@ -130,7 +131,7 @@ body {
             font-weight: 700;
             letter-spacing: -0.5px;
             line-height: 45px;
-            padding: 90px 0 0;
+            padding: 0;
             white-space: nowrap;
 
             + span {
@@ -141,81 +142,6 @@ body {
                 letter-spacing: 0.7px;
                 line-height: 30px;
                 text-transform: uppercase;
-            }
-
-            a {
-                $on-hover-rotation: 4.35deg;
-
-                &:before {
-                    @include transition(transform $breakpoint-transition-duration,
-                                        top $breakpoint-transition-duration,
-                                        left $breakpoint-transition-duration);
-                    content: url("../images/monogram.svg");
-                    display: block;
-                    left: 100px;
-                    position: fixed;
-                    top: 60px;
-                    z-index: 10000;
-                }
-
-                &:hover {
-
-                    &:before {
-                        transform: rotate($on-hover-rotation);
-                    }
-                }
-
-                @media (max-width: $main-navigation-narrowed-breakpoint) {
-                    $scale: 0.8;
-
-                    &:before {
-                        left: 60px;
-                        top: 70px;
-                        transform: scale($scale);
-                    }
-
-                    &:hover {
-
-                        &:before {
-                            transform: scale($scale) rotate($on-hover-rotation);
-                        }
-                    }
-                }
-
-                @media (max-width: $pre-content-linearised-breakpoint) {
-                    $scale: 0.8;
-
-                    &:before {
-                        left: 50px;
-                        top: 40px;
-                        transform: scale($scale);
-                    }
-
-                    &:hover {
-
-                        &:before {
-                            transform: scale($scale) rotate($on-hover-rotation);
-                        }
-                    }
-                }
-
-                @media (max-width: $content-linearised-breakpoint) {
-                    $scale: 0.3;
-
-                    &:before {
-                        left: -25px;
-                        position: absolute;
-                        top: -32px;
-                        transform: scale($scale);
-                    }
-
-                    &:hover {
-
-                        &:before {
-                            transform: scale($scale) rotate($on-hover-rotation);
-                        }
-                    }
-                }
             }
         }
 
@@ -230,19 +156,16 @@ body {
 
         @media (max-width: $pre-content-linearised-breakpoint) {
             padding-left: $slim-navigation-width;
-
-            h1 {
-                padding-top: 60px;
-            }
+            padding-top: 60px;
         }
 
         @media (max-width: $content-linearised-breakpoint) {
             border-top-width: 0;
             padding-left: $linearised-navigation-width;
+            padding-top: 15px;
 
             h1 {
                 font-size: 34px;
-                padding-top: 15px;
 
                 + span {
                     @include offscreen;
@@ -396,6 +319,90 @@ article {
 }
 
 nav {
+    $on-hover-rotation: 4.35deg;
+
+    > ul {
+
+        > li:first-child {
+
+            :first-child {
+
+                &:before {
+                    @include transition(transform $breakpoint-transition-duration,
+                                        top $breakpoint-transition-duration,
+                                        left $breakpoint-transition-duration);
+                    content: url("../images/monogram.svg");
+                    display: block;
+                    left: 100px;
+                    position: absolute;
+                    top: -100px;
+                    z-index: 10000;
+                }
+
+                &:hover {
+
+                    &:before {
+                        transform: rotate($on-hover-rotation);
+                    }
+                }
+
+                @media (max-width: $main-navigation-narrowed-breakpoint) {
+                    $scale: 0.8;
+
+                    &:before {
+                        left: 60px;
+                        top: -105px;
+                        transform: scale($scale);
+                    }
+
+                    &:hover {
+
+                        &:before {
+                            transform: scale($scale) rotate($on-hover-rotation);
+                        }
+                    }
+                }
+
+                @media (max-width: $pre-content-linearised-breakpoint) {
+                    $scale: 0.8;
+
+                    &:before {
+                        left: 50px;
+                        top: -135px;
+                        transform: scale($scale);
+                    }
+
+                    &:hover {
+
+                        &:before {
+                            transform: scale($scale) rotate($on-hover-rotation);
+                        }
+                    }
+                }
+
+                @media (max-width: $content-linearised-breakpoint) {
+                    $scale: 0.3;
+
+                    &:before {
+                        left: -25px;
+                        position: absolute;
+                        top: -107px;
+                        transform: scale($scale);
+                    }
+
+                    &:hover {
+
+                        &:before {
+                            transform: scale($scale) rotate($on-hover-rotation);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+nav {
     $horizontal-link-padding: 15px;
     @include greyscale-font-smoothing;
     @include user-select(none);
@@ -416,7 +423,6 @@ nav {
     h2 {
         @include offscreen;
     }
-
 
     ul {
         @include transition(padding $breakpoint-transition-duration);
@@ -560,7 +566,7 @@ nav {
             }
 
             &.selected > a {
-            margin-right: 0;
+                margin-right: 0;
             }
 
             li {
@@ -613,6 +619,7 @@ main {
     }
 
     > section {
+        @include transition(padding $breakpoint-transition-duration);
         padding-bottom: 30px;
     }
 
@@ -645,8 +652,8 @@ main {
     @media (max-width: $content-linearised-breakpoint) {
         margin-left: $content-linearised-margin-widths;
         margin-right: $content-linearised-margin-widths;
-        padding-top: 25px;
         padding-bottom: 5px;
+        padding-top: 25px;
         width: auto;
 
         > section,
@@ -777,6 +784,7 @@ p {
 }
 
 .image-list {
+    @include transition(margin $breakpoint-transition-duration, padding $breakpoint-transition-duration);
     display: flex;
     flex-wrap: wrap;
     list-style: none;
