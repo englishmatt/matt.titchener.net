@@ -4,4 +4,4 @@ node_modules
 *.un~
 *.*~
 .sass-cache
-images/**/*.svg
+/dist
