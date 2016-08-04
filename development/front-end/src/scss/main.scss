@@ -319,7 +319,12 @@ article {
 }
 
 nav {
-    $on-hover-rotation: 4.35deg;
+    $horizontal-link-padding: 15px;
+    @include greyscale-font-smoothing;
+    @include user-select(none);
+    @include transition(min-width $breakpoint-transition-duration);
+    min-width: $navigation-width;
+    position: relative;
 
     > ul {
 
@@ -339,13 +344,6 @@ nav {
                     z-index: 10000;
                 }
 
-                &:hover {
-
-                    &:before {
-                        transform: rotate($on-hover-rotation);
-                    }
-                }
-
                 @media (max-width: $main-navigation-narrowed-breakpoint) {
                     $scale: 0.8;
 
@@ -353,13 +351,6 @@ nav {
                         left: 60px;
                         top: -105px;
                         transform: scale($scale);
-                    }
-
-                    &:hover {
-
-                        &:before {
-                            transform: scale($scale) rotate($on-hover-rotation);
-                        }
                     }
                 }
 
@@ -370,13 +361,6 @@ nav {
                         left: 50px;
                         top: -135px;
                         transform: scale($scale);
-                    }
-
-                    &:hover {
-
-                        &:before {
-                            transform: scale($scale) rotate($on-hover-rotation);
-                        }
                     }
                 }
 
@@ -389,26 +373,10 @@ nav {
                         top: -107px;
                         transform: scale($scale);
                     }
-
-                    &:hover {
-
-                        &:before {
-                            transform: scale($scale) rotate($on-hover-rotation);
-                        }
-                    }
                 }
             }
         }
     }
-}
-
-nav {
-    $horizontal-link-padding: 15px;
-    @include greyscale-font-smoothing;
-    @include user-select(none);
-    @include transition(min-width $breakpoint-transition-duration);
-    min-width: $navigation-width;
-    position: relative;
 
     a {
         &:visited {
