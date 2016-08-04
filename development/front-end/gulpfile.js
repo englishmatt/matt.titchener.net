@@ -8,6 +8,7 @@ var gulp = require("gulp"),
     htmlFiles = "src/**/*.htm",
     svgFiles = "src/svg/**/*.svg";
 
+// Style sheets
 gulp.task("compass", function () {
     gulp.src(sassSourcefiles)
         .pipe(compass({
@@ -21,22 +22,34 @@ gulp.task("compass", function () {
         });
 });
 
+gulp.task("compass:watch", function () {
+    gulp.watch(sassSourcefiles, ["compass"]);
+});
+
+// HTML
 gulp.task("typeset", function () {
-    gulp.src(htmlFiles)
+    return gulp.src(htmlFiles)
         .pipe(typogr({
             only: ["smartypants"]
         }))
         .pipe(gulp.dest("./dist"));
 });
 
+gulp.task("html:watch", function () {
+    gulp.watch(htmlFiles, ["typeset"]);
+});
+
+// SVG
 gulp.task("optimize-svg", function () {
     return gulp.src(svgFiles)
         .pipe(svgmin())
         .pipe(gulp.dest("./dist/images"));
 });
 
-gulp.task("compass:watch", function () {
-    gulp.watch(sassSourcefiles, ["compass"]);
+gulp.task("svg:watch", function () {
+    gulp.watch(svgFiles, ["optimize-svg"]);
 });
 
-gulp.task("default", function () {});
+// Default and composite tasks
+gulp.task("watch", ["html:watch", "compass:watch", "svg:watch"]);
+gulp.task("default", ["typeset", "compass", "optimize-svg"]);
