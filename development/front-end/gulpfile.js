@@ -4,13 +4,23 @@ var gulp = require("gulp"),
     typogr = require("gulp-typogr"),
     compass = require("gulp-compass"),
     svgmin = require("gulp-svgmin"),
-    sassSourcefiles = "src/scss/**/*.scss",
+    inject = require("gulp-inject"),
+    typeScript = require("gulp-typescript"),
+    del = require("del"),
+    sassFiles = "src/scss/**/*.scss",
+    cssFiles = [
+        "dist/css/normalize.css",
+        "dist/css/screen.css",
+        "dist/css/**/*.css"
+    ],
     htmlFiles = "src/**/*.htm",
-    svgFiles = "src/svg/**/*.svg";
+    svgFiles = "src/svg/**/*.svg",
+    typeScriptFiles = "src/**/*.ts",
+    javaScriptFiles = "dist/scripts/**/*.js";
 
 // Style sheets
 gulp.task("compass", function () {
-    gulp.src(sassSourcefiles)
+    return gulp.src(sassFiles)
         .pipe(compass({
             // The `css` and `sass` directories must be specified both here and in the config.rb file.
             config_file: "./config.rb",
@@ -23,20 +33,26 @@ gulp.task("compass", function () {
 });
 
 gulp.task("compass:watch", function () {
-    gulp.watch(sassSourcefiles, ["compass"]);
+    gulp.watch(sassFiles, ["compass"]);
 });
 
 // HTML
-gulp.task("typeset", function () {
+gulp.task("html", ["compass", "typescript"], function () {
+
+    var sourceFiles = gulp.src(cssFiles.concat(javaScriptFiles), { read: false }),
+        injectOptions = {
+            ignorePath: "dist",
+            addRootSlash: false
+        };
+
     return gulp.src(htmlFiles)
-        .pipe(typogr({
-            only: ["smartypants"]
-        }))
+        .pipe(typogr({ only: ["smartypants"] }))
+        .pipe(inject(sourceFiles, injectOptions))
         .pipe(gulp.dest("./dist"));
 });
 
 gulp.task("html:watch", function () {
-    gulp.watch(htmlFiles, ["typeset"]);
+    gulp.watch(htmlFiles, ["html"]);
 });
 
 // SVG
@@ -50,6 +66,24 @@ gulp.task("svg:watch", function () {
     gulp.watch(svgFiles, ["optimize-svg"]);
 });
 
+// TypeScript
+gulp.task("typescript", function () {
+    return gulp.src(typeScriptFiles)
+        .pipe(typeScript())
+        .pipe(gulp.dest("./dist"));
+});
+
+gulp.task("typescript:watch", function () {
+    gulp.watch(typeScriptFiles, ["typescript"]);
+});
+
+// Cleaning
+gulp.task("clean", function () {
+    return del(["dist"]);
+});
+
 // Default and composite tasks
-gulp.task("watch", ["html:watch", "compass:watch", "svg:watch"]);
-gulp.task("default", ["typeset", "compass", "optimize-svg"]);
+gulp.task("watch", ["html:watch", "compass:watch", "svg:watch", "typescript:watch"]);
+gulp.task("default", ["clean"], function () {
+    gulp.start("html", "optimize-svg");
+});

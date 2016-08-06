@@ -6,9 +6,12 @@
   "dependencies": {},
   "devDependencies": {
     "bower": "^1.7.9",
+    "del": "^2.2.1",
     "gulp": "^3.9.1",
     "gulp-compass": "^2.1.0",
+    "gulp-inject": "^4.1.0",
     "gulp-svgmin": "^1.2.2",
+    "gulp-typescript": "^2.13.6",
     "gulp-typogr": "^1.0.0"
   },
   "scripts": {
