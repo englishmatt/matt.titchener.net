@@ -113,6 +113,7 @@ body {
     > header {
         @include greyscale-font-smoothing;  // Provides better rendering in some browsers---perhaps.
         @include transition(padding-left $breakpoint-transition-duration,
+                            padding-top $breakpoint-transition-duration,
                             border-top-width $breakpoint-transition-duration);
         border-top: 10px solid $body-border-colour;
         color: $header-colour;
@@ -123,6 +124,10 @@ body {
         a:link,
         a:visited {
             color: $header-colour;
+        }
+
+        > img {
+            display: none;
         }
 
         h1 {
@@ -161,11 +166,20 @@ body {
 
         @media (max-width: $content-linearised-breakpoint) {
             border-top-width: 0;
-            padding-left: $linearised-navigation-width;
+            padding-left: $content-linearised-margin-widths;
+            padding-right: $content-linearised-margin-widths;
             padding-top: 15px;
 
+            > img {
+                display: inline-block;
+                margin-right: 10px;
+                vertical-align: -7px;
+                width: 42px;
+            }
+
             h1 {
-                font-size: 34px;
+                display: inline-block;
+                font-size: 37px;
 
                 + span {
                     @include offscreen;
@@ -320,6 +334,7 @@ article {
 
 nav {
     $horizontal-link-padding: 15px;
+    $navigation-gutter: 135px;
     @include greyscale-font-smoothing;
     @include user-select(none);
     @include transition(min-width $breakpoint-transition-duration);
@@ -327,6 +342,10 @@ nav {
     position: relative;
 
     > ul {
+        @include transition(width $breakpoint-transition-duration, top $breakpoint-transition-duration);
+        position: fixed;
+        top: 240px;
+        width: $navigation-width;
 
         > li:first-child {
 
@@ -340,16 +359,15 @@ nav {
                     display: block;
                     left: 100px;
                     position: absolute;
-                    top: -100px;
-                    z-index: 10000;
+                    top: -180px;
                 }
 
                 @media (max-width: $main-navigation-narrowed-breakpoint) {
                     $scale: 0.8;
 
                     &:before {
-                        left: 60px;
-                        top: -105px;
+                        left: 78px;
+                        top: -171px;
                         transform: scale($scale);
                     }
                 }
@@ -358,8 +376,8 @@ nav {
                     $scale: 0.8;
 
                     &:before {
-                        left: 50px;
-                        top: -135px;
+                        left: 53px;
+                        top: -170px;
                         transform: scale($scale);
                     }
                 }
@@ -368,10 +386,7 @@ nav {
                     $scale: 0.3;
 
                     &:before {
-                        left: -25px;
-                        position: absolute;
-                        top: -107px;
-                        transform: scale($scale);
+                        display: none;
                     }
                 }
             }
@@ -393,10 +408,9 @@ nav {
     }
 
     ul {
-        @include transition(padding $breakpoint-transition-duration);
         list-style: none;
         margin: 0;
-        padding: 65px (150 - $horizontal-link-padding) 10px 0;
+        padding: 0;
 
         ul {
             margin-right: -$horizontal-link-padding;
@@ -404,39 +418,36 @@ nav {
         }
     }
 
-    > ul {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 175px;
-    }
-
     li {
-        @include transition(font-size $breakpoint-transition-duration, line-height $breakpoint-transition-duration);
+        @include transition(font-size $breakpoint-transition-duration,
+                            line-height $breakpoint-transition-duration,
+                            padding $breakpoint-transition-duration);
         color: $header-colour;
         cursor: default;
         font-size: 34px;
         line-height: 45px;
         margin: 0;
-        padding: 0 0 15px 0;
+        padding: 0 $navigation-gutter 15px 0;
         text-align: right;
 
         &.selected {
             font-weight: 600;
+            padding-right: $navigation-gutter + $horizontal-link-padding;
+
+            > a {
+                margin-right: -$horizontal-link-padding;
+            }
+
+            .selected {
+                padding-right: $horizontal-link-padding
+            }
         }
 
         a {
             margin-bottom: -5px;
-            padding-top: 5px;
-        }
-
-        a,
-        &.selected {
             padding-left: $horizontal-link-padding;
             padding-right: $horizontal-link-padding;
-        }
-
-        &.selected > a {
-            margin-right: -$horizontal-link-padding;
+            padding-top: 5px;
         }
 
         li {
@@ -468,26 +479,50 @@ nav {
     }
 
     @media (max-width: $main-navigation-narrowed-breakpoint) {
+        $navigation-gutter: 50px;
         min-width: $narrowed-navigation-width;
 
-        ul {
-            padding: 65px (80 - $horizontal-link-padding) 10px 0;
+        > ul {
+            width: $narrowed-navigation-width;
+        }
+
+        li {
+            padding: 0 $navigation-gutter 15px 0;
+
+            &.selected {
+                padding-right: $navigation-gutter + $horizontal-link-padding;
+
+                .selected {
+                    padding-right: $horizontal-link-padding;
+                }
+            }
         }
     }
 
     @media (max-width: $pre-content-linearised-breakpoint) {
+        $navigation-gutter: 30px;
         min-width: $slim-navigation-width;
 
-        ul {
-            padding: 35px (50 - $horizontal-link-padding) 10px 0;
+        > ul {
+            top: 210px;
+            width: $slim-navigation-width;
         }
 
         li {
             font-size: 27px;
             line-height: 30px;
+            padding: 0 $navigation-gutter 15px 0;
 
             li {
                 font-size: 17px;
+            }
+
+            &.selected {
+                padding-right: $navigation-gutter + $horizontal-link-padding;
+
+                .selected {
+                    padding-right: $horizontal-link-padding;
+                }
             }
         }
     }
@@ -497,10 +532,11 @@ nav {
         color: #fff;
         margin-top: 15px;
 
-        ul {
+        > ul {
             background-color: $body-border-colour;
             padding: 15px 0 15px;
             position: static;
+            width: auto;
 
             ul {
                 margin: 0;
