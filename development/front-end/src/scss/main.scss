@@ -612,6 +612,7 @@ nav {
 
 main {
     margin-right: 70px;
+    overflow: hidden;       // Required so that block elements wider than 'main' do not expand the flex-box.
     padding: 60px 0 0;
     width: $main-width;
 
