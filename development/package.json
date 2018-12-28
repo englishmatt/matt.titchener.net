@@ -1,0 +1,11 @@
+{
+  "name": "matt.titchener.net",
+  "version": "0.2.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Titchener",
+  "license": "ISC"
+}
