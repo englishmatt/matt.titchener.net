@@ -1,19 +1,36 @@
-const { series, parallel, src, dest } = require("gulp");
+const { series, parallel, src, dest, watch } = require("gulp");
 const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
+const sassLint = require("gulp-sass-lint");
 const del = require("delete");
 const outputDirectory = "./dist";
 
+const sassFiles = ["./src/scss/**/*.scss"];
+const htmlFiles = ["./src/**/*.htm"];
+
 function html() {
   // Simple file copy
-  return src("./src/**/*.htm")
+  return src(htmlFiles)
     .pipe(dest(outputDirectory));
 }
 
+function scss() {
+  return src(sassFiles)
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
+}
+
 function css() {
-  return src("./src/scss/**/*.scss")
+
+  let sassOptions = {
+    outputStyle: "compressed",
+    includePaths: ["./node_modules/normalize.css/"]
+  };
+
+  return src(sassFiles)
     .pipe(sourcemaps.init())
-    .pipe(sass().on("error", sass.logError))
+    .pipe(sass(sassOptions).on("error", sass.logError))
     .pipe(sourcemaps.write("./"))   // Compiles source maps alongside CSS files
     .pipe(dest(outputDirectory + "/css"));
 }
@@ -23,10 +40,17 @@ function clean(callback) {
   del([outputDirectory], callback);
 }
 
-const build = parallel(html, css);
+const styles = series(scss, css);
+const build = parallel(html, styles);
 
 exports.default = series(clean, build);
 exports.html = html;
 exports.css = css;
 exports.build = build;
 exports.clean = clean;
+
+exports.watch = () => {
+  // Split watching over different file types to avoid unnecessary churn
+  watch(sassFiles, styles);
+  watch(htmlFiles, html);
+};

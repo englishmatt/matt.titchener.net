@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "quotes": [
+      2,
+      {
+        "style": "double"
+      }
+    ]
+  }
+}
