@@ -2,6 +2,7 @@ const { series, parallel, src, dest, watch } = require("gulp");
 const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const sassLint = require("gulp-sass-lint");
+const htmlHint = require("gulp-htmlhint");
 const del = require("delete");
 const outputDirectory = "./dist";
 
@@ -11,6 +12,8 @@ const htmlFiles = ["./src/**/*.htm"];
 function html() {
   // Simple file copy
   return src(htmlFiles)
+    .pipe(htmlHint())
+    .pipe(htmlHint.failAfterError())
     .pipe(dest(outputDirectory));
 }
 
