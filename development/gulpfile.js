@@ -3,19 +3,30 @@ const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const sassLint = require("gulp-sass-lint");
 const htmlHint = require("gulp-htmlhint");
+const access = require("gulp-accessibility");
 const del = require("delete");
 const outputDirectory = "./dist";
 
 const sassFiles = ["./src/scss/**/*.scss"];
 const htmlFiles = ["./src/**/*.htm"];
 
-function html() {
-  // Simple file copy
+function copyHtml() {
   return src(htmlFiles)
-    .pipe(htmlHint())
-    .pipe(htmlHint.failAfterError())
     .pipe(dest(outputDirectory));
 }
+
+function lintHtml() {
+  return src(htmlFiles)
+    .pipe(htmlHint())
+    .pipe(htmlHint.failAfterError());
+}
+
+function a11yHtml() {
+  return src(htmlFiles)
+    .pipe(access());
+}
+
+const html = parallel(lintHtml, copyHtml, a11yHtml);
 
 function scss() {
   return src(sassFiles)
