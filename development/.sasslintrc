@@ -1,5 +1,11 @@
 {
   "rules": {
+    "leading-zero": [
+      2,
+      {
+        "include": true
+      }
+    ],
     "quotes": [
       2,
       {
