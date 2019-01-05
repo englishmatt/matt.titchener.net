@@ -4,6 +4,8 @@
 $orange-color: #f80;
 $high-contrast-copy-color: #fff;
 $high-contrast-background-color: $orange-color;
+$max-content-width: 68rem;
+$content-padding: 2rem;
 
 // Mixins
 @mixin visually-hidden {
@@ -46,7 +48,7 @@ $high-contrast-background-color: $orange-color;
   }
 }
 
-// Layout
+// General
 
 html {
   height: 100%;
@@ -61,6 +63,26 @@ body {
 
 .page-header {
   border-top: 7px solid $orange-color;
+  position: sticky;
+  top: 0;
+}
+
+main {
+  flex: 1;
+}
+
+.page-header,
+main,
+.page-footer {
+  padding: 0 1rem;
+}
+
+.masthead,
+.page-content,
+.colophon {
+  margin: 0 auto;
+  max-width: $max-content-width;
+  width: 100%;
 }
 
 h1 {
