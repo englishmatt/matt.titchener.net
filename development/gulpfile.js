@@ -5,6 +5,7 @@ const sassLint = require("gulp-sass-lint");
 const htmlHint = require("gulp-htmlhint");
 const access = require("gulp-accessibility");
 const svgmin = require("gulp-svgmin");
+const browserSync = require("browser-sync").create();
 const del = require("delete");
 const outputDirectory = "dist";
 
@@ -12,6 +13,23 @@ const outputDirectory = "dist";
 const sassFiles = ["src/scss/**/*.scss"];
 const htmlFiles = ["src/**/*.htm"];
 const svgFiles = ["src/images/**/*.svg"];
+
+function live(done) {
+
+  const config = {
+    port: 5000,
+    server: {
+      baseDir: outputDirectory,
+      index: "index.htm"
+    },
+    watch: true,
+    notify: false,
+    browser: 'chrome.exe'
+  };
+
+  browserSync.init(config)
+  done();
+}
 
 function copyHtml() {
   return src(htmlFiles)
@@ -74,6 +92,7 @@ const styles = series(scss, css);
 const build = parallel(html, styles, svgs);
 
 exports.default = series(clean, build);
+exports.live = live;
 exports.html = html;
 exports.css = css;
 exports.svgs = svgs;
