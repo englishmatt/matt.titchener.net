@@ -1,5 +1,7 @@
 {
   "ignore": [
+    "WCAG2A.Principle1.Guideline1_1.1_1_1.G73,G74",
+    "WCAG2A.Principle1.Guideline1_1.1_1_1.G94.Image",
     "WCAG2A.Principle2.Guideline2_4.2_4_2.H25.2",
     "WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81"
   ]

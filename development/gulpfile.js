@@ -4,11 +4,14 @@ const sourcemaps = require("gulp-sourcemaps");
 const sassLint = require("gulp-sass-lint");
 const htmlHint = require("gulp-htmlhint");
 const access = require("gulp-accessibility");
+const svgmin = require("gulp-svgmin");
 const del = require("delete");
-const outputDirectory = "./dist";
+const outputDirectory = "dist";
 
-const sassFiles = ["./src/scss/**/*.scss"];
-const htmlFiles = ["./src/**/*.htm"];
+// Paths
+const sassFiles = ["src/scss/**/*.scss"];
+const htmlFiles = ["src/**/*.htm"];
+const svgFiles = ["src/images/**/*.svg"];
 
 function copyHtml() {
   return src(htmlFiles)
@@ -49,22 +52,37 @@ function css() {
     .pipe(dest(outputDirectory + "/css"));
 }
 
-function clean(callback) {
+function svgs() {
+
+  return src(svgFiles)
+    .pipe(svgmin({
+      plugins: [{
+        cleanupNumericValues: {
+          floatPrecision: 2
+        }
+      }]
+    }))
+    .pipe(dest(outputDirectory + "/images"));
+}
+
+function clean(done) {
   // Removes entire dist directory
-  del([outputDirectory], callback);
+  del([outputDirectory], done);
 }
 
 const styles = series(scss, css);
-const build = parallel(html, styles);
+const build = parallel(html, styles, svgs);
 
 exports.default = series(clean, build);
 exports.html = html;
 exports.css = css;
+exports.svgs = svgs;
 exports.build = build;
 exports.clean = clean;
 
 exports.watch = () => {
-  // Split watching over different file types to avoid unnecessary churn
+  // Split watching over different file types to avoid churn
   watch(sassFiles, styles);
   watch(htmlFiles, html);
+  watch(svgFiles, svgs);
 };
