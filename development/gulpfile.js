@@ -27,7 +27,13 @@ function live(done) {
     browser: 'chrome.exe'
   };
 
-  browserSync.init(config)
+  browserSync.init(config);
+
+  watch("dist/images/**/*.svg", (done) => {
+    browserSync.reload();
+    done();
+  });
+
   done();
 }
 
