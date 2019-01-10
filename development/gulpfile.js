@@ -94,7 +94,7 @@ function clean(done) {
   del([outputDirectory], done);
 }
 
-const styles = series(scss, css);
+const styles = series(css);
 const build = parallel(html, styles, svgs);
 
 exports.default = series(clean, build);
