@@ -1,9 +1,14 @@
 @import "normalize";
 
 :root {
-  --orange-color: #f80;
+  // Colors
+  --accent-color: #f80;
   --high-contrast-copy-color: #fff;
-  --high-contrast-background-color: --orange-color;
+  --high-contrast-background-color: --accent-color;
+  --positive-color: #00a321;
+  --call-to-action-link-color: #fff;
+
+  // Layout
   --max-content-width: 68rem;
   --content-padding: 2rem;
 }
@@ -70,7 +75,7 @@ body {
 }
 
 .page-header {
-  border-top: 7px solid var(--orange-color);
+  border-top: 7px solid var(--accent-color);
   position: sticky;
   top: 0;
 }
@@ -104,7 +109,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 3rem 0 2.5rem;
+  padding: 3rem 0 0;
   border-bottom: 2px solid var(--border-color);
 
   .logotype {
@@ -118,6 +123,38 @@ h1 {
   --link-active-color: #3d3d3d;
   font-size: 1.375rem;
 
+  li {
+    position: relative;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+
+      li {
+
+        &.active span {
+
+          &::after {
+            content: "";
+          }
+        }
+      }
+    }
+  }
+
   .active {
 
     span {
@@ -128,49 +165,69 @@ h1 {
 
   .active span,
   a {
-    border-radius: 4px;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.9rem 2.2rem;
+    transition: color 200ms;
+    display: block;
   }
 
-  .active span,
-  a:focus,
-  a:hover {
+  a:link {
+    text-decoration: none;
+  }
 
-    &::after {
-      color: var(--orange-color);
-      content: "\2022";
-      font-size: 2rem;
-      left: 0;
-      line-height: 1;
-      position: absolute;
-      text-align: center;
-      top: 100%;
-      width: 100%;
+  li:not(.call-to-action) {
+
+    &.active span,
+    a:focus,
+    a:hover {
+
+      &::after {
+        color: var(--accent-color);
+        content: "\2022";
+        font-size: 2.4rem;
+        left: 0;
+        line-height: 0;
+        position: absolute;
+        text-align: center;
+        top: 68%;
+        width: 100%;
+      }
+    }
+
+    a {
+
+      &:link,
+      &:visited {
+        color: var(--link-color);
+        text-decoration: none;
+      }
+
+      &:focus,
+      &:hover {
+        color: var(--link-active-color);
+      }
     }
   }
 
-  a {
+  .call-to-action {
+    margin-left: 1.5rem;
 
-    &:link,
-    &:visited {
-      color: var(--link-color);
-      text-decoration: none;
+    a {
+      border-radius: 4px;
+      padding: 0.5rem 1.1rem 0.45rem;
+      font-weight: 600;
+      box-shadow: 0 0 0 2px inset var(--positive-color);
+
+      &:link,
+      &:visited {
+        color: var(--call-to-action-link-color);
+        background-color: var(--positive-color);
+      }
+
+      &:focus,
+      &:hover {
+        color: var(--positive-color);
+        background-color: var(--call-to-action-link-color);
+      }
     }
-
-    &:focus,
-    &:hover {
-      color: var(--link-active-color);
-    }
-  }
-
-  li {
-    position: relative;
-  }
-
-  ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
   }
 }
