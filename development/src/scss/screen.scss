@@ -7,6 +7,7 @@
   --high-contrast-background-color: --accent-color;
   --positive-color: #00a321;
   --call-to-action-link-color: #fff;
+  --copy-color: #707070;
 
   // Layout
   --max-content-width: 68rem;
@@ -72,6 +73,7 @@ body {
   flex-direction: column;
   font-family: "Proxima Nova";
   min-height: 100%;
+  line-height: 1.4;
 }
 
 .page-header {
@@ -106,7 +108,7 @@ h1 {
 // Page nameplate
 
 .nameplate {
-  --border-color: rgba(0, 0, 0, 0.05);
+  --border-color: rgba(0, 0, 0, 0.07);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -230,5 +232,18 @@ h1 {
         background-color: var(--call-to-action-link-color);
       }
     }
+  }
+}
+
+// Dek
+
+.dek {
+  border-bottom: 2px solid #eee;
+  color: var(--copy-color);
+  font-size: 1.625rem;
+  padding: 3rem 0;
+
+  p {
+    margin: 0;
   }
 }
