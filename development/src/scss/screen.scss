@@ -75,6 +75,7 @@ body {
 }
 
 .page-header {
+  background-color: #fff;
   border-top: 7px solid var(--accent-color);
   position: sticky;
   top: 0;
@@ -90,7 +91,7 @@ main,
   padding: 0 1rem;
 }
 
-.masthead,
+.nameplate,
 .page-content,
 .colophon {
   margin: 0 auto;
@@ -102,15 +103,15 @@ h1 {
   @include visually-hidden;
 }
 
-// Page Masthead
+// Page nameplate
 
-.masthead {
-  --border-color: #eee;
+.nameplate {
+  --border-color: rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 3rem 0 0;
-  border-bottom: 2px solid var(--border-color);
+  box-shadow: 0 2px 0 0 var(--border-color);
 
   .logotype {
     transform: translate(-20.2%, 21%);
@@ -165,7 +166,7 @@ h1 {
 
   .active span,
   a {
-    padding: 0.5rem 1.9rem 2.2rem;
+    padding: 0.5rem 1.9rem 2.7rem;
     transition: color 200ms;
     display: block;
   }
@@ -188,7 +189,7 @@ h1 {
         line-height: 0;
         position: absolute;
         text-align: center;
-        top: 68%;
+        top: 65%;
         width: 100%;
       }
     }
