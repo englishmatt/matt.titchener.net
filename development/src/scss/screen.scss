@@ -266,6 +266,7 @@ h2 {
 .projects {
   --tile-background-color: #f3f9ff;
   --tile-header-color: #003D7A;
+  --tile-gap: 25px;
 
   h3 {
     color: inherit;
@@ -274,29 +275,35 @@ h2 {
   }
 
   ul {
+    align-items: flex-start;
     padding: 0;
     margin: 0;
     list-style-type: none;
     display: flex;
+    margin-right: calc(var(--tile-gap) * -1);
+    justify-content: left;
   }
 
   li {
-    --square-dimension: 25%;
-    flex: 0 1 var(--square-dimension);
+    --square-dimension: calc(25% - var(--tile-gap));
     background-color: var(--tile-background-color);
     border-radius: 4px;
     color: var(--tile-header-color);
-    margin-right: 25px;
+    flex: 0 0 var(--square-dimension);
     font-size: 1.125rem;
+    margin-right: var(--tile-gap);
+    width: calc(100% + var(--tile-gap));
 
-    a {
+    > a {
+      --top-padding: 1.3rem;
+      height: 0;
+      padding: var(--top-padding) 1.6rem calc(100% - var(--top-padding));
       display: block;
 
       &:link,
       &:visited {
         color: inherit;
         text-decoration: none;
-        padding: 1.2rem 1.6rem;
       }
     }
   }
