@@ -82,6 +82,7 @@ body {
   border-top: 7px solid var(--accent-color);
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
 main {
@@ -114,7 +115,6 @@ h2 {
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-top: 3.5rem;
   text-transform: uppercase;
 }
 
@@ -267,6 +267,15 @@ h2 {
   --tile-background-color: #f3f9ff;
   --tile-header-color: #003D7A;
   --tile-gap: 25px;
+  --project-group-title-margin-top: 3.5rem;
+  --project-group-title-margin-bottom: 1.5rem;
+  --project-group-title-height: 1.6rem;
+
+  h2 {
+    height: var(--project-group-title-height);
+    margin-top: var(--project-group-title-margin-top);
+    margin-bottom: var(--project-group-title-margin-bottom);
+  }
 
   h3 {
     color: inherit;
@@ -286,25 +295,50 @@ h2 {
 
   li {
     --square-dimension: calc(25% - var(--tile-gap));
-    background-color: var(--tile-background-color);
-    border-radius: 4px;
     color: var(--tile-header-color);
     flex: 0 0 var(--square-dimension);
     font-size: 1.125rem;
     margin-right: var(--tile-gap);
+    position: relative;
     width: calc(100% + var(--tile-gap));
 
-    > a {
-      --top-padding: 1.3rem;
-      height: 0;
-      padding: var(--top-padding) 1.6rem calc(100% - var(--top-padding));
+    &::after {
+      content: "";
       display: block;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+
+    &.cross-cutting {
+
+      a {
+        height: calc(200% + var(--project-group-title-margin-top) + var(--project-group-title-height) + var(--project-group-title-margin-bottom));
+      }
+    }
+
+    > a {
+      display: block;
+      background-color: var(--tile-background-color);
+      padding: 1.3rem 1.6rem;
+      border-radius: 4px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 
       &:link,
       &:visited {
         color: inherit;
         text-decoration: none;
       }
+    }
+  }
+
+  .ux-design {
+
+    li:last-child {
+      margin-left: auto;
     }
   }
 }
