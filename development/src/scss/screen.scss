@@ -6,7 +6,7 @@
   --high-contrast-copy-color: #fff;
   --high-contrast-background-color: --accent-color;
   --positive-color: #00a321;
-  --call-to-action-link-color: #fff;
+  --call-to-action-link-color: rgba(255, 255, 255, 0.7);
   --copy-color: #707070;
   --heading-color: #3d3d3d;
 
@@ -230,7 +230,6 @@ h2 {
     a {
       border-radius: 4px;
       padding: 0.5rem 1.1rem 0.45rem;
-      font-weight: 600;
       box-shadow: 0 0 0 2px inset var(--positive-color);
 
       &:link,
