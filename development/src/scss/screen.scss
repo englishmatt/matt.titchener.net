@@ -127,6 +127,7 @@ h2 {
   align-items: baseline;
   padding: 3rem 0 0;
   box-shadow: 0 2px 0 0 var(--border-color);
+  transition: padding 300ms;
 
   .logotype {
     transform: translate(-20.2%, 21%);
@@ -137,7 +138,50 @@ h2 {
   --link-color: #a1a1a1;
   --link-background-color: #eee;
   --link-active-color: var(--heading-color);
+  display: flex;
   font-size: 1.375rem;
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &:hover,
+    &:focus-within {
+
+      li {
+
+        &.active span {
+
+          &::after {
+            content: "";
+          }
+        }
+      }
+    }
+
+    li {
+
+      &.active span,
+      &.active:hover span,
+      a:focus,
+      a:hover {
+
+        &::after {
+          color: var(--accent-color);
+          content: "\2022";
+          font-size: 2.4rem;
+          left: 0;
+          line-height: 0;
+          position: absolute;
+          text-align: center;
+          top: 65%;
+          width: 100%;
+        }
+      }
+    }
+  }
 
   li {
     position: relative;
@@ -149,24 +193,18 @@ h2 {
     &:last-child {
       margin-right: 0;
     }
-  }
 
-  ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    a {
 
-    &:hover {
+      &:link,
+      &:visited {
+        color: var(--link-color);
+        text-decoration: none;
+      }
 
-      li {
-
-        &.active span {
-
-          &::after {
-            content: "";
-          }
-        }
+      &:focus,
+      &:hover {
+        color: var(--link-active-color);
       }
     }
   }
@@ -188,40 +226,6 @@ h2 {
 
   a:link {
     text-decoration: none;
-  }
-
-  li:not(.call-to-action) {
-
-    &.active span,
-    a:focus,
-    a:hover {
-
-      &::after {
-        color: var(--accent-color);
-        content: "\2022";
-        font-size: 2.4rem;
-        left: 0;
-        line-height: 0;
-        position: absolute;
-        text-align: center;
-        top: 65%;
-        width: 100%;
-      }
-    }
-
-    a {
-
-      &:link,
-      &:visited {
-        color: var(--link-color);
-        text-decoration: none;
-      }
-
-      &:focus,
-      &:hover {
-        color: var(--link-active-color);
-      }
-    }
   }
 
   .call-to-action {
