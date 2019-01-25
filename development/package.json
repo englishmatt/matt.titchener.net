@@ -18,6 +18,8 @@
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svgmin": "^2.1.0",
-    "normalize.css": "^8.0.1"
+    "gulp-typescript": "^5.0.0",
+    "normalize.css": "^8.0.1",
+    "typescript": "^3.2.4"
   }
 }

@@ -5,6 +5,7 @@ const sassLint = require("gulp-sass-lint");
 const htmlHint = require("gulp-htmlhint");
 const access = require("gulp-accessibility");
 const svgmin = require("gulp-svgmin");
+const typeScript = require("gulp-typescript");
 const browserSync = require("browser-sync").create();
 const del = require("delete");
 const outputDirectory = "dist";
@@ -13,6 +14,7 @@ const outputDirectory = "dist";
 const sassFiles = ["src/scss/**/*.scss"];
 const htmlFiles = ["src/**/*.htm"];
 const svgFiles = ["src/images/**/*.svg"];
+const typeScriptFiles = ["src/scripts/**/*.ts"];
 
 function live(done) {
 
@@ -76,6 +78,13 @@ function css() {
     .pipe(dest(outputDirectory + "/css"));
 }
 
+function scripts() {
+
+  return src(typeScriptFiles)
+    .pipe(typeScript())
+    .pipe(dest(outputDirectory + "/js"));
+}
+
 function svgs() {
 
   return src(svgFiles)
@@ -95,13 +104,14 @@ function clean(done) {
 }
 
 const styles = series(css);
-const build = parallel(html, styles, svgs);
+const build = parallel(html, styles, svgs, scripts);
 
 exports.default = series(clean, build);
 exports.live = live;
 exports.html = html;
 exports.css = css;
 exports.svgs = svgs;
+exports.scripts = scripts;
 exports.build = build;
 exports.clean = clean;
 
@@ -110,4 +120,5 @@ exports.watch = () => {
   watch(sassFiles, styles);
   watch(htmlFiles, html);
   watch(svgFiles, svgs);
+  watch(typeScriptFiles, scripts);
 };
