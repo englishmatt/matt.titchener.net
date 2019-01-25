@@ -4,7 +4,7 @@
   // Colors
   --accent-color: #f80;
   --high-contrast-copy-color: #fff;
-  --high-contrast-background-color: --accent-color;
+  --high-contrast-background-color: var(--accent-color);
   --positive-color: #00a321;
   --call-to-action-link-color: rgba(255, 255, 255, 0.7);
   --copy-color: #707070;
