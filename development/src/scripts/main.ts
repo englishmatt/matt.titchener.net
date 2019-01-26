@@ -3,6 +3,10 @@
   let header: HTMLElement = document.querySelector(".page-header"),
       initialHeaderHeight = header.getBoundingClientRect().height;
 
+  window.addEventListener("DOMContentLoaded", () => {
+    header.style.opacity = "1";
+  });
+
   window.addEventListener("scroll", () => {
 
     let headerHeight = window.pageYOffset > initialHeaderHeight ? 0 : initialHeaderHeight - window.pageYOffset,

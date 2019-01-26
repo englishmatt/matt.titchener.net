@@ -39,6 +39,10 @@
   box-sizing: border-box;
 }
 
+img:-moz-loading {
+  visibility: hidden;
+}
+
 // Accessibility
 
 .skip-to-content {
@@ -91,6 +95,7 @@ body {
 }
 
 .page-header {
+  opacity: 0;
   background-color: #fff;
   display: flex;
   font-size: 1rem;
@@ -100,6 +105,10 @@ body {
   top: 0;
   width: 100%;
   z-index: 10;
+
+  .no-js & {
+    opacity: 1;
+  }
 }
 
 main {
