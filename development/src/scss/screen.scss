@@ -6,13 +6,14 @@
   --high-contrast-copy-color: #fff;
   --high-contrast-background-color: var(--accent-color);
   --positive-color: #00a321;
-  --call-to-action-link-color: rgba(255, 255, 255, 0.7);
+  --call-to-action-link-color: #fff;
   --copy-color: #707070;
   --heading-color: #3d3d3d;
 
   // Layout
   --max-content-width: 68rem;
   --content-padding: 2rem;
+  --page-header-height: 11rem;
 
   // Timing
   --scroll-transition-duration: 300ms;
@@ -91,18 +92,19 @@ body {
 
 .page-header {
   background-color: #fff;
-  position: sticky;
+  display: flex;
+  font-size: 1rem;
+  height: var(--page-header-height);
+  min-height: 9.5em;
+  position: fixed;
   top: 0;
-  transition: transform var(--scroll-transition-duration);
+  width: 100%;
   z-index: 10;
-
-  .page-scrolled & {
-    transform: translate(0, -3rem);
-  }
 }
 
 main {
   flex: 1;
+  margin-top: var(--page-header-height);
 }
 
 .page-header,
@@ -139,20 +141,19 @@ h2 {
 .nameplate {
   --border-color: rgba(0, 0, 0, 0.07);
   display: flex;
+  height: 100%;
   justify-content: space-between;
-  align-items: baseline;
-  padding: 3rem 0 0;
+  align-items: flex-end;
   box-shadow: 0 2px 0 0 var(--border-color);
 
   .logotype {
-    --x-translation: -20.2%;
-    --y-translation: 21%;
+    --x-translation: -20.3%;
+    --y-translation: calc(1rem - 54%);
+    height: calc(2rem + 18%);
     transform: translate(var(--x-translation), var(--y-translation));
-    transform-origin: calc(var(--x-translation) * -1) calc(100% - var(--y-translation));
-    transition: transform var(--scroll-transition-duration);
 
-    .page-scrolled & {
-      transform: translate(var(--x-translation), var(--y-translation)) scale(0.7);
+    img {
+      height: 100%;
     }
   }
 }
@@ -162,7 +163,8 @@ h2 {
   --link-background-color: #eee;
   --link-active-color: var(--heading-color);
   display: flex;
-  font-size: 1.375rem;
+  font-size: calc(0.375em + 1rem);
+  height: calc(20% + 2rem);
 
   ul {
     display: flex;
@@ -194,12 +196,10 @@ h2 {
         &::after {
           color: var(--accent-color);
           content: "\2022";
-          font-size: 2.4rem;
+          font-size: 1.3em;
           left: 0;
-          line-height: 0;
+          line-height: 0.9;
           position: absolute;
-          text-align: center;
-          top: 65%;
           width: 100%;
         }
       }
@@ -215,6 +215,14 @@ h2 {
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &.active span,
+    a {
+      display: block;
+      height: 100%;
+      padding: 0.5em 1em 1em;
+      transition: color 200ms;
     }
 
     a {
@@ -240,24 +248,20 @@ h2 {
     }
   }
 
-  .active span,
-  a {
-    padding: 0.5rem 1.9rem 2.7rem;
-    transition: color 200ms;
-    display: block;
-  }
-
   a:link {
     text-decoration: none;
   }
 
   .call-to-action {
-    margin-left: 1.5rem;
+    margin-left: 0.8em;
+    font-weight: 600;
 
     a {
       border-radius: 4px;
-      padding: 0.5rem 1.1rem 0.45rem;
       box-shadow: 0 0 0 2px inset var(--positive-color);
+      display: block;
+      height: auto;
+      padding: 0.4em 0.8em 0.35em;
 
       &:link,
       &:visited {
