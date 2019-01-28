@@ -2,6 +2,7 @@
 
 :root {
   // Colors
+  --dark-blue: #314c67;
   --accent-color: #f80;
   --high-contrast-copy-color: #fff;
   --high-contrast-background-color: var(--accent-color);
@@ -304,7 +305,7 @@ h2 {
 
 .projects {
   --tile-background-color: #f3f9ff;
-  --tile-header-color: #314c67;
+  --tile-header-color: var(--dark-blue);
   --tile-gap: 25px;
   --project-group-title-margin-top: 3.5rem;
   --project-group-title-margin-bottom: 1.5rem;
@@ -415,7 +416,7 @@ h2 {
 // Footer
 
 .page-footer {
-  background-color: var(--accent-color);
+  background-color: var(--dark-blue);
   color: #fff;
   margin-top: 8rem;
 
