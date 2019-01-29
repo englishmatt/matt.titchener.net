@@ -305,11 +305,13 @@ h2 {
 
 .projects {
   --tile-background-color: #f3f9ff;
+  --tile-background-shadow-color: #e8f4ff;
   --tile-header-color: var(--dark-blue);
   --tile-gap: 25px;
   --project-group-title-margin-top: 3.5rem;
   --project-group-title-margin-bottom: 1.5rem;
   --project-group-title-height: 1.6rem;
+  --spotlight-radius: 200px;
 
   h2 {
     height: var(--project-group-title-height);
@@ -358,15 +360,19 @@ h2 {
 
     > a {
       display: block;
-      background-color: var(--tile-background-color);
       padding: 1.3rem 1.6rem;
       border-radius: 4px;
+      background: radial-gradient(circle at var(--center-x, -100%) var(--center-y, -100%),
+                                  var(--tile-background-shadow-color) var(--spotlight-radius),
+                                  transparent var(--spotlight-radius)
+                  ),
+                  var(--tile-background-color);
+      background-attachment: fixed;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      overflow: hidden;
 
       h3, p {
         position: relative;
@@ -377,30 +383,6 @@ h2 {
       &:visited {
         color: inherit;
         text-decoration: none;
-      }
-
-      &::before {
-        background-color: inherit;
-        border-radius: 50%;
-        content: "";
-        filter: hue-rotate(27deg) saturate(1000%) brightness(98%);
-        left: 0;
-        opacity: 0;
-        padding-bottom: 100%;
-        position: absolute;
-        top: 0;
-        transform: scale(1.5, 1.5);
-        transition: transform 1s, opacity 500ms;
-        width: 100%;
-        z-index: 1;
-      }
-
-      &:hover {
-
-        &::before {
-          transform: scale(2, 2);
-          opacity: 1;
-        }
       }
     }
   }

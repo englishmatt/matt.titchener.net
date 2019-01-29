@@ -9,7 +9,6 @@
       initialHeaderHeight = header.getBoundingClientRect().height;  // Using .getBoundingClientRect provides sub-pixel
                                                                     // measurements; compare with .offsetHeight.
 
-
   window.addEventListener("DOMContentLoaded", () => { header.style.opacity = "1"; });
 
   window.addEventListener("scroll", () => {
@@ -28,5 +27,17 @@
     // Add class to indicate page is in scrolled state
     document.documentElement.classList.toggle("page-scrolled", window.pageYOffset > 0 ? true : false);
   });
+
+}());
+
+(function () {
+
+  // TODO: This does not perform well in Firefox, perhaps introduce alternative approach? RequestAnimationFrame?
+  function handleTileMouseMove(event) {
+    document.documentElement.style.setProperty('--center-x', `${event.clientX}px`);
+    document.documentElement.style.setProperty('--center-y', `${event.clientY}px`);
+  }
+
+  document.addEventListener("mousemove", handleTileMouseMove, false);
 
 }());
