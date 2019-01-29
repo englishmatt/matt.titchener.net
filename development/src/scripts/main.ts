@@ -29,15 +29,3 @@
   });
 
 }());
-
-(function () {
-
-  // TODO: This does not perform well in Firefox, perhaps introduce alternative approach? RequestAnimationFrame?
-  function handleTileMouseMove(event) {
-    document.documentElement.style.setProperty('--center-x', `${event.clientX}px`);
-    document.documentElement.style.setProperty('--center-y', `${event.clientY}px`);
-  }
-
-  document.addEventListener("mousemove", handleTileMouseMove, false);
-
-}());
