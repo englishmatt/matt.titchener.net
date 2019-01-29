@@ -44,6 +44,11 @@ img:-moz-loading {
   visibility: hidden;
 }
 
+::selection {
+  color: #fff;
+  background: var(--dark-blue);
+}
+
 // Accessibility
 
 .skip-to-content {
@@ -92,6 +97,12 @@ body {
     height: 7px;
     background-color: var(--accent-color);
     z-index: 1000;
+    transform-origin: 0 0;
+    transition: transform 400ms;
+
+    .page-scrolled & {
+      transform: scaleY(0.5);
+    }
   }
 }
 
@@ -106,6 +117,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 10;
+  user-select: none;
 
   .no-js & {
     opacity: 1;
