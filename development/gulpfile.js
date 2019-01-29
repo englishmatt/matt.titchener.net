@@ -22,7 +22,12 @@ function live(done) {
     port: 5000,
     server: {
       baseDir: outputDirectory,
-      index: "index.htm"
+      index: "index.htm",
+      routes: {
+        '/about': outputDirectory + "/about.htm",
+        '/': outputDirectory + "/index.htm",
+        '/resume': outputDirectory + "/resume.htm"
+      }
     },
     watch: true,
     notify: false,
