@@ -49,6 +49,26 @@ img:-moz-loading {
   background: var(--dark-blue);
 }
 
+section,
+header {
+
+  &.anonymous {
+
+    > h1, > h2, > h3, > h4, > h5, > h6 {
+      @include visually-hidden;
+    }
+  }
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.portrait {
+  border-radius: 4px;
+}
+
 // Accessibility
 
 .skip-to-content {
@@ -129,6 +149,19 @@ main {
   margin-top: var(--page-header-height);
 }
 
+article {
+  --aside-width: 25rem;
+  --aside-gutter-width: 3rem;
+  margin-left: var(--aside-width);
+
+  img {
+    float: left;
+    margin-left: calc(var(--aside-width) * -1);
+    width: calc(var(--aside-width) - var(--aside-gutter-width));
+    margin-top: 0.6rem;
+  }
+}
+
 .page-header,
 main,
 .page-footer {
@@ -148,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  @include visually-hidden;
+  font-size: 1.875rem;
 }
 
 h2 {
@@ -300,15 +333,35 @@ h2 {
   }
 }
 
-// Dek
+// Content header
 
-.dek {
+.content-header {
+  margin-bottom: 2rem;
   border-bottom: 2px solid #eee;
+  padding: 2rem 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  h1 {
+    font-weight: 600;
+    margin: 1.5rem 0 0;
+  }
+}
+
+.dek,
+.lede {
   color: var(--copy-color);
   font-size: 1.625rem;
-  padding: 3rem 0;
+  line-height: calc(36 / 26);
+  margin: 1rem 0;
+}
+
+.dek {
 
   p {
+    font-size: inherit;
     margin: 0;
   }
 }
@@ -384,7 +437,12 @@ h2 {
 
       h3, p {
         position: relative;
+        line-height: 1.35;
         z-index: 2;
+      }
+
+      p {
+        font-size: inherit;
       }
 
       &:link,
