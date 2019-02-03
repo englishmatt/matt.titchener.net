@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Matt Titchener&thinsp;&mdash;&thinsp;Work</title>
+    <title>Matt Titchener&thinsp;&mdash;&thinsp;SimplePromises.js</title>
 
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
     <link rel="manifest" href="site.webmanifest" />
@@ -16,7 +16,7 @@
 
     <header class="page-header">
       <div class="nameplate">
-        <div class="logotype"><a href="/"><img src="/images/logo.svg" alt="Matt Titchener"></a></div>
+        <div class="logotype"><img src="/images/logo.svg" alt="Matt Titchener"></div>
         <nav class="top-level-navigation">
           <ul>
             <li><a href="/">Work</a></li>
@@ -30,15 +30,22 @@
 
     <main id="main">
       <div class="page-content">
-        <article class="biography">
+        <article class="project">
           <header class="content-header">
-            <h1>About</h1>
+            <h1>SimplePromises.js</h1>
           </header>
-
-          <img class="portrait" src="https://placekitten.com/700/1000" alt="Portrait of Matt Titchener" />
 
           <p class="lede">I am a generalist. Those in the software engineering industry might describe me as "full stack", but I think it's more than that. Part interaction designer, part software engineer, I have spent countless hours solving problems .</p>
           <p>I've spent the majority of my career writing code, but have led and contributed to UX and visual design projects at every opportunity. I have found that being able to think in multiple disciplines results in clear design, efficient projects lifecycles, and scalable infrastructure.</p>
+          <pre>
+            <code>
+              let header: HTMLElement = document.querySelector(".page-header"),
+                  initialHeaderHeight = header.getBoundingClientRect().height;  // Using .getBoundingClientRect provides sub-pixel
+                                                                  // measurements; compare with .offsetHeight.
+
+                  window.addEventListener("DOMContentLoaded", () => { header.style.opacity = "1"; });
+            </code>
+          </pre>
         </article>
       </div>
     </main>

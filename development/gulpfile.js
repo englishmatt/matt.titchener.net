@@ -26,7 +26,8 @@ function live(done) {
       routes: {
         '/about': outputDirectory + "/about.htm",
         '/': outputDirectory + "/index.htm",
-        '/resume': outputDirectory + "/resume.htm"
+        '/resume': outputDirectory + "/resume.htm",
+        '/project/simplepromisesjs': outputDirectory + "/project/simplepromisesjs.htm"
       }
     },
     watch: true,

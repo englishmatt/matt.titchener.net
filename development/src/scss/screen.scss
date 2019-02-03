@@ -3,6 +3,8 @@
 :root {
   // Colors
   --dark-blue: #314c67;
+  --baby-blue: #f3f9ff;
+  --off-baby-blue: #e8f4ff;
   --accent-color: #f80;
   --high-contrast-copy-color: #fff;
   --high-contrast-background-color: var(--accent-color);
@@ -147,19 +149,6 @@ body {
 main {
   flex: 1;
   margin-top: var(--page-header-height);
-}
-
-article {
-  --aside-width: 25rem;
-  --aside-gutter-width: 3rem;
-  margin-left: var(--aside-width);
-
-  img {
-    float: left;
-    margin-left: calc(var(--aside-width) * -1);
-    width: calc(var(--aside-width) - var(--aside-gutter-width));
-    margin-top: 0.6rem;
-  }
 }
 
 .page-header,
@@ -369,8 +358,8 @@ h2 {
 // Project list
 
 .projects {
-  --tile-background-color: #f3f9ff;
-  --tile-background-shadow-color: #e8f4ff;
+  --tile-background-color: var(--baby-blue);
+  --tile-background-shadow-color: var(--off-baby-blue);
   --tile-header-color: var(--dark-blue);
   --tile-gap: 25px;
   --project-group-title-margin-top: 3.5rem;
@@ -490,6 +479,37 @@ h2 {
       &:link {
         color: rgba(255, 255, 255, 0.4);
       }
+    }
+  }
+}
+
+// Article layouts
+article {
+  --whitespace-width: 25rem;
+}
+
+.biography {
+  --gutter-width: 3rem;
+  margin-left: var(--whitespace-width);
+
+  img {
+    float: left;
+    margin-left: calc(var(--whitespace-width) * -1);
+    width: calc(var(--whitespace-width) - var(--gutter-width));
+    margin-top: 0.6rem;
+  }
+}
+
+.project {
+
+  p {
+    margin-right: var(--whitespace-width);
+  }
+
+  pre {
+
+    code {
+      background-color: var(--baby-blue);
     }
   }
 }
