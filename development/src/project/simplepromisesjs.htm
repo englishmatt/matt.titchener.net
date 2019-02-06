@@ -39,9 +39,7 @@
           <p>I've spent the majority of my career writing code, but have led and contributed to UX and visual design projects at every opportunity. I have found that being able to think in multiple disciplines results in clear design, efficient projects lifecycles, and scalable infrastructure.</p>
           <pre>
             <code>
-              let header: HTMLElement = document.querySelector(".page-header"),
-                  initialHeaderHeight = header.getBoundingClientRect().height;  // Using .getBoundingClientRect provides sub-pixel
-                                                                  // measurements; compare with .offsetHeight.
+let <span class="variable">header</span>: <span class="type">HTMLElement</span> = document.querySelector(".page-header"),
 
                   window.addEventListener("DOMContentLoaded", () => { header.style.opacity = "1"; });
             </code>

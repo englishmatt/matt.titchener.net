@@ -507,9 +507,22 @@ article {
   }
 
   pre {
+    background-color: var(--baby-blue);
+    border-radius: 4px;
+    overflow-x: auto;
 
     code {
-      background-color: var(--baby-blue);
+      color: var(--heading-color);
     }
   }
+}
+
+// Syntax highlighting
+
+.variable {
+  color: #f00;
+}
+
+.type {
+  color: #0f0;
 }
