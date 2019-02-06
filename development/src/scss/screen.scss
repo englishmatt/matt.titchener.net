@@ -486,6 +486,17 @@ h2 {
 // Article layouts
 article {
   --whitespace-width: 25rem;
+
+  p:last-of-type {
+
+    &::after {
+      content: "\2022";
+      color: var(--accent-color);
+      font-size: 3rem;
+      line-height: 0;
+      vertical-align: -0.3rem;
+    }
+  }
 }
 
 .biography {
