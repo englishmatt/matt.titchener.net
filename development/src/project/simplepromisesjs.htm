@@ -38,11 +38,13 @@
           <p class="lede">I am a generalist. Those in the software engineering industry might describe me as "full stack", but I think it's more than that. Part interaction designer, part software engineer, I have spent countless hours solving problems .</p>
           <p>I've spent the majority of my career writing code, but have led and contributed to UX and visual design projects at every opportunity. I have found that being able to think in multiple disciplines results in clear design, efficient projects lifecycles, and scalable infrastructure.</p>
           <pre>
-            <code>
+<code>
 let <span class="variable">header</span>: <span class="type">HTMLElement</span> = document.querySelector(".page-header"),
+    initialHeaderHeight = header.getBoundingClientRect().height;  <span class="comment">// Using .getBoundingClientRect provides sub-pixel</span>
+                                                                  <span class="comment">// measurements; compare with .offsetHeight.</span>
 
-                  window.addEventListener("DOMContentLoaded", () => { header.style.opacity = "1"; });
-            </code>
+  window.addEventListener("DOMContentLoaded", () => { header.style.opacity = "1"; });
+</code>
           </pre>
         </article>
       </div>

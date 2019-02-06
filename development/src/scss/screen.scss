@@ -510,19 +510,34 @@ article {
     background-color: var(--baby-blue);
     border-radius: 4px;
     overflow-x: auto;
-
-    code {
-      color: var(--heading-color);
-    }
+    padding: 1.3rem;
   }
 }
 
 // Syntax highlighting
 
-.variable {
-  color: #f00;
-}
+code {
+  color: var(--dark-blue);
+  font-family: Consolas, monospace;
 
-.type {
-  color: #0f0;
+  .variable {
+    filter: brightness(0%);
+    font-weight: bold;
+  }
+
+  .string {
+    filter: hue-rotate(70deg) saturate(200%);
+  }
+
+  .type {
+    filter: hue-rotate(-50deg) brightness(180%);
+  }
+
+  .comment {
+    filter: brightness(180%);
+  }
+
+  .keyword {
+    font-style: italic;
+  }
 }
