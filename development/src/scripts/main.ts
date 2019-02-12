@@ -10,7 +10,6 @@
                                                                     // measurements; compare with .offsetHeight.
 
   window.addEventListener("DOMContentLoaded", () => { header.style.opacity = "1"; });
-
   window.addEventListener("scroll", () => {
 
     let headerHeight = window.pageYOffset > initialHeaderHeight ? 0 : initialHeaderHeight - window.pageYOffset,
@@ -28,4 +27,7 @@
     document.documentElement.classList.toggle("page-scrolled", window.pageYOffset > 0 ? true : false);
   });
 
+  window.dispatchEvent(new Event("scroll"));  // The standard scroll event (on page load) was intermittently firing
+                                              // before the event listener. Here we fire it manually to ensure the
+                                              // header is appropriately scaled when reloading/linking to an anchor.
 }());
