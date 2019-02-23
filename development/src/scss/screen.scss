@@ -5,6 +5,8 @@
   --dark-blue: #314c67;
   --baby-blue: #f3f9ff;
   --off-baby-blue: #e8f4ff;
+
+  --border-color: #eee;
   --accent-color: #f80;
   --high-contrast-copy-color: #fff;
   --high-contrast-background-color: var(--accent-color);
@@ -32,6 +34,17 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+@mixin button {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: var(--positive-color);
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px inset var(--positive-color);
+  padding: 0.4em 0.8em 0.35em;
+  display: block;
 }
 
 // Cross-Cutting
@@ -62,9 +75,21 @@ header {
   }
 }
 
-p {
+p,
+ul {
   font-size: 1.25rem;
   line-height: 1.5;
+}
+
+ul {
+  padding: 0;
+
+  &.responsibilities {
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+  }
 }
 
 .portrait {
@@ -178,6 +203,39 @@ h2 {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.company-name,
+.job-title {
+  margin: 0;
+}
+
+.company-name {
+  font-size: 1.4rem;
+}
+
+.division-name {
+  font-size: 1.3rem;
+}
+
+.role-byline {
+  color: #fff;
+  margin: 2rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 400;
+}
+
+.job-title {
+  font-size: 1.4rem;
+  color: var(--copy-color);
+}
+
+.timeframe {
+  text-transform: uppercase;
+  color: var(--copy-color);
+  letter-spacing: 0.5px;
 }
 
 // Page nameplate
@@ -301,11 +359,7 @@ h2 {
     font-weight: 600;
 
     a {
-      border-radius: 4px;
-      box-shadow: 0 0 0 2px inset var(--positive-color);
-      display: block;
-      height: auto;
-      padding: 0.4em 0.8em 0.35em;
+      @include button;
 
       &:link,
       &:visited {
@@ -326,7 +380,7 @@ h2 {
 
 .content-header {
   margin-bottom: 2rem;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid var(--border-color);
   padding: 2rem 0;
 
   h1, h2, h3, h4, h5, h6 {
@@ -340,6 +394,7 @@ h2 {
 }
 
 .dek,
+.summary,
 .lede {
   color: var(--copy-color);
   font-size: 1.625rem;
@@ -487,7 +542,12 @@ h2 {
 article {
   --whitespace-width: 25rem;
 
-  p:last-of-type {
+  .body-copy {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  p:last-child {
 
     &::after {
       content: "\2022";
@@ -508,6 +568,55 @@ article {
     margin-left: calc(var(--whitespace-width) * -1);
     width: calc(var(--whitespace-width) - var(--gutter-width));
     margin-top: 0.6rem;
+  }
+}
+
+.résumé {
+
+  > header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    .button {
+      @include button;
+    }
+  }
+
+  h2 {
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  .expertise {
+    order: 2;
+    flex: 2;
+
+    p,
+    ul {
+      font-size: 1.1rem;
+    }
+
+    ul {
+      list-style: none;
+    }
+  }
+
+  .work-history {
+    order: 1;
+    flex: 5;
+    margin-right: 4rem;
+
+    p,
+    ul {
+      font-size: 1.2rem;
+    }
+  }
+
+  .role-description {
+    margin-top: 0.5rem;
   }
 }
 
