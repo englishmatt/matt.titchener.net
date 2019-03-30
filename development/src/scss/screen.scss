@@ -75,21 +75,8 @@ header {
   }
 }
 
-p,
-ul {
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
 ul {
   padding: 0;
-
-  &.responsibilities {
-
-    li {
-      margin-bottom: 0.4rem;
-    }
-  }
 }
 
 .portrait {
@@ -134,6 +121,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Proxima Nova";
+  font-size: 1.25rem;
   min-height: 100%;
   line-height: 1.4;
 
@@ -225,6 +213,10 @@ h2 {
   justify-content: space-between;
   align-items: baseline;
   font-weight: 400;
+
+  .company-name + & {
+    margin-top: 0.5rem;
+  }
 }
 
 .job-title {
@@ -236,6 +228,7 @@ h2 {
   text-transform: uppercase;
   color: var(--copy-color);
   letter-spacing: 0.5px;
+  font-size: 1.1rem;
 }
 
 // Page nameplate
@@ -265,7 +258,7 @@ h2 {
   --link-background-color: #eee;
   --link-active-color: var(--heading-color);
   display: flex;
-  font-size: calc(0.375em + 1rem);
+  font-size: calc(0.25em + 1rem);
   height: calc(20% + 2rem);
 
   ul {
@@ -584,15 +577,24 @@ article {
   }
 
   h2 {
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid var(--border-color);
   }
 
-  .expertise {
+  .secondary {
     order: 2;
     flex: 2;
+
+    h2:first-child {
+      margin-top: 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
 
     p,
     ul {
@@ -601,17 +603,27 @@ article {
 
     ul {
       list-style: none;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
     }
   }
 
-  .work-history {
+  .primary {
     order: 1;
     flex: 5;
     margin-right: 4rem;
+    font-size: 1.2rem;
 
-    p,
-    ul {
-      font-size: 1.2rem;
+    li {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .company {
+
+    + .company {
+      margin-top: 4rem;
     }
   }
 
@@ -629,6 +641,7 @@ article {
   pre {
     background-color: var(--baby-blue);
     border-radius: 4px;
+    font-size: 1rem;
     overflow-x: auto;
     padding: 1.3rem;
   }
