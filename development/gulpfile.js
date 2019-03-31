@@ -14,6 +14,7 @@ const outputDirectory = "dist";
 const sassFiles = ["src/scss/**/*.scss"];
 const htmlFiles = ["src/**/*.htm"];
 const svgFiles = ["src/images/**/*.svg"];
+const fontFiles = ["src/fonts/**/*.*"];
 const typeScriptFiles = ["src/scripts/**/*.ts"];
 
 function live(done) {
@@ -54,7 +55,7 @@ function copyHtml() {
 function lintHtml() {
   return src(htmlFiles)
     .pipe(htmlHint())
-    .pipe(htmlHint.failAfterError());
+    .pipe(htmlhint.failOnError());
 }
 
 function a11yHtml() {
@@ -62,7 +63,7 @@ function a11yHtml() {
     .pipe(access());
 }
 
-const html = parallel(lintHtml, copyHtml, a11yHtml);
+const html = parallel(copyHtml, a11yHtml );
 
 function scss() {
   return src(sassFiles)
@@ -83,6 +84,12 @@ function css() {
     .pipe(sass(sassOptions).on("error", sass.logError))
     .pipe(sourcemaps.write("./"))   // Compiles source maps alongside CSS files
     .pipe(dest(outputDirectory + "/css"));
+}
+
+function fonts() {
+
+  return src(fontFiles)
+    .pipe(dest(outputDirectory + "/fonts"));
 }
 
 function scripts() {
@@ -111,13 +118,14 @@ function clean(done) {
 }
 
 const styles = series(css);
-const build = parallel(html, styles, svgs, scripts);
+const build = parallel(html, styles, svgs, fonts, scripts);
 
 exports.default = series(clean, build);
 exports.live = live;
 exports.html = html;
 exports.css = css;
 exports.svgs = svgs;
+exports.fonts = fonts;
 exports.scripts = scripts;
 exports.build = build;
 exports.clean = clean;
@@ -127,5 +135,6 @@ exports.watch = () => {
   watch(sassFiles, styles);
   watch(htmlFiles, html);
   watch(svgFiles, svgs);
+  watch(fontFiles, fonts);
   watch(typeScriptFiles, scripts);
 };

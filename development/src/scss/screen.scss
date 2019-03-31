@@ -1,4 +1,5 @@
 @import "normalize";
+@import "fonts";
 
 :root {
   // Colors
@@ -120,7 +121,8 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Proxima Nova";
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
   font-size: 1.25rem;
   min-height: 100%;
   line-height: 1.4;
@@ -411,7 +413,7 @@ h2 {
   --tile-header-color: var(--dark-blue);
   --tile-gap: 25px;
   --project-group-title-margin-top: 3.5rem;
-  --project-group-title-margin-bottom: 1.5rem;
+  --project-group-title-margin-bottom: 2rem;
   --project-group-title-height: 1.6rem;
   --spotlight-radius: 200px;
 
@@ -419,11 +421,13 @@ h2 {
     height: var(--project-group-title-height);
     margin-top: var(--project-group-title-margin-top);
     margin-bottom: var(--project-group-title-margin-bottom);
+    font-family: "Montserrat";
   }
 
   h3 {
     color: inherit;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    font-variation-settings: 'wght' 500;
     margin: 0 0 1rem;
   }
 
@@ -441,7 +445,7 @@ h2 {
     --square-dimension: calc(25% - var(--tile-gap));
     color: var(--tile-header-color);
     flex: 0 0 var(--square-dimension);
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-right: var(--tile-gap);
     position: relative;
     width: calc(100% + var(--tile-gap));
@@ -474,7 +478,7 @@ h2 {
 
       h3, p {
         position: relative;
-        line-height: 1.35;
+        line-height: 1.45;
         z-index: 2;
       }
 
