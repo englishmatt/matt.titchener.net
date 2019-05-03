@@ -1,5 +1,4 @@
 @import "normalize";
-@import "fonts";
 
 :root {
   // Colors
@@ -15,6 +14,8 @@
   --call-to-action-link-color: #fff;
   --copy-color: #707070;
   --heading-color: #3d3d3d;
+  --horizontal-nav-link-color: #a1a1a1;
+  --horizontal-nav-link-active-color: var(--heading-color);
 
   // Layout
   --max-content-width: 68rem;
@@ -121,7 +122,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: Nunito;
   font-weight: 400;
   font-size: 1.25rem;
   min-height: 100%;
@@ -158,6 +159,16 @@ body {
 
   .no-js & {
     opacity: 1;
+  }
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -256,9 +267,6 @@ h2 {
 }
 
 .top-level-navigation {
-  --link-color: #a1a1a1;
-  --link-background-color: #eee;
-  --link-active-color: var(--heading-color);
   display: flex;
   font-size: calc(0.25em + 1rem);
   height: calc(20% + 2rem);
@@ -326,13 +334,14 @@ h2 {
 
       &:link,
       &:visited {
-        color: var(--link-color);
+        color: var(--horizontal-nav-link-color
+    );
         text-decoration: none;
       }
 
       &:focus,
       &:hover {
-        color: var(--link-active-color);
+        color: var(--horizontal-nav-link-active-color);
       }
     }
   }
@@ -340,7 +349,7 @@ h2 {
   .active {
 
     span {
-      color: var(--link-active-color);
+      color: var(--horizontal-nav-link-active-color);
       font-weight: 600;
     }
   }
@@ -398,6 +407,7 @@ h2 {
 }
 
 .dek {
+  margin: 2rem 0 4rem;
 
   p {
     font-size: inherit;
@@ -432,53 +442,49 @@ h2 {
   }
 
   ul {
-    align-items: flex-start;
     padding: 0;
     margin: 0;
     list-style-type: none;
-    display: flex;
-    margin-right: calc(var(--tile-gap) * -1);
-    justify-content: left;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
   }
 
   li {
-    --square-dimension: calc(25% - var(--tile-gap));
     color: var(--tile-header-color);
-    flex: 0 0 var(--square-dimension);
     font-size: 1rem;
-    margin-right: var(--tile-gap);
     position: relative;
-    width: calc(100% + var(--tile-gap));
 
-    &::after {
+    &.primary {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    &.secondary {
+      grid-column: span 2;
+    }
+
+    &:before {
       content: "";
-      display: block;
-      width: 100%;
+      display: inline-block;
+      width: 1px;
+      height: 0;
       padding-bottom: 100%;
     }
 
-    &.cross-cutting {
-
-      a {
-        height: calc(200% + var(--project-group-title-margin-top) + var(--project-group-title-height) + var(--project-group-title-margin-bottom));
-      }
-    }
-
     > a {
-      display: block;
+      position: absolute;
+      width: 100%;
       padding: 1.3rem 1.6rem;
       border-radius: 4px;
       background: var(--tile-background-color);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+      transition: background-color 300ms, filter 300ms;
       height: 100%;
-      transition: background-color 300ms;
 
       h3, p {
         position: relative;
-        line-height: 1.45;
+        line-height: 1.5;
         z-index: 2;
       }
 
@@ -496,13 +502,6 @@ h2 {
       &:focus {
         background: var(--tile-background-shadow-color);
       }
-    }
-  }
-
-  .ux-design {
-
-    li:last-child {
-      margin-left: auto;
     }
   }
 }
@@ -553,6 +552,31 @@ article {
       line-height: 0;
       vertical-align: -0.3rem;
     }
+  }
+}
+
+// Selected work
+
+.selected-work {
+
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.osher-project {
+  --tile-background-color: #004c23;
+  --tile-background-shadow-color: #003c1b;
+  --tile-header-color: #fff;
+
+  h3 {
+    background: 100% 0% / contain url("../images/csu-osher-lockup.svg") no-repeat;
+    height: 3.5rem;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 
