@@ -1,4 +1,4 @@
- {
+{
   "name": "matt.titchener.net",
   "version": "0.2.0",
   "description": "",
@@ -9,7 +9,7 @@
   "author": "Matt Titchener",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.5",
     "delete": "^1.1.0",
     "gulp": "^4.0.0",
     "gulp-accessibility": "^3.1.1",
