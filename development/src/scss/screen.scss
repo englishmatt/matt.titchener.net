@@ -580,6 +580,20 @@ article {
   }
 }
 
+.boxes-and-arrows {
+  --tile-background-color: #ef7a17;
+  --tile-background-shadow-color: #bf5d13;
+  --tile-header-color: #fff;
+
+  h3 {
+    background: 100% 50% / contain url("../images/boxes-and-arrows-logo-inverted.svg") no-repeat;
+    height: 2rem;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
 .biography {
   --gutter-width: 3rem;
   margin-left: var(--whitespace-width);
