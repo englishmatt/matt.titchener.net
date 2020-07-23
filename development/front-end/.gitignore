@@ -1,8 +1,0 @@
-node_modules
-*.css
-*.css.map
-*.un~
-*.*~
-.sass-cache
-/dist
-.vscode
