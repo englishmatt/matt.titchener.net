@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "leading-zero": [
+      2,
+      {
+        "include": true
+      }
+    ],
+    "no-misspelled-properties": [
+      2,
+      {
+        "extra-properties": "scrollbar-width"
+      }
+    ],
+    "quotes": [
+      2,
+      {
+        "style": "double"
+      }
+    ],
+  }
+}
