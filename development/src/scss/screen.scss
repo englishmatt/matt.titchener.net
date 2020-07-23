@@ -18,7 +18,7 @@
   --horizontal-nav-link-active-color: var(--heading-color);
 
   // Layout
-  --max-content-width: 68rem;
+  --max-content-width: 68.4rem;
   --content-padding: 2rem;
   --page-header-height: 11rem;
 
@@ -277,6 +277,7 @@ h2 {
     margin: 0;
     padding: 0;
 
+
     &:hover,
     &:focus-within {
 
@@ -284,8 +285,8 @@ h2 {
 
         &.active span {
 
-          &::after {
-            content: "";
+          &::before {
+            transform: scale(0);
           }
         }
       }
@@ -293,19 +294,27 @@ h2 {
 
     li {
 
+      a, span {
+
+        &::before {
+          color: var(--accent-color);
+          content: "\2022";
+          font-size: 1em;   // Using em so it scales with parent font size
+          left: -0.2rem;
+          line-height: 1.3;
+          position: absolute;
+          transform: scale(0);
+          transition: transform 300ms;
+        }
+      }
+
       &.active span,
       &.active:hover span,
       a:focus,
       a:hover {
 
-        &::after {
-          color: var(--accent-color);
-          content: "\2022";
-          font-size: 1.3em;
-          left: 0;
-          line-height: 0.9;
-          position: absolute;
-          width: 100%;
+        &::before {
+          transform: scale(1);
         }
       }
     }
@@ -327,7 +336,7 @@ h2 {
       display: block;
       height: 100%;
       padding: 0.5em 1em 1em;
-      transition: color 200ms;
+      transition: color 300ms;
     }
 
     a {
@@ -350,7 +359,6 @@ h2 {
 
     span {
       color: var(--horizontal-nav-link-active-color);
-      font-weight: 600;
     }
   }
 
@@ -364,6 +372,7 @@ h2 {
 
     a {
       @include button;
+      transition: color 200ms, background-color 200ms;
 
       &:link,
       &:visited {
@@ -407,7 +416,7 @@ h2 {
 }
 
 .dek {
-  margin: 2rem 0 4rem;
+  margin: 4rem 0 1rem;
 
   p {
     font-size: inherit;
@@ -563,48 +572,6 @@ article {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-  }
-}
-
-.osher-project {
-  --tile-background-color: #004c23;
-  --tile-background-shadow-color: #003c1b;
-  --tile-header-color: #fff;
-
-  h3 {
-    background: 100% 0% / contain url("../images/csu-osher-lockup.svg") no-repeat;
-    height: 3.5rem;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-}
-
-.boxes-and-arrows {
-  --tile-background-color: #ef7a17;
-  --tile-background-shadow-color: #bf5d13;
-  --tile-header-color: #fff;
-
-  h3 {
-    background: 100% 50% / contain url("../images/boxes-and-arrows-logo-inverted.svg") no-repeat;
-    height: 2rem;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-}
-
-.gt-molecular {
-  --tile-background-color: #187fce;
-  --tile-background-shadow-color: #026fc3;
-  --tile-header-color: #fff;
-
-  h3 {
-    background: 100% 50% / contain url("../images/gt-molecular-logo.svg") no-repeat;
-    height: 2rem;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
   }
 }
 
