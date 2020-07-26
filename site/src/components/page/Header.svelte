@@ -5,6 +5,6 @@
 </script>
 
 <header>
-    <p>Site header</p>
+    <img src="lock-in.svg" alt="Matt Titchener"/>
     <Nav {segment}/>
 </header>
