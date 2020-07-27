@@ -5,6 +5,7 @@
 
     /* Colors */
     --default-copy: rgba(0, 0, 0, 0.8);
+    --primary-accent: rgba(0, 132, 255, 1);
 
     /* Development */
     --highlight-red: rgba(255, 0, 0, 0.1);

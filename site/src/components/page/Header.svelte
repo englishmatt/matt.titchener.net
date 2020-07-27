@@ -12,19 +12,20 @@
         align-items: flex-end;
         display: flex;
         padding: 2rem 0;
-        background-color: var(--highlight-red);
     }
 
     header > div {
         margin-left: var(--site-horizontal-margin);
         width: var(--primary-content-width);
     }
+
+    * {
+        background-color: var(--highlight-red);
+    }
 </style>
 
 <header>
     <SkipToContent {contentId} />
-    <div>
-        <img src="lock-in.svg" alt="Matt Titchener"/>
-    </div>
+    <div><img src="lock-in.svg" alt="Matt Titchener"/></div>
     <Nav {active}/>
 </header>

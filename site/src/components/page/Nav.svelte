@@ -11,7 +11,9 @@
 	}
 
 	a {
-		padding: 1rem;
+		display: block;
+		padding: 0 1rem;
+		box-sizing: border-box;
 	}
 
 	a:link,
@@ -25,11 +27,23 @@
 	a:visited {
 		text-transform: uppercase;
 	}
+
+	a span {
+		display: block;
+		padding: 1rem 0;
+		box-sizing: border-box;
+		border-bottom: 4px solid transparent;
+	}
+
+	a[aria-current="page"] span {
+		border-bottom: 4px solid var(--primary-accent);
+		font-weight: 700;
+	}
 </style>
 
 <nav>
 	<ul>
-		<li><a aria-current="{active === undefined ? 'page' : undefined}" href=".">Portfolio</a></li>
-		<li><a aria-current="{active === 'about' ? 'page' : undefined}" href="about">About</a></li>
+		<li><a aria-current="{active === undefined || active === 'portfolio' ? 'page' : undefined}" href="."><span>Portfolio</span></a></li>
+		<li><a aria-current="{active === 'about' ? 'page' : undefined}" href="about"><span>About</span></a></li>
 	</ul>
 </nav>
