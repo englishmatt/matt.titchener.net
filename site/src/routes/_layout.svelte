@@ -3,15 +3,16 @@
 	import Footer from '../components/page/Footer.svelte';
 
 	export let segment = 'portfolio';
-</script>
 
-<Header {segment}/>
+	const contentId = 'content';
+</script>
+<Header active={segment} {contentId}/>
 
 <svelte:head>
 	<title>{segment} &#183; Matt Titchener</title>
 </svelte:head>
 
-<main>
+<main id="{contentId}">
 	<slot></slot>
 </main>
 

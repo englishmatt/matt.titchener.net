@@ -1,3 +1,17 @@
+:root {
+    /* Layout */
+    --primary-content-width: 60%;
+    --site-horizontal-margin: 2.1rem;
+
+    /* Colors */
+    --default-copy: rgba(0, 0, 0, 0.8);
+
+    /* Development */
+    --highlight-red: rgba(255, 0, 0, 0.1);
+    --highlight-yellow: rgba(255, 255, 0, 0.1);
+    --highlight-blue: rgba(0, 0, 255, 0.1);
+}
+
 html {
     height: 100%;
 }
@@ -10,5 +24,5 @@ body {
 body {
     min-height: 100%;
     font-family: 'Inter', 'Arial', sans-serif;
-    color: rgba(0, 0, 0, 0.8);
+    color: var(--default-copy);
 }

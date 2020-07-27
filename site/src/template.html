@@ -6,7 +6,9 @@
 		<!-- TODO: Dynamically adjust theme color based on background color.
 		     See for more info: https://gordonlesti.com/change-theme-color-via-javascript/ -->
 		<meta name="theme-color" content="#333333" />
+		<!-- TODO: Spike: Investigate how best to serve fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
 
 		%sapper.base%
 
@@ -21,6 +23,7 @@
 			 lazily loaded when it precaches secondary pages -->
 		%sapper.styles%
 
+		<!-- TODO: Add meta descriptions-->
 		<!-- This contains the contents of the <svelte:head> component, if
 			 the current page has one -->
 		%sapper.head%
