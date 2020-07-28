@@ -8,6 +8,7 @@
 		list-style: none;
 		/* TODO: Introduce similar character width fallback typeface */
 		font-family: 'Montserrat', sans-serif;
+		padding: 0;
 	}
 
 	a {

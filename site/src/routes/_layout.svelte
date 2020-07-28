@@ -6,6 +6,14 @@
 
 	const contentId = 'content';
 </script>
+
+<style>
+	main {
+		box-sizing: border-box;
+		margin-left: calc(var(--site-horizontal-margin) + var(--content-left-margin));
+	}
+</style>
+
 <Header active={segment} {contentId}/>
 
 <svelte:head>
