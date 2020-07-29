@@ -1,7 +1,9 @@
 :root {
     /* Layout */
-    --max-primary-content-width: 60rem;
-    --primary-content-width: 60vw;
+    --primary-content-right-margin: 1.5rem;
+    --max-primary-content-width: calc(60rem + var(--primary-content-right-margin));
+    --primary-content-width: 63vw;
+
     --content-left-margin: 6.3rem;
     --site-horizontal-margin: 2.1rem;
     --site-header-height: 10rem;
@@ -33,4 +35,8 @@ body {
     font-family: 'Inter', 'Arial', sans-serif;
     min-height: 100%;
     text-rendering: optimizeLegibility;
+}
+
+* {
+    background-color: var(--highlight-red);
 }

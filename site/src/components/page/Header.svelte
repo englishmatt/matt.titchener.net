@@ -24,6 +24,10 @@
         max-width: var(--max-primary-content-width);
         width: var(--primary-content-width);
     }
+
+    header > div > :global(*) {
+        display: block; /* Removes white space artifacts during layout */
+    }
 </style>
 
 <header>

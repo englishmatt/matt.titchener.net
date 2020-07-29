@@ -13,7 +13,7 @@
 
 	a {
 		display: block;
-		padding: 0 1rem;
+		padding: 0 var(--primary-content-right-margin);
 		box-sizing: border-box;
 	}
 
