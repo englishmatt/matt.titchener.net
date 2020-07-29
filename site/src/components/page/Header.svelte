@@ -1,6 +1,7 @@
 <script>
     import Nav from './Nav.svelte';
-	import SkipToContent from './SkipToContent.svelte';
+    import SkipToContent from './SkipToContent.svelte';
+    import LockIn from '../../../static/LockIn.svg';
 
     export let active;
     export let contentId;
@@ -27,6 +28,8 @@
 
 <header>
     <SkipToContent {contentId} />
-    <div><img src="lock-in.svg" alt="Matt Titchener"/></div>
+    <div>
+        {@html LockIn}
+    </div>
     <Nav {active}/>
 </header>
