@@ -8,6 +8,8 @@
         --bus-stop-air-gap: 3px;
         --bus-stop-radius: 1rem;
         --margin-top: 20vh;
+        --line-height: 1.462;
+        --lede-font-size: calc(2.2vw - 0.22rem);       /* Magic */
         border-right: var(--border-width) solid var(--primary-accent);
         box-sizing: border-box;
         margin-top: var(--margin-top);
@@ -34,13 +36,13 @@
 
     .primary > :global(*) {
         position: relative;
-        top: calc((var(--bus-stop-radius) + var(--bus-stop-air-gap)) * -1);
+        top: calc(((var(--bus-stop-radius) + var(--bus-stop-air-gap)) * -1) - ((var(--lede-font-size) * var(--line-height)) / 4));
     }
 
     .lede {
-        font-size: calc(2.2vw - 0.22rem);   /* Magic */
+        font-size: var(--lede-font-size);
         font-weight: 600;
-        line-height: 146.2%;
+        line-height: var(--line-height);
     }
 
     @media(min-width: 1600px) {

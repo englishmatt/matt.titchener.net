@@ -1,6 +1,6 @@
 :root {
     /* Layout */
-    --primary-content-right-margin: 1.5rem;
+    --primary-content-right-margin: 2.5rem;
     --max-primary-content-width: calc(60rem + var(--primary-content-right-margin));
     --primary-content-width: 63vw;
 
