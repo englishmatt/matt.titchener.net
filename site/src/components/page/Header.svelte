@@ -26,8 +26,9 @@
         width: var(--primary-content-width);
     }
 
-    header > div > :global(*) {
+    header > div > :global(svg) {
         display: block; /* Removes white space artifacts during layout */
+        opacity: 0.8;
     }
 </style>
 
