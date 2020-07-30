@@ -6,7 +6,7 @@
     .primary {
         --border-width: 2px;
         --bus-stop-air-gap: 3px;
-        --bus-stop-radius: 1rem;
+        --bus-stop-radius: 1.2rem;
         --margin-top: 20vh;
         --line-height: 1.462;
         --lede-font-size: calc(2.2vw - 0.22rem);       /* Magic */

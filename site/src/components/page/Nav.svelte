@@ -4,16 +4,17 @@
 
 <style>
 	ul {
+		--navigation-horizontal-padding: 1.2rem;
 		display: flex;
 		list-style: none;
 		/* TODO: Introduce similar character width fallback typeface */
 		font-family: 'Montserrat', sans-serif;
-		padding: 0;
+		padding: 0 0 0 var(--navigation-horizontal-padding);
 	}
 
 	a {
 		display: block;
-		padding: 0 var(--primary-content-right-margin);
+		padding: 0 var(--navigation-horizontal-padding);
 		box-sizing: border-box;
 	}
 
@@ -21,7 +22,7 @@
 	a:visited,
 	a:hover {
 		text-decoration: none;
-		color: rgba(0, 0, 0, 0.6);
+		color: var(--default-copy);
 	}
 
 	a:link,
@@ -34,6 +35,7 @@
 		padding: 1rem 0;
 		box-sizing: border-box;
 		border-bottom: 4px solid transparent;
+		font-weight: 600;
 	}
 
 	a[aria-current="page"] span {
