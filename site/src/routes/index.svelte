@@ -1,14 +1,20 @@
 <script>
     import Section from '../components/Section.svelte';
     import Introduction from '../components/sections/Introduction.svelte';
+    import Entry from '../components/Entry.svelte';
 </script>
 
-<Section>
-    <Introduction />
+<Section id="entry">
+    <Entry entryOffset="20vh">
+        <Introduction />
+    </Entry>
 </Section>
 
-<Section>
-    <div class="primary">
-        <p class="lede">I’m Matt, a UX designer and software engineer from the UK. Assessibility and universal design are central to my work, be it engineering or design.</p>
-    </div>
+<Section id="entry">
+    <Entry>
+        <img src="http://placekitten.com/300/200" alt="Kitty" />
+    </Entry>
+    <Entry>
+        <img src="http://placekitten.com/100/200" alt="Kitty" />
+    </Entry>
 </Section>

@@ -1,8 +1,8 @@
 :root {
     /* Layout */
-    --primary-content-right-margin: 6rem;
-    --max-primary-content-width: calc(60rem + var(--primary-content-right-margin));
-    --primary-content-width: 63vw;
+    --main-content-right-margin: 6rem;
+    --max-main-content-width: calc(60rem + var(--main-content-right-margin));
+    --main-content-width: 63vw;
 
     --content-left-margin: 6.3rem;
     --site-horizontal-margin: 2.1rem;
@@ -10,8 +10,9 @@
     --site-footer-height: 3rem;
 
     /* Colors */
-    --default-copy: rgba(0, 0, 0, 0.7);
-    --primary-accent: rgba(0, 132, 255, 1);
+    --default-copy-color: rgba(0, 0, 0, 0.7);
+    --primary-accent-color: rgba(0, 132, 255, 1);
+    --bus-route-color: rgba(0, 132, 255, 0.3);
 
     /* Development */
     --highlight-red: rgba(255, 0, 0, 0.1);
@@ -22,7 +23,7 @@
 html {
     height: 100%;
     scrollbar-width: thin;
-    scrollbar-color: var(--default-copy) transparent;
+    scrollbar-color: var(--default-copy-color) transparent;
 }
 
 html,
@@ -31,7 +32,7 @@ body {
 }
 
 body {
-    color: var(--default-copy);
+    color: var(--default-copy-color);
     display: flex;
     flex-direction: column;
     font-family: 'Inter', 'Arial', sans-serif;

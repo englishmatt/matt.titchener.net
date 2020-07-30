@@ -8,6 +8,7 @@
     }
 </style>
 
+<!-- Represents the site footer -->
 <footer>
     <p>Site Footer</p>
 </footer>

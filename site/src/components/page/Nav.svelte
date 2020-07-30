@@ -22,7 +22,7 @@
 	a:visited,
 	a:hover {
 		text-decoration: none;
-		color: var(--default-copy);
+		color: var(--default-copy-color);
 	}
 
 	a:link,
@@ -39,11 +39,12 @@
 	}
 
 	a[aria-current="page"] span {
-		border-bottom: 4px solid var(--primary-accent);
+		border-bottom: 4px solid var(--primary-accent-color);
 		font-weight: 700;
 	}
 </style>
 
+<!-- Represents the top-level navigation -->
 <nav>
 	<ul>
 		<li><a aria-current="{active === undefined || active === 'portfolio' ? 'page' : undefined}" href="."><span>Portfolio</span></a></li>

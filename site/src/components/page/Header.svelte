@@ -22,8 +22,8 @@
 
     header > div {
         margin-left: var(--site-horizontal-margin);
-        max-width: var(--max-primary-content-width);
-        width: var(--primary-content-width);
+        max-width: var(--max-main-content-width);
+        width: var(--main-content-width);
     }
 
     header > div > :global(svg) {
@@ -32,6 +32,7 @@
     }
 </style>
 
+<!-- Represents the site header -->
 <header>
     <SkipToContent {contentId} />
     <div>
