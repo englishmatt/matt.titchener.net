@@ -25,7 +25,11 @@
         padding-bottom: 3rem;
     }
 
-    .entry:first-of-type::before {
+    :global(section:last-of-type) .entry:last-of-type {
+        border-color: transparent;
+    }
+
+    :global(section:not(:first-of-type)) .entry:first-of-type::before {
         --height: calc(var(--site-header-height) + var(--entry-offset) + var(--section-padding-top));
         border-right: var(--bus-route-width) solid var(--bus-route-color);
         top: calc(var(--height) * -1);
