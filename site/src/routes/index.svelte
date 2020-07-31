@@ -4,17 +4,20 @@
     import Entry from '../components/Entry.svelte';
 </script>
 
-<Section id="entry">
+<Section>
     <Entry entryOffset="20vh">
         <Introduction />
     </Entry>
 </Section>
 
-<Section id="entry">
+<Section id="entries">
     <Entry>
         <img src="http://placekitten.com/300/200" alt="Kitty" />
     </Entry>
     <Entry>
         <img src="http://placekitten.com/100/200" alt="Kitty" />
+    </Entry>
+    <Entry>
+        <img src="http://placekitten.com/500/200" alt="Kitty" />
     </Entry>
 </Section>
