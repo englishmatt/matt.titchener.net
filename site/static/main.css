@@ -1,6 +1,6 @@
 :root {
     /* Layout */
-    --main-content-right-margin: 6rem;
+    --main-content-right-margin: 3rem;
     --max-main-content-width: calc(60rem + var(--main-content-right-margin));
     --main-content-width: 63vw;
 
@@ -8,6 +8,8 @@
     --site-horizontal-margin: 2.1rem;
     --site-header-height: 10rem;
     --site-footer-height: 3rem;
+
+    --navigation-horizontal-padding: 1.2rem;
 
     /* Colors */
     --default-copy-color: rgba(0, 0, 0, 0.7);
@@ -38,4 +40,5 @@ body {
     font-family: 'Inter', 'Arial', sans-serif;
     min-height: 100%;
     text-rendering: optimizeLegibility;
+    line-height: 1.6;
 }

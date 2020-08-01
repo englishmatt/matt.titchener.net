@@ -1,6 +1,8 @@
 <script>
-    // Represents the entry-offset from the page; CSS value, so must include dimension units.
+    // Represents the vertical entry-offset from the page; CSS value, so must include dimension units.
     export let entryOffset = "0rem";
+
+    let slots = $$props.$$slots;
 </script>
 
 <style>
@@ -17,12 +19,12 @@
         position: relative;
     }
 
-    .primary {
-        --primary-padding-bottom: 3rem;
+    .item {
+        --item-padding-bottom: 3rem;
         /* border-right: var(--bus-route-width) solid var(--bus-route-color); */
         box-sizing: border-box;
         max-width: calc(var(--max-main-content-width) - var(--content-left-margin));
-        padding-bottom: var(--primary-padding-bottom);
+        padding-bottom: var(--item-padding-bottom);
         padding-right: var(--main-content-right-margin);
         position: relative;
         width: calc(var(--main-content-width) - var(--content-left-margin));
@@ -33,7 +35,7 @@
     }
 
     /* Bus route */
-    .primary::before {
+    .item::before {
         content: "";
         border-right: var(--bus-route-width) solid var(--bus-route-color);
         position: absolute;
@@ -54,19 +56,19 @@
         position: absolute;
     }
 
-    :global(section:last-of-type) .entry:last-of-type .primary::before {
+    :global(section:last-of-type) .entry:last-of-type .item::before {
         border-color: transparent;
     }
 
 
-    .entry:last-of-type .primary::before {
+    .entry:last-of-type .item::before {
         height: calc(100% - var(--bus-stop-diameter) - var(--bus-stop-air-gap));
         bottom: 0;
     }
 
     /* Bus stop */
     /* TODO: Consider using SVG for circle for more consistent rendering across browsers */
-    .primary::after {
+    .item::after {
         border-radius: 50%;
         border: 3px solid var(--primary-accent-color);
         box-sizing: border-box;
@@ -78,12 +80,31 @@
         transform: translate(calc(50% + (var(--bus-route-width) / 2)), 0);
         width: var(--bus-stop-diameter);
     }
+
+    .description {
+        flex: 1;
+        margin-left: calc(var(--navigation-horizontal-padding) * 2);
+        max-width: 25rem;
+    }
+
+    .entry .item :global(img) {
+        width: 100%;
+    }
 </style>
 
 <!-- Represents a single entry in a {Section} -->
-<div class="entry" style="--entry-offset: {entryOffset}">
-    <div class="primary">
-        <slot></slot>
+{#if slots}
+    <div class="entry" style="--entry-offset: {entryOffset}">
+        {#if slots.default}
+            <div class="item">
+                <slot />
+            </div>
+        {/if}
+
+        {#if slots.description}
+            <section class="description">
+                <slot name="description" />
+            </section>
+        {/if}
     </div>
-    <section>Section goes here.</section>
-</div>
+{/if}

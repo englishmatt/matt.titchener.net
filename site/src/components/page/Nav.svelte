@@ -3,13 +3,17 @@
 </script>
 
 <style>
-	ul {
+	nav {
 		--navigation-horizontal-padding: 1.2rem;
+		padding-left: var(--navigation-horizontal-padding);
+	}
+
+	ul {
 		display: flex;
 		list-style: none;
 		/* TODO: Introduce similar character width fallback typeface */
 		font-family: 'Montserrat', sans-serif;
-		padding: 0 0 0 var(--navigation-horizontal-padding);
+		padding: 0;
 	}
 
 	a {
