@@ -26,64 +26,18 @@
         box-sizing: border-box;
         max-width: calc(var(--max-main-content-width) - var(--content-left-margin));
         padding-bottom: var(--item-padding-bottom);
-        padding-right: var(--main-content-right-margin);
+        padding-right: 0;
         position: relative;
         width: calc(var(--main-content-width) - var(--content-left-margin));
     }
 
     .item > :global(img) {
         border-radius: 6px;
+        display: block;
     }
 
     .entry:last-of-type {
         flex: 1;
-    }
-
-    /* Bus route */
-    .item::before {
-        content: "";
-        border-right: var(--bus-route-width) solid var(--bus-route-color);
-        position: absolute;
-        height: calc(100% - var(--bus-stop-diameter) - (var(--bus-stop-air-gap) * 2));
-        right: calc(var(--bus-route-width) * -1);
-        bottom: var(--bus-stop-air-gap);
-    }
-
-    :global(section:not(:first-of-type)) .entry:first-of-type::before {
-        --height: calc(var(--site-header-height) + var(--entry-offset) + var(--section-padding-top));
-        content: "";
-        border-right: var(--bus-route-width) solid var(--bus-route-color);
-        top: calc(var(--height) * -1);
-        left: 0;
-        max-width: calc(var(--max-main-content-width) - var(--content-left-margin));
-        width: calc(var(--main-content-width) - var(--content-left-margin));
-        height: calc(var(--height) - var(--bus-stop-air-gap));
-        position: absolute;
-    }
-
-    :global(section:last-of-type) .entry:last-of-type .item::before {
-        border-color: transparent;
-    }
-
-
-    .entry:last-of-type .item::before {
-        height: calc(100% - var(--bus-stop-diameter) - var(--bus-stop-air-gap));
-        bottom: 0;
-    }
-
-    /* Bus stop */
-    /* TODO: Consider using SVG for circle for more consistent rendering across browsers */
-    .item::after {
-        border-radius: 50%;
-        border: 3px solid var(--primary-accent-color);
-        box-sizing: border-box;
-        content: "";
-        height: var(--bus-stop-diameter);
-        position: absolute;
-        right: 0;
-        top: 0;
-        transform: translate(calc(50% + (var(--bus-route-width) / 2)), 0);
-        width: var(--bus-stop-diameter);
     }
 
     .entry .item :global(img) {
