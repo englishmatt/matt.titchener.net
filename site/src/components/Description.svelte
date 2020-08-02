@@ -13,16 +13,29 @@
         font-size: 1.125rem;
         font-weight: 500;
     }
+
+    .description {
+        align-self: flex-start;
+        flex: 1;
+        max-width: 25rem;
+        margin-right: 3rem;
+    }
+
+    .description-body :global(:last-child) {
+        margin-bottom: 0;
+    }
 </style>
 
 {#if slots}
-    {#if slots.title}
-        <h3><slot name="title" /></h3>
-    {/if}
+    <section class="description">
+        {#if slots.title}
+            <h3><slot name="title" /></h3>
+        {/if}
 
-    {#if slots.default}
-        <div class="description-body">
-            <slot />
-        </div>
-    {/if}
+        {#if slots.default}
+            <div class="description-body">
+                <slot></slot>
+            </div>
+        {/if}
+    </section>
 {/if}

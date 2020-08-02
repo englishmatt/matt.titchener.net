@@ -4,7 +4,6 @@
 
 <style>
 	nav {
-		--navigation-horizontal-padding: 1.2rem;
 		padding-left: var(--navigation-horizontal-padding);
 	}
 

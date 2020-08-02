@@ -1,4 +1,6 @@
 <script>
+    import Description from '../components/Description.svelte';
+
     // Represents the vertical entry-offset from the page; CSS value, so must include dimension units.
     export let entryOffset = "0rem";
 
@@ -13,6 +15,7 @@
         --entry-offset: 0rem;
         --lede-font-size: calc(2.2vw - 0.22rem);       /* Magic */
         --line-height: 1.462;
+        --item-padding-bottom: 3rem;
         box-sizing: border-box;
         display: flex;
         margin-top: var(--entry-offset);
@@ -20,14 +23,16 @@
     }
 
     .item {
-        --item-padding-bottom: 3rem;
-        /* border-right: var(--bus-route-width) solid var(--bus-route-color); */
         box-sizing: border-box;
         max-width: calc(var(--max-main-content-width) - var(--content-left-margin));
         padding-bottom: var(--item-padding-bottom);
         padding-right: var(--main-content-right-margin);
         position: relative;
         width: calc(var(--main-content-width) - var(--content-left-margin));
+    }
+
+    .item > :global(img) {
+        border-radius: 6px;
     }
 
     .entry:last-of-type {
@@ -81,14 +86,15 @@
         width: var(--bus-stop-diameter);
     }
 
-    .description {
-        flex: 1;
-        margin-left: calc(var(--navigation-horizontal-padding) * 2);
-        max-width: 25rem;
-    }
-
     .entry .item :global(img) {
         width: 100%;
+    }
+
+    :global(.description) {
+        margin-left: calc(var(--navigation-horizontal-padding) * 2);
+        position: sticky;
+        top: calc(var(--site-header-height) + var(--section-padding-top));
+        margin-bottom: var(--item-padding-bottom);
     }
 </style>
 
@@ -97,14 +103,17 @@
     <div class="entry" style="--entry-offset: {entryOffset}">
         {#if slots.default}
             <div class="item">
-                <slot />
+                <slot></slot>
             </div>
         {/if}
 
         {#if slots.description}
-            <section class="description">
-                <slot name="description" />
-            </section>
+            <Description>
+                <span slot="title"><slot name="title"></slot></span>
+                {#if slots.description}
+                    <slot name="description" />
+                {/if}
+            </Description>
         {/if}
     </div>
 {/if}
