@@ -1,12 +1,10 @@
 <script>
     export let id = null;
-    export let backgroundColor = "transparent";
 </script>
 
 <style>
     section {
         --section-padding-top: 4rem;
-        background-color: var(--background-color);
         display: flex;
         flex-direction: column;
         padding-top: calc(var(--site-header-height) + var(--section-padding-top));
@@ -22,6 +20,6 @@
 </style>
 
 <!-- Represents a collection of elements of type {Entry} -->
-<section {id} style="--background-color: {backgroundColor}">
+<section {id}>
     <slot></slot>
 </section>

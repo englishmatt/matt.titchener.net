@@ -28,7 +28,7 @@
 
     header > div > :global(svg) {
         display: block; /* Removes white space artifacts during layout */
-        opacity: 0.8;
+        opacity: 0.7;
     }
 </style>
 
