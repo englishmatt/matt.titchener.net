@@ -15,6 +15,7 @@
     --default-copy-color: rgba(0, 0, 0, 0.7);
     --primary-accent-color: rgba(0, 132, 255, 1);
     --bus-route-color: rgba(0, 132, 255, 0.3);
+    --introduction-background-color: #ffe600;
 
     /* Development */
     --highlight-red: rgba(255, 0, 0, 0.1);
@@ -40,4 +41,24 @@ body {
     font-family: 'Inter', 'Arial', sans-serif;
     text-rendering: optimizeLegibility;
     line-height: 1.6;
+}
+
+body > .page::before {
+    background-color: var(--introduction-background-color);
+    content: "";
+    height: 100%;
+    left: 0;
+    /* mix-blend-mode: multiply; */
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+    transition: transform 300ms;
+    transform-origin: top left;
+    width: 100%;
+}
+
+body > .page.transformed::before {
+    transform: skewY(-10deg) scaleY(0.5);
+    transform-origin: top left;
 }

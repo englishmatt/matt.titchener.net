@@ -20,6 +20,7 @@
         display: flex;
         margin-top: var(--entry-offset);
         position: relative;
+        align-items: flex-start;
     }
 
     .item {
