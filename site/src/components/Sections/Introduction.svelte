@@ -4,9 +4,10 @@
     }
 
     .lede {
-        font-size: var(--lede-font-size);
+        font-size: 2rem;
         font-weight: 600;
         line-height: var(--line-height);
+        max-width: calc(var(--max-main-content-width) - var(--content-left-margin));
     }
 
     @media(min-width: 1600px) {
@@ -16,4 +17,4 @@
     }
 </style>
 
-<p class="lede">I’m Matt, a UX designer and software engineer from the UK. Assessibility and universal design are central to my work, be it engineering or design.</p>
+<p class="lede"><slot></slot></p>

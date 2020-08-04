@@ -29,7 +29,6 @@
         padding-bottom: var(--item-padding-bottom);
         padding-right: 0;
         position: relative;
-        width: calc(var(--main-content-width) - var(--content-left-margin));
     }
 
     .item > :global(img) {
@@ -56,13 +55,15 @@
 <!-- Represents a single entry in a {Section} -->
 {#if slots}
     <div class="entry" style="--entry-offset: {entryOffset}">
-        {#if slots.default}
+        <slot></slot>
+
+        {#if slots.item}
             <div class="item">
-                <slot></slot>
+                <slot name="item"></slot>
             </div>
         {/if}
 
-        {#if slots.description}
+        {#if slots.description || slots.title}
             <Description>
                 <span slot="title"><slot name="title"></slot></span>
                 {#if slots.description}

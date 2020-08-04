@@ -54,11 +54,33 @@ body > .page::before {
     position: fixed;
     top: 0;
     transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
-    transition: clip-path 300ms;
+    transition: background-color 300ms, clip-path 300ms;
     width: 100%;
     z-index: -2;
 }
 
 body > .page.transformed::before {
     clip-path: polygon(0 0, 125rem 0, 120rem 40rem, 0 20rem);
+}
+
+body > .page::after {
+    background-color: #ffe6a7;
+    content: "";
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    position: fixed;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+    transition: background-color 300ms, transform 300ms;
+    z-index: -1;
+    width: 100rem;
+    height: 70rem;
+    top: 0;
+    left: 0;
+    transform: translate(-60rem, 20rem) rotate(-4.5deg);
+}
+
+body > .page.transformed::after {
+    background-color: #a5E9ff;
+    transform: translate(-70rem, -20rem) rotate(25deg);
 }

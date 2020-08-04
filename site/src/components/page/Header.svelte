@@ -1,10 +1,8 @@
 <script>
     import Nav from './Nav.svelte';
-    import SkipToContent from './SkipToContent.svelte';
     import LockIn from '../../../static/LockIn.svg';
 
     export let active;
-    export let contentId;
 </script>
 
 <style>
@@ -34,7 +32,6 @@
 
 <!-- Represents the site header -->
 <header>
-    <SkipToContent {contentId} />
     <div>
         {@html LockIn}
     </div>
