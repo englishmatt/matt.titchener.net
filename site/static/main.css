@@ -49,7 +49,6 @@ body > .page::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     height: 100%;
     left: 0;
-    /* mix-blend-mode: multiply; */
     pointer-events: none;
     position: fixed;
     top: 0;
@@ -60,7 +59,7 @@ body > .page::before {
 }
 
 body > .page.transformed::before {
-    clip-path: polygon(0 0, 125rem 0, 120rem 40rem, 0 20rem);
+    clip-path: polygon(0 0, 140rem 0, 120rem 60rem, 0 20rem);
 }
 
 body > .page::after {
@@ -74,7 +73,7 @@ body > .page::after {
     transition: background-color 300ms, transform 300ms;
     z-index: -1;
     width: 100rem;
-    height: 70rem;
+    height: 110rem;
     top: 0;
     left: 0;
     transform: translate(-60rem, 20rem) rotate(-4.5deg);
@@ -82,5 +81,5 @@ body > .page::after {
 
 body > .page.transformed::after {
     background-color: #a5E9ff;
-    transform: translate(-70rem, -20rem) rotate(25deg);
+    transform: translate(-50rem, -40rem) rotate(25deg);
 }
