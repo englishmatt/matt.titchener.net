@@ -46,6 +46,7 @@ body {
 body > .page::before {
     background-color: var(--introduction-background-color);
     content: "";
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     height: 100%;
     left: 0;
     /* mix-blend-mode: multiply; */
@@ -53,12 +54,11 @@ body > .page::before {
     position: fixed;
     top: 0;
     transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
-    transition: transform 300ms;
-    transform-origin: top left;
+    transition: clip-path 300ms;
     width: 100%;
+    z-index: -2;
 }
 
 body > .page.transformed::before {
-    transform: skewY(-10deg) scaleY(0.5);
-    transform-origin: top left;
+    clip-path: polygon(0 0, 125rem 0, 120rem 40rem, 0 20rem);
 }

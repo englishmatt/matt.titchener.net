@@ -13,7 +13,7 @@
 
 <Section id="entries">
     <Entry>
-        <img src="http://placekitten.com/1000/500" loading="lazy" alt="Kitty" />
+        <img src="http://placeimg.com/1000/500/nature" loading="lazy" alt="Kitty" />
         <!-- TODO: Remove wrapping span; this is only required as Svelte/issue #1037 has not be closed.
              See for more info: https://github.com/sveltejs/svelte/issues/1037 -->
         <span slot="title">Boxes & Arrows</span>
@@ -23,6 +23,6 @@
 
 <Section id="entries2">
     <Entry>
-        <img src="http://placekitten.com/1000/500" loading="lazy" alt="Kitty" />
+        <img src="http://placeimg.com/1000/500/nature" loading="lazy" alt="Kitty" />
     </Entry>
 </Section>

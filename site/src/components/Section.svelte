@@ -8,7 +8,6 @@
         display: flex;
         flex-direction: column;
         padding-top: calc(var(--site-header-height) + var(--section-padding-top));
-        min-height: 100vh;
         box-sizing: border-box;
         padding-left: calc(var(--site-horizontal-margin) + var(--content-left-margin));
         margin-left: calc((var(--site-horizontal-margin) + var(--content-left-margin)) * -1);
