@@ -35,6 +35,7 @@ body {
 }
 
 body {
+    --background-transition-duration: 500ms;
     color: var(--default-copy-color);
     display: flex;
     flex-direction: column;
@@ -53,14 +54,14 @@ body > .page::before {
     position: fixed;
     top: 0;
     transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
-    transition: background-color 300ms, clip-path 300ms;
+    transition: background-color var(--background-transition-duration), clip-path var(--background-transition-duration);
     width: 100%;
     z-index: -2;
 }
 
-body > .page.transformed::before {
+/* body > .page.transformed::before {
     clip-path: polygon(0 0, 140rem 0, 120rem 60rem, 0 20rem);
-}
+} */
 
 body > .page::after {
     background-color: #ffe6a7;
@@ -70,7 +71,7 @@ body > .page::after {
     pointer-events: none;
     position: fixed;
     transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
-    transition: background-color 300ms, transform 300ms;
+    transition: background-color var(--background-transition-duration), transform var(--background-transition-duration);
     z-index: -1;
     width: 100rem;
     height: 110rem;

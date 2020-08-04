@@ -53,6 +53,8 @@
 </style>
 
 <!-- Represents a single entry in a {Section} -->
+<!-- TODO: Figure out how to trigger fading in when item content (image) has loaded.
+     Consider dispatching an event from a new Image component? -->
 {#if slots}
     <div class="entry" style="--entry-offset: {entryOffset}">
         <slot></slot>

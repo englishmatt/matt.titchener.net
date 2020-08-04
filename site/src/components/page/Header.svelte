@@ -10,7 +10,7 @@
         box-sizing: border-box;
         align-items: flex-end;
         display: flex;
-        padding: 2rem 0;
+        padding: 3.5rem 0;
         position: fixed;
         top: 0;
         width: 100%;

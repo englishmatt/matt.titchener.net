@@ -6,7 +6,7 @@
     div {
         background-color: rgba(0, 0, 0, 0.6);
         box-sizing: border-box;
-        padding: 0.25rem var(--site-horizontal-margin);
+        padding: 0.25rem calc(var(--site-horizontal-margin) + var(--content-left-margin));
         left: 0;
         top: 0;
         width: 100%;
@@ -15,10 +15,10 @@
     }
 
     a {
-        --height: 1rem;
+        --height: 1.2rem;
         clip-path: inset(50%);
         clip: rect(1px, 1px, 1px, 1px);
-        font-size: calc(var(--height) - 0.2rem);
+        font-size: calc(var(--height) - 0.4rem);
         height: 1px;
         margin: -1px;
         overflow: hidden;
