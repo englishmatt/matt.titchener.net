@@ -29,6 +29,7 @@
         padding-bottom: var(--item-padding-bottom);
         padding-right: 0;
         position: relative;
+        width: calc(var(--main-content-width) - var(--content-left-margin));
     }
 
     .item > :global(img) {
