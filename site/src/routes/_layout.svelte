@@ -29,6 +29,7 @@
     main {
         box-sizing: border-box;
         padding-left: calc(var(--site-horizontal-margin) + var(--content-left-margin));
+        padding-right: var(--site-horizontal-margin);
     }
 </style>
 
