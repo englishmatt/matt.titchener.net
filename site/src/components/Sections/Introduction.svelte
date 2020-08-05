@@ -1,6 +1,10 @@
 <style>
     p {
-        margin-top: 0;
+        box-sizing: border-box;
+        height: 0;
+        margin: 0;
+        position: sticky;
+        top: calc(var(--entry-offset) + var(--site-header-height) + var(--section-padding-top));
     }
 
     .lede {
