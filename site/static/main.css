@@ -59,9 +59,9 @@ body > .page::before {
     z-index: -2;
 }
 
-/* body > .page.transformed::before {
-    clip-path: polygon(0 0, 140rem 0, 120rem 60rem, 0 20rem);
-} */
+body > .page.transformed::before {
+    clip-path: polygon(0 0, 130rem 0, 120rem 60rem, 0 40rem);
+}
 
 body > .page::after {
     background-color: #ffe6a7;
