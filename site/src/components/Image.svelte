@@ -15,7 +15,7 @@
     div {
         background-color: var(--background-color);
         border-radius: var(--border-radius);
-        display: inline-block;
+        display: block;
         overflow: hidden;
     }
 
