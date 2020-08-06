@@ -32,17 +32,14 @@
         width: calc(var(--main-content-width) - var(--content-left-margin));
     }
 
-    .item > :global(img) {
-        border-radius: 6px;
-        display: block;
+    .item :global(img) {
+        height: auto;
+        object-fit: cover;
+        width: 100%;
     }
 
     .entry:last-of-type {
         flex: 1;
-    }
-
-    .entry .item :global(img) {
-        width: 100%;
     }
 
     :global(.description) {

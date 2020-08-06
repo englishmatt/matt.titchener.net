@@ -3,6 +3,7 @@
     import Introduction from '../components/sections/Introduction.svelte';
     import Entry from '../components/Entry.svelte';
     import Description from '../components/Description.svelte';
+    import Image from '../components/Image.svelte';
 </script>
 
 <style>
@@ -19,7 +20,9 @@
 
 <Section id="entries">
     <Entry>
-        <img slot="item" src="http://placeimg.com/1000/500/nature" alt="Kitty" />
+        <div slot="item">
+            <Image alt="Boxes &amp; Arrows" src="http://placeimg.com/1000/500/nature" width="1000" height="500" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" />
+        </div>
         <!-- TODO: Remove wrapping span; this is only required as Svelte/issue #1037 has not be closed.
              See for more info: https://github.com/sveltejs/svelte/issues/1037 -->
         <span slot="title">Boxes & Arrows</span>
@@ -29,6 +32,56 @@
 
 <Section id="entries2">
     <Entry>
-        <img slot="item" src="http://placeimg.com/1000/600/nature" loading="lazy" alt="Kitty" />
+        <div slot="item">
+            <Image alt="Foobar" src="http://placeimg.com/1000/600/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" />
+        </div>
+    </Entry>
+</Section>
+
+<Section id="entries2">
+    <Entry>
+        <div slot="item">
+            <Image alt="Foobar" src="http://placeimg.com/1000/650/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" />
+        </div>
+    </Entry>
+</Section>
+
+<Section id="entries2">
+    <Entry>
+        <div slot="item">
+            <Image alt="Foobar" src="http://placeimg.com/1000/700/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" />
+        </div>
+    </Entry>
+</Section>
+
+<Section id="entries2">
+    <Entry>
+        <div slot="item">
+            <Image alt="Foobar" src="http://placeimg.com/1000/750/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" />
+        </div>
+    </Entry>
+</Section>
+
+<Section id="entries2">
+    <Entry>
+        <div slot="item">
+            <Image alt="Foobar" src="http://placeimg.com/1000/800/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" />
+        </div>
+    </Entry>
+</Section>
+
+<Section id="entries2">
+    <Entry>
+        <div slot="item">
+            <Image alt="Foobar" src="http://placeimg.com/1000/850/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" />
+        </div>
+    </Entry>
+</Section>
+
+<Section id="entries2">
+    <Entry>
+        <div slot="item">
+            <Image alt="Foobar" src="http://placeimg.com/1000/900/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" />
+        </div>
     </Entry>
 </Section>
