@@ -8,16 +8,9 @@
     }
 
     .lede {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 600;
         line-height: var(--line-height);
-        max-width: calc(var(--max-main-content-width) - var(--content-left-margin));
-    }
-
-    @media(min-width: 1600px) {
-        .lede {
-            font-size: 2rem;
-        }
     }
 
     /* TODO: Move globals to better spot? */
@@ -25,6 +18,7 @@
         --mask-image: linear-gradient(black 75%, transparent 95%, transparent);
         mask-image: var(--mask-image);
         -webkit-mask-image: var(--mask-image);
+        pointer-events: none;
     }
 
     :global(.introduction > div) {

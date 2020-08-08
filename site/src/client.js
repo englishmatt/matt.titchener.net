@@ -1,5 +1,5 @@
 import * as sapper from '@sapper/app';
 
 sapper.start({
-	target: document.querySelector("body > .page")
+	target: document.body
 });
