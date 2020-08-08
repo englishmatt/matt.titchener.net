@@ -19,6 +19,18 @@
             font-size: 2rem;
         }
     }
+
+    /* TODO: Move globals to better spot? */
+    :global(.introduction) {
+        --mask-image: linear-gradient(black 75%, transparent 95%, transparent);
+        mask-image: var(--mask-image);
+        -webkit-mask-image: var(--mask-image);
+    }
+
+    :global(.introduction > div) {
+        /* Hack to overcome odd rendering bug in Firefox 79.0 */
+        background-image: linear-gradient(transparent, transparent);
+    }
 </style>
 
 <p class="lede"><slot></slot></p>
