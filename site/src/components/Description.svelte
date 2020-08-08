@@ -19,6 +19,7 @@
         flex: 1;
         max-width: 25rem;
         margin-right: 3rem;
+        pointer-events: all;
     }
 
     .description-body :global(:last-child) {
