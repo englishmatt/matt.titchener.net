@@ -26,7 +26,6 @@
 
     .item {
         box-sizing: border-box;
-        max-width: calc(var(--max-main-content-width) - var(--content-left-margin));
         padding-bottom: var(--item-padding-bottom);
         padding-right: 0;
         position: relative;

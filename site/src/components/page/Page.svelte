@@ -1,17 +1,10 @@
 <script>
     import { onMount } from "svelte";
 
-    let transformed = false;
     let page;
+    let _class = null;
 
-    function handlePageScroll() {
-        transformed = page.scrollTop > (window.innerHeight / 4);
-    }
-
-    onMount(() => {
-        // Ensure the background is set correctly when the page loads in to a scrolled position.
-        handlePageScroll();
-    });
+    export let sectionName = "";
 </script>
 
 <style>
@@ -58,6 +51,6 @@
     }
 </style>
 
-<div class="page" bind:this={page} on:scroll={handlePageScroll} class:transformed>
+<div class="page {sectionName}" bind:this={page}>
     <slot></slot>
 </div>

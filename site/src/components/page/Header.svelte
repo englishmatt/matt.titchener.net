@@ -6,33 +6,31 @@
 </script>
 
 <style>
-    header {
-        box-sizing: border-box;
-        align-items: flex-end;
-        display: flex;
-        padding: 3.5rem 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: var(--site-header-height);
-        z-index: 0;
-    }
-
-    header > div {
+    .lockin {
         margin-left: var(--site-horizontal-margin);
         max-width: var(--max-main-content-width);
         width: var(--main-content-width);
     }
 
-    header > div > :global(svg) {
+    .lockin > :global(svg) {
         display: block; /* Removes white space artifacts during layout */
         opacity: 0.7;
+    }
+
+    header > :global(*) {
+        position: fixed;
+        top: 3.5rem;
+    }
+
+    header :global(nav) {
+        z-index: 10;
+        left: calc(var(--main-content-width) + var(--site-horizontal-margin));
     }
 </style>
 
 <!-- Represents the site header -->
 <header>
-    <div>
+    <div class="lockin">
         {@html LockIn}
     </div>
     <Nav {active}/>
