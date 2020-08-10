@@ -14,7 +14,7 @@
 
 <Section class="introduction" minHeight="calc(100vh - 5rem)">
     <Entry entryOffset="20vh">
-        <Introduction>I’m Matt, a UX designer and software engineer from the UK. Accessibility and universal design are central to my work, be it engineering or design.</Introduction>
+        <Introduction>I’m a software engineer and UX designer based in California. I specialise in interaction and UI design that is accessible and usable.</Introduction>
     </Entry>
 </Section>
 
@@ -35,6 +35,8 @@
         <div slot="item">
             <Image alt="Foobar" src="http://placeimg.com/1000/600/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" loading="lazy" />
         </div>
+        <span slot="title">Boxes & Arrows</span>
+        <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>
 
@@ -43,6 +45,8 @@
         <div slot="item">
             <Image alt="Foobar" src="http://placeimg.com/1000/650/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" loading="lazy" />
         </div>
+        <span slot="title">Boxes & Arrows</span>
+        <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>
 
@@ -51,6 +55,8 @@
         <div slot="item">
             <Image alt="Foobar" src="http://placeimg.com/1000/700/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" loading="lazy" />
         </div>
+        <span slot="title">Boxes & Arrows</span>
+        <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>
 
@@ -59,6 +65,8 @@
         <div slot="item">
             <Image alt="Foobar" src="http://placeimg.com/1000/750/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" loading="lazy" />
         </div>
+        <span slot="title">Boxes & Arrows</span>
+        <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>
 
@@ -67,6 +75,8 @@
         <div slot="item">
             <Image alt="Foobar" src="http://placeimg.com/1000/800/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" loading="lazy" />
         </div>
+        <span slot="title">Boxes & Arrows</span>
+        <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>
 
@@ -75,6 +85,8 @@
         <div slot="item">
             <Image alt="Foobar" src="http://placeimg.com/1000/850/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" loading="lazy" />
         </div>
+        <span slot="title">Boxes & Arrows</span>
+        <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>
 
@@ -83,5 +95,7 @@
         <div slot="item">
             <Image alt="Foobar" src="http://placeimg.com/1000/900/nature" width="1000" height="600" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" loading="lazy" />
         </div>
+        <span slot="title">Boxes & Arrows</span>
+        <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>

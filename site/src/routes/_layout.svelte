@@ -46,7 +46,8 @@
         padding-right: calc(var(--site-horizontal-margin) + 3rem);
         scrollbar-width: thin;
         scrollbar-color: var(--default-copy-color) var(--scrollbar-background-color);
-        width: calc(100vw - 2px);
+        scroll-behavior: smooth;
+        width: calc(100% - 2px);
         margin-right: 2px;
     }
 

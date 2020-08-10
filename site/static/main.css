@@ -35,18 +35,13 @@ body {
 body {
     --background-transition-duration: 500ms;
     color: var(--default-copy-color);
-    display: flex;
-    flex-direction: column;
     font-family: 'Inter', 'Arial', sans-serif;
     text-rendering: optimizeLegibility;
     line-height: 1.6;
-    height: 100vh;
 }
 
 body > .page {
     overflow: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--default-copy-color) transparent;
 }
 
 :focus {
