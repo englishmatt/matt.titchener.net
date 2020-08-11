@@ -36,7 +36,7 @@
 
 <Section class="introduction" minHeight="calc(100vh - 7rem)">
     <Entry entryOffset="20vh">
-        <Introduction>I’m a software engineer and UX designer based in California. I specialise in interaction and UI design that is accessible and usable.</Introduction>
+        <Introduction>I’m an interdisciplinary developer and designer based in California. I care about interaction and UI design that is accessible and usable.</Introduction>
     </Entry>
 </Section>
 

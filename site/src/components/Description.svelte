@@ -24,6 +24,24 @@
     .description-body :global(:last-child) {
         margin-bottom: 0;
     }
+
+    .byline {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border: 2px solid var(--primary-accent-color);
+        border-radius: 4px;
+        text-decoration: none;
+        color: var(--primary-accent-color);
+        transition: border-color var(--background-transition-duration), color var(--background-transition-duration);
+        margin-top: 0.6rem;
+    }
 </style>
 
 {#if slots}
@@ -32,9 +50,12 @@
             <h3><slot name="title" /></h3>
         {/if}
 
+        <slot name="byline"><span class="byline">(2003) IA, UI design, visual design</span></slot>
+
         {#if slots.default}
             <div class="description-body">
                 <slot></slot>
+                <a href="/boxes-and-arrows">Read more</a>
             </div>
         {/if}
     </section>

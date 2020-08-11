@@ -8,6 +8,11 @@
 </script>
 
 <style>
+    .page,
+    .page.introduction {
+        --primary-accent-color: rgba(0, 132, 255, 1);
+    }
+
     /* TODO: Move page transitions elsewhere */
     .page::before,
     .page.introduction::before {
@@ -25,9 +30,16 @@
         z-index: -2;
     }
 
+    .page.page.boxes-and-arrows {
+        --primary-accent-color: #8e4eff;
+    }
+
     .page.boxes-and-arrows::before {
-        /* clip-path: polygon(0 0, 130rem 0, 120rem 60rem, 0 40rem); */
-        background-color: #a7fffd;
+        background-color: #8afff2;
+    }
+
+    .page.foobar {
+        --primary-accent-color: yellow;
     }
 
     .page.foobar::before {
@@ -59,7 +71,7 @@
 
     .page.foobar::after {
         background-color: #a5e9ff;
-        transform: translate(-3rem, 25rem) rotate(37deg);
+        transform: translate(-15rem, 10rem) rotate(-10deg);
     }
 </style>
 
