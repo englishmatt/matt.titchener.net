@@ -8,12 +8,15 @@
 
 <style>
     section {
-        --section-padding-top: 4rem;
         display: flex;
         flex-direction: column;
         min-height: var(--min-height);
-        padding-top: calc(var(--site-header-height) + var(--section-padding-top));
         box-sizing: border-box;
+    }
+
+    section:first-of-type,
+    section + section {
+        padding-top: calc(var(--site-header-height) + var(--section-padding-top));
     }
 
     section:last-of-type {

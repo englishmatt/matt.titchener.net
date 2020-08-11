@@ -35,6 +35,7 @@
     .item :global(img) {
         height: auto;
         object-fit: cover;
+        max-height: calc(100vh - var(--site-header-height) - 7rem);
         width: 100%;
     }
 
@@ -42,7 +43,7 @@
         flex: 1;
     }
 
-    :global(.description) {
+    .entry :global(.description) {
         margin-left: calc(var(--navigation-horizontal-padding) * 2);
         position: sticky;
         top: calc(var(--site-header-height) + var(--section-padding-top));

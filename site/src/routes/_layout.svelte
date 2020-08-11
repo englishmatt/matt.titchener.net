@@ -11,13 +11,21 @@
 
     function handleScroll() {
 
+        const defaultSectionName = "introduction";
+
         // TODO: Switch to Intersection Observer API
         switch (true) {
-            case (main.scrollTop > 400):
-                sectionName = "transformed";
+            case (main.scrollTop < 400):
+                sectionName = defaultSectionName;
+                break;
+            case (main.scrollTop < 1200):
+                sectionName = "boxes-and-arrows";
+                break
+            case (main.scrollTop < 2400):
+                sectionName = "foobar";
                 break;
             default:
-                sectionName = "";
+                sectionName = defaultSectionName;
         }
     }
 

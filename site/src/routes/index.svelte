@@ -7,24 +7,47 @@
 </script>
 
 <style>
-    :global(main > section.introduction) {
+    :global(main > .introduction) {
         margin-bottom: calc((var(--site-header-height) + var(--section-padding-top)) *-1);
+    }
+
+    :global(main > .introduction) {
+        --mask-image: linear-gradient(black 75%, transparent 95%, transparent);
+        mask-image: var(--mask-image);
+        -webkit-mask-image: var(--mask-image);
+        pointer-events: none;
+    }
+
+    :global(.introduction) + h2 {
+        padding-top: calc(var(--site-header-height) + var(--section-padding-top));
+    }
+
+    :global(h2 + section) {
+        padding-top: 0;
+    }
+
+    :global(h2) {
+        font-family: 'Montserrat', sans-serif;
+        position: sticky;
+        text-transform: uppercase;
+        top: 0;
     }
 </style>
 
-<Section class="introduction" minHeight="calc(100vh - 5rem)">
+<Section class="introduction" minHeight="calc(100vh - 7rem)">
     <Entry entryOffset="20vh">
         <Introduction>I’m a software engineer and UX designer based in California. I specialise in interaction and UI design that is accessible and usable.</Introduction>
     </Entry>
 </Section>
 
-<Section id="entries">
+<h2 id="entries">Portfolio</h2>
+<Section id="boxes-and-arrows">
     <Entry>
         <div slot="item">
-            <Image alt="Boxes &amp; Arrows" src="http://placeimg.com/1000/500/nature" width="1000" height="500" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" decoding="sync" importance="high" />
+            <Image alt="Boxes &amp; Arrows" src="http://placeimg.com/1000/1000/nature" width="1000" height="1000" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" decoding="sync" importance="high" />
         </div>
         <!-- TODO: Remove wrapping span; this is only required as Svelte/issue #1037 has not be closed.
-             See for more info: https://github.com/sveltejs/svelte/issues/1037 -->
+            See for more info: https://github.com/sveltejs/svelte/issues/1037 -->
         <span slot="title">Boxes & Arrows</span>
         <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
