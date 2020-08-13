@@ -5,6 +5,7 @@
         margin: 0;
         position: sticky;
         top: calc(var(--entry-offset) + var(--site-header-height) + var(--section-padding-top));
+        max-width: 88rem;
     }
 
     .lede {

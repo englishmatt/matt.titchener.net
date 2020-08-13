@@ -15,14 +15,19 @@
     div {
         background-color: var(--background-color);
         border-radius: var(--border-radius);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
         display: block;
         overflow: hidden;
+        transition: box-shadow var(--background-transition-duration);
     }
 
     img {
         display: block;
-        object-fit: cover;
         transition: opacity 300ms;
+    }
+
+    .loading {
+        box-shadow: none;
     }
 
     .loading img {

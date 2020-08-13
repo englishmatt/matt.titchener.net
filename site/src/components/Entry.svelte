@@ -35,6 +35,8 @@
     .item :global(img) {
         height: auto;
         object-fit: cover;
+        object-position: top left;
+        min-width: 77rem;
         max-height: calc(100vh - var(--site-header-height) - 7rem);
         width: 100%;
     }
