@@ -25,6 +25,7 @@
 
 html {
     height: 100%;
+    font-synthesis: none;   /* Disable browser synthesis of font styles and weights if the typeface is missing */
 }
 
 html,
