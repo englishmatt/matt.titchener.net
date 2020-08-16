@@ -15,10 +15,6 @@
         pointer-events: none;
     }
 
-    :global(.introduction) + h2 {
-        padding-top: calc(var(--site-header-height) + var(--section-padding-top));
-    }
-
     :global(.introduction > div) {
         /* Hack to overcome odd rendering bug in Firefox 79.0 */
         background-image: linear-gradient(transparent, transparent);
@@ -38,12 +34,14 @@
 
 <Section class="introduction" minHeight="calc(100vh - 7rem)">
     <Entry entryOffset="20vh">
-        <Introduction>I’m an interdisciplinary developer and designer based in California. I care about creating experiences that are clear, accessible, and beautiful.</Introduction>
+        <Introduction>
+            <span slot="headline">I’m a designer-developer based in California.</span><br />
+            <span>Accessibility and universal design are important to me.</span>
+        </Introduction>
     </Entry>
 </Section>
 
-<h2 id="entries">Portfolio</h2>
-<Section id="facespace">
+<Section id="entries">
     <Entry>
         <div slot="item">
             <Image alt="FaceSpace" src="/FaceSpace.png" width="1000" height="1000" borderRadius="6px" backgroundColor="rgba(0, 0, 0, 0.4)" decoding="sync" importance="high" />

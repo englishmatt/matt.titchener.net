@@ -10,9 +10,17 @@
 
     .lede {
         font-size: 2.5rem;
-        font-weight: 600;
+        font-weight: 400;
         line-height: var(--line-height);
+    }
+
+    .lede .headline {
+        font-size: 3rem;
+        font-weight: 700;
     }
 </style>
 
-<p class="lede"><slot></slot></p>
+<p class="lede">
+    <span class="headline"><slot name="headline"></slot></span>
+    <span><slot></slot></span>
+</p>

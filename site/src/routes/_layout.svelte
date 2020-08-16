@@ -29,7 +29,7 @@
         }
     }
 
-    export let segment = 'portfolio';
+    export let segment = 'work';
 </script>
 
 <style>

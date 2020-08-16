@@ -50,7 +50,7 @@
 <!-- Represents the top-level navigation -->
 <nav>
 	<ul>
-		<li><a aria-current="{active === undefined || active === 'portfolio' ? 'page' : undefined}" href="#entries"><span>Portfolio</span></a></li>
+		<li><a aria-current="{active === undefined || active === 'work' ? 'page' : undefined}" href="#entries"><span>Work</span></a></li>
 		<li><a aria-current="{active === 'about' ? 'page' : undefined}" href="about"><span>About</span></a></li>
 	</ul>
 </nav>
