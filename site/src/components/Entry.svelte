@@ -24,31 +24,11 @@
         pointer-events: none;
     }
 
-    .item {
-        box-sizing: border-box;
-        padding-bottom: var(--item-padding-bottom);
-        padding-right: 0;
-        position: relative;
-        width: calc(var(--main-content-width) - var(--content-left-margin));
-    }
-
-    .item :global(img) {
-        height: auto;
-        object-fit: cover;
-        object-position: top left;
-        min-width: 77rem;
-        max-height: calc(100vh - var(--site-header-height) - 7rem);
-        width: 100%;
-    }
-
     .entry:last-of-type {
         flex: 1;
     }
 
     .entry :global(.description) {
-        margin-left: calc(var(--navigation-horizontal-padding) * 2);
-        position: sticky;
-        top: calc(var(--site-header-height) + var(--section-padding-top));
         margin-bottom: var(--item-padding-bottom);
     }
 </style>
@@ -59,12 +39,6 @@
 {#if slots}
     <div class="entry" style="--entry-offset: {entryOffset}">
         <slot></slot>
-
-        {#if slots.item}
-            <div class="item">
-                <slot name="item"></slot>
-            </div>
-        {/if}
 
         {#if slots.description || slots.title}
             <Description>

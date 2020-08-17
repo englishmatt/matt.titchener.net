@@ -37,10 +37,10 @@
         --scrollbar-background-color: transparent;
         box-sizing: border-box;
         height: 100vh;
-        --mask-image:  linear-gradient(black, black), linear-gradient(transparent 8rem, black 12rem), linear-gradient(black, black);
+        --mask-image: linear-gradient(transparent 8rem, black 12rem);
         --mask-repeat: no-repeat;
-        --mask-size: calc(var(--main-content-width) + var(--site-horizontal-margin)) 100%, 100% 100%, 5vw 100%;
-        --mask-position: 0 0, 0 0, top right;
+        --mask-size: 100% 100%;
+        --mask-position: 0 0;
         -webkit-mask-image: var(--mask-image);
         -webkit-mask-repeat: var(--mask-repeat);
         -webkit-mask-size: var(--mask-size);

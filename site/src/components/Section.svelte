@@ -2,7 +2,7 @@
     let _class = null;
 
     export let id = null;
-    export let minHeight = "0";
+    export let minHeight = "calc(100vh - 7rem)";
     export { _class as class };
 </script>
 

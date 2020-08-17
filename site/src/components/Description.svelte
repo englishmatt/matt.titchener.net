@@ -4,7 +4,7 @@
 
 <style>
     h3 {
-        font-size: 1.6875rem;
+        font-size: 4rem;
         margin-top: -0.7rem;
         margin-bottom: 1rem;
     }
@@ -12,12 +12,12 @@
     .description-body {
         font-size: 1.125rem;
         font-weight: 500;
+        max-width: 25rem;
     }
 
     .description {
         align-self: flex-start;
         flex: 1;
-        max-width: 25rem;
         pointer-events: all;
     }
 
