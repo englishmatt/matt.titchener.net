@@ -30,7 +30,7 @@
         z-index: -2;
     }
 
-    .page.page.boxes-and-arrows {
+    .page.boxes-and-arrows {
         --primary-accent-color: #8e4eff;
     }
 

@@ -8,26 +8,14 @@
 <style>
     :global(main > .introduction) {
         --mask-image: linear-gradient(black 75%, transparent 95%, transparent);
-        margin-bottom: calc((var(--site-header-height) + var(--section-padding-top)) *-1);
-        mask-image: var(--mask-image);
         -webkit-mask-image: var(--mask-image);
+        mask-image: var(--mask-image);
         pointer-events: none;
     }
 
     :global(.introduction > div) {
         /* Hack to overcome odd rendering bug in Firefox 79.0 */
         background-image: linear-gradient(transparent, transparent);
-    }
-
-    :global(h2 + section) {
-        padding-top: 0;
-    }
-
-    :global(h2) {
-        font-family: 'Montserrat', sans-serif;
-        position: sticky;
-        text-transform: uppercase;
-        top: 0;
     }
 </style>
 
