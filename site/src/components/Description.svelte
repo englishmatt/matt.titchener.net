@@ -18,7 +18,6 @@
     .description {
         align-self: flex-start;
         flex: 1;
-        pointer-events: all;
     }
 
     .description-body :global(:last-child) {

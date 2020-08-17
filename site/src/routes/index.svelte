@@ -10,7 +10,6 @@
         --mask-image: linear-gradient(black 75%, transparent 95%, transparent);
         -webkit-mask-image: var(--mask-image);
         mask-image: var(--mask-image);
-        pointer-events: none;
     }
 
     :global(.introduction > div) {
@@ -19,7 +18,7 @@
     }
 </style>
 
-<Section class="introduction" minHeight="calc(100vh - 7rem)">
+<Section id="introduction" class="introduction" minHeight="calc(100vh - 7rem)">
     <Entry entryOffset="20vh">
         <Introduction>
             <span slot="headline">I’m a designer-developer based in California.</span><br />

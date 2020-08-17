@@ -21,7 +21,6 @@
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         height: 100%;
         left: 0;
-        pointer-events: none;
         position: fixed;
         top: 0;
         transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
@@ -52,7 +51,6 @@
         content: "";
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         mix-blend-mode: multiply;
-        pointer-events: none;
         position: fixed;
         transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
         transition: background-color var(--background-transition-duration), transform var(--background-transition-duration);
