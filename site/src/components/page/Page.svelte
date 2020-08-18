@@ -45,6 +45,14 @@
         background-color: #7ac7ff;
     }
 
+    .page.quzbaz {
+        --primary-accent-color: #fff;
+    }
+
+    .page.quzbaz::before {
+        background-color: #7fff64;
+    }
+
     .page::after,
     .page.introduction::after {
         background-color: #ffe6a7;
@@ -70,6 +78,11 @@
     .page.foobar::after {
         background-color: #a5e9ff;
         transform: translate(-15rem, 10rem) rotate(-10deg);
+    }
+
+    .page.quzbaz::after {
+        background-color: #48c4d9;
+        transform: translate(-53rem, 10rem) rotate(4.5deg)
     }
 </style>
 

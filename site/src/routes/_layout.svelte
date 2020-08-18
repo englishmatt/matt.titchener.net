@@ -24,6 +24,9 @@
             case (main.scrollTop < 2400):
                 sectionName = "foobar";
                 break;
+            case (main.scrollTop < 3600):
+                sectionName = "quzbaz";
+                break;
             default:
                 sectionName = defaultSectionName;
         }

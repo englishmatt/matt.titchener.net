@@ -45,7 +45,7 @@
 
 <Section id="entries2">
     <Entry>
-        <span slot="title">Boxes & Arrows</span>
+        <span slot="title">Boxes &amp; Arrows</span>
         <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>
@@ -53,34 +53,6 @@
 <Section id="entries2">
     <Entry>
         <span slot="title">Elim Springs</span>
-        <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
-    </Entry>
-</Section>
-
-<Section id="entries2">
-    <Entry>
-        <span slot="title">Boxes & Arrows</span>
-        <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
-    </Entry>
-</Section>
-
-<Section id="entries2">
-    <Entry>
-        <span slot="title">Boxes & Arrows</span>
-        <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
-    </Entry>
-</Section>
-
-<Section id="entries2">
-    <Entry>
-        <span slot="title">Boxes & Arrows</span>
-        <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
-    </Entry>
-</Section>
-
-<Section id="entries2">
-    <Entry>
-        <span slot="title">Boxes & Arrows</span>
         <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>
