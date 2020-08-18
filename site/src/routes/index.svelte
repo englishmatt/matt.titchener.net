@@ -28,36 +28,31 @@
 </Section>
 
 <Section id="entries">
-    <Entry>
-        <span slot="title">FaceSpace</span>
+    <Entry title="FaceSpace">
         <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>
 
 <Section id="entries2">
-    <Entry>
-        <span slot="title">Budgeting</span>
+    <Entry title="Budgeting">
         <p slot="description">Budgeting started as a speculative project to design personal budgeting and financial planning application.</p>
     </Entry>
 </Section>
 
 <Section id="entries">
-    <Entry>
-        <span slot="title">Project X</span>
+    <Entry title="Project X">
         <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>
 
 <Section id="entries2">
-    <Entry>
-        <span slot="title">Boxes &amp; Arrows</span>
+    <Entry title="Boxes &amp; Arrows" autologo="true">
         <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>
 
 <Section id="entries2">
-    <Entry>
-        <span slot="title">Elim Springs</span>
+    <Entry title="Elim Springs">
         <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>

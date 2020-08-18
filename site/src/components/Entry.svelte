@@ -3,8 +3,8 @@
 
     // Represents the vertical entry-offset from the page; CSS value, so must include dimension units.
     export let entryOffset = "0rem";
-
-    let slots = $$props.$$slots;
+    export let title = null;
+    export let autologo = false;
 </script>
 
 <style>
@@ -33,19 +33,12 @@
 </style>
 
 <!-- Represents a single entry in a {Section} -->
-<!-- TODO: Figure out how to trigger fading in when item content (image) has loaded.
-     Consider dispatching an event from a new Image component? -->
-{#if slots}
-    <div class="entry" style="--entry-offset: {entryOffset}">
-        <slot></slot>
+<div class="entry" style="--entry-offset: {entryOffset}">
+    <slot></slot>
 
-        {#if slots.description || slots.title}
-            <Description>
-                <span slot="title"><slot name="title"></slot></span>
-                {#if slots.description}
-                    <slot name="description" />
-                {/if}
-            </Description>
-        {/if}
-    </div>
-{/if}
+    {#if title}
+        <Description {title} {autologo}>
+            <slot name="description" />
+        </Description>
+    {/if}
+</div>

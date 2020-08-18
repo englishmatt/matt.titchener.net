@@ -1,5 +1,6 @@
 <script>
-    let slots = $$props.$$slots;
+    export let title = null;
+    export let autologo = false;
 </script>
 
 <style>
@@ -43,19 +44,15 @@
     }
 </style>
 
-{#if slots}
-    <section class="description">
-        {#if slots.title}
-            <h3><slot name="title" /></h3>
-        {/if}
+<section class="description">
+    {#if title}
+        <h3>{title}</h3>
+    {/if}
 
-        <slot name="byline"><span class="byline">(2003) IA, UI design, visual design</span></slot>
+    <slot name="byline"><span class="byline">(2003) IA, UI design, visual design</span></slot>
 
-        {#if slots.default}
-            <div class="description-body">
-                <slot></slot>
-                <a href="/boxes-and-arrows">Read more</a>
-            </div>
-        {/if}
-    </section>
-{/if}
+    <div class="description-body">
+        <slot></slot>
+        <a href="/boxes-and-arrows">Read more</a>
+    </div>
+</section>
