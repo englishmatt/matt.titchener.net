@@ -29,8 +29,6 @@
 
 <Section id="entries">
     <Entry>
-        <!-- TODO: Remove wrapping span; this is only required as Svelte/issue #1037 has not be closed.
-            See for more info: https://github.com/sveltejs/svelte/issues/1037 -->
         <span slot="title">FaceSpace</span>
         <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
@@ -40,6 +38,13 @@
     <Entry>
         <span slot="title">Budgeting</span>
         <p slot="description">Budgeting started as a speculative project to design personal budgeting and financial planning application.</p>
+    </Entry>
+</Section>
+
+<Section id="entries">
+    <Entry>
+        <span slot="title">Project X</span>
+        <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
     </Entry>
 </Section>
 
