@@ -1,12 +1,15 @@
 <style>
     ul {
+        align-items: flex-start;
         align-self: flex-start;
+        display: flex;
+        flex-direction: column;
         list-style: none;
+        margin-left: -1rem;
         padding-left: calc(var(--navigation-horizontal-padding) * 2);
         padding-top: calc(var(--site-header-height) + var(--section-padding-top));
         position: sticky;
         top: 0;
-        margin-left: -1rem;
     }
 
     li {
