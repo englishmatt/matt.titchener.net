@@ -20,7 +20,7 @@
     }
 
     section:last-of-type {
-        min-height: calc(100vh - var(--site-footer-height));
+        min-height: 100vh;
     }
 </style>
 

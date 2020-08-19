@@ -24,10 +24,6 @@
         display: block; /* Removes white space artifacts during layout */
         opacity: 0.7;
     }
-
-    header :global(nav) {
-        left: calc(var(--main-content-width) + var(--site-horizontal-margin));
-    }
 </style>
 
 <!-- Represents the site header -->

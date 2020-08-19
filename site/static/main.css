@@ -39,6 +39,7 @@ body {
     font-family: 'Inter', 'Arial', sans-serif;
     text-rendering: optimizeLegibility;
     line-height: 1.6;
+    font-size: 1.125rem;
 }
 
 body > .page {
