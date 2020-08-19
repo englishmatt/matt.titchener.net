@@ -13,6 +13,7 @@
         position: relative;
     }
 
+    li:hover::before,
     .active::before {
         --dimension: 0.5rem;
         content: "";
@@ -32,6 +33,7 @@
         font-weight: 500;
     }
 
+    li:hover a,
     .active a {
         font-weight: 700;
         color: var(--default-copy-color);
