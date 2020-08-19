@@ -45,12 +45,21 @@
 		border-bottom: 4px solid var(--primary-accent-color);
 		font-weight: 700;
 	}
+
+	a::before {
+		/* TODO: Test this technique in modern screenreaders to ensure the content is not read twice. */
+		content: attr(data-content);
+		display: block;
+		font-weight: 700;
+		height: 0;
+		visibility: hidden;
+	}
 </style>
 
 <!-- Represents the top-level navigation -->
 <nav>
 	<ul>
-		<li><a aria-current="{active === undefined || active === 'work' ? 'page' : undefined}" href="#entries"><span>Work</span></a></li>
-		<li><a aria-current="{active === 'about' ? 'page' : undefined}" href="about"><span>About</span></a></li>
+		<li><a aria-current="{active === undefined || active === 'work' ? 'page' : undefined}" data-content="Work" href="#entries"><span>Work</span></a></li>
+		<li><a aria-current="{active === 'about' ? 'page' : undefined}" data-content="About" href="about"><span>About</span></a></li>
 	</ul>
 </nav>
