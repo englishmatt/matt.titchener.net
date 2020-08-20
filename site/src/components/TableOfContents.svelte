@@ -1,3 +1,7 @@
+<script>
+    export let currentSection = null;
+</script>
+
 <style>
     ul {
         align-items: flex-start;
@@ -44,9 +48,9 @@
 </style>
 
 <ul>
-    <li class="active"><a href="#facespace">FaceSpace</a></li>
-    <li><a href="#budgeting">Budgeting</a></li>
-    <li><a href="#projectx">Project X</a></li>
-    <li><a href="#boxesandarrows">Boxes &amp; Arrows</a></li>
-    <li><a href="#elimsprings">Elim Springs</a></li>
+    <li class:active={currentSection === "facespace"}><a href="#facespace">FaceSpace</a></li>
+    <li class:active={currentSection === "budgeting"}><a href="#budgeting">Budgeting</a></li>
+    <li class:active={currentSection === "projectx"}><a href="#projectx">Project X</a></li>
+    <li class:active={currentSection === "boxesandarrows"}><a href="#boxesandarrows">Boxes &amp; Arrows</a></li>
+    <li class:active={currentSection === "elimsprings"}><a href="#elimsprings">Elim Springs</a></li>
 </ul>

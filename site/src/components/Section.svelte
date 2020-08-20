@@ -1,5 +1,49 @@
 <script>
+    import { onMount, onDestroy, createEventDispatcher } from "svelte";
+    import { goto, stores } from "@sapper/app";
+
+    const { page } = stores();
+    const dispatch = createEventDispatcher();
+    let observer;
     let _class = null;
+    let section;
+    let activeSectionId;
+
+    // Handles <Section> intersection observation events. Used to update the hash of the URL
+    // when the user scrolls through the content of the page.
+    function handleIntersection(event) {
+
+        let intersectingSection = event.find((x) => x.isIntersecting === true);
+
+        if (intersectingSection !== undefined) {
+            activeSectionId = intersectingSection.target.id;
+
+            // We must check to see if the intersectingSectionId is also an empty string
+            // otherwise it will attempt to send us back to the base URL.
+            if (activeSectionId !== undefined && activeSectionId !== "") {
+                // Using `replaceState` here is considered dangerous, however Sapper's `goto` call
+                // caused issues with smooth scrolling when using anchor tags.
+                history.replaceState(undefined, undefined, `#${activeSectionId}`);
+                dispatch("intersect", { id: activeSectionId });
+            }
+        }
+    }
+
+    onMount(() => {
+        activeSectionId = location.hash;
+
+        // TODO: Move instantiation of IntersectionObserver to parent component.
+        observer = new IntersectionObserver(handleIntersection, {
+            root: document.getElementById("content"),
+            threshold: 0.5
+        });
+
+        observer.observe(section);
+
+        return () => {
+            observer.disconnect();
+        };
+    });
 
     export let id = null;
     export let minHeight = "calc(100vh - 7rem)";
@@ -25,6 +69,6 @@
 </style>
 
 <!-- Represents a collection of elements of type {Entry} -->
-<section {id} class={_class} style="--min-height: {minHeight}">
+<section {id} class={_class} style="--min-height: {minHeight}" bind:this={section}>
     <slot></slot>
 </section>

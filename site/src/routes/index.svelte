@@ -4,6 +4,12 @@
     import Entry from '../components/Entry.svelte';
     import Description from '../components/Description.svelte';
     import TableOfContents from '../components/TableOfContents.svelte';
+
+    let currentSection = null;
+
+    function handleIntersect(event) {
+        currentSection = event.detail.id;
+    }
 </script>
 
 <style>
@@ -33,7 +39,7 @@
     }
 </style>
 
-<Section id="introduction" class="introduction" minHeight="calc(100vh - 7rem)">
+<Section id="introduction" class="introduction" minHeight="calc(100vh - 7rem)" on:intersect={handleIntersect}>
     <Entry entryOffset="20vh">
         <Introduction>
             <span slot="headline">I’m a designer-developer based in California.</span><br />
@@ -43,33 +49,33 @@
 </Section>
 
 <section class="work">
-    <TableOfContents />
+    <TableOfContents {currentSection} />
     <section id="entries" class="entries">
-        <Section id="facespace">
+        <Section id="facespace" on:intersect={handleIntersect}>
             <Entry title="FaceSpace">
                 <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
             </Entry>
         </Section>
 
-        <Section id="budgeting">
+        <Section id="budgeting" on:intersect={handleIntersect}>
             <Entry title="Budgeting">
                 <p slot="description">Budgeting started as a speculative project to design personal budgeting and financial planning application.</p>
             </Entry>
         </Section>
 
-        <Section id="projectx">
+        <Section id="projectx" on:intersect={handleIntersect}>
             <Entry title="Project X">
                 <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
             </Entry>
         </Section>
 
-        <Section id="boxesandarrows">
+        <Section id="boxesandarrows" on:intersect={handleIntersect}>
             <Entry title="Boxes &amp; Arrows" autologo="true">
                 <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
             </Entry>
         </Section>
 
-        <Section id="elimsprings">
+        <Section id="elimsprings" on:intersect={handleIntersect}>
             <Entry title="Elim Springs">
                 <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
             </Entry>
