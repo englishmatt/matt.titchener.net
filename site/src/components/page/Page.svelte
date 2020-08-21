@@ -1,10 +1,5 @@
 <script>
-    import { onMount } from "svelte";
-
-    let page;
-    let _class = null;
-
-    export let sectionName = "";
+    export let sectionName;
 </script>
 
 <style>
@@ -86,6 +81,6 @@
     }
 </style>
 
-<div class="page {sectionName}" bind:this={page}>
+<div class="page {sectionName}">
     <slot></slot>
 </div>

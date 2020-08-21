@@ -1,11 +1,10 @@
 <script>
-    import { onMount, onDestroy, createEventDispatcher } from "svelte";
-    import { goto, stores } from "@sapper/app";
+    import { onMount, createEventDispatcher } from "svelte";
 
-    const { page } = stores();
     const dispatch = createEventDispatcher();
+
     let observer;
-    let _class = null;
+    let className = null;
     let section;
     let activeSectionId;
 
@@ -47,7 +46,7 @@
 
     export let id = null;
     export let minHeight = "calc(100vh - 7rem)";
-    export { _class as class };
+    export { className as class };
 </script>
 
 <style>
@@ -69,6 +68,6 @@
 </style>
 
 <!-- Represents a collection of elements of type {Entry} -->
-<section {id} class={_class} style="--min-height: {minHeight}" bind:this={section}>
+<section {id} class={className} style="--min-height: {minHeight}" bind:this={section}>
     <slot></slot>
 </section>

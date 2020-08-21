@@ -4,33 +4,42 @@
     import SkipToContent from '../components/page/SkipToContent.svelte';
     import Page from '../components/page/Page.svelte';
     import { onMount } from 'svelte';
+    import { stores } from "@sapper/app";
 
-    let sectionName = null;
-    let main;
+    const { page } = stores();
     const contentId = 'content';
 
-    function handleScroll() {
+    // TODO: This is a hack. As of Sapper 0.27.16 there's no easy way to pass values
+    // from a component/route to _layout. Ideally, the `sectionName` would be set by the
+    // the requisite route and passed up to `_layout`. Instead we calculate the `sectionName`
+    // below based on our own route calculus. Hopefully the above situation will change
+    // one day. See for more details: https://github.com/sveltejs/sapper/issues/917
 
-        const defaultSectionName = "introduction";
+    // WARNING: All new pages (routes) MUST be added in the switch statement, otherwise they
+    // receive an error class on the .page div.
+    function getSectionName(urlPath) {
+        let sectionName;
 
-        // TODO: Switch to Intersection Observer API
-        switch (true) {
-            case (main.scrollTop < 400):
-                sectionName = defaultSectionName;
+        switch (urlPath) {
+            case "/":
+                sectionName = "introduction";
                 break;
-            case (main.scrollTop < 1200):
-                sectionName = "boxes-and-arrows";
-                break
-            case (main.scrollTop < 2400):
-                sectionName = "foobar";
-                break;
-            case (main.scrollTop < 3600):
-                sectionName = "quzbaz";
+            case "/about":
+                sectionName = "about";
                 break;
             default:
-                sectionName = defaultSectionName;
+                sectionName = "error";
         }
+
+        return sectionName;
     }
+
+    let section;
+    $: sectionName = section;
+
+    page.subscribe((page) => {
+        section = getSectionName(page.path);
+    });
 
     // TODO: Ensure 'work' item is _not_ selected when loading the front page; ensure 'work' becomes
     // selected when the user scrolls down to the portfolio.
@@ -83,7 +92,7 @@
     <SkipToContent {contentId} />
     <Header active={segment} />
 
-    <main id="{contentId}" bind:this={main} on:scroll={handleScroll}>
+    <main id="{contentId}">
         <slot></slot>
     </main>
 </Page>
