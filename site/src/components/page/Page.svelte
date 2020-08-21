@@ -28,12 +28,7 @@
         return sectionName;
     }
 
-    let section;
-    $: sectionName = section;
-
-    page.subscribe((page) => {
-        section = getSectionName(page.path);
-    });
+    $: sectionName = getSectionName($page.path);
 </script>
 
 <style>
