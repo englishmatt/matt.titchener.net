@@ -9,7 +9,7 @@
         display: flex;
         flex-direction: column;
         list-style: none;
-        margin-left: -1rem;
+        margin: 0 0 0 -1rem;
         padding-left: calc(var(--navigation-horizontal-padding) * 2);
         padding-top: calc(var(--site-header-height) + var(--section-padding-top));
         position: sticky;
@@ -20,6 +20,8 @@
         position: relative;
     }
 
+    /* Not using `::marker` as it's not fully supported yet, and does not provide the
+       flexibility we need. */
     li:hover::before,
     .active::before {
         --dimension: 0.5rem;
