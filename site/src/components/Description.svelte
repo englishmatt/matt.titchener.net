@@ -28,7 +28,7 @@
         text-transform: uppercase;
         font-size: 0.9rem;
         font-weight: 600;
-        color: rgba(0, 0, 0, 0.5);
+        opacity: 0.5;;
     }
 
     a {

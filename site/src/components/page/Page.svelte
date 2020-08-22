@@ -40,6 +40,12 @@
 </script>
 
 <style>
+
+    .page {
+        color: var(--default-copy-color);
+        transition: color var(--background-transition-duration);
+    }
+
     .page,
     .page.introduction {
         --primary-accent-color: rgba(0, 132, 255, 1);
@@ -119,7 +125,7 @@
         transform: translate(-53rem, 10rem) rotate(4.5deg)
     }
 
-    /* Project X */
+    /* Error pages */
     .page.error {
         --primary-accent-color: #fff;
     }
@@ -130,6 +136,21 @@
 
     .page.error::after {
         background-color: #f6cdeb;
+        transform: translate(-53rem, 10rem) rotate(4.5deg)
+    }
+
+    /* Elim Springs */
+    .page.elimsprings {
+        --default-copy-color: #fff;
+        --primary-accent-color: #ffffff;
+    }
+
+    .page.elimsprings::before {
+        background-color: #17234d;
+    }
+
+    .page.elimsprings::after {
+        background-color: rgba(0, 0, 0, 0.377);
         transform: translate(-53rem, 10rem) rotate(4.5deg)
     }
 </style>

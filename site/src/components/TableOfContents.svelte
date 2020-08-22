@@ -35,7 +35,8 @@
     }
 
     a {
-        color: rgba(0, 0, 0, 0.4);
+        color: var(--default-copy-color);
+        opacity: 0.4;
         display: inline-block;
         padding: 0.2rem 1rem 0.2rem;
         text-decoration: none;
@@ -46,6 +47,7 @@
     .active a {
         font-weight: 700;
         color: var(--default-copy-color);
+        opacity: 1;
     }
 </style>
 

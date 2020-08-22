@@ -35,7 +35,6 @@ body {
 
 body {
     --background-transition-duration: 500ms;
-    color: var(--default-copy-color);
     font-family: 'Inter', 'Arial', sans-serif;
     text-rendering: optimizeLegibility;
     line-height: 1.6;
