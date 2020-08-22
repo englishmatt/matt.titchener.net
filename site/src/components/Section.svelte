@@ -1,5 +1,6 @@
 <script>
     import { onMount, createEventDispatcher } from "svelte";
+    import { sectionClassName } from "../stores.js";
 
     const dispatch = createEventDispatcher();
 
@@ -24,6 +25,12 @@
                 // caused issues with smooth scrolling when using anchor tags.
                 history.replaceState(undefined, undefined, `#${activeSectionId}`);
                 dispatch("intersect", { id: activeSectionId });
+
+                // WARNING: Do not set state in Sapper/SSR - this will leak global data to other users.
+                // TODO: Consider using session store for this?
+                if (process.browser) {
+                    sectionClassName.set(activeSectionId);
+                }
             }
         }
     }

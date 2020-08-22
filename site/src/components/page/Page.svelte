@@ -1,7 +1,9 @@
 <script>
     import { stores } from "@sapper/app";
+    import { sectionClassName } from "../../stores.js";
 
     const { page } = stores();
+    let oldUrlPath;
 
     // TODO: This is a hack. As of Sapper 0.27.16 there's no easy way to pass values
     // from a component/route to _layout. Ideally, the `sectionName` would be set by the
@@ -11,24 +13,30 @@
 
     // WARNING: All new pages (routes) MUST be added in the switch statement, otherwise they
     // receive an error class on the .page div.
-    function getSectionName(urlPath) {
-        let sectionName;
+    function getSectionName(urlPath, sectionName) {
+        let name;
 
-        switch (urlPath) {
-            case "/":
-                sectionName = "introduction";
-                break;
-            case "/about":
-                sectionName = "about";
-                break;
-            default:
-                sectionName = "error";
+        // Determine if we're navigating...
+        if (oldUrlPath === urlPath) {
+            name = sectionName;
+        } else {
+            switch (urlPath) {
+                case "/":
+                    name = "introduction";
+                    break;
+                case "/about":
+                    name = "about";
+                    break;
+                default:
+                    name = "error";
+            }
         }
 
-        return sectionName;
+        oldUrlPath = urlPath;
+        return name;
     }
 
-    $: sectionName = getSectionName($page.path);
+    $: sectionName = getSectionName($page.path, $sectionClassName);
 </script>
 
 <style>
@@ -37,7 +45,6 @@
         --primary-accent-color: rgba(0, 132, 255, 1);
     }
 
-    /* TODO: Move page transitions elsewhere */
     .page::before,
     .page.introduction::before {
         background-color: var(--introduction-background-color);
@@ -51,30 +58,6 @@
         transition: background-color var(--background-transition-duration);
         width: 100%;
         z-index: -2;
-    }
-
-    .page.boxes-and-arrows {
-        --primary-accent-color: #8e4eff;
-    }
-
-    .page.boxes-and-arrows::before {
-        background-color: #8afff2;
-    }
-
-    .page.foobar {
-        --primary-accent-color: yellow;
-    }
-
-    .page.foobar::before {
-        background-color: #7ac7ff;
-    }
-
-    .page.quzbaz {
-        --primary-accent-color: #fff;
-    }
-
-    .page.quzbaz::before {
-        background-color: #7fff64;
     }
 
     .page::after,
@@ -94,18 +77,59 @@
         transform: translate(-60rem, 20rem) rotate(-4.5deg);
     }
 
-    .page.boxes-and-arrows::after {
+    /* Boxes and Arrows */
+    .page.boxesandarrows {
+        --primary-accent-color: #8e4eff;
+    }
+
+    .page.boxesandarrows::before {
+        background-color: #8afff2;
+    }
+
+    .page.boxesandarrows::after {
         background-color: #a5e9ff;
         transform: translate(-67rem, -19rem) rotate(25deg);
     }
 
-    .page.foobar::after {
+    /* Facespace */
+    .page.facespace {
+        --primary-accent-color: yellow;
+    }
+
+    .page.facespace::before {
+        background-color: #7ac7ff;
+    }
+
+    .page.facespace::after {
         background-color: #a5e9ff;
         transform: translate(-15rem, 10rem) rotate(-10deg);
     }
 
-    .page.quzbaz::after {
+    /* Project X */
+    .page.projectx {
+        --primary-accent-color: #fff;
+    }
+
+    .page.projectx::before {
+        background-color: #7fff64;
+    }
+
+    .page.projectx::after {
         background-color: #48c4d9;
+        transform: translate(-53rem, 10rem) rotate(4.5deg)
+    }
+
+    /* Project X */
+    .page.error {
+        --primary-accent-color: #fff;
+    }
+
+    .page.error::before {
+        background-color: #ff7373;
+    }
+
+    .page.error::after {
+        background-color: #f6cdeb;
         transform: translate(-53rem, 10rem) rotate(4.5deg)
     }
 </style>
