@@ -21,8 +21,9 @@
     }
 
     .lockin :global(svg) {
+        fill: var(--default-copy-color);
         display: block; /* Removes white space artifacts during layout */
-        opacity: 0.7;
+        transition: fill var(--background-transition-duration);
     }
 </style>
 

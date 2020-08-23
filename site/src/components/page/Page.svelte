@@ -42,20 +42,18 @@
 <style>
 
     .page {
+        --primary-background-color: #ffe600;
+        --secondary-background-color: #ffe6a7;
+        --primary-accent-color: rgba(0, 132, 255, 1);
+        --transform: none;
         color: var(--default-copy-color);
         transition: color var(--background-transition-duration);
     }
 
-    .page,
-    .page.introduction {
-        --primary-accent-color: rgba(0, 132, 255, 1);
-    }
-
-    .page::before,
-    .page.introduction::before {
-        background-color: var(--introduction-background-color);
-        content: "";
+    .page::before {
+        background-color: var(--primary-background-color);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        content: "";
         height: 100%;
         left: 0;
         position: fixed;
@@ -66,13 +64,12 @@
         z-index: -2;
     }
 
-    .page::after,
-    .page.introduction::after {
-        background-color: #ffe6a7;
+    .page::after {
+        background-color: var(--secondary-background-color);
         content: "";
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         mix-blend-mode: multiply;
         position: fixed;
+        transform: var(--transform);
         transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
         transition: background-color var(--background-transition-duration), transform var(--background-transition-duration);
         z-index: -1;
@@ -80,78 +77,59 @@
         height: 110rem;
         top: 0;
         left: 0;
-        transform: translate(-60rem, 20rem) rotate(-4.5deg);
+    }
+
+    .page.introduction {
+        --transform: translate(-60rem, 20rem) rotate(-4.5deg);
     }
 
     /* Boxes and Arrows */
     .page.boxesandarrows {
         --primary-accent-color: #8e4eff;
-    }
-
-    .page.boxesandarrows::before {
-        background-color: #8afff2;
-    }
-
-    .page.boxesandarrows::after {
-        background-color: #a5e9ff;
-        transform: translate(-67rem, -19rem) rotate(25deg);
+        --primary-background-color: #8afff2;
+        --secondary-background-color: #a5e9ff;
+        --transform: translate(-67rem, -19rem) rotate(25deg);
     }
 
     /* Facespace */
     .page.facespace {
-        --primary-accent-color: yellow;
+        --primary-accent-color: #ff0;
+        --primary-background-color: #7ac7ff;
+        --secondary-background-color: #a5e9ff;
+        --transform: translate(-15rem, 10rem) rotate(-10deg);
     }
 
-    .page.facespace::before {
-        background-color: #7ac7ff;
-    }
-
-    .page.facespace::after {
-        background-color: #a5e9ff;
-        transform: translate(-15rem, 10rem) rotate(-10deg);
+    /* Boxes and Arrows */
+    .page.budgeting {
+        --primary-accent-color: #8e4eff;
+        --primary-background-color: #8afff2;
+        --secondary-background-color: #a5e9ff;
+        --transform: translate(-67rem, -19rem) rotate(25deg);
     }
 
     /* Project X */
     .page.projectx {
         --primary-accent-color: #fff;
-    }
-
-    .page.projectx::before {
-        background-color: #7fff64;
-    }
-
-    .page.projectx::after {
-        background-color: #48c4d9;
-        transform: translate(-53rem, 10rem) rotate(4.5deg)
+        --primary-background-color: #7fff64;
+        --secondary-background-color: #48c4d9;
+        --transform: translate(-53rem, 10rem) rotate(4.5deg);
     }
 
     /* Error pages */
     .page.error {
         --primary-accent-color: #fff;
-    }
-
-    .page.error::before {
-        background-color: #ff7373;
-    }
-
-    .page.error::after {
-        background-color: #f6cdeb;
-        transform: translate(-53rem, 10rem) rotate(4.5deg)
+        --primary-background-color: #ff7373;
+        --secondary-background-color: #f6cdeb;
+        --transform: translate(-53rem, 10rem) rotate(4.5deg);
     }
 
     /* Elim Springs */
     .page.elimsprings {
         --default-copy-color: #fff;
-        --primary-accent-color: #ffffff;
-    }
-
-    .page.elimsprings::before {
-        background-color: #17234d;
-    }
-
-    .page.elimsprings::after {
-        background-color: rgba(0, 0, 0, 0.377);
-        transform: translate(-53rem, 10rem) rotate(4.5deg)
+        --primary-accent-color: #ff6000;
+        --primary-background-color: #17234d;
+        --secondary-background-color: rgba(0, 0, 0, 0.377);
+        --transform: translate(-53rem, 10rem) rotate(4.5deg);
     }
 </style>
 

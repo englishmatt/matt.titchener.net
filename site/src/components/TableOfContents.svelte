@@ -36,25 +36,32 @@
 
     a {
         color: var(--default-copy-color);
-        opacity: 0.4;
         display: inline-block;
         padding: 0.2rem 1rem 0.2rem;
         text-decoration: none;
         font-weight: 500;
     }
 
+    a span {
+        opacity: 0.4;
+    }
+
     li:hover a,
     .active a {
         font-weight: 700;
         color: var(--default-copy-color);
+    }
+
+    li:hover a span,
+    .active a span {
         opacity: 1;
     }
 </style>
 
 <ul>
-    <li class:active={currentSection === "facespace"}><a href="#facespace">FaceSpace</a></li>
-    <li class:active={currentSection === "budgeting"}><a href="#budgeting">Budgeting</a></li>
-    <li class:active={currentSection === "projectx"}><a href="#projectx">Project X</a></li>
-    <li class:active={currentSection === "boxesandarrows"}><a href="#boxesandarrows">Boxes &amp; Arrows</a></li>
-    <li class:active={currentSection === "elimsprings"}><a href="#elimsprings">Elim Springs</a></li>
+    <li class:active={currentSection === "facespace"}><a href="#facespace"><span>FaceSpace</span></a></li>
+    <li class:active={currentSection === "budgeting"}><a href="#budgeting"><span>Budgeting</span></a></li>
+    <li class:active={currentSection === "projectx"}><a href="#projectx"><span>Project X</span></a></li>
+    <li class:active={currentSection === "boxesandarrows"}><a href="#boxesandarrows"><span>Boxes &amp; Arrows</span></a></li>
+    <li class:active={currentSection === "elimsprings"}><a href="#elimsprings"><span>Elim Springs</span></a></li>
 </ul>

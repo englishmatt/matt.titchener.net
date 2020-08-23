@@ -19,9 +19,16 @@
         mask-image: var(--mask-image);
     }
 
-    :global(.introduction > div) {
+    :global(main > .introduction > div) {
         /* Hack to overcome odd rendering bug in Firefox 79.0 */
+        animation-delay: 500ms;
+        animation-duration: 1000ms;
+        animation-iteration-count: 1;
+        animation-name: show-lede;
+        animation-timing-function: cubic-bezier(.02,.02,0,1.01);
+        animation-fill-mode: forwards;
         background-image: linear-gradient(transparent, transparent);
+        opacity: 0;
     }
 
     .work {
@@ -36,6 +43,18 @@
         order: 1;
         max-width: calc(var(--max-main-content-width) - var(--content-left-margin));
         width: calc(var(--main-content-width) - var(--content-left-margin));
+    }
+
+    @keyframes show-lede {
+        from {
+            opacity: 0;
+            transform: translateY(1rem);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 </style>
 

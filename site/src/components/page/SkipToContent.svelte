@@ -4,7 +4,7 @@
 
 <style>
     div {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: var(--header-accent-color);
         box-sizing: border-box;
         padding: 0.25rem calc(var(--site-horizontal-margin) + var(--content-left-margin));
         left: 0;
