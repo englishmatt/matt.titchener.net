@@ -76,6 +76,12 @@
             </Entry>
         </Section>
 
+        <Section id="osher" on:intersect={handleIntersect}>
+            <Entry title="Osher Foundation" subtitle="at Colorado State University" logo="../osher-logo.svg">
+                <p slot="description">Budgeting started as a speculative project to design personal budgeting and financial planning application.</p>
+            </Entry>
+        </Section>
+
         <Section id="budgeting" on:intersect={handleIntersect}>
             <Entry title="Budgeting">
                 <p slot="description">Budgeting started as a speculative project to design personal budgeting and financial planning application.</p>

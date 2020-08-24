@@ -61,6 +61,7 @@
 <ul>
     <li class:active={currentSection === "facespace"}><a href="#facespace"><span>FaceSpace</span></a></li>
     <li class:active={currentSection === "budgeting"}><a href="#budgeting"><span>Budgeting</span></a></li>
+    <li class:active={currentSection === "osher"}><a href="#osher"><span>Osher Foundation</span></a></li>
     <li class:active={currentSection === "projectx"}><a href="#projectx"><span>Project X</span></a></li>
     <li class:active={currentSection === "boxesandarrows"}><a href="#boxesandarrows"><span>Boxes &amp; Arrows</span></a></li>
     <li class:active={currentSection === "elimsprings"}><a href="#elimsprings"><span>Elim Springs</span></a></li>
