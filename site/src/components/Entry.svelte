@@ -4,7 +4,7 @@
     // Represents the vertical entry-offset from the page; CSS value, so must include dimension units.
     export let entryOffset = "0rem";
     export let title = null;
-    export let autologo = false;
+    export let logo = null;
 </script>
 
 <style>
@@ -37,7 +37,7 @@
     <slot></slot>
 
     {#if title}
-        <Description {title} {autologo}>
+        <Description {title} {logo}>
             <slot name="description" />
         </Description>
     {/if}

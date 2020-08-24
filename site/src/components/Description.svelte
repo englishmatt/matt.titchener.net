@@ -1,6 +1,6 @@
 <script>
     export let title = null;
-    export let autologo = false;
+    export let logo = null;
 </script>
 
 <style>
@@ -8,6 +8,23 @@
         font-size: 4rem;
         margin-top: -0.7rem;
         margin-bottom: 1rem;
+    }
+
+    h3.logo {
+        --mask-size: 60% auto;
+        --mask-repeat: no-repeat;
+        --mask-position: 0 65%;
+        background-color: var(--default-copy-color);
+        -webkit-mask-image: var(--logo);
+        -webkit-mask-size: var(--mask-size);
+        -webkit-mask-repeat: var(--mask-repeat);
+        -webkit-mask-position: var(--mask-position);
+        mask-image: var(--logo);
+        mask-size: var(--mask-size);
+        mask-repeat: var(--mask-repeat);
+        mask-position: var(--mask-position);
+        /* TODO: Do more to visually hide header */
+        text-indent: -1000px;
     }
 
     .description-body {
@@ -43,9 +60,9 @@
     }
 </style>
 
-<section class="description">
+<section class="description" style="--logo: url({logo})">
     {#if title}
-        <h3>{title}</h3>
+        <h3 class:logo={!!logo}>{title}</h3>
     {/if}
 
     <slot name="byline"><span class="byline">(2003) IA, UI design, visual design</span></slot>
