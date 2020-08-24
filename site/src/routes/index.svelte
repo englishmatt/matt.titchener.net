@@ -89,13 +89,13 @@
         </Section>
 
         <Section id="boxesandarrows" on:intersect={handleIntersect}>
-            <Entry title="Boxes &amp; Arrows" autologo="true" logo="../boxesandarrows-logo.svg">
+            <Entry title="Boxes &amp; Arrows" logo="../boxesandarrows-logo.svg">
                 <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
             </Entry>
         </Section>
 
         <Section id="elimsprings" on:intersect={handleIntersect}>
-            <Entry title="Elim Springs">
+            <Entry title="Elim Springs" logo="../elimsprings-logo.svg">
                 <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
             </Entry>
         </Section>
