@@ -47,7 +47,6 @@
         --primary-accent-color: rgba(0, 132, 255, 1);
         --transform: none;
         color: var(--default-copy-color);
-        transition: color var(--background-transition-duration);
     }
 
     .page::before {
