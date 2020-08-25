@@ -14,7 +14,7 @@
 
 <style>
     :global(main > .introduction) {
-        --mask-image: linear-gradient(black 75%, transparent 95%, transparent);
+        --mask-image: linear-gradient(to top, transparent 7rem, black 19rem);
         -webkit-mask-image: var(--mask-image);
         mask-image: var(--mask-image);
     }
