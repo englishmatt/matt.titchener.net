@@ -1,10 +1,13 @@
 <script>
     import Description from '../components/Description.svelte';
 
+    let className;
+
     // Represents the vertical entry-offset from the page; CSS value, so must include dimension units.
     export let entryOffset = "0rem";
     export let title = null;
     export let logo = null;
+    export { className as class }
 </script>
 
 <style>
@@ -16,24 +19,17 @@
         --lede-font-size: calc(2.2vw - 0.22rem);       /* Magic */
         --line-height: 1.462;
         --item-padding-bottom: 3rem;
+        align-items: center;
         box-sizing: border-box;
         display: flex;
+        flex: 1;
         margin-top: var(--entry-offset);
         position: relative;
-        align-items: flex-start;
-    }
-
-    .entry:last-of-type {
-        flex: 1;
-    }
-
-    .entry :global(.description) {
-        margin-bottom: var(--item-padding-bottom);
     }
 </style>
 
 <!-- Represents a single entry in a {Section} -->
-<div class="entry" style="--entry-offset: {entryOffset}">
+<div class="entry {className}" style="--entry-offset: {entryOffset}">
     <slot></slot>
 
     {#if title}

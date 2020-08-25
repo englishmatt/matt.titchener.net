@@ -19,15 +19,16 @@
         mask-image: var(--mask-image);
     }
 
-    :global(main > .introduction > div) {
-        /* Hack to overcome odd rendering bug in Firefox 79.0 */
+    :global(main > .introduction > .introduction-entry) {
+        position: fixed;
+        top: 23%;
         animation-delay: 500ms;
         animation-duration: 1000ms;
         animation-iteration-count: 1;
         animation-name: show-lede;
-        animation-timing-function: cubic-bezier(.02,.02,0,1.01);
+        animation-timing-function: cubic-bezier(.02, .02, 0, 1.01);
         animation-fill-mode: forwards;
-        background-image: linear-gradient(transparent, transparent);
+        background-image: linear-gradient(transparent, transparent);    /* Hack to overcome odd rendering bug in Firefox 79.0 */
         opacity: 0;
     }
 
@@ -48,18 +49,18 @@
     @keyframes show-lede {
         from {
             opacity: 0;
-            transform: translateY(1rem);
+            transform: translateY(0) scale(0.95);;
         }
 
         to {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(-4rem);
         }
     }
 </style>
 
-<Section id="introduction" class="introduction" minHeight="calc(100vh - 7rem)" on:intersect={handleIntersect}>
-    <Entry entryOffset="20vh">
+<Section id="introduction" class="introduction" on:intersect={handleIntersect}>
+    <Entry entryOffset="20vh" class="introduction-entry">
         <Introduction>
             <span slot="headline">I’m a designer-developer based in California.</span><br />
             <span>Accessibility and universal design are important to me.</span>

@@ -33,7 +33,6 @@
     }
 
     .description {
-        align-self: flex-start;
         flex: 1;
     }
 
