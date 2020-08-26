@@ -60,7 +60,7 @@
     }
 </style>
 
-<Section id="introduction" class="introduction" on:intersect={handleIntersect}>
+<Section id="introduction" class="introduction" on:intersect={handleIntersect} minHeight="100vh">
     <Entry class="introduction-entry">
         <Introduction>
             <span slot="headline">I’m a designer-developer based in California.</span><br />

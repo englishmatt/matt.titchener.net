@@ -16,7 +16,7 @@
         let intersectingSection = event.find((x) => x.isIntersecting === true);
 
         if (intersectingSection !== undefined) {
-            activeSectionId = intersectingSection.target.id;
+            activeSectionId = intersectingSection.target.parentNode.id;
 
             // We must check to see if the intersectingSectionId is also an empty string
             // otherwise it will attempt to send us back to the base URL.
@@ -36,23 +36,30 @@
     }
 
     onMount(() => {
-        activeSectionId = location.hash;
 
-        // TODO: Move instantiation of IntersectionObserver to parent component.
-        observer = new IntersectionObserver(handleIntersection, {
-            root: document.getElementById("content"),
-            threshold: 0.5
-        });
+        // TODO: Investigate passing/wrapping the Entry component with the IntersectionObserver
+        // and handling events there.
+        let observee = section.querySelector(".entry");
 
-        observer.observe(section);
+        if (!!observee) {
+            activeSectionId = location.hash;
 
-        return () => {
-            observer.disconnect();
-        };
+            observer = new IntersectionObserver(handleIntersection, {
+                root: document.getElementById("content"),
+                rootMargin: "-30% 0% -30% 0%",
+                threshold: 0
+            });
+
+            observer.observe(observee);
+
+            return () => {
+                observer.unobserve(observee);
+            };
+        }
     });
 
+    export let minHeight = null;
     export let id = null;
-    export let minHeight = "100vh";
     export { className as class };
 </script>
 
@@ -60,8 +67,14 @@
     section {
         display: flex;
         align-items: center;
-        min-height: var(--min-height);
+        min-height: var(--min-height, calc(100vh * (2/3)));
+        padding-top: calc(100vh * (1/3));
         box-sizing: border-box;
+    }
+
+    section:last-child {
+        padding-top: 0;
+        min-height: 100vh;
     }
 </style>
 
