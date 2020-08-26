@@ -35,15 +35,18 @@
     }
 
     a {
+        --navigation-transition-duration: 400ms;
         color: var(--default-copy-color);
         display: inline-block;
         padding: 0.2rem 1rem 0.2rem;
         text-decoration: none;
         font-weight: 500;
+        transition: font-weight var(--navigation-transition-duration);
     }
 
     a span {
         opacity: 0.4;
+        transition: opacity var(--navigation-transition-duration);
     }
 
     li:hover a,
