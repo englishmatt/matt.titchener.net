@@ -58,7 +58,7 @@
         }
     });
 
-    export let minHeight = null;
+    export let minHeight = "calc(100vh * (2/3))";
     export let id = null;
     export { className as class };
 </script>
@@ -67,7 +67,7 @@
     section {
         display: flex;
         align-items: center;
-        min-height: var(--min-height, calc(100vh * (2/3)));
+        min-height: var(--min-height);
         padding-top: calc(100vh * (1/3));
         box-sizing: border-box;
     }
