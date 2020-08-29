@@ -46,18 +46,18 @@
         --secondary-background-color: #ffe6a7;
         --primary-accent-color: rgba(0, 132, 255, 1);
         --transform: none;
+        --timing-function: cubic-bezier(0.23, 1, 0.320, 1);
         color: var(--default-copy-color);
     }
 
     .page::before {
         background-color: var(--primary-background-color);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         content: "";
         height: 100%;
         left: 0;
         position: fixed;
         top: 0;
-        transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+        transition-timing-function: var(--timing-function);
         transition: background-color var(--background-transition-duration);
         width: 100%;
         z-index: -2;
@@ -65,21 +65,23 @@
 
     .page::after {
         background-color: var(--secondary-background-color);
+        border-radius: 1rem;
         content: "";
-        mix-blend-mode: multiply;
+        mix-blend-mode: var(--blend-mode, multiply);
         position: fixed;
         transform: var(--transform);
-        transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+        transition-timing-function: var(--timing-function);
         transition: background-color var(--background-transition-duration), transform var(--background-transition-duration);
         z-index: -1;
         width: 100rem;
         height: 110rem;
         top: 0;
         left: 0;
+        will-change: mix-blend-mode, background-color, transform;
     }
 
     .page.introduction {
-        --transform: translate(-60rem, 20rem) rotate(-4.5deg);
+        --transform: translate(-40rem, 20rem) rotate(-4.5deg);
     }
 
     /* Boxes and Arrows */
@@ -91,26 +93,29 @@
     }
 
     /* Facespace */
-    .page.facespace {
+    .page.osher {
+        --default-copy-color: #fff;
         --primary-accent-color: #ff0;
-        --primary-background-color: #7ac7ff;
-        --secondary-background-color: #a5e9ff;
-        --transform: translate(-15rem, 10rem) rotate(-10deg);
+        --primary-background-color: #0da73b;
+        --secondary-background-color: #65abc2;
+        --transform: translate(-51rem, -53rem) rotate(11deg);
     }
 
     /* Boxes and Arrows */
     .page.budgeting {
-        --primary-accent-color: #8e4eff;
-        --primary-background-color: #8afff2;
-        --secondary-background-color: #a5e9ff;
-        --transform: translate(-67rem, -19rem) rotate(25deg);
+        --primary-accent-color: #ffce00;
+        --primary-background-color: #0072bb;
+        --secondary-background-color: #accddf;
+        --transform: translate(-61rem, -29rem) rotate(-25deg);
+        --default-copy-color: #fff;
     }
 
     /* Project X */
     .page.projectx {
+        --default-copy-color: #fff;
         --primary-accent-color: #fff;
-        --primary-background-color: #7fff64;
-        --secondary-background-color: #48c4d9;
+        --primary-background-color: #222;
+        --secondary-background-color: #9f9f9f;
         --transform: translate(-53rem, 10rem) rotate(4.5deg);
     }
 

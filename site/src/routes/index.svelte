@@ -30,7 +30,8 @@
         background-image: linear-gradient(transparent, transparent);    /* Hack to overcome odd rendering bug in Firefox 79.0 */
         opacity: 0;
         position: sticky;
-        top: 46%;
+        top: 44%;
+        transform: rotate(-4.5deg);
     }
 
     .work {
@@ -63,8 +64,9 @@
 <Section id="introduction" class="introduction" on:intersect={handleIntersect} minHeight="100vh">
     <Entry class="introduction-entry">
         <Introduction>
-            <span slot="headline">I’m a designer-developer based in California.</span><br />
-            <span>Accessibility and universal design are important to me.</span>
+            <strong>Make digital things</strong><br />
+            accessible and refined&mdash;<br />
+            users matter most.
         </Introduction>
     </Entry>
 </Section>
@@ -72,15 +74,15 @@
 <section class="work">
     <TableOfContents {currentSection} />
     <section id="entries" class="entries">
-        <Section id="facespace" on:intersect={handleIntersect}>
-            <Entry title="FaceSpace">
-                <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
+        <Section id="osher" on:intersect={handleIntersect}>
+            <Entry title="Osher Foundation" subtitle="at Colorado State University" logo="../osher-logo.svg">
+                <p slot="description">An class registration and student information system for Osher Lifelong Learning students at Colorado State University.</p>
             </Entry>
         </Section>
 
-        <Section id="osher" on:intersect={handleIntersect}>
-            <Entry title="Osher Foundation" subtitle="at Colorado State University" logo="../osher-logo.svg">
-                <p slot="description">Budgeting started as a speculative project to design personal budgeting and financial planning application.</p>
+        <Section id="elimsprings" on:intersect={handleIntersect}>
+            <Entry title="Elim Springs" logo="../elimsprings-logo.svg">
+                <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
             </Entry>
         </Section>
 
@@ -90,20 +92,14 @@
             </Entry>
         </Section>
 
-        <Section id="projectx" on:intersect={handleIntersect}>
-            <Entry title="Project X">
-                <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
-            </Entry>
-        </Section>
-
         <Section id="boxesandarrows" on:intersect={handleIntersect}>
             <Entry title="Boxes &amp; Arrows" logo="../boxesandarrows-logo.svg">
                 <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
             </Entry>
         </Section>
 
-        <Section id="elimsprings" on:intersect={handleIntersect}>
-            <Entry title="Elim Springs" logo="../elimsprings-logo.svg">
+        <Section id="projectx" on:intersect={handleIntersect}>
+            <Entry title="Project X">
                 <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
             </Entry>
         </Section>

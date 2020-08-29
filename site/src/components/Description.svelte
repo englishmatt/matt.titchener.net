@@ -64,7 +64,9 @@
         <h3 class:logo={!!logo}>{title}</h3>
     {/if}
 
-    <slot name="byline"><span class="byline">(2003) IA, UI design, visual design</span></slot>
+    <span class="byline">
+        <slot name="byline"></slot>
+    </span>
 
     <div class="description-body">
         <slot></slot>
