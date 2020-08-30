@@ -11,7 +11,7 @@
     }
 
     h3.logo {
-        --mask-size: 60% auto;
+        --mask-size: contain;
         --mask-repeat: no-repeat;
         --mask-position: 0 65%;
         background-color: var(--default-copy-color);
@@ -23,8 +23,10 @@
         mask-size: var(--mask-size);
         mask-repeat: var(--mask-repeat);
         mask-position: var(--mask-position);
-        /* TODO: Do more to visually hide header */
-        text-indent: -1000px;
+        height: 72px;
+        width: 30rem;           /* TODO: Either introduce media query at smaller screen widths
+                                   or calc() a smarter width value */
+        text-indent: -1000px;   /* TODO: Do more to visually hide text */
     }
 
     .description-body {

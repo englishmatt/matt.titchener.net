@@ -98,7 +98,7 @@
         --primary-accent-color: #ff0;
         --primary-background-color: #0da73b;
         --secondary-background-color: #65abc2;
-        --transform: translate(-51rem, -53rem) rotate(11deg);
+        --transform: translate(-47rem, -50rem) rotate(11deg);
     }
 
     /* Boxes and Arrows */

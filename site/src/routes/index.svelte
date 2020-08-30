@@ -36,6 +36,7 @@
 
     :global(main .projectx h3) {
         font-family: "Permanent Marker";
+        font-weight: 400;
     }
 
     .work {
@@ -95,21 +96,21 @@
         <Section id="budgeting" on:intersect={handleIntersect}>
             <Entry title="Budgeting" logo="../budgeting-logo.svg">
                 <span slot="byline">UI and visual design</span>
-                <p slot="description">Speculative user interface for personal finance and budgeting web and desktop application.</p>
+                <p slot="description">Speculative user experience for personal finance and budgeting for the web and desktop.</p>
             </Entry>
         </Section>
 
         <Section id="boxesandarrows" on:intersect={handleIntersect}>
             <Entry title="Boxes &amp; Arrows" logo="../boxesandarrows-logo.svg">
                 <span slot="byline">IA, UI and visual design</span>
-                <p slot="description">Winning entry to Boxes and Arrows site redesign and final deliverable.</p>
+                <p slot="description">Awarding winning site redesign for Boxes and Arrows with final deliverable.</p>
             </Entry>
         </Section>
 
         <Section id="projectx" on:intersect={handleIntersect}>
             <Entry title="Project X">
                 <span slot="byline">Research, Workflows, UI and visual design</span>
-                <p slot="description">Outreach, contact, and call scheduling web application for remote volunteers.</p>
+                <p slot="description">Outreach, contact, and call-scheduling web application for remote volunteers nationwide.</p>
             </Entry>
         </Section>
     </section>
