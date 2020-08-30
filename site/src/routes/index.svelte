@@ -64,7 +64,7 @@
 <Section id="introduction" class="introduction" on:intersect={handleIntersect} minHeight="100vh">
     <Entry class="introduction-entry">
         <Introduction>
-            <strong>Make digital things</strong><br />
+            <strong>Digital products,</strong><br />
             accessible and refined&mdash;<br />
             users matter most.
         </Introduction>
@@ -76,31 +76,36 @@
     <section id="entries" class="entries">
         <Section id="osher" on:intersect={handleIntersect}>
             <Entry title="Osher Foundation" subtitle="at Colorado State University" logo="../osher-logo.svg">
-                <p slot="description">An class registration and student information system for Osher Lifelong Learning students at Colorado State University.</p>
+                <span slot="byline">Research, IA, Workflows, UI and visual design</span>
+                <p slot="description">Class registration and student information system for Osher Lifelong Learning students at Colorado State University.</p>
             </Entry>
         </Section>
 
         <Section id="elimsprings" on:intersect={handleIntersect}>
             <Entry title="Elim Springs" logo="../elimsprings-logo.svg">
-                <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
+                <span slot="byline">Brand, UI and visual design</span>
+                <p slot="description">Marketing and payment processing for small German event management and venue agency.</p>
             </Entry>
         </Section>
 
         <Section id="budgeting" on:intersect={handleIntersect}>
             <Entry title="Budgeting">
-                <p slot="description">Budgeting started as a speculative project to design personal budgeting and financial planning application.</p>
+                <span slot="byline">UI and visual design</span>
+                <p slot="description">Speculative user interface for personal finance and budgeting web and desktop application.</p>
             </Entry>
         </Section>
 
         <Section id="boxesandarrows" on:intersect={handleIntersect}>
             <Entry title="Boxes &amp; Arrows" logo="../boxesandarrows-logo.svg">
-                <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
+                <span slot="byline">IA, UI and visual design</span>
+                <p slot="description">Winning entry to Boxes and Arrows site redesign and final deliverable.</p>
             </Entry>
         </Section>
 
         <Section id="projectx" on:intersect={handleIntersect}>
             <Entry title="Project X">
-                <p slot="description">After winning the 2003 Boxes &amp; Arrows site redesign competition, we set to work making our vision a reality.</p>
+                <span slot="byline">Research, Workflows, UI and visual design</span>
+                <p slot="description">Outreach, contact, and call scheduling web application for remote volunteers.</p>
             </Entry>
         </Section>
     </section>

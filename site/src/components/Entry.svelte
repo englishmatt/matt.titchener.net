@@ -34,6 +34,7 @@
 
     {#if title}
         <Description {title} {logo}>
+            <span slot="byline"><slot name="byline" /></span>
             <slot name="description" />
         </Description>
     {/if}

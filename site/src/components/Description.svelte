@@ -41,10 +41,11 @@
     }
 
     .byline {
-        text-transform: uppercase;
         font-size: 0.9rem;
-        font-weight: 600;
-        opacity: 0.5;;
+        font-weight: 500;
+        letter-spacing: 0.4px;
+        opacity: 0.6;
+        text-transform: uppercase;
     }
 
     a {
