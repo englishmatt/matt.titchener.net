@@ -65,7 +65,7 @@
 
     .page::after {
         background-color: var(--secondary-background-color);
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         content: "";
         mix-blend-mode: var(--blend-mode, multiply);
         position: fixed;
