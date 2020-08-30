@@ -34,6 +34,10 @@
         transform: rotate(-4.5deg);
     }
 
+    :global(main .projectx h3) {
+        font-family: "Permanent Marker";
+    }
+
     .work {
         display: flex;
     }
@@ -89,7 +93,7 @@
         </Section>
 
         <Section id="budgeting" on:intersect={handleIntersect}>
-            <Entry title="Budgeting">
+            <Entry title="Budgeting" logo="../budgeting-logo.svg">
                 <span slot="byline">UI and visual design</span>
                 <p slot="description">Speculative user interface for personal finance and budgeting web and desktop application.</p>
             </Entry>

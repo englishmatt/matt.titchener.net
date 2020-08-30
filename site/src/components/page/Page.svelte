@@ -89,7 +89,7 @@
         --primary-accent-color: #8e4eff;
         --primary-background-color: #8afff2;
         --secondary-background-color: #a5e9ff;
-        --transform: translate(-67rem, -19rem) rotate(25deg);
+        --transform: translate(-60rem, 9rem) rotate(8deg);
     }
 
     /* Facespace */
@@ -116,7 +116,7 @@
         --primary-accent-color: #fff;
         --primary-background-color: #222;
         --secondary-background-color: #9f9f9f;
-        --transform: translate(-53rem, 10rem) rotate(4.5deg);
+        --transform: translate(-53rem, -34rem) rotate(-6.5deg);
     }
 
     /* Error pages */
