@@ -5,6 +5,7 @@
 
     // Represents the vertical entry-offset from the page; CSS value, so must include dimension units.
     export let entryOffset = "0rem";
+    export let href = null;
     export let title = null;
     export let logo = null;
     export { className as class }
@@ -33,7 +34,7 @@
     <slot></slot>
 
     {#if title}
-        <Description {title} {logo}>
+        <Description {title} {logo} {href}>
             <span slot="byline"><slot name="byline" /></span>
             <slot name="description" />
         </Description>

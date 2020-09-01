@@ -1,6 +1,7 @@
 <script>
     export let title = null;
     export let logo = null;
+    export let href = null;
 </script>
 
 <style>
@@ -73,6 +74,8 @@
 
     <div class="description-body">
         <slot></slot>
-        <a href="/boxes-and-arrows">Read more</a>
+        {#if !!href}
+            <a href={href}>Read more</a>
+        {/if}
     </div>
 </section>

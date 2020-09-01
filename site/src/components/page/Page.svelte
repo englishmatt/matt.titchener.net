@@ -27,6 +27,11 @@
                 case "/about":
                     name = "about";
                     break;
+                case "/work/osher":
+                    // TODO: We need classes for the page *and* the section. Implemenent a more
+                    // elegant solution.
+                    name = "work osher";
+                    break;
                 default:
                     name = "error";
             }
@@ -80,8 +85,14 @@
         will-change: mix-blend-mode, background-color, transform;
     }
 
+    /* TODO: Optimize these styles */
+    .page.work::after,
+    .page.about::after {
+        border-radius: 0;
+    }
+
     .page.introduction {
-        --transform: translate(-40rem, 20rem) rotate(-4.5deg);
+        --transform: translate(-40rem, 25vh) rotate(-4.5deg);
     }
 
     /* Boxes and Arrows */
@@ -92,16 +103,20 @@
         --transform: translate(-60rem, 9rem) rotate(8deg);
     }
 
-    /* Facespace */
+    /* Osher */
     .page.osher {
         --default-copy-color: #fff;
         --primary-accent-color: #ff0;
         --primary-background-color: #0da73b;
         --secondary-background-color: #65abc2;
-        --transform: translate(-47rem, -50rem) rotate(11deg);
+        --transform: translate(-47rem, -50vh) rotate(11deg);
     }
 
-    /* Boxes and Arrows */
+    .page.work.osher {
+        --transform: none;
+    }
+
+    /* Budgeting */
     .page.budgeting {
         --primary-accent-color: #ffce00;
         --primary-background-color: #0072bb;
