@@ -79,6 +79,6 @@
 </style>
 
 <!-- Represents a collection of elements of type {Entry} -->
-<section {id} class="{className} {id}" style="--min-height: {minHeight}" bind:this={section}>
+<section id={id || ''} class="{className || ''} {id || ''}" style="--min-height: {minHeight}" bind:this={section}>
     <slot></slot>
 </section>

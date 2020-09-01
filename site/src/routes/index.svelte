@@ -48,9 +48,9 @@
     }
 
     .entries {
+        flex: 0 0 var(--main-content-width);
+        max-width: var(--max-main-content-width);
         order: 1;
-        max-width: calc(var(--max-main-content-width) - var(--content-left-margin));
-        width: calc(var(--main-content-width) - var(--content-left-margin));
     }
 
     @keyframes show-lede {

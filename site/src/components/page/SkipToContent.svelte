@@ -6,7 +6,7 @@
     div {
         background-color: var(--header-accent-color);
         box-sizing: border-box;
-        padding: 0.25rem calc(var(--site-horizontal-margin) + var(--content-left-margin));
+        padding: 0.25rem var(--content-left-margin);
         left: 0;
         top: 0;
         width: 100%;

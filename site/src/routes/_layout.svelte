@@ -15,12 +15,12 @@
 <style>
     main {
         --scrollbar-background-color: transparent;
-        box-sizing: border-box;
-        height: 100vh;
         --mask-image: linear-gradient(transparent 8rem, black 12rem);
         --mask-repeat: no-repeat;
         --mask-size: 100% 100%;
         --mask-position: 0 0;
+        box-sizing: border-box;
+        height: 100vh;
         -webkit-mask-image: var(--mask-image);
         -webkit-mask-repeat: var(--mask-repeat);
         -webkit-mask-size: var(--mask-size);
@@ -30,8 +30,8 @@
         mask-size: var(--mask-size);
         mask-position: var(--mask-position);
         overflow: auto;
-        padding-left: calc(var(--site-horizontal-margin) + var(--content-left-margin));
-        padding-right: calc(var(--site-horizontal-margin) + 3rem);
+        padding-left: var(--content-left-margin);
+        padding-right: var(--content-left-margin);
         scrollbar-width: thin;
         scrollbar-color: var(--default-copy-color) var(--scrollbar-background-color);
         width: calc(100% - 2px);

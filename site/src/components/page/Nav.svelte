@@ -39,6 +39,7 @@
 		box-sizing: border-box;
 		border-bottom: 4px solid transparent;
 		font-weight: 600;
+		white-space: nowrap;
 	}
 
 	a[aria-current="page"] span {

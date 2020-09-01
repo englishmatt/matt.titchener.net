@@ -4,9 +4,8 @@
     --max-main-content-width: calc(60rem + var(--main-content-right-margin));
     --main-content-width: 63vw;
 
-    --content-left-margin: 6.3rem;
+    --content-left-margin: 8.5rem;
     --section-padding-top: 4rem;
-    --site-horizontal-margin: 2.1rem;
     --site-header-height: 10rem;
     --site-footer-height: 3rem;
 

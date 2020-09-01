@@ -47,6 +47,7 @@
     a span {
         opacity: 0.4;
         transition: opacity var(--navigation-transition-duration);
+        white-space: nowrap;
     }
 
     li:hover a,

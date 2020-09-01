@@ -12,12 +12,17 @@
         position: fixed;
         align-items: flex-start;
         top: 3.5rem;
+        width: 100%;
+        padding-left: var(--content-left-margin);
+        padding-right: var(--content-left-margin);
+        box-sizing: border-box;
     }
 
     .lockin {
-        margin-left: var(--site-horizontal-margin);
+        left: -6.3rem;
         max-width: var(--max-main-content-width);
-        width: var(--main-content-width);
+        position: relative;
+        flex: 0 0 var(--main-content-width);
     }
 
     .lockin :global(svg) {
