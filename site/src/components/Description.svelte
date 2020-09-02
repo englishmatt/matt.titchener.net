@@ -31,8 +31,10 @@
     }
 
     .description-body {
+        font-size: 1.2rem;
         font-weight: 500;
-        max-width: 25rem;
+        max-width: 29rem;
+        opacity: 0.9;
     }
 
     .description {

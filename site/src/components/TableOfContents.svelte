@@ -11,9 +11,8 @@
         list-style: none;
         margin: 0 0 0 -1rem;
         padding-left: calc(var(--navigation-horizontal-padding) * 2);
-        padding-top: calc(var(--site-header-height) + var(--section-padding-top));
         position: sticky;
-        top: 0;
+        top: 3rem;
     }
 
     li {

@@ -66,6 +66,7 @@
         transition: background-color var(--background-transition-duration);
         width: 100%;
         z-index: -2;
+        will-change: background-color;
     }
 
     .page::after {
@@ -109,7 +110,7 @@
         --primary-accent-color: #ff0;
         --primary-background-color: #0da73b;
         --secondary-background-color: #65abc2;
-        --transform: translate(-47rem, -50vh) rotate(11deg);
+        --transform: translate(-47rem, calc(100vh - 115%)) rotate(11deg);
     }
 
     .page.work.osher {
@@ -149,6 +150,11 @@
         --primary-background-color: #17234d;
         --secondary-background-color: rgba(0, 0, 0, 0.377);
         --transform: translate(-53rem, 10rem) rotate(4.5deg);
+    }
+
+    .page.work :global(article) {
+        width: var(--main-content-width);
+        max-width: var(--max-main-content-width);
     }
 </style>
 

@@ -30,8 +30,7 @@
         background-image: linear-gradient(transparent, transparent);    /* Hack to overcome odd rendering bug in Firefox 79.0 */
         opacity: 0;
         position: sticky;
-        top: 44%;
-        transform: rotate(-4.5deg);
+        top: 36%;
     }
 
     :global(main .projectx h3) {
@@ -66,7 +65,7 @@
     }
 </style>
 
-<Section id="introduction" class="introduction" on:intersect={handleIntersect} minHeight="100vh">
+<Section id="introduction" on:intersect={handleIntersect} minHeight="100vh" paddingTop="calc((100vh * (1/3)) - var(--site-header-height))">
     <Entry class="introduction-entry">
         <Introduction>
             <strong>Digital products,</strong><br />

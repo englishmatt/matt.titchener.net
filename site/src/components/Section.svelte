@@ -5,7 +5,6 @@
     const dispatch = createEventDispatcher();
 
     let observer;
-    let className = null;
     let section;
     let activeSectionId;
 
@@ -43,10 +42,11 @@
 
         if (!!observee) {
             activeSectionId = location.hash;
+            const verticalMargin = 30; // In percent
 
             observer = new IntersectionObserver(handleIntersection, {
                 root: document.getElementById("content"),
-                rootMargin: "-30% 0% -30% 0%",
+                rootMargin: `-${verticalMargin}% 0% -${verticalMargin}% 0%`,
                 threshold: 0
             });
 
@@ -59,8 +59,8 @@
     });
 
     export let minHeight = "calc(100vh * (2/3))";
+    export let paddingTop = "calc(100vh * (1/3))";
     export let id = null;
-    export { className as class };
 </script>
 
 <style>
@@ -68,7 +68,7 @@
         display: flex;
         align-items: center;
         min-height: var(--min-height);
-        padding-top: calc(100vh * (1/3));
+        padding-top: var(--padding-top);
         box-sizing: border-box;
     }
 
@@ -79,6 +79,6 @@
 </style>
 
 <!-- Represents a collection of elements of type {Entry} -->
-<section id={id || ''} class="{className || ''} {id || ''}" style="--min-height: {minHeight}" bind:this={section}>
+<section id={id || ''} class="{id || ''}" style="--min-height: {minHeight}; --padding-top: {paddingTop}" bind:this={section}>
     <slot></slot>
 </section>

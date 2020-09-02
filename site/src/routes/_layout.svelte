@@ -32,6 +32,7 @@
         overflow: auto;
         padding-left: var(--content-left-margin);
         padding-right: var(--content-left-margin);
+        padding-top: var(--site-header-height);
         scrollbar-width: thin;
         scrollbar-color: var(--default-copy-color) var(--scrollbar-background-color);
         width: calc(100% - 2px);
