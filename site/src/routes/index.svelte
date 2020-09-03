@@ -51,18 +51,6 @@
         max-width: var(--max-main-content-width);
         order: 1;
     }
-
-    @keyframes show-lede {
-        from {
-            opacity: 0;
-            transform: translateY(0);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(-4rem);
-        }
-    }
 </style>
 
 <Section id="introduction" on:intersect={handleIntersect} minHeight="100vh" paddingTop="calc((100vh * (1/3)) - var(--site-header-height))">

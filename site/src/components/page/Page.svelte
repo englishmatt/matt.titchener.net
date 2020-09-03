@@ -137,6 +137,7 @@
 
     /* Error pages */
     .page.error {
+        --default-copy-color: #fff;
         --primary-accent-color: #fff;
         --primary-background-color: #ff7373;
         --secondary-background-color: #f6cdeb;

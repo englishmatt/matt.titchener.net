@@ -9,7 +9,7 @@
 
     // TODO: Ensure 'work' item is _not_ selected when loading the front page; ensure 'work' becomes
     // selected when the user scrolls down to the portfolio.
-    export let segment = 'work';
+    export let segment;
 </script>
 
 <style>
