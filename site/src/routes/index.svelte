@@ -68,35 +68,50 @@
     <section id="entries" class="entries">
         <Section id="osher" on:intersect={handleIntersect}>
             <Entry title="Osher Foundation" subtitle="at Colorado State University" logo="../osher-logo.svg" href="/work/osher">
-                <span slot="byline">Research, IA, Workflows, UI and visual design</span>
+                <ul slot="byline">
+                    <li>Research</li>
+                    <li>IA</li>
+                    <li>Workflows</li>
+                    <li>UI and Visual Design</li>
+                </ul>
                 <p slot="description">Class registration and student information system for Osher Lifelong Learning students at Colorado State University.</p>
             </Entry>
         </Section>
 
         <Section id="elimsprings" on:intersect={handleIntersect}>
             <Entry title="Elim Springs" logo="../elimsprings-logo.svg">
-                <span slot="byline">Brand, UI and visual design</span>
+                <ul slot="byline">
+                    <li>Brand</li>
+                    <li>UI and visual design</li>
+                </ul>
                 <p slot="description">Marketing and payment processing for small German event management and venue agency.</p>
             </Entry>
         </Section>
 
         <Section id="budgeting" on:intersect={handleIntersect}>
             <Entry title="Budgeting" logo="../budgeting-logo.svg">
-                <span slot="byline">UI and visual design</span>
+                <ul slot="byline"><li>UI and visual design</li></ul>
                 <p slot="description">Speculative user experience for personal finance and budgeting for the web and desktop.</p>
             </Entry>
         </Section>
 
         <Section id="boxesandarrows" on:intersect={handleIntersect}>
             <Entry title="Boxes &amp; Arrows" logo="../boxesandarrows-logo.svg">
-                <span slot="byline">IA, UI and visual design</span>
+                <ul slot="byline">
+                    <li>IA</li>
+                    <li>UI and visual design</li>
+                </ul>
                 <p slot="description">Awarding winning site redesign for Boxes and Arrows with final deliverable.</p>
             </Entry>
         </Section>
 
         <Section id="projectx" on:intersect={handleIntersect}>
             <Entry title="Project X">
-                <span slot="byline">Research, Workflows, UI and visual design</span>
+                <ul slot="byline">
+                    <li>Research</li>
+                    <li>Workflows</li>
+                    <li>UI and visual design</li>
+                </ul>
                 <p slot="description">Outreach, contact, and call-scheduling web application for remote volunteers nationwide.</p>
             </Entry>
         </Section>

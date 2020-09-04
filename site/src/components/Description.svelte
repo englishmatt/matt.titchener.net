@@ -46,11 +46,25 @@
     }
 
     .byline {
+        font-family: 'Montserrat', 'Inter', sans-serif;
         font-size: 0.9rem;
         font-weight: 500;
         letter-spacing: 0.4px;
         opacity: 0.6;
         text-transform: uppercase;
+    }
+
+    .byline :global(ul) {
+        padding: 0;
+    }
+
+    .byline :global(ul li) {
+        display: inline-block;
+    }
+
+    .byline :global(ul li:not(:first-of-type):before) {
+        content: "\2022";
+        margin-right: 0.35rem;
     }
 
     a {
@@ -70,9 +84,9 @@
         <h3 class:logo={!!logo}>{title}</h3>
     {/if}
 
-    <span class="byline">
+    <div class="byline">
         <slot name="byline"></slot>
-    </span>
+    </div>
 
     <div class="description-body">
         <slot></slot>
