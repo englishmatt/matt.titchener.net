@@ -35,7 +35,6 @@
     }
 
     onMount(() => {
-
         // TODO: Investigate passing/wrapping the Entry component with the IntersectionObserver
         // and handling events there.
         let observee = section.querySelector(".entry");

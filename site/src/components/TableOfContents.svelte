@@ -40,7 +40,7 @@
         padding: 0.2rem 1rem 0.2rem;
         text-decoration: none;
         font-weight: 500;
-        transition: font-weight var(--navigation-transition-duration);
+        transition: font-weight var(--navigation-transition-duration), color var(--navigation-transition-duration);
     }
 
     a span {

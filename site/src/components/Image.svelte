@@ -31,7 +31,7 @@
 
     /* Chrome only: Pseudo elements do not typically work on replace elements (like `img`), however, the below is used to display
        a broken image icon. In this use-case the `img` element is never replaced onload, so the psuedo element is visible
-       when the image _fails_ to load. Sneaky. */
+       when the image _fails_ to load. Sneaky. Only works if the width is set to 100%. */
     img::after {
         content: "";
         display: block;

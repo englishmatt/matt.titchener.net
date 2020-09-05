@@ -52,7 +52,14 @@
         --primary-accent-color: rgba(0, 132, 255, 1);
         --transform: none;
         --timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+        --selection-color: var(--primary-accent-color);
+        --selection-background-color: rgba(0, 0, 0, 0.4);;
         color: var(--default-copy-color);
+    }
+
+    .page :global(::selection) {
+        background-color: var(--selection-background-color);
+        color: var(--selection-color);
     }
 
     .page::before {
