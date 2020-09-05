@@ -14,7 +14,6 @@
 
 <style>
     main {
-        --scrollbar-background-color: transparent;
         --mask-image: linear-gradient(transparent 8rem, black 12rem);
         --mask-repeat: no-repeat;
         --mask-size: 100% 100%;
@@ -33,21 +32,8 @@
         padding-left: var(--content-left-margin);
         padding-right: var(--content-left-margin);
         padding-top: var(--site-header-height);
-        scrollbar-width: thin;
-        scrollbar-color: var(--default-copy-color) var(--scrollbar-background-color);
         width: calc(100% - 2px);
         margin-right: 2px;
-    }
-
-    main::-webkit-scrollbar {
-        width: 7px;
-    }
-
-    main::-webkit-scrollbar-track {
-        background: var(--scrollbar-background-color);
-    }
-    main::-webkit-scrollbar-thumb {
-        background-color: var(--default-copy-color);
     }
 </style>
 

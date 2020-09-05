@@ -20,8 +20,9 @@
     /* Firefox only: hides Firefox broken-image borders. Padding, margin, and inset widths are magic numbers. */
     img:-moz-broken {
         padding: 2px;
-        margin-bottom: -4px;
-        clip-path: inset(0 4px 4px 0 round var(--border-radius));
+        margin-top: -4px;
+        margin-right: -4px;
+        clip-path: inset(4px 4px 0 0 round var(--border-radius));
         mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)), var(--broken-image);
         mask-repeat: repeat, no-repeat;
         mask-position: top left, center;
@@ -36,6 +37,7 @@
         display: block;
         padding-top: calc((var(--height) / var(--width)) * 100%);
         width: 100%;
+        min-width: 10rem;
         background-color: rgba(255, 255, 255, 0.2);
         -webkit-mask-image: var(--broken-image);
         -webkit-mask-repeat: no-repeat;

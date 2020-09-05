@@ -10,11 +10,13 @@
     --site-footer-height: 3rem;
 
     --navigation-horizontal-padding: 1.2rem;
+    --scrollbar-width: 7px;
 
     /* Colors */
     --default-copy-color: rgba(0, 0, 0, 0.7);
     --header-accent-color: rgba(0, 0, 0, 0.6);
     --bus-route-color: rgba(0, 132, 255, 0.3);
+    --scrollbar-background-color: transparent;
 
     /* Development */
     --highlight-red: rgba(255, 0, 0, 0.1);
@@ -51,6 +53,23 @@ body > .page {
 :not(:hover):focus {
     outline: 4px solid var(--primary-accent-color);
     mix-blend-mode: difference;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--default-copy-color) var(--scrollbar-background-color);
+}
+
+*::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbar-background-color);
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--default-copy-color);
 }
 
 @keyframes show-lede {

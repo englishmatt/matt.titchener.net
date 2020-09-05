@@ -38,6 +38,56 @@
         color: rgba(255, 255, 255, 0.7);
         font-weight: 500;
     }
+
+    .carousel {
+        --inset: 2rem;
+        border: 0 10px solid #f00;
+        width: calc(100vw - (var(--inset) * 2));
+        margin-left: calc((var(--content-left-margin) - var(--inset)) * -1);
+        box-sizing: border-box;
+        overflow: auto;
+        white-space: nowrap;
+        height: 60vw;
+        max-height: calc((500 / 1000) * var(--main-content-width));
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+    }
+
+    .carousel::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .carousel::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+
+    .carousel:hover::-webkit-scrollbar-track {
+        background: var(--scrollbar-background-color);
+    }
+
+    .carousel:hover::-webkit-scrollbar-thumb {
+        background: var(--default-copy-color);
+    }
+
+    .carousel:hover {
+        scrollbar-color: var(--default-copy-color) var(--scrollbar-background-color);
+    }
+
+    .carousel :global(img) {
+        transform: translateX(calc(var(--content-left-margin) - var(--inset)));
+        display: inline-block;
+        width: auto;
+        height: 100%;
+        vertical-align: top;
+    }
+
+    .carousel :global(img + img) {
+        margin-left: 1rem;
+    }
+
+    .carousel :global(:last-child) {
+        margin-right: calc(100vw - var(--main-content-width));
+    }
 </style>
 
 <article class="osher">
@@ -45,9 +95,14 @@
     <h2>Case Study</h2>
     <p class="lede">The Osher Lifelong Learning Institute at Colorado State University provides intellectual nourishment to seniors and retirees through northern Colorado. Over the course of the 2017-2018 academic year, through student and administrative feedback, a business case was presented to overhaul the customer experience, both in form and function.</p>
     <p>In concert with OLLI stakeholders, my team and I set about reimagining what a new OLLI registration experience might look like:</p>
-    <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
+    <div class="carousel">
+        <Image src="https://dummyimage.com/1000x500/000/fff" alt="" width="1000" height="500" loading="lazy" />
+        <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
+        <Image src="https://dummyimage.com/500x700/000/fff" alt="" width="500" height="700" loading="lazy" />
+        <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
+    </div>
     <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x700/000/fff" alt="" width="1000" height="700" loading="lazy" />
+    <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
     <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
     <Image src="https://dummyimage.com/500x700/000/fff" alt="" width="500" height="700" loading="lazy" />
     <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
