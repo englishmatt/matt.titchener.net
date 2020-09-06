@@ -5,16 +5,17 @@
 
 <style>
     .carousel {
-        height: 60vw;
+        height: 40vw;
         margin-left: calc((var(--content-left-margin) - var(--inset)) * -1);
         margin-top: calc(var(--scroll-offset) * -1);
-        max-height: calc((500 / 1000) * var(--main-content-width));
+        max-height: 65vh;
         overflow: auto;
         padding-top: var(--scroll-offset);
         scrollbar-color: transparent transparent;
         scrollbar-width: thin;
         white-space: nowrap;
         width: calc(100vw - (var(--inset) * 2) - var(--scrollbar-mask-width));
+        clip-path: inset(var(--scroll-offset) 0 0 0);
     }
 
     .carousel::-webkit-scrollbar-track {

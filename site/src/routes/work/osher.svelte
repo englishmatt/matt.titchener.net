@@ -43,15 +43,15 @@
 
 <article class="osher">
     <h1 class="logo">Osher Lifelong Learning Institute <span class="subheading">at Colorado State University</span></h1>
+    <Carousel id="carousel" scrollOffset="30vh">
+        <Image src="../../osher/front-page.png" alt="Osher front page" width="1400" height="2514" />
+        <Image src="../../osher/membership.png" alt="Osher membership" width="1400" height="1835" />
+        <Image src="../../osher/course-browse.png" alt="Osher front page" width="1400" height="1458" />
+        <Image src="../../osher/course-page.png" alt="Osher front page" width="1400" height="1513" />
+    </Carousel>
     <h2>Case Study</h2>
     <p class="lede">The Osher Lifelong Learning Institute at Colorado State University provides intellectual nourishment to seniors and retirees through northern Colorado. Over the course of the 2017-2018 academic year, through student and administrative feedback, a business case was presented to overhaul the customer experience, both in form and function.</p>
     <p>In concert with OLLI stakeholders, my team and I set about reimagining what a new OLLI registration experience might look like:</p>
-    <Carousel id="carousel" scrollOffset="30vh">
-        <Image src="https://dummyimage.com/1000x500/000/fff" alt="" width="1000" height="500" />
-        <Image id="testing1" src="https://dummyimage.com/1000x200/000/0ff" alt="" width="1000" height="200" />
-        <Image src="https://dummyimage.com/500x700/000/fff" alt="" width="500" height="700" loading="lazy" />
-        <Image src="https://dummyimage.com/1000x700/fff/f00" alt="" width="1000" height="700" loading="lazy" />
-    </Carousel>
     <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
     <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
     <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
