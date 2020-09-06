@@ -46,9 +46,9 @@
     <h2>Case Study</h2>
     <p class="lede">The Osher Lifelong Learning Institute at Colorado State University provides intellectual nourishment to seniors and retirees through northern Colorado. Over the course of the 2017-2018 academic year, through student and administrative feedback, a business case was presented to overhaul the customer experience, both in form and function.</p>
     <p>In concert with OLLI stakeholders, my team and I set about reimagining what a new OLLI registration experience might look like:</p>
-    <Carousel>
-        <Image src="https://dummyimage.com/1000x500/000/fff" alt="" width="1000" height="500" loading="lazy" />
-        <Image src="https://dummyimage.com/1000x200/000/0ff" alt="" width="1000" height="200" loading="lazy" />
+    <Carousel id="carousel" scrollOffset="30vh">
+        <Image src="https://dummyimage.com/1000x500/000/fff" alt="" width="1000" height="500" />
+        <Image id="testing1" src="https://dummyimage.com/1000x200/000/0ff" alt="" width="1000" height="200" />
         <Image src="https://dummyimage.com/500x700/000/fff" alt="" width="500" height="700" loading="lazy" />
         <Image src="https://dummyimage.com/1000x700/fff/f00" alt="" width="1000" height="700" loading="lazy" />
     </Carousel>

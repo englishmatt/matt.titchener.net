@@ -1,18 +1,20 @@
 <script>
     export let inset = "0rem";
+    export let scrollOffset = "0rem";
 </script>
 
 <style>
     .carousel {
-        width: calc(100vw - var(--scrollbar-mask-width));
-        margin-left: calc((var(--content-left-margin) - var(--inset)) * -1);
-        box-sizing: border-box;
-        overflow: auto;
-        white-space: nowrap;
         height: 60vw;
+        margin-left: calc((var(--content-left-margin) - var(--inset)) * -1);
+        margin-top: calc(var(--scroll-offset) * -1);
         max-height: calc((500 / 1000) * var(--main-content-width));
-        scrollbar-width: thin;
+        overflow: auto;
+        padding-top: var(--scroll-offset);
         scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+        white-space: nowrap;
+        width: calc(100vw - (var(--inset) * 2) - var(--scrollbar-mask-width));
     }
 
     .carousel::-webkit-scrollbar-track {
@@ -36,7 +38,6 @@
     }
 
     .carousel :global(img) {
-        transform: translateX(calc(var(--content-left-margin) - var(--inset)));
         display: inline-block;
         width: auto;
         height: 100%;
@@ -47,11 +48,15 @@
         margin-left: 1rem;
     }
 
+    .carousel :global(:first-child) {
+        margin-left: calc(var(--content-left-margin) - var(--inset));
+    }
+
     .carousel :global(:last-child) {
-        margin-right: calc(100vw - var(--main-content-width));
+        margin-right: calc(100vw - var(--main-content-width) - var(--inset));
     }
 </style>
 
-<div class="carousel" style="--inset: {inset}">
+<div {...$$restProps} class="carousel" style="--inset: {inset}; --scroll-offset: {scrollOffset}">
     <slot />
 </div>
