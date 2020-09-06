@@ -16,7 +16,7 @@
     main {
         --mask-image: linear-gradient(transparent 8rem, black 12rem), linear-gradient(black, black);
         --mask-repeat: no-repeat, no-repeat;
-        --mask-size: calc(99% - var(--scrollbar-mask-width)) 100%, var(--scrollbar-mask-width) 100%;
+        --mask-size: calc(100vw - var(--scrollbar-mask-width)) 100%, var(--scrollbar-mask-width) 100%;
         --mask-position: 0 0, 100% 10px;
         box-sizing: border-box;
         height: 100vh;
@@ -32,8 +32,7 @@
         padding-left: var(--content-left-margin);
         padding-right: var(--content-left-margin);
         padding-top: var(--site-header-height);
-        width: calc(100% - 2px);
-        margin-right: 2px;
+        width: 100%;
     }
 </style>
 
