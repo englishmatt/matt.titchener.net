@@ -1,11 +1,12 @@
 <script>
     export let inset = "0rem";
     export let scrollOffset = "0rem";
+    export let height = "40vw";
 </script>
 
 <style>
     .carousel {
-        height: 40vw;
+        height: var(--height);
         margin-left: calc((var(--content-left-margin) - var(--inset)) * -1);
         margin-top: calc(var(--scroll-offset) * -1);
         max-height: 65vh;
@@ -54,10 +55,10 @@
     }
 
     .carousel :global(:last-child) {
-        margin-right: calc(100vw - var(--main-content-width) - var(--inset));
+        margin-right: calc(var(--content-left-margin) - var(--inset));
     }
 </style>
 
-<div {...$$restProps} class="carousel" style="--inset: {inset}; --scroll-offset: {scrollOffset}">
+<div {...$$restProps} class="carousel" style="--inset: {inset}; --scroll-offset: {scrollOffset}; --height: {height}">
     <slot />
 </div>

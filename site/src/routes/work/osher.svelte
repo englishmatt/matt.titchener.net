@@ -22,15 +22,21 @@
         width: 30rem;           /* TODO: Either introduce media query at smaller screen widths
                                    or calc() a smarter width value */
         text-indent: -1000px;   /* TODO: Do more to visually hide text */
+        display: block;
+        margin-top: 1rem;
     }
 
-    h2 {
+    h1 {
         text-transform: uppercase;
         font-weight: 700;
         font-size: 1.2rem;
         letter-spacing: 1px;
         margin-top: 5rem;
         font-family: 'Montserrat', 'Inter', sans-serif;
+    }
+
+    h1, h2 {
+        color: var(--primary-accent-color);
     }
 
     .lede {
@@ -41,85 +47,39 @@
     }
 </style>
 
-<article class="osher">
-    <h1 class="logo">Osher Lifelong Learning Institute <span class="subheading">at Colorado State University</span></h1>
-    <Carousel id="carousel" scrollOffset="30vh">
+<article>
+    <Carousel id="final" scrollOffset="30vh">
         <Image src="../../osher/front-page.png" alt="Osher front page" width="1400" height="2514" />
         <Image src="../../osher/membership.png" alt="Osher membership" width="1400" height="1835" />
         <Image src="../../osher/course-browse.png" alt="Osher front page" width="1400" height="1458" />
         <Image src="../../osher/course-page.png" alt="Osher front page" width="1400" height="1513" />
     </Carousel>
-    <h2>Case Study</h2>
-    <p class="lede">The Osher Lifelong Learning Institute at Colorado State University provides intellectual nourishment to seniors and retirees through northern Colorado. Over the course of the 2017-2018 academic year, through student and administrative feedback, a business case was presented to overhaul the customer experience, both in form and function.</p>
-    <p>In concert with OLLI stakeholders, my team and I set about reimagining what a new OLLI registration experience might look like:</p>
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/500x700/000/fff" alt="" width="500" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x200/000/fff" alt="" width="1000" height="200" loading="lazy" />
-    <p class="lede">The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x700/fff/000" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/500x700/fff/000" alt="" width="500" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x200/fff/000" alt="" width="1000" height="200" loading="lazy" />
-    <p class="lede">The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x700/000/ff0" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/500x700/000/ff0" alt="" width="500" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x200/000/ff0" alt="" width="1000" height="200" loading="lazy" />
-    <p class="lede">The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x700/000/f0f" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/500x700/000/f0f" alt="" width="500" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x200/000/f0f" alt="" width="1000" height="200" loading="lazy" />
-    <p class="lede">The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x700/fff/f00" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/500x700/fff/f00" alt="" width="500" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x200/fff/f00" alt="" width="1000" height="200" loading="lazy" />
-    <p class="lede">The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x700/000/f0f" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/500x700/000/f0f" alt="" width="500" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x200/000/f0f" alt="" width="1000" height="200" loading="lazy" />
-    <p class="lede">The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x700/000/0ff" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/500x700/000/0ff" alt="" width="500" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x200/000/0ff" alt="" width="1000" height="200" loading="lazy" />
-    <p class="lede">The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x700/fff/0f0" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/500x700/fff/0f0" alt="" width="500" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x200/fff/0f0" alt="" width="1000" height="200" loading="lazy" />
-    <p class="lede">The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://localhost" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x700/00f/ff0" alt="" width="1000" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/500x700/00f/ff0" alt="" width="500" height="700" loading="lazy" />
-    <p>The Division of Continuing Education at Colorado State University is responsible for the development and maintenance of the OLLI. The original customer experience was considered confusing, and overly complex for the target audience.</p>
-    <Image src="https://dummyimage.com/1000x200/00f/ff0" alt="" width="1000" height="200" loading="lazy" />
+    <h1>
+        <span>Case Study</span>
+        <span class="logo">Osher Lifelong Learning Institute <span class="subheading">at Colorado State University</span></span>
+    </h1>
+    <p class="lede">
+        The <i>Osher Lifelong Learning Institute</i> (OLLI) at <i>Colorado State University</i> (CSU) provides
+        intellectual nourishment to seniors and retirees throughout northern Colorado. Over the course of the 2017-2018 academic year the team at the Division of Continuing Education at CSU,
+        researched, designed, and delivered a new OLLI course registration platform and web presence for their students.
+    </p>
+    <h2>Research</h2>
+    <p>
+        Through student and administrative feedback, a business case was presented to overhaul the customer experience,
+        both in form and function. In concert with OLLI stakeholders, my team and I set about reimagining what a new
+        OLLI registration experience might look like:
+    </p>
+    <Carousel id="bpmn" scrollOffset="30vh" height="20rem">
+        <Image src="../../osher/instructor-recruitment-bpmn.png" alt="Instructor recruitment BPMN" width="2439" height="1309" />
+        <Image src="../../osher/registration-bpmn.png" alt="Student registration BPMN" width="2083" height="1483" />
+        <Image src="../../osher/checkout-bpmn.png" alt="Checkout BPMN" width="1731" height="870" />
+        <Image src="../../osher/payment-bpmn.png" alt="Payment BPMN" width="2013" height="1326" />
+    </Carousel>
+    <h2>Design Process</h2>
+    <Carousel id="bpmn" scrollOffset="30vh" height="20rem">
+        <Image src="../../osher/instructor-recruitment-bpmn.png" alt="Instructor recruitment BPMN" width="2439" height="1309" />
+        <Image src="../../osher/registration-bpmn.png" alt="Student registration BPMN" width="2083" height="1483" />
+        <Image src="../../osher/checkout-bpmn.png" alt="Checkout BPMN" width="1731" height="870" />
+        <Image src="../../osher/payment-bpmn.png" alt="Payment BPMN" width="2013" height="1326" />
+    </Carousel>
 </article>
