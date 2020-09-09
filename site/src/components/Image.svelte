@@ -23,6 +23,8 @@
         display: block;
         filter: none;
         height: auto;
+        object-fit: cover;
+        object-position: top;
         overflow: hidden;
         position: relative;
         transition: filter var(--fade-in-duration);
