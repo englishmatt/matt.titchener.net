@@ -169,4 +169,9 @@
         nisi non mollit anim ex laborum duis laboris aute consectetur ipsum. Cillum proident enim commodo anim
         reprehenderit proident in cupidatat aute elit.
     </p>
+    <h2>Results</h2>
+    <p>
+        The first iteration of the site launched in the autumn of 2018 and received positive feedback from students and
+        OLLI staff alike. As with many projects, the next set of iterations are still to come.
+    </p>
 </article>

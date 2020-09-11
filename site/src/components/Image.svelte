@@ -1,7 +1,5 @@
 <script>
-    // TODO: There's a number of different ways to prevent `loading` being set during SSR.
-    // Not sure what is most idiomatic for Svelte/Sapper; this works for now.
-    let loading = process.browser ? true : false;
+    let loading = true;
 
     function loaded(img) {
         img.onload = img.onerror = () => loading = false;
@@ -29,37 +27,34 @@
         position: relative;
         transition: filter var(--fade-in-duration);
         width: 100%;
+        font-size: 0;
+        line-height: 0;
     }
 
-    /* Firefox only: hides Firefox broken-image borders. Padding, margin, and inset widths are magic numbers. */
-    img:-moz-broken {
-        padding: 2px;
-        margin-top: -4px;
-        margin-right: -4px;
-        clip-path: inset(4px 4px 0 0 round var(--border-radius));
-        mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)), var(--broken-image);
-        mask-repeat: repeat, no-repeat;
-        mask-position: top left, center;
-        mask-composite: subtract;
-    }
-
-    /* Chrome only: Pseudo elements do not typically work on replace elements (like `img`), however, the below is used to display
-       a broken image icon. In this use-case the `img` element is never replaced onload, so the psuedo element is visible
-       when the image _fails_ to load. Sneaky. Only works if the width is set to 100%. */
     img::after {
+        --mask-image: var(--broken-image);
+        --mask-repeat: no-repeat;
+        --mask-position: center;
         content: "";
         display: block;
         padding-top: calc((var(--height) / var(--width)) * 100%);
         width: 100%;
         min-width: 10rem;
         background-color: rgba(255, 255, 255, 0.2);
-        -webkit-mask-image: var(--broken-image);
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-position: center;
+        -webkit-mask-image: var(--mask-image);
+        -webkit-mask-repeat: var(--mask-repeat);
+        -webkit-mask-position: var(--mask-position);
+        mask-image: var(--mask-image);
+        mask-repeat: var(--mask-repeat);
+        mask-position: var(--mask-position);
     }
 
     img.loading {
         filter: brightness(0) opacity(0.2);
+    }
+
+    :global(.no-js) img.loading {
+        filter: none;
     }
 </style>
 

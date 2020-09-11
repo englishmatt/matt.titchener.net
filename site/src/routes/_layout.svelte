@@ -3,7 +3,6 @@
     import Footer from '../components/page/Footer.svelte';
     import SkipToContent from '../components/page/SkipToContent.svelte';
     import Page from '../components/page/Page.svelte';
-    import { onMount } from 'svelte';
 
     const contentId = 'content';
 
