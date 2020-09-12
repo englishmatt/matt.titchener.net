@@ -79,7 +79,7 @@
         </Section>
 
         <Section id="elimsprings" on:intersect={handleIntersect}>
-            <Entry title="Elim Springs" logo="../elimsprings-logo.svg">
+            <Entry title="Elim Springs" logo="../elimsprings-logo.svg" href="/work/elim-springs">
                 <ul slot="byline">
                     <li>Brand</li>
                     <li>UI and visual design</li>

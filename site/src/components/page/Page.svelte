@@ -32,6 +32,11 @@
                     // elegant solution.
                     name = "work osher";
                     break;
+                case "/work/elim-springs":
+                    // TODO: We need classes for the page *and* the section. Implemenent a more
+                    // elegant solution.
+                    name = "work elimsprings";
+                    break;
                 default:
                     name = "error";
             }

@@ -47,13 +47,6 @@
         margin-top: 0;
     }
 
-    .lede {
-        font-size: 1.5rem;
-        line-height: 1.5;
-        color: rgba(255, 255, 255, 0.7);
-        font-weight: 500;
-    }
-
     /* TODO: Consider moving bullet styling to main.css; used in TableOfContents component as well. */
     ul {
         padding-left: 0;
