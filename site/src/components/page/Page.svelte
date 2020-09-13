@@ -159,10 +159,14 @@
     /* Elim Springs */
     .page.elimsprings {
         --default-copy-color: #fff;
-        --primary-accent-color: #ff6000;
-        --primary-background-color: #17234d;
+        --primary-accent-color: #d2e186;
+        --primary-background-color: #009e63;
         --secondary-background-color: rgba(0, 0, 0, 0.377);
         --transform: translate(-53rem, 10rem) rotate(4.5deg);
+    }
+
+    .page.work.elimsprings {
+        --transform: none;
     }
 
     .page.work :global(article) {

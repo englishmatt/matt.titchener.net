@@ -37,52 +37,64 @@
 
     h1, h2 {
         color: var(--primary-accent-color);
+        clear: both;
     }
 
     p {
         margin-top: 0;
     }
 
-    :global(body) {
-        overflow: hidden;
+    figure {
+        --caption-gutter: 2.2rem;
+        margin: 0;
+        padding: 0;
+        margin-top: 2rem;
     }
 
-    :global(.work.elimsprings main) {
-        height: 100vw;
-        width: 100vh;
+    figure :global(img) {
+        width: calc(50% - (var(--caption-gutter) / 2));
+        margin-bottom: 2rem;
+    }
+
+    .typography :global(p) {
+        padding-right: var(--caption-gutter);
         overflow: auto;
-        direction: rtl;
-        transform: rotate(-90deg) translate(-100%, 0);
-        transform-origin: 0 0;
-        mask-image: none;
-        -webkit-mask-image: none;
-        padding-top: 0;
     }
 
-    article {
-        transform: rotate(90deg) translate(100%, 0);
-        transform-origin: 100% 0;
-        height: 10rem;
-        display: inline-flex;
-        direction: ltr;
-        width: auto !important;
-        transition: transform 300ms, transform-origin 300ms;
+    .typography :global(p::before) {
+        content: "\25BA";
+        display: inline-block;
+        padding-right: 0.5rem;
+        font-size: 0.7rem;
+        color: var(--primary-accent-color);
+        vertical-align: 18.8%;
     }
 
-    section {
-        padding: 0 var(--content-left-margin);
-        flex: 1 1 auto;
-        box-sizing: border-box;
+    .logo-typeface :global(p::before),
+    .patterns :global(p::before) {
+        content: "\25C4";
+        display: inline-block;
+        padding-right: 0.5rem;
+        font-size: 0.7rem;
+        color: var(--primary-accent-color);
+        vertical-align: 18.8%;
     }
 
-    p {
-        width: 60vw;
+    .logo-typeface :global(img),
+    .patterns :global(img) {
+        margin-right: var(--caption-gutter);
     }
 </style>
 
 <article>
     <section>
-        <Image alt="final design" src="http://placekitten.com/1000/500" />
+        <Carousel>
+            <Image alt="" src="../../elim-springs/front-page.png" />
+            <Image alt="" src="../../elim-springs/events.png" />
+            <Image alt="" src="../../elim-springs/about.png" />
+            <Image alt="" src="../../elim-springs/location-a.png" />
+            <Image alt="" src="../../elim-springs/donations.png" />
+        </Carousel>
         <h1>
             <span>Case Study</span>
             <span class="logo">Osher Lifelong Learning Institute <span class="subheading">at Colorado State University</span></span>
@@ -93,8 +105,46 @@
         <p>
             Velit amet elit sunt Lorem incididunt consectetur eu enim do sint quis duis veniam commodo. Nostrud voluptate elit enim excepteur elit sit excepteur elit eu amet nostrud. Aliquip laborum incididunt esse ullamco aliqua tempor aute non. Enim ullamco duis anim labore commodo Lorem ex aliquip sunt et aliqua.
         </p>
+        <h2>Design Iterations</h2>
+        <Carousel id="process" scrollOffset="30vh" height="20rem">
+            <Image alt="" src="../../elim-springs/iteration-1.png" />
+            <Image alt="" src="../../elim-springs/iteration-2.png" />
+            <Image alt="" src="../../elim-springs/iteration-3.png" />
+            <Image alt="" src="../../elim-springs/iteration-4.png" />
+            <Image alt="" src="../../elim-springs/iteration-5.png" />
+            <Image alt="" src="../../elim-springs/iteration-6.png" />
+            <Image alt="" src="../../elim-springs/front-page.png" />
+        </Carousel>
+        <h2>Style Guide</h2>
+        <figure class="typography">
+            <Image alt="Elim Springs' style guide" src="../../elim-springs/typography.png" align="right" />
+            <figcaption>
+                <p>
+                    Incididunt non consectetur voluptate sint laborum ad minim amet in non consequat veniam consectetur proident. Ut tempor ea ipsum veniam elit qui mollit nulla dolore nostrud tempor sit magna nostrud. Culpa labore labore reprehenderit tempor pariatur do eu ipsum. Sunt ad consequat minim mollit amet nulla elit quis voluptate. Velit velit aute nisi dolor Lorem et laboris adipisicing laborum eiusmod dolore do aliquip. Aliquip esse do duis anim et irure aliquip.
+                </p>
+            </figcaption>
+        </figure>
+        <figure class="patterns">
+            <Image alt="Elim Springs' style guide" src="../../elim-springs/buttons.png" align="left" />
+            <figcaption>
+                <p>
+                    Incididunt non consectetur voluptate sint laborum ad minim amet in non consequat veniam consectetur proident. Ut tempor ea ipsum veniam elit qui mollit nulla dolore nostrud tempor sit magna nostrud. Culpa labore labore reprehenderit tempor pariatur do eu ipsum. Sunt ad consequat minim mollit amet nulla elit quis voluptate. Velit velit aute nisi dolor Lorem et laboris adipisicing laborum eiusmod dolore do aliquip. Aliquip esse do duis anim et irure aliquip.
+                </p>
+            </figcaption>
+        </figure>
+        <h2>Brand</h2>
+        <Image alt="Elim Springs' style guide" src="../../elim-springs/brand.png" />
+        <figure class="logo-typeface">
+            <Image alt="Elim Springs' style guide" src="../../elim-springs/logo-typeface.png" align="left" />
+            <figcaption>
+                <p>
+                    Duis cupidatat labore qui irure. Nisi occaecat magna consectetur ipsum adipisicing duis ullamco nostrud tempor dolore duis. Officia cupidatat ipsum tempor ullamco labore. Exercitation aliquip cupidatat consectetur eiusmod mollit est aliqua cillum sit. Dolore occaecat quis elit veniam veniam ad nisi minim.
+                </p>
+            </figcaption>
+        </figure>
     </section>
     <section>
+        <h2>Results</h2>
         <p>
             Ullamco aute nostrud ex nostrud commodo esse non occaecat ea quis laborum enim ipsum. Eiusmod quis esse officia tempor officia quis aliqua incididunt voluptate dolor reprehenderit cupidatat est. Velit amet elit sunt Lorem incididunt consectetur eu enim do sint quis duis veniam commodo. Nostrud voluptate elit enim excepteur elit sit excepteur elit eu amet nostrud. Aliquip laborum incididunt esse ullamco aliqua tempor aute non. Enim ullamco duis anim labore commodo Lorem ex aliquip sunt et aliqua.
         </p>

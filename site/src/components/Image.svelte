@@ -9,6 +9,7 @@
     export let height = null;
     export let fadeInDuration = "300ms";
     export let alt;
+    export let align;   // The `img` element supports this out-of-the-box in most browsers, but it's deprecated in HTML5
 </script>
 
 <style>
@@ -20,15 +21,16 @@
         border-radius: var(--border-radius);
         display: block;
         filter: none;
+        float: var(--align);
+        font-size: 0;
         height: auto;
+        line-height: 0;
+        max-width: 100%;
         object-fit: cover;
         object-position: top;
         overflow: hidden;
         position: relative;
         transition: filter var(--fade-in-duration);
-        width: 100%;
-        font-size: 0;
-        line-height: 0;
     }
 
     img::after {
@@ -58,4 +60,15 @@
     }
 </style>
 
-<img class:loading use:loaded {alt} {...$$restProps} style="--width: {width ? width : 'initial'}; --height: {height ? height : 'initial'}; --fade-in-duration: {fadeInDuration}" {width} {height} />
+<img class:loading
+    use:loaded
+    {alt}
+    {...$$restProps}
+    style="
+        --width: {width ? width : 'initial'};
+        --height: {height ? height : 'initial'};
+        --fade-in-duration: {fadeInDuration};
+        --align: {align};"
+    {width}
+    {height}
+/>
