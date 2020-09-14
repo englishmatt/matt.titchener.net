@@ -78,8 +78,10 @@
     <section>
         <Carousel>
             <Image alt="" src="../../elim-springs/front-page.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/front-page-mobile.png" width="1440" height="1024" />
             <Image alt="" src="../../elim-springs/events.png" width="1440" height="1024" />
             <Image alt="" src="../../elim-springs/about.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/about-mobile.png" width="1440" height="1024" />
             <Image alt="" src="../../elim-springs/location-a.png" width="1440" height="1024" />
             <Image alt="" src="../../elim-springs/donations.png" width="1440" height="1024" />
         </Carousel>

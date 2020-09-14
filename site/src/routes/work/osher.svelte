@@ -82,7 +82,7 @@
 
     .affiliates :global(img) {
         margin-right: var(--caption-gutter);
-        width: 30%;
+        width: 45%;
     }
 </style>
 

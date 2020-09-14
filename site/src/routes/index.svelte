@@ -89,7 +89,7 @@
         </Section>
 
         <Section id="budgeting" on:intersect={handleIntersect}>
-            <Entry title="Budgeting" logo="../budgeting-logo.svg">
+            <Entry title="Budgeting" logo="../budgeting-logo.svg" href="/work/budgeting">
                 <ul slot="byline"><li>UI and visual design</li></ul>
                 <p slot="description">Speculative user experience for personal finance and budgeting for the web and desktop.</p>
             </Entry>

@@ -6,6 +6,7 @@
 
 <style>
     .carousel {
+        display: flex;
         height: var(--height);
         margin-left: calc((var(--content-left-margin) - var(--inset)) * -1);
         margin-top: calc(var(--scroll-offset) * -1);
@@ -39,22 +40,40 @@
         scrollbar-color: var(--default-copy-color) var(--scrollbar-background-color);
     }
 
-    .carousel :global(img) {
-        display: inline-block;
-        width: auto;
-        height: 100%;
-        vertical-align: top;
+    .carousel > :global(div) {
+        display: flex;
+        flex-direction: column;
     }
 
-    .carousel :global(img + img) {
+    .carousel > :global(div > img) {
+        flex: 1;
+        object-fit: cover;
+        object-position: top left;
+    }
+
+    .carousel > :global(div),
+    .carousel > :global(img) {
+        flex: 0 0 auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .carousel > :global(div + div),
+    .carousel > :global(div + img),
+    .carousel > :global(img + div),
+    .carousel > :global(img + img) {
         margin-left: 1rem;
     }
 
-    .carousel :global(:first-child) {
+    .carousel > :global(div > img + img) {
+        margin-top: 1rem;
+    }
+
+    .carousel > :global(:first-child) {
         margin-left: calc(var(--content-left-margin) - var(--inset));
     }
 
-    .carousel :global(:last-child) {
+    .carousel > :global(:last-child) {
         margin-right: calc(var(--content-left-margin) - var(--inset));
     }
 </style>

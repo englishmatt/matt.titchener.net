@@ -33,9 +33,10 @@
                     name = "work osher";
                     break;
                 case "/work/elim-springs":
-                    // TODO: We need classes for the page *and* the section. Implemenent a more
-                    // elegant solution.
                     name = "work elimsprings";
+                    break;
+                case "/work/budgeting":
+                    name = "work budgeting";
                     break;
                 default:
                     name = "error";
@@ -132,10 +133,14 @@
     /* Budgeting */
     .page.budgeting {
         --primary-accent-color: #ffce00;
-        --primary-background-color: #0072bb;
+        --primary-background-color: #53646b;
         --secondary-background-color: #accddf;
         --transform: translate(-61rem, -29rem) rotate(-25deg);
         --default-copy-color: #fff;
+    }
+
+    .page.work.budgeting {
+        --transform: none;
     }
 
     /* Project X */
@@ -159,8 +164,8 @@
     /* Elim Springs */
     .page.elimsprings {
         --default-copy-color: #fff;
-        --primary-accent-color: #d2e186;
-        --primary-background-color: #009e63;
+        --primary-accent-color: #00ff74;
+        --primary-background-color: #00c3b9;
         --secondary-background-color: rgba(0, 0, 0, 0.377);
         --transform: translate(-53rem, 10rem) rotate(4.5deg);
     }
