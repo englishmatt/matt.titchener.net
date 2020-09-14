@@ -89,11 +89,11 @@
 <article>
     <section>
         <Carousel>
-            <Image alt="" src="../../elim-springs/front-page.png" />
-            <Image alt="" src="../../elim-springs/events.png" />
-            <Image alt="" src="../../elim-springs/about.png" />
-            <Image alt="" src="../../elim-springs/location-a.png" />
-            <Image alt="" src="../../elim-springs/donations.png" />
+            <Image alt="" src="../../elim-springs/front-page.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/events.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/about.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/location-a.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/donations.png" width="1440" height="1024" />
         </Carousel>
         <h1>
             <span>Case Study</span>
@@ -107,17 +107,17 @@
         </p>
         <h2>Design Iterations</h2>
         <Carousel id="process" scrollOffset="30vh" height="20rem">
-            <Image alt="" src="../../elim-springs/iteration-1.png" />
-            <Image alt="" src="../../elim-springs/iteration-2.png" />
-            <Image alt="" src="../../elim-springs/iteration-3.png" />
-            <Image alt="" src="../../elim-springs/iteration-4.png" />
-            <Image alt="" src="../../elim-springs/iteration-5.png" />
-            <Image alt="" src="../../elim-springs/iteration-6.png" />
-            <Image alt="" src="../../elim-springs/front-page.png" />
+            <Image alt="" src="../../elim-springs/iteration-1.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/iteration-2.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/iteration-3.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/iteration-4.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/iteration-5.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/iteration-6.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/front-page.png" width="1440" height="1024" />
         </Carousel>
         <h2>Style Guide</h2>
         <figure class="typography">
-            <Image alt="Elim Springs' style guide" src="../../elim-springs/typography.png" align="right" />
+            <Image alt="Elim Springs' style guide" src="../../elim-springs/typography.png" align="right" width="494" height="588" />
             <figcaption>
                 <p>
                     Incididunt non consectetur voluptate sint laborum ad minim amet in non consequat veniam consectetur proident. Ut tempor ea ipsum veniam elit qui mollit nulla dolore nostrud tempor sit magna nostrud. Culpa labore labore reprehenderit tempor pariatur do eu ipsum. Sunt ad consequat minim mollit amet nulla elit quis voluptate. Velit velit aute nisi dolor Lorem et laboris adipisicing laborum eiusmod dolore do aliquip. Aliquip esse do duis anim et irure aliquip.
@@ -125,7 +125,7 @@
             </figcaption>
         </figure>
         <figure class="patterns">
-            <Image alt="Elim Springs' style guide" src="../../elim-springs/buttons.png" align="left" />
+            <Image alt="Elim Springs' style guide" src="../../elim-springs/buttons.png" align="left" width="478" heightg="714" />
             <figcaption>
                 <p>
                     Incididunt non consectetur voluptate sint laborum ad minim amet in non consequat veniam consectetur proident. Ut tempor ea ipsum veniam elit qui mollit nulla dolore nostrud tempor sit magna nostrud. Culpa labore labore reprehenderit tempor pariatur do eu ipsum. Sunt ad consequat minim mollit amet nulla elit quis voluptate. Velit velit aute nisi dolor Lorem et laboris adipisicing laborum eiusmod dolore do aliquip. Aliquip esse do duis anim et irure aliquip.
@@ -133,9 +133,9 @@
             </figcaption>
         </figure>
         <h2>Brand</h2>
-        <Image alt="Elim Springs' style guide" src="../../elim-springs/brand.png" />
+        <Image alt="Elim Springs' style guide" src="../../elim-springs/brand.png" width="974" height="771" />
         <figure class="logo-typeface">
-            <Image alt="Elim Springs' style guide" src="../../elim-springs/logo-typeface.png" align="left" />
+            <Image alt="Elim Springs' style guide" src="../../elim-springs/logo-typeface.png" align="left" width="876" height="463" />
             <figcaption>
                 <p>
                     Duis cupidatat labore qui irure. Nisi occaecat magna consectetur ipsum adipisicing duis ullamco nostrud tempor dolore duis. Officia cupidatat ipsum tempor ullamco labore. Exercitation aliquip cupidatat consectetur eiusmod mollit est aliqua cillum sit. Dolore occaecat quis elit veniam veniam ad nisi minim.
