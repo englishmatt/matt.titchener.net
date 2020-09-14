@@ -12,6 +12,7 @@
     --navigation-horizontal-padding: 1.2rem;
     --scrollbar-width: 7px;     /* Only applies to browsers that support ::-webkit-scrollbar */
     --scrollbar-mask-width: 1rem;
+    --lockin-offset: 6.3rem;
 
     /* Colors */
     --default-copy-color: rgba(0, 0, 0, 0.7);
@@ -78,6 +79,18 @@ article .lede {
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
+}
+
+article figure {
+    --caption-gutter: 2.2rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+article figure img {
+    width: calc(50% - (var(--caption-gutter) / 2));
+    margin-bottom: 2rem;
 }
 
 @keyframes show-lede {

@@ -44,18 +44,6 @@
         margin-top: 0;
     }
 
-    figure {
-        --caption-gutter: 2.2rem;
-        margin: 0;
-        padding: 0;
-        margin-top: 2rem;
-    }
-
-    figure :global(img) {
-        width: calc(50% - (var(--caption-gutter) / 2));
-        margin-bottom: 2rem;
-    }
-
     .typography :global(p) {
         padding-right: var(--caption-gutter);
         overflow: auto;

@@ -37,6 +37,7 @@
 
     h1, h2 {
         color: var(--primary-accent-color);
+        clear: both;
     }
 
     h3 {
@@ -68,6 +69,20 @@
         position: absolute;
         top: calc(50% - (var(--dimension) / 2));
         left: -1rem;
+    }
+
+    .affiliates :global(p::before) {
+        content: "\25C4";
+        display: inline-block;
+        padding-right: 0.5rem;
+        font-size: 0.7rem;
+        color: var(--primary-accent-color);
+        vertical-align: 18.8%;
+    }
+
+    .affiliates :global(img) {
+        margin-right: var(--caption-gutter);
+        width: 30%;
     }
 </style>
 
@@ -148,12 +163,15 @@
         pariatur proident incididunt irure fugiat ea cupidatat. Aute do in ea Lorem pariatur aliqua nisi eiusmod sit.
         Nulla quis veniam eu exercitation anim. Sint velit deserunt sit voluptate culpa.
     </p>
-    <h3>Affilate Sites</h3>
-    <p>
-        As the OLLI course registration was to be part of a series of affiliated sites, it was important that the design
-        language be extensible, and scale to various new challenges.
-    </p>
-    <Image src="../../osher/professional-development-front-page.png" alt="Professional Development front page" width="1400" height="700" />
+    <figure class="affiliates">
+        <Image src="../../osher/professional-development-front-page-cropped.png" alt="Professional Development front page" width="1400" height="700" align="left" />
+        <figcaption>
+            <p>
+                As the OLLI course registration was to be part of a series of affiliated sites, it was important that the design
+                language be extensible, and scale to various new challenges.
+            </p>
+        </figcaption>
+    </figure>
     <h3>Page Headers &amp; Alerting</h3>
     <p>
         Anim qui minim officia consequat sit duis minim enim commodo culpa exercitation occaecat veniam. Adipisicing

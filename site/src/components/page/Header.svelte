@@ -19,7 +19,7 @@
     }
 
     .lockin {
-        left: -6.3rem;
+        left: calc(var(--lockin-offset) * -1);
         max-width: var(--max-main-content-width);
         position: relative;
         flex: 0 0 var(--main-content-width);
