@@ -38,6 +38,9 @@
                 case "/work/budgeting":
                     name = "work budgeting";
                     break;
+                case "/work/boxes-and-arrows":
+                    name = "work boxesandarrows";
+                    break;
                 default:
                     name = "error";
             }
@@ -115,6 +118,10 @@
         --primary-background-color: #8afff2;
         --secondary-background-color: #a5e9ff;
         --transform: translate(-60rem, 9rem) rotate(8deg);
+    }
+
+    .page.work.boxesandarrows {
+        --transform: none;
     }
 
     /* Osher */

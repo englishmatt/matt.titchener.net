@@ -96,7 +96,7 @@
         </Section>
 
         <Section id="boxesandarrows" on:intersect={handleIntersect}>
-            <Entry title="Boxes &amp; Arrows" logo="../boxesandarrows-logo.svg">
+            <Entry title="Boxes &amp; Arrows" logo="../boxesandarrows-logo.svg" href="/work/boxes-and-arrows">
                 <ul slot="byline">
                     <li>IA</li>
                     <li>UI and visual design</li>
