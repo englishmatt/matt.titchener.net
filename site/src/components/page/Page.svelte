@@ -164,9 +164,9 @@
     /* Elim Springs */
     .page.elimsprings {
         --default-copy-color: #fff;
-        --primary-accent-color: #00ff74;
-        --primary-background-color: #00c3b9;
-        --secondary-background-color: rgba(0, 0, 0, 0.377);
+        --primary-accent-color: #353535;
+        --primary-background-color:#00c3b9;
+        --secondary-background-color: rgb(0 84 130 / 23%);
         --transform: translate(-53rem, 10rem) rotate(4.5deg);
     }
 
