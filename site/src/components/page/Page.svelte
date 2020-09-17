@@ -106,6 +106,7 @@
     .page.work::after,
     .page.about::after {
         border-radius: 0;
+        width: 100%;
     }
 
     .page.introduction {
@@ -114,10 +115,11 @@
 
     /* Boxes and Arrows */
     .page.boxesandarrows {
-        --primary-accent-color: #8e4eff;
-        --primary-background-color: #8afff2;
-        --secondary-background-color: #a5e9ff;
+        --primary-accent-color: #000;
+        --primary-background-color: #e07dd9;
+        --secondary-background-color: #aeaeae;
         --transform: translate(-60rem, 9rem) rotate(8deg);
+        --default-copy-color: #fff;
     }
 
     .page.work.boxesandarrows {

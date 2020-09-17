@@ -64,12 +64,19 @@
         <p>
             Velit amet elit sunt Lorem incididunt consectetur eu enim do sint quis duis veniam commodo. Nostrud voluptate elit enim excepteur elit sit excepteur elit eu amet nostrud. Aliquip laborum incididunt esse ullamco aliqua tempor aute non. Enim ullamco duis anim labore commodo Lorem ex aliquip sunt et aliqua.
         </p>
-        <h2>Design Process</h2>
+        <h2>Design I... It... Iterations</h2>
         <Carousel height="20rem">
-            <Image alt="" src="../../budgeting/pattern-library.png" width="1440" height="1024" />
-            <Image alt="" src="../../budgeting/pattern-library.png" width="1440" height="1024" />
-            <Image alt="" src="../../budgeting/pattern-library.png" width="1440" height="1024" />
-            <Image alt="" src="../../budgeting/pattern-library.png" width="1440" height="1024" />
+            <Image alt="" src="../../boxes-and-arrows/mockup-1.png" width="1440" height="1024" />
+            <Image alt="" src="../../boxes-and-arrows/mockup-2.png" width="1440" height="1024" />
+            <Image alt="" src="../../boxes-and-arrows/mockup-3.png" width="1440" height="1024" />
+            <Image alt="" src="../../boxes-and-arrows/mockup-4.png" width="1440" height="1024" />
+        </Carousel>
+        <h2>Information Architecture</h2>
+        <Carousel height="20rem">
+            <Image alt="" src="../../boxes-and-arrows/information-architecture.png" width="1440" height="1024" />
+            <Image alt="" src="../../boxes-and-arrows/issue-transitions-1.png" width="1440" height="1024" />
+            <Image alt="" src="../../boxes-and-arrows/issue-transitions-2.png" width="1440" height="1024" />
+            <Image alt="" src="../../boxes-and-arrows/issue-transitions-3.png" width="1440" height="1024" />
         </Carousel>
         <h2>Style Guide</h2>
         <p>
