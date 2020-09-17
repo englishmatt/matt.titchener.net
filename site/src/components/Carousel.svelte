@@ -45,6 +45,10 @@
         flex-direction: column;
     }
 
+    .carousel :global(img) {
+        max-width: unset;
+    }
+
     .carousel > :global(div > img) {
         flex: 1;
         object-fit: cover;

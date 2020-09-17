@@ -44,10 +44,6 @@
         margin-bottom: 1rem;
     }
 
-    p {
-        margin-top: 0;
-    }
-
     /* TODO: Consider moving bullet styling to main.css; used in TableOfContents component as well. */
     ul {
         padding-left: 0;
@@ -84,6 +80,8 @@
         margin-right: var(--caption-gutter);
         width: 45%;
     }
+
+
 </style>
 
 <article>
@@ -132,9 +130,7 @@
     </Carousel>
     <h2>Design Process</h2>
     <p>
-        <strong>User stories</strong> were generated from their processes could be automated or refined using
-        technology. We then set about putting together a workable prototype. Below is the iterative wireframes I put
-        together in Adobe XD.
+        Reprehenderit velit non aliquip mollit non consequat sit culpa consequat reprehenderit. Sit quis non Lorem enim laborum est proident laborum est aliquip voluptate. Occaecat irure deserunt nostrud elit incididunt est ex enim sint amet nisi culpa. Enim anim qui aliquip magna amet duis non duis voluptate tempor irure mollit eu duis. Dolore fugiat nostrud exercitation nulla officia excepteur.
     </p>
     <Carousel id="wireframes" scrollOffset="30vh" height="20rem">
         <Image src="../../osher/wireframe-1.png" alt="Wireframe version 1" width="1300" height="1300" />
@@ -145,6 +141,14 @@
         <Image src="../../osher/wireframe-6.png" alt="Wireframe version 6" width="1300" height="1934" />
         <Image src="../../osher/wireframe-7.png" alt="Wireframe version 7" width="1300" height="1934" />
         <Image src="../../osher/front-page.png" alt="Final high-fidelity mockup" width="1400" height="2514" />
+    </Carousel>
+    <p>
+        <strong>User stories</strong> were generated from their processes could be automated or refined using
+        technology. We then set about putting together a workable prototype. Below is the iterative wireframes I put
+        together in Adobe XD.
+    </p>
+    <Carousel id="grayboxes">
+        <Image src="../../osher/grayboxing.png" alt="Grayboxing montage" height="20rem" />
     </Carousel>
     <h2>Feature Highlights</h2>
     <h3>Course Discovery</h3>
