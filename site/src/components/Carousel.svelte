@@ -55,17 +55,13 @@
         object-position: top left;
     }
 
-    .carousel > :global(div),
-    .carousel > :global(img) {
+    .carousel > :global(*) {
         flex: 0 0 auto;
         width: auto;
         height: 100%;
     }
 
-    .carousel > :global(div + div),
-    .carousel > :global(div + img),
-    .carousel > :global(img + div),
-    .carousel > :global(img + img) {
+    .carousel > :global(* + *) {
         margin-left: 1rem;
     }
 

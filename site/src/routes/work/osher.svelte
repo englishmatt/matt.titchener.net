@@ -1,5 +1,6 @@
 <script>
     import Image from "../../components/Image.svelte";
+    import MobileImage from "../../components/MobileImage.svelte";
     import Carousel from "../../components/Carousel.svelte";
 </script>
 
@@ -86,7 +87,8 @@
 
 <article>
     <Carousel id="final" scrollOffset="30vh" height="50vw">
-        <Image src="../../osher/front-page.png" alt="Osher front page" width="1400" height="2514" />
+        <Image src="../../osher/front-page.png" alt="Osher front page (desktop layout)" width="1400" height="2514" />
+        <MobileImage src="../../osher/front-page-mobile.png" alt="Osher front page (mobile layout)" width="1400" height="2514" />
         <Image src="../../osher/membership.png" alt="Osher membership" width="1400" height="1835" />
         <Image src="../../osher/course-browse.png" alt="Osher front page" width="1400" height="1458" />
         <Image src="../../osher/course-page.png" alt="Osher front page" width="1400" height="1513" />
@@ -138,8 +140,6 @@
         <Image src="../../osher/wireframe-3.png" alt="Wireframe version 3" width="1300" height="1934" />
         <Image src="../../osher/wireframe-4.png" alt="Wireframe version 4" width="1300" height="1934" />
         <Image src="../../osher/wireframe-5.png" alt="Wireframe version 5" width="1300" height="1934" />
-        <Image src="../../osher/wireframe-6.png" alt="Wireframe version 6" width="1300" height="1934" />
-        <Image src="../../osher/wireframe-7.png" alt="Wireframe version 7" width="1300" height="1934" />
         <Image src="../../osher/front-page.png" alt="Final high-fidelity mockup" width="1400" height="2514" />
     </Carousel>
     <p>

@@ -129,7 +129,7 @@
     /* Osher */
     .page.osher {
         --default-copy-color: #fff;
-        --primary-accent-color: #ff0;
+        --primary-accent-color: #ffd916;
         --primary-background-color: #0da73b;
         --secondary-background-color: #65abc2;
         --transform: translate(-47rem, calc(100vh - 115%)) rotate(11deg);
