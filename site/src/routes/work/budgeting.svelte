@@ -68,6 +68,7 @@
         </p>
         <h2>Pattern Library</h2>
         <Image alt="" src="../../budgeting/pattern-library.png" width="1440" height="1024" />
+        <h3>Grey Boxes</h3>
     </section>
     <section>
         <h2>Results</h2>

@@ -81,8 +81,6 @@
         margin-right: var(--caption-gutter);
         width: 45%;
     }
-
-
 </style>
 
 <article>
