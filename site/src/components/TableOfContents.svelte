@@ -44,7 +44,7 @@
     }
 
     a span {
-        opacity: 0.4;
+        opacity: 0.8;
         transition: opacity var(--navigation-transition-duration);
         white-space: nowrap;
     }
