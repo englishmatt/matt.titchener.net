@@ -1,6 +1,5 @@
 <script>
     import Header from '../components/page/Header.svelte';
-    import Footer from '../components/page/Footer.svelte';
     import SkipToContent from '../components/page/SkipToContent.svelte';
     import Page from '../components/page/Page.svelte';
 

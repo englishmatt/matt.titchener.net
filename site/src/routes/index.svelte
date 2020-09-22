@@ -2,7 +2,6 @@
     import Section from '../components/Section.svelte';
     import Introduction from '../components/sections/Introduction.svelte';
     import Entry from '../components/Entry.svelte';
-    import Description from '../components/Description.svelte';
     import TableOfContents from '../components/TableOfContents.svelte';
 
     let currentSection = null;
@@ -36,6 +35,10 @@
     :global(main .projectx h3) {
         font-family: "Permanent Marker";
         font-weight: 400;
+    }
+
+    :global(.entries > section:first-child) {
+        margin-top: calc(var(--padding-top) * -1);
     }
 
     .work {
