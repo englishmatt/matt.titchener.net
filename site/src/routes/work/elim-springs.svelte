@@ -77,10 +77,11 @@
 
 <article>
     <section>
-        <Carousel>
+        <Carousel scrollOffset="30vh" height="50vw">
             <Image alt="" src="../../elim-springs/front-page.png" width="1440" height="1024" />
-            <MobileImage alt="" src="../../elim-springs/front-page-mobile.png" width="1440" height="1024" />
+            <MobileImage alt="" src="../../elim-springs/front-page-mobile.png" width="411" height="823" />
             <Image alt="" src="../../elim-springs/events.png" width="1440" height="1024" />
+            <MobileImage alt="" src="../../elim-springs/navigation-open-mobile.png" width="411" height="823" />
             <Image alt="" src="../../elim-springs/about.png" width="1440" height="1024" />
             <MobileImage alt="" src="../../elim-springs/about-mobile.png" width="1440" height="1024" />
             <Image alt="" src="../../elim-springs/location-a.png" width="1440" height="1024" />
@@ -124,7 +125,6 @@
             </figcaption>
         </figure>
         <h2>Brand</h2>
-        <Image alt="Elim Springs' style guide" src="../../elim-springs/brand.png" width="974" height="771" />
         <figure class="logo-typeface">
             <Image alt="Elim Springs' style guide" src="../../elim-springs/logo-typeface.png" align="left" width="876" height="463" />
             <figcaption>
@@ -133,6 +133,7 @@
                 </p>
             </figcaption>
         </figure>
+        <Image alt="Elim Springs' style guide" src="../../elim-springs/brand.png" width="974" height="771" />
     </section>
     <section>
         <h2>Results</h2>

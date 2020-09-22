@@ -9,7 +9,7 @@
     export let height = null;
     export let fadeInDuration = "300ms";
     export let alt;
-    export let align;   // The `img` element supports this out-of-the-box in most browsers, but it's deprecated in HTML5
+    export let align = null;   // The `img` element supports this out-of-the-box in most browsers, but it's deprecated in HTML5
 </script>
 
 <style>
