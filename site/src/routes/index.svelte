@@ -106,7 +106,7 @@
         </Section>
 
         <Section id="projectx" on:intersect={handleIntersect}>
-            <Entry title="Project X">
+            <Entry title="Project X" href="/work/project-x">
                 <ul slot="byline">
                     <li>Research</li>
                     <li>Workflows</li>

@@ -34,7 +34,7 @@
         transform: translate(-46%, 55%);
         transition: filter var(--fade-in-duration);
         max-width: 15.2rem;
-        border: 5px solid var(--primary-background-color);
+        border: 8px solid var(--secondary-background-color);
         border-radius: 1vw;
     }
 

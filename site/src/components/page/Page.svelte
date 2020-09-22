@@ -41,6 +41,9 @@
                 case "/work/boxes-and-arrows":
                     name = "work boxesandarrows";
                     break;
+                case "/work/project-x":
+                    name = "work projectx";
+                    break;
                 default:
                     name = "error";
             }
@@ -57,12 +60,12 @@
 
     .page {
         --primary-background-color: #ffe600;
-        --secondary-background-color: #ffe6a7;
+        --secondary-background-color: #ffcf00;
         --primary-accent-color: rgba(0, 132, 255, 1);
         --transform: none;
         --timing-function: cubic-bezier(0.23, 1, 0.320, 1);
         --selection-color: var(--primary-accent-color);
-        --selection-background-color: rgba(0, 0, 0, 0.4);;
+        --selection-background-color: rgba(0, 0, 0, 0.4);
         color: var(--default-copy-color);
     }
 
@@ -89,7 +92,7 @@
         background-color: var(--secondary-background-color);
         border-radius: 0.5rem;
         content: "";
-        mix-blend-mode: var(--blend-mode, multiply);
+        mix-blend-mode: var(--blend-mode, normal);
         position: fixed;
         transform: var(--transform);
         transition-timing-function: var(--timing-function);
@@ -117,7 +120,7 @@
     .page.boxesandarrows {
         --primary-accent-color: #000;
         --primary-background-color: #e07dd9;
-        --secondary-background-color: #aeaeae;
+        --secondary-background-color: #995594;
         --transform: translate(-60rem, 9rem) rotate(8deg);
         --default-copy-color: #fff;
     }
@@ -131,7 +134,7 @@
         --default-copy-color: #fff;
         --primary-accent-color: #ffd916;
         --primary-background-color: #0da73b;
-        --secondary-background-color: #65abc2;
+        --secondary-background-color: #05702d;
         --transform: translate(-47rem, calc(100vh - 115%)) rotate(11deg);
     }
 
@@ -143,7 +146,7 @@
     .page.budgeting {
         --primary-accent-color: #ffce00;
         --primary-background-color: #53646b;
-        --secondary-background-color: #accddf;
+        --secondary-background-color: #38505e;
         --transform: translate(-61rem, -29rem) rotate(-25deg);
         --default-copy-color: #fff;
     }
@@ -157,8 +160,12 @@
         --default-copy-color: #fff;
         --primary-accent-color: #fff;
         --primary-background-color: #222;
-        --secondary-background-color: #9f9f9f;
+        --secondary-background-color: #151515;
         --transform: translate(-53rem, -34rem) rotate(-6.5deg);
+    }
+
+    .page.work.projectx {
+        --transform: none;
     }
 
     /* Error pages */
@@ -175,7 +182,7 @@
         --default-copy-color: #fff;
         --primary-accent-color: #353535;
         --primary-background-color:#00c3b9;
-        --secondary-background-color: rgb(0 84 130 / 23%);
+        --secondary-background-color: #00a4a4;
         --transform: translate(-53rem, 10rem) rotate(4.5deg);
     }
 
