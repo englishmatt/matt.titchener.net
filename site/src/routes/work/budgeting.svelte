@@ -47,14 +47,14 @@
 
 <article>
     <section>
-        <Carousel>
-            <Image alt="" src="../../budgeting/overview.png" width="1440" height="1024" />
+        <Carousel height="60vw">
+            <Image alt="" src="../../budgeting/overview.png" width="1460" height="830" />
             <div>
-                <Image alt="" src="../../budgeting/balance-over-time.png" />
-                <Image alt="" src="../../budgeting/transaction-histogram.png" />
+                <Image alt="" src="../../budgeting/balance-over-time.png" width="960" height="325" />
+                <Image alt="" src="../../budgeting/transaction-histogram.png" width="960" height="237" />
             </div>
-            <Image alt="" src="../../budgeting/onboarding.png" width="1440" height="1024" />
-            <Image alt="" src="../../budgeting/income.png" width="1440" height="1024" />
+            <Image alt="" src="../../budgeting/onboarding.png" width="1460" height="840" />
+            <Image alt="" src="../../budgeting/income.png" width="1460" height="830" />
         </Carousel>
         <h1>
             <span>Case Study</span>
@@ -66,9 +66,21 @@
         <p>
             Velit amet elit sunt Lorem incididunt consectetur eu enim do sint quis duis veniam commodo. Nostrud voluptate elit enim excepteur elit sit excepteur elit eu amet nostrud. Aliquip laborum incididunt esse ullamco aliqua tempor aute non. Enim ullamco duis anim labore commodo Lorem ex aliquip sunt et aliqua.
         </p>
+        <h3>Gray Boxing</h3>
+        <Carousel height="20rem">
+            <Image alt="" src="../../budgeting/wireframes/overview.png" width="1460" height="840" />
+            <Image alt="" src="../../budgeting/wireframes/bank-accounts.png" width="1460" height="840" />
+            <Image alt="" src="../../budgeting/wireframes/savings.png" width="1460" height="840" />
+            <Image alt="" src="../../budgeting/wireframes/savings-goals.png" width="1460" height="947" />
+            <Image alt="" src="../../budgeting/wireframes/spending.png" width="1460" height="947" />
+            <Image alt="" src="../../budgeting/wireframes/transactions-for-account.png" width="1460" height="947" />
+            <Image alt="" src="../../budgeting/wireframes/transactions-for-all-accounts.png" width="1460" height="947" />
+            <Image alt="" src="../../budgeting/wireframes/welcome.png" width="1460" height="840" />
+            <Image alt="" src="../../budgeting/wireframes/budget.png" width="1460" height="947" />
+            <Image alt="" src="../../budgeting/wireframes/budget-empty.png" width="1460" height="840" />
+        </Carousel>
         <h2>Pattern Library</h2>
-        <Image alt="" src="../../budgeting/pattern-library.png" width="1440" height="1024" />
-        <h3>Grey Boxes</h3>
+        <Image alt="" src="../../budgeting/pattern-library.png" width="1460" height="1190" />
     </section>
     <section>
         <h2>Results</h2>
