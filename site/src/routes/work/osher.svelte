@@ -2,6 +2,7 @@
     import Image from "../../components/Image.svelte";
     import MobileImage from "../../components/MobileImage.svelte";
     import Carousel from "../../components/Carousel.svelte";
+    import CaseStudy from "../../components/CaseStudy.svelte";
 </script>
 
 <style>
@@ -83,7 +84,7 @@
     }
 </style>
 
-<article>
+<CaseStudy>
     <Carousel id="final" scrollOffset="30vh" height="50vw">
         <Image src="../../osher/front-page.png" alt="Osher front page (desktop layout)" width="1400" height="2514" />
         <MobileImage src="../../osher/front-page-mobile.png" alt="Osher front page (mobile layout)" width="1400" height="2514" />
@@ -187,4 +188,4 @@
         The first iteration of the site launched in the autumn of 2018 and received positive feedback from students and
         OLLI staff alike. As with many projects, the next set of iterations are still to come.
     </p>
-</article>
+</CaseStudy>

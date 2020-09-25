@@ -68,6 +68,8 @@
     }
 </style>
 
+<svelte:window on:hashchange={handleHashChange} />
+
 <Section id="introduction" on:intersect={handleIntersect} minHeight="100vh" paddingTop="calc((100vh * (1/3)) - var(--site-header-height))">
     <Entry class="introduction-entry">
         <Introduction>
@@ -77,8 +79,6 @@
         </Introduction>
     </Entry>
 </Section>
-
-<svelte:window on:hashchange={handleHashChange} />
 
 <section class="work">
     <TableOfContents {currentSection} />

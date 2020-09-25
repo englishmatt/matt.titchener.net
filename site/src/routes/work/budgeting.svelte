@@ -1,6 +1,7 @@
 <script>
     import Image from "../../components/Image.svelte";
     import Carousel from "../../components/Carousel.svelte";
+    import CaseStudy from "../../components/CaseStudy.svelte";
 </script>
 
 <style>
@@ -45,7 +46,7 @@
     }
 </style>
 
-<article>
+<CaseStudy>
     <section>
         <Carousel height="60vw">
             <Image alt="" src="../../budgeting/overview.png" width="1460" height="830" />
@@ -88,4 +89,4 @@
             Ullamco aute nostrud ex nostrud commodo esse non occaecat ea quis laborum enim ipsum. Eiusmod quis esse officia tempor officia quis aliqua incididunt voluptate dolor reprehenderit cupidatat est. Velit amet elit sunt Lorem incididunt consectetur eu enim do sint quis duis veniam commodo. Nostrud voluptate elit enim excepteur elit sit excepteur elit eu amet nostrud. Aliquip laborum incididunt esse ullamco aliqua tempor aute non. Enim ullamco duis anim labore commodo Lorem ex aliquip sunt et aliqua.
         </p>
     </section>
-</article>
+</CaseStudy>

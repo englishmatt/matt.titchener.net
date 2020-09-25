@@ -1,7 +1,7 @@
 <script>
     import Image from "../../components/Image.svelte";
-    import MobileImage from "../../components/MobileImage.svelte";
     import Carousel from "../../components/Carousel.svelte";
+    import CaseStudy from "../../components/CaseStudy.svelte";
 </script>
 
 <style>
@@ -42,7 +42,7 @@
     }
 </style>
 
-<article>
+<CaseStudy>
     <h1>
         <span>Case Study</span>
         <span class="logo">Project X</span>
@@ -97,4 +97,4 @@
         elit mollit. Culpa qui cillum dolor elit. Lorem in nostrud velit ipsum Lorem pariatur ex officia velit irure.
         Et aliquip amet Lorem officia occaecat ad elit mollit. Culpa qui cillum dolor elit.
     </p>
-</article>
+</CaseStudy>

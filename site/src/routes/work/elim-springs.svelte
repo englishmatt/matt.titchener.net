@@ -2,6 +2,7 @@
     import Image from "../../components/Image.svelte";
     import MobileImage from "../../components/MobileImage.svelte";
     import Carousel from "../../components/Carousel.svelte";
+    import CaseStudy from "../../components/CaseStudy.svelte";
 </script>
 
 <style>
@@ -75,7 +76,7 @@
     }
 </style>
 
-<article>
+<CaseStudy>
     <section>
         <Carousel scrollOffset="30vh" height="50vw">
             <Image alt="" src="../../elim-springs/front-page.png" width="1440" height="1024" />
@@ -141,4 +142,4 @@
             Ullamco aute nostrud ex nostrud commodo esse non occaecat ea quis laborum enim ipsum. Eiusmod quis esse officia tempor officia quis aliqua incididunt voluptate dolor reprehenderit cupidatat est. Velit amet elit sunt Lorem incididunt consectetur eu enim do sint quis duis veniam commodo. Nostrud voluptate elit enim excepteur elit sit excepteur elit eu amet nostrud. Aliquip laborum incididunt esse ullamco aliqua tempor aute non. Enim ullamco duis anim labore commodo Lorem ex aliquip sunt et aliqua.
         </p>
     </section>
-</article>
+</CaseStudy>
