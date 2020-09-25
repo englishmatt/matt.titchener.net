@@ -1,6 +1,7 @@
 <script>
     import { onMount, createEventDispatcher } from "svelte";
     import { sectionClassName } from "../stores.js";
+    import { goto } from "@sapper/app";
 
     const dispatch = createEventDispatcher();
 
@@ -8,11 +9,10 @@
     let section;
     let activeSectionId;
 
-    // Handles <Section> intersection observation events. Used to update the hash of the URL
+    // Handles <Section> intersection observation entries. Used to update the hash of the URL
     // when the user scrolls through the content of the page.
-    function handleIntersection(event) {
-
-        let intersectingSection = event.find((x) => x.isIntersecting === true);
+    async function handleIntersection(entries) {
+        let intersectingSection = entries.find((x) => x.isIntersecting === true);
 
         if (intersectingSection !== undefined) {
             activeSectionId = intersectingSection.target.parentNode.id;
@@ -20,9 +20,7 @@
             // We must check to see if the intersectingSectionId is also an empty string
             // otherwise it will attempt to send us back to the base URL.
             if (activeSectionId !== undefined && activeSectionId !== "") {
-                // Using `replaceState` here is considered dangerous, however Sapper's `goto` call
-                // caused issues with smooth scrolling when using anchor tags.
-                history.replaceState(undefined, undefined, `#${activeSectionId}`);
+                await goto(`#${activeSectionId}`, { noscroll: true, replaceState: true });
                 dispatch("intersect", { id: activeSectionId });
 
                 // WARNING: Do not set state in Sapper/SSR - this will leak global data to other users.

@@ -3,12 +3,24 @@
     import Introduction from '../components/sections/Introduction.svelte';
     import Entry from '../components/Entry.svelte';
     import TableOfContents from '../components/TableOfContents.svelte';
+    import { onMount } from 'svelte';
 
     let currentSection = null;
 
     function handleIntersect(event) {
         currentSection = event.detail.id;
     }
+
+    function handleHashChange() {
+        const id = window.location.hash.substring(1);
+        const element = document.getElementById(id);
+
+        if (element instanceof HTMLElement) {
+            element.scrollIntoView(true);
+        }
+    }
+
+    onMount(handleHashChange);
 </script>
 
 <style>
@@ -65,6 +77,8 @@
         </Introduction>
     </Entry>
 </Section>
+
+<svelte:window on:hashchange={handleHashChange} />
 
 <section class="work">
     <TableOfContents {currentSection} />
