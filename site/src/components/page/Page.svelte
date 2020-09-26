@@ -96,7 +96,9 @@
         position: fixed;
         transform: var(--transform);
         transition-timing-function: var(--timing-function);
-        transition: background-color var(--background-transition-duration), transform var(--background-transition-duration);
+        transition: background-color var(--background-transition-duration),
+                    transform var(--background-transition-duration),
+                    width var(--background-transition-duration);
         z-index: -1;
         width: 100rem;
         height: 110rem;
