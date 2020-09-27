@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Budgeting &#183; Matt Titchener</title>
+</svelte:head>
+
 <script>
     import Image from "../../components/Image.svelte";
     import Carousel from "../../components/Carousel.svelte";

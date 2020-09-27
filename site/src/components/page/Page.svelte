@@ -104,7 +104,7 @@
         height: 110rem;
         top: 0;
         left: 0;
-        will-change: mix-blend-mode, background-color, transform;
+        will-change: background-color, transform, width;
     }
 
     /* TODO: Optimize these styles */

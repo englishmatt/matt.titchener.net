@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Matt Titchener</title>
+</svelte:head>
+
 <script>
     import Section from '../components/Section.svelte';
     import Introduction from '../components/sections/Introduction.svelte';

@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Elim Springs &#183; Matt Titchener</title>
+</svelte:head>
+
 <script>
     import Image from "../../components/Image.svelte";
     import MobileImage from "../../components/MobileImage.svelte";

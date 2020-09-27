@@ -34,10 +34,6 @@
     }
 </style>
 
-<svelte:head>
-    <title>{segment} &#183; Matt Titchener</title>
-</svelte:head>
-
 <Page>
     <SkipToContent {contentId} />
     <Header active={segment} />
