@@ -1,3 +1,7 @@
+<svelte:head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?background=%23ffe600" />
+</svelte:head>
+
 <script>
     import { stores } from "@sapper/app";
     import { sectionClassName } from "../../stores.js";
