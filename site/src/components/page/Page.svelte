@@ -6,7 +6,8 @@
     const { page } = stores();
     let pageComponent;
     let oldUrlPath;
-    $: backgroundColor = "";
+    let backgroundColor;
+    let foregroundColor;
 
     // TODO: This is a hack. As of Sapper 0.27.16 there's no easy way to pass values
     // from a component/route to _layout. Ideally, the `sectionName` would be set by the
@@ -59,12 +60,20 @@
     $: sectionName = getSectionName($page.path, $sectionClassName);
 
     afterUpdate(() => {
-        backgroundColor = pageComponent && getComputedStyle(pageComponent, ":after").getPropertyValue("--secondary-background-color");
+        backgroundColor = pageComponent &&
+            getComputedStyle(pageComponent, ":after")
+                .getPropertyValue("--secondary-background-color");
+
+        foregroundColor = pageComponent &&
+            getComputedStyle(pageComponent)
+                .getPropertyValue("--default-copy-color");
     });
 </script>
 
 <svelte:head>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg?background={encodeURIComponent(backgroundColor)}" />
+    <link rel="icon"
+        type="image/svg+xml"
+        href="/favicon.svg?background={encodeURIComponent(backgroundColor)}&foreground={encodeURIComponent(foregroundColor)}" />
 </svelte:head>
 
 <style>
