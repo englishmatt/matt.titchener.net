@@ -1,5 +1,9 @@
 export async function get(req, res, next) {
-    let background = req.query.background || "#ffe600";
+    let background = req.query.background;
+
+    if (!background) {
+        background = "#ffe600";
+    }
 
     res.setHeader('Content-Type', 'image/svg+xml');
     res.end(`<svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" fill="none">
