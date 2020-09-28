@@ -151,7 +151,7 @@
     /* Budgeting */
     .page.budgeting {
         --primary-accent-color: #ffce00;
-        --primary-background-color: #53646b;
+        --primary-background-color: #436172;
         --secondary-background-color: #38505e;
         --transform: translate(-61rem, -29rem) rotate(-25deg);
         --default-copy-color: #fff;
