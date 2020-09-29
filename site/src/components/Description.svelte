@@ -74,8 +74,24 @@
         border-radius: 4px;
         text-decoration: none;
         color: var(--primary-accent-color);
-        transition: border-color var(--background-transition-duration), color var(--background-transition-duration);
+        transition: border-color var(--background-transition-duration),
+                    color var(--background-transition-duration),
+                    font-weight var(--background-transition-duration);
         margin-top: 0.6rem;
+    }
+
+    a::before {
+        content: attr(data-content);
+        display: block;
+        font-weight: 700;
+        height: 0;
+        visibility: hidden;
+    }
+
+    a:hover {
+        background-color: var(--primary-accent-color);
+        color: var(--secondary-background-color);
+        font-weight: 600;
     }
 </style>
 
@@ -91,7 +107,7 @@
     <div class="description-body">
         <slot></slot>
         {#if !!href}
-            <a href={href}>Read more</a>
+            <a href={href} data-content="Read more">Read more</a>
         {/if}
     </div>
 </section>
