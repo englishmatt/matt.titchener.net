@@ -64,7 +64,7 @@
         documentation. I used <i>Business Process Model Notation</i> (BPMN). <strong>User journies</strong> were
         inferred from interviews and business processes:
     </p>
-    <Carousel id="workflows" scrollOffset="30vh" height="60vw">
+    <Carousel id="workflows" scrollOffset="30vh" height="50vw">
         <Image src="../../project-x/customer-list.png" alt="User journey" width="2439" height="1309" />
         <Image src="../../project-x/customer-record.png" alt="User workflow" width="2439" height="1309" />
         <Image src="../../project-x/customer-contact-history.png" alt="Customer life cycle" width="2439" height="1309" />

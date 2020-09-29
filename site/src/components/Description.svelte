@@ -91,7 +91,7 @@
     a:hover {
         background-color: var(--primary-accent-color);
         color: var(--secondary-background-color);
-        font-weight: 600;
+        font-weight: 700;
     }
 </style>
 

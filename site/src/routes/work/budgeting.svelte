@@ -52,7 +52,7 @@
 
 <CaseStudy>
     <section>
-        <Carousel height="60vw">
+        <Carousel id="final" scrollOffset="30vh" height="50vw">
             <Image alt="" src="../../budgeting/overview.png" width="1460" height="830" />
             <div>
                 <Image alt="" src="../../budgeting/balance-over-time.png" width="960" height="325" />

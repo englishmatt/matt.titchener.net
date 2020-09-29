@@ -82,7 +82,7 @@
 
 <CaseStudy>
     <section>
-        <Carousel scrollOffset="30vh" height="50vw">
+        <Carousel id="final" scrollOffset="30vh" height="50vw">
             <Image alt="" src="../../elim-springs/front-page.png" width="1440" height="1024" />
             <MobileImage alt="" src="../../elim-springs/front-page-mobile.png" width="411" height="823" />
             <Image alt="" src="../../elim-springs/events.png" width="1440" height="1024" />
