@@ -1,7 +1,5 @@
 <script>
     import { onMount, createEventDispatcher } from "svelte";
-    import { sectionClassName } from "../stores.js";
-    import { goto } from "@sapper/app";
 
     const dispatch = createEventDispatcher();
 
@@ -11,40 +9,28 @@
 
     // Handles <Section> intersection observation entries. Used to update the hash of the URL
     // when the user scrolls through the content of the page.
-    async function handleIntersection(entries) {
-        let intersectingSection = entries.find((x) => x.isIntersecting === true);
+    function handleIntersection(entries) {
+        entries.forEach(async (entry) => {
+            if (entry.isIntersecting) {
+                activeSectionId = section.id; 
 
-        if (intersectingSection !== undefined) {
-            activeSectionId = intersectingSection.target.parentNode.id;
-
-            // We must check to see if the intersectingSectionId is also an empty string
-            // otherwise it will attempt to send us back to the base URL.
-            if (activeSectionId !== undefined && activeSectionId !== "") {
-                await goto(`#${activeSectionId}`, { noscroll: true, replaceState: true });
-                dispatch("intersect", { id: activeSectionId });
-
-                // WARNING: Do not set state in Sapper/SSR - this will leak global data to other users.
-                // TODO: Consider using session store for this?
-                if (process.browser) {
-                    sectionClassName.set(activeSectionId);
+                // We must check to see if the intersectingSectionId is also an empty string
+                // otherwise it will attempt to send us back to the base URL.
+                if (activeSectionId !== undefined && activeSectionId !== "") {
+                    dispatch("intersect", { id: activeSectionId });
                 }
             }
-        }
+        });
     }
 
     onMount(() => {
-        // TODO: Investigate passing/wrapping the Entry component with the IntersectionObserver
-        // and handling events there.
-        let observee = section.querySelector(".entry");
-
+        let observee = intersectSelector ? section.querySelector(intersectSelector) : section;
+        
         if (!!observee) {
-            activeSectionId = location.hash;
-            const verticalMargin = 30; // In percent
-
             observer = new IntersectionObserver(handleIntersection, {
-                root: document.getElementById("content"),
-                rootMargin: `-${verticalMargin}% 0% -${verticalMargin}% 0%`,
-                threshold: 0
+                root: intersectionRoot,
+                rootMargin: intersectionMargin,
+                threshold: intersectionThreshold
             });
 
             observer.observe(observee);
@@ -58,6 +44,10 @@
     export let minHeight = "calc(100vh * (2/3))";
     export let paddingTop = "calc(100vh * (1/3))";
     export let id = null;
+    export let intersectSelector = null;
+    export let intersectionMargin = "-10% 0px -10% 0px";
+    export let intersectionThreshold = 1;
+    export let intersectionRoot = null;
 </script>
 
 <style>

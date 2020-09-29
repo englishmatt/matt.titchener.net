@@ -8,11 +8,20 @@
     import Entry from '../components/Entry.svelte';
     import TableOfContents from '../components/TableOfContents.svelte';
     import { onMount } from 'svelte';
+    import { sectionClassName } from "../stores.js";
+    import { goto } from "@sapper/app";
 
     let currentSection = null;
 
-    function handleIntersect(event) {
+    async function handleIntersect(event) {
+        await goto(`#${event.detail.id}`, { noscroll: true, replaceState: true });
         currentSection = event.detail.id;
+
+        // WARNING: Do not set state in Sapper/SSR - this will leak global data to other users.
+        // TODO: Consider using session store for this?
+        if (process.browser) {
+            sectionClassName.set(event.detail.id);
+        }
     }
 
     function handleHashChange() {
@@ -32,6 +41,8 @@
         --mask-image: linear-gradient(to top, transparent 7rem, black 19rem);
         -webkit-mask-image: var(--mask-image);
         mask-image: var(--mask-image);
+        margin-top: calc(var(--site-header-height) * -1);
+        background-image: linear-gradient(transparent, transparent);    /* Hack to overcome odd rendering bug in Firefox 79.0 */
     }
 
     :global(main > .introduction > .introduction-entry) {
@@ -42,7 +53,6 @@
         animation-iteration-count: 1;
         animation-name: show-lede;
         animation-timing-function: cubic-bezier(.02, .02, 0, 1.01);
-        background-image: linear-gradient(transparent, transparent);    /* Hack to overcome odd rendering bug in Firefox 79.0 */
         opacity: 0;
         position: sticky;
         top: 36%;
@@ -74,7 +84,7 @@
 
 <svelte:window on:hashchange={handleHashChange} />
 
-<Section id="introduction" on:intersect={handleIntersect} minHeight="100vh" paddingTop="calc((100vh * (1/3)) - var(--site-header-height))">
+<Section id="introduction" on:intersect={handleIntersect} minHeight="100vh" paddingTop="0" intersectionMargin="-80% 0px -20% 0px" intersectionThreshold="0">
     <Entry class="introduction-entry">
         <Introduction>
             <strong>Digital products,</strong><br />
@@ -87,7 +97,7 @@
 <section class="work">
     <TableOfContents {currentSection} />
     <section id="entries" class="entries">
-        <Section id="osher" on:intersect={handleIntersect}>
+        <Section id="osher" on:intersect={handleIntersect} intersectSelector=".entry">
             <Entry title="Osher Foundation" subtitle="at Colorado State University" logo="../osher-logo.svg" href="/work/osher">
                 <ul slot="byline">
                     <li>Research</li>
@@ -99,7 +109,7 @@
             </Entry>
         </Section>
 
-        <Section id="elimsprings" on:intersect={handleIntersect}>
+        <Section id="elimsprings" on:intersect={handleIntersect} intersectSelector=".entry">
             <Entry title="Elim Springs" logo="../elimsprings-logo.svg" href="/work/elim-springs">
                 <ul slot="byline">
                     <li>Brand</li>
@@ -109,14 +119,14 @@
             </Entry>
         </Section>
 
-        <Section id="budgeting" on:intersect={handleIntersect}>
+        <Section id="budgeting" on:intersect={handleIntersect} intersectSelector=".entry">
             <Entry title="Budgeting" logo="../budgeting-logo.svg" href="/work/budgeting">
                 <ul slot="byline"><li>UI and visual design</li></ul>
                 <p slot="description">Speculative user experience for personal finance and budgeting for the web and desktop.</p>
             </Entry>
         </Section>
 
-        <Section id="boxesandarrows" on:intersect={handleIntersect}>
+        <Section id="boxesandarrows" on:intersect={handleIntersect} intersectSelector=".entry">
             <Entry title="Boxes &amp; Arrows" logo="../boxesandarrows-logo.svg" href="/work/boxes-and-arrows">
                 <ul slot="byline">
                     <li>IA</li>
@@ -126,7 +136,7 @@
             </Entry>
         </Section>
 
-        <Section id="projectx" on:intersect={handleIntersect}>
+        <Section id="projectx" on:intersect={handleIntersect} intersectSelector=".entry">
             <Entry title="Project X" href="/work/project-x">
                 <ul slot="byline">
                     <li>Research</li>
