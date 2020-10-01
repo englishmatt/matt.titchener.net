@@ -215,6 +215,14 @@
         width: var(--main-content-width);
         max-width: var(--max-main-content-width);
     }
+
+    .page :global(p.closing::after) {
+        color: var(--primary-accent-color);
+        content: "\25A0";
+        font-size: 2rem;
+        line-height: 0;
+        padding-left: 0.4rem;
+    }
 </style>
 
 <div class="page {sectionName}" bind:this={pageComponent}>

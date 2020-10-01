@@ -105,7 +105,10 @@
                     <li>Workflows</li>
                     <li>UI and Visual Design</li>
                 </ul>
-                <p slot="description">Class registration and student information system for Osher Lifelong Learning students at Colorado State University.</p>
+                <p slot="description">
+                    Class registration and student information system for Osher Lifelong Learning Institute at Colorado
+                    State University.
+                </p>
             </Entry>
         </Section>
 
@@ -115,14 +118,20 @@
                     <li>Brand</li>
                     <li>UI and visual design</li>
                 </ul>
-                <p slot="description">Marketing and payment processing for small German event management and venue agency.</p>
+                <p slot="description">
+                    Marketing and payment processing for small German event management and venue agency.
+                </p>
             </Entry>
         </Section>
 
         <Section id="budgeting" on:intersect={handleIntersect} intersectSelector=".entry">
             <Entry title="Budgeting" logo="../budgeting-logo.svg" href="/work/budgeting">
-                <ul slot="byline"><li>UI and visual design</li></ul>
-                <p slot="description">Speculative user experience for personal finance and budgeting for the web and desktop.</p>
+                <ul slot="byline">
+                    <li>UI and visual design</li>
+                </ul>
+                <p slot="description">
+                    Speculative user experience for personal finance and budgeting for the web and desktop.
+                </p>
             </Entry>
         </Section>
 
@@ -132,7 +141,9 @@
                     <li>IA</li>
                     <li>UI and visual design</li>
                 </ul>
-                <p slot="description">Awarding winning site redesign for Boxes and Arrows with final deliverable.</p>
+                <p slot="description">
+                    Awarding winning site redesign for Boxes and Arrows with final deliverable.
+                </p>
             </Entry>
         </Section>
 
@@ -143,7 +154,9 @@
                     <li>Workflows</li>
                     <li>UI and visual design</li>
                 </ul>
-                <p slot="description">Outreach, contact, and call-scheduling web application for remote volunteers nationwide.</p>
+                <p slot="description">
+                    Outreach, contact, and call-scheduling web application for remote volunteers nationwide.
+                </p>
             </Entry>
         </Section>
     </section>
