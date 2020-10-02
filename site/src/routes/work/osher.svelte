@@ -7,6 +7,7 @@
     import MobileImage from "../../components/MobileImage.svelte";
     import Carousel from "../../components/Carousel.svelte";
     import CaseStudy from "../../components/CaseStudy.svelte";
+    import Figure from "../../components/Figure.svelte";
 </script>
 
 <style>
@@ -73,43 +74,14 @@
         left: -1rem;
     }
 
-    .affiliates :global(p:first-of-type::before) {
+    /* .affiliates :global(p:first-of-type::before) {
         content: "\25C4";
         display: inline-block;
         padding-right: 0.5rem;
         font-size: 0.7rem;
         color: var(--primary-accent-color);
         vertical-align: 18.8%;
-    }
-
-    figcaption p {
-        font-size: 1rem;
-    }
-
-    figure {
-        margin: 0;
-        overflow: auto;
-    }
-
-    figure > :global(*) {
-        margin-right: var(--caption-gutter);
-    }
-
-    figure > :global(:last-child) {
-        margin-right: 0;
-    }
-
-    figure :first-of-type {
-        margin-top: 0
-    }
-
-    p + figure {
-        margin-top: 2rem;
-    }
-
-    figure + figure {
-        margin-top: 1.5rem;
-    }
+    } */
 </style>
 
 <CaseStudy>
@@ -166,50 +138,44 @@
         <Image src="../../osher/grayboxing.png" alt="Grayboxing montage" height="20rem" />
     </Carousel>
     <h2>Feature Highlights</h2>
-    <figure>
+    <Figure>
         <Image src="../../osher/course-discovery.png" align="left" width="966" height="809" />
-        <figcaption>
-            <h3>Course Discovery</h3>
-            <p>
-                During the research phase it became clear that users often stuggled to find courses; the existing UX did
-                not provided any course search or filtering functionality.
-            </p>
-            <p>
-                We employed a classic UI pattern: real-time <strong>faceted search</strong>
-                to solve this. Facets (dimensions) were determined by a brief analysis of the way members typically
-                identified courses of interest; however this solution was constrained by the data points available to us
-                by the underlying systems. Sometimes even the best solutions must be a compromise!
-            </p>
-        </figcaption>
-    </figure>
-    <figure class="affiliates">
+        <h3 slot="caption">Course Discovery</h3>
+        <p slot="caption">
+            During the research phase it became clear that users often stuggled to find courses; the existing UX did
+            not provided any course search or filtering functionality.
+        </p>
+        <p slot="caption">
+            We employed a classic UI pattern: real-time <strong>faceted search</strong>
+            to solve this. Facets (dimensions) were determined by a brief analysis of the way members typically
+            identified courses of interest; however this solution was constrained by the data points available to us
+            by the underlying systems. Sometimes even the best solutions must be a compromise!
+        </p>
+    </Figure>
+    <Figure class="affiliates">
         <Image src="../../osher/professional-development-front-page-cropped.png" alt="Professional Development front page" width="1400" height="700" align="left" />
-        <figcaption>
-            <h3>Layouts &amp; Component Library</h3>
-            <p>
-                As the OLLI site was part of a series of affiliated sites, it was important that the design
-                language be <strong>extensible</strong>, and <strong>scale</strong> to various new challenges.
-            </p>
-            <p>
-                Our approach meant we could reuse components and layouts, swapping out images, copy, and accent colours
-                to form a cohesive experience between each entity. The newly envisioned CSU Professional Development
-                experience is shown here.
-            </p>
-        </figcaption>
-    </figure>
-    <figure>
+        <h3 slot="caption">Layouts &amp; Component Library</h3>
+        <p slot="caption">
+            As the OLLI site was part of a series of affiliated sites, it was important that the design
+            language be <strong>extensible</strong>, and <strong>scale</strong> to various new challenges.
+        </p>
+        <p slot="caption">
+            Our approach meant we could reuse components and layouts, swapping out images, copy, and accent colours
+            to form a cohesive experience between each entity. The newly envisioned CSU Professional Development
+            experience is shown here.
+        </p>
+    </Figure>
+    <Figure>
         <Image src="../../osher/front-page-warning.png" alt="Professional Development front page" width="1400" height="700" align="left" />
         <Image src="../../osher/course-browse-information.png" alt="Professional Development front page" width="1400" height="700" align="left" />
-        <figcaption>
-            <h3>Page Headers &amp; Alerting</h3>
-            <p>
-                Our research also highlighted the need for clear, timely messaging to members. In addition to real-time
-                notifications through email or SMS for class rescheduling or cancellation, we also decided to render
-                messages on the front page to <strong>overcommunicate</strong> this vital information. Our solution
-                involved the use of iconography, placement, and colour.
-            </p>
-        </figcaption>
-    </figure>
+        <h3 slot="caption">Page Headers &amp; Alerting</h3>
+        <p slot="caption">
+            Our research also highlighted the need for clear, timely messaging to members. In addition to real-time
+            notifications through email or SMS for class rescheduling or cancellation, we also decided to render
+            messages on the front page to <strong>overcommunicate</strong> this vital information. Our solution
+            involved the use of iconography, placement, and colour.
+        </p>
+    </Figure>
     <h2>Outcome</h2>
     <p>
         The first iteration of the site launched in the Autumn of 2018 and received positive feedback from students and

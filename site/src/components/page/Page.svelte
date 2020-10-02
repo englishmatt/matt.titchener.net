@@ -216,12 +216,21 @@
         max-width: var(--max-main-content-width);
     }
 
-    .page :global(p.closing::after) {
-        color: var(--primary-accent-color);
-        content: "\25A0";
-        font-size: 2rem;
+    .page :global(article > p:last-child),
+    .page :global(article > section:last-child > p:last-child) {
+        margin-bottom: 10rem;
+    }
+
+    .page :global(article > p:last-child::after),
+    .page :global(article > section:last-child > p:last-child::after) {
+        background-color: var(--primary-accent-color);
+        border-radius: 2px;
+        content: "";
+        display: inline-block;
+        height: 0.9rem;
         line-height: 0;
-        padding-left: 0.4rem;
+        margin-left: 0.4rem;
+        width: 0.9rem;
     }
 </style>
 

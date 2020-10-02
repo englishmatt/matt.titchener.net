@@ -119,7 +119,8 @@
                     <li>UI and visual design</li>
                 </ul>
                 <p slot="description">
-                    Marketing and payment processing for small German event management and venue agency.
+                    Marketing and e-commerce experience for event management and venue agency baed in Düsseldorf,
+                    Germany.
                 </p>
             </Entry>
         </Section>

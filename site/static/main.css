@@ -94,10 +94,6 @@ article figure img {
     margin-top: 0.3rem;
 }
 
-p.closing {
-    margin-bottom: 10rem;
-}
-
 @keyframes show-lede {
     from {
         opacity: 0;

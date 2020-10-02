@@ -7,6 +7,7 @@
     import MobileImage from "../../components/MobileImage.svelte";
     import Carousel from "../../components/Carousel.svelte";
     import CaseStudy from "../../components/CaseStudy.svelte";
+    import Figure from "../../components/Figure.svelte";
 </script>
 
 <style>
@@ -50,33 +51,24 @@
         margin-top: 0;
     }
 
-    .typography :global(p) {
-        padding-right: var(--caption-gutter);
-        overflow: auto;
+    aside {
+        font-size: 1rem;
+        padding: 0.3rem 1.9rem;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
     }
 
-    .typography :global(p::before) {
-        content: "\25BA";
-        display: inline-block;
-        padding-right: 0.5rem;
-        font-size: 0.7rem;
-        color: var(--primary-accent-color);
-        vertical-align: 18.8%;
-    }
-
-    .logo-typeface :global(p::before),
-    .patterns :global(p::before) {
-        content: "\25C4";
-        display: inline-block;
-        padding-right: 0.5rem;
-        font-size: 0.7rem;
-        color: var(--primary-accent-color);
-        vertical-align: 18.8%;
-    }
-
-    .logo-typeface :global(img),
-    .patterns :global(img) {
-        margin-right: var(--caption-gutter);
+    aside::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--primary-accent-color);
+        opacity: 0.4;
+        z-index: -1;
     }
 </style>
 
@@ -85,24 +77,34 @@
         <Carousel id="final" scrollOffset="30vh" height="50vw">
             <Image alt="" src="../../elim-springs/front-page.png" width="1440" height="1024" />
             <MobileImage alt="" src="../../elim-springs/front-page-mobile.png" width="411" height="823" />
-            <Image alt="" src="../../elim-springs/events.png" width="1440" height="1024" />
-            <MobileImage alt="" src="../../elim-springs/navigation-open-mobile.png" width="411" height="823" />
             <Image alt="" src="../../elim-springs/about.png" width="1440" height="1024" />
             <MobileImage alt="" src="../../elim-springs/about-mobile.png" width="1440" height="1024" />
+            <Image alt="" src="../../elim-springs/events.png" width="1440" height="1024" />
+            <MobileImage alt="" src="../../elim-springs/navigation-open-mobile.png" width="411" height="823" />
             <Image alt="" src="../../elim-springs/location-a.png" width="1440" height="1024" />
             <Image alt="" src="../../elim-springs/donations.png" width="1440" height="1024" />
         </Carousel>
         <h1>
             <span>Case Study</span>
-            <span class="logo">Osher Lifelong Learning Institute <span class="subheading">at Colorado State University</span></span>
+            <span class="logo">Elim Springs</span>
         </h1>
         <p class="lede">
-            Ullamco aute nostrud ex nostrud commodo esse non occaecat ea quis laborum enim ipsum. Eiusmod quis esse officia tempor officia quis aliqua incididunt voluptate dolor reprehenderit cupidatat est.
+            Marketing and e-commerce experience for event management and venue agency based in Düsseldorf, Germany.
         </p>
+        <h2>Opportunity</h2>
         <p>
-            Velit amet elit sunt Lorem incididunt consectetur eu enim do sint quis duis veniam commodo. Nostrud voluptate elit enim excepteur elit sit excepteur elit eu amet nostrud. Aliquip laborum incididunt esse ullamco aliqua tempor aute non. Enim ullamco duis anim labore commodo Lorem ex aliquip sunt et aliqua.
+            Elim Springs, a small non-profit event management and venue agency based in Düsseldoft, Germany, were in
+            need of a corporate web presence, brand, and online donation solution. In late-2019, I worked alongside
+            Elim Springs stakeholders to design and develop an appealing experience, that would simplify donations,
+            provide clear event information, and a simple means to keep content up-to-date and relevant to their
+            customers.
         </p>
-        <h2>Design Iterations</h2>
+        <h2>Process</h2>
+        <p>
+            Given the promotional nature of the project, an strong <strong>visual design</strong> was paramount, and
+            was my initial focus. After a number of iterations we came to a compelling look-and-feel that reflected the
+            values of the organization: approachable, traditional, and trustworthy.
+        </p>
         <Carousel id="process" scrollOffset="30vh" height="20rem">
             <Image alt="" src="../../elim-springs/iteration-1.png" width="1440" height="1024" />
             <Image alt="" src="../../elim-springs/iteration-2.png" width="1440" height="1024" />
@@ -112,38 +114,80 @@
             <Image alt="" src="../../elim-springs/iteration-6.png" width="1440" height="1024" />
             <Image alt="" src="../../elim-springs/front-page.png" width="1440" height="1024" />
         </Carousel>
-        <h2>Style Guide</h2>
-        <figure class="typography">
-            <Image alt="Elim Springs' style guide" src="../../elim-springs/typography.png" align="right" width="494" height="588" />
-            <figcaption>
-                <p>
-                    Incididunt non consectetur voluptate sint laborum ad minim amet in non consequat veniam consectetur proident. Ut tempor ea ipsum veniam elit qui mollit nulla dolore nostrud tempor sit magna nostrud. Culpa labore labore reprehenderit tempor pariatur do eu ipsum. Sunt ad consequat minim mollit amet nulla elit quis voluptate. Velit velit aute nisi dolor Lorem et laboris adipisicing laborum eiusmod dolore do aliquip. Aliquip esse do duis anim et irure aliquip.
-                </p>
-            </figcaption>
-        </figure>
-        <figure class="patterns">
+        <p>
+            With the advent of modern single page application (SPA) frameworks that can provide progressive enhancement,
+            performance, and accessibility, and even improve UX for content-heavy sites, it gave us the opportunity to
+            explore several different navigation paradigms previously not within reach. This also allowed us to provide
+            a particularly dynamic checkout experience for donations.
+        </p>
+        <p>
+            Through experimentations, I settled on a left-side navigation that transitioned content in to view. This
+            keeps the user continually <strong>orientated</strong> and <strong>discoverability</strong> high. Best of
+            all, with server-side rendering (SSR) and static site generation (SSG) at the core of this solution, it is
+            usable even when JavaScript and styling are disabled, or otherwise unavailable.
+        </p>
+        <aside>
+            <h3>A Word on SPAs</h3>
+            <p>
+                Typically, the use of a SPA framework for a content-heavy site is not recommended and has been (rightly)
+                derided by many as detrimental to the web; it can often place developer experience (DX) over UX.
+                Although I was initially skeptical of SPA solutions, with the advent of modern solutions, such a Next.js
+                and Sapper, I realized one can have the best of both worlds: small page sizes, interactivity, and page
+                transitions, all while mainitaining <strong>accessibility</strong> and <strong>progressive enhancement</strong>.
+                Perfect!
+            </p>
+        </aside>
+        <h2>Project Highlights</h2>
+        <Figure>
+            <Image alt="Elim Springs' style guide" src="../../elim-springs/typography.png" align="left" width="494" height="588" />
+            <h3>Style Guide</h3>
+            <p slot="caption">
+                In recent years <strong>Figma</strong> has become an industry standard for good reason. Its use in this
+                project further emphasised its utility to me. Not only did it allow me to easily share the Elim Springs
+                prototype, but its feature set also made creating and reusing styles and components straighforward. The
+                result was a style guide without even trying!
+            </p>
+        </Figure>
+        <Figure>
             <Image alt="Elim Springs' style guide" src="../../elim-springs/buttons.png" align="left" width="478" heightg="714" />
-            <figcaption>
-                <p>
-                    Incididunt non consectetur voluptate sint laborum ad minim amet in non consequat veniam consectetur proident. Ut tempor ea ipsum veniam elit qui mollit nulla dolore nostrud tempor sit magna nostrud. Culpa labore labore reprehenderit tempor pariatur do eu ipsum. Sunt ad consequat minim mollit amet nulla elit quis voluptate. Velit velit aute nisi dolor Lorem et laboris adipisicing laborum eiusmod dolore do aliquip. Aliquip esse do duis anim et irure aliquip.
-                </p>
-            </figcaption>
-        </figure>
+            <h3>Pattern Library</h3>
+            <p slot="caption">
+                In similar fashion to creating a style guide, Figma's shared components let me create an extensible
+                <strong>pattern library</strong>. Sweeping changes could be made across the prototype by simply editing
+                the master component.
+            </p>
+            <p slot="caption">
+                Components here were purposely based on a Material design look-and-feel as, fortunately, it fit the
+                brief, and would reduce the engineering effort and timeline.
+            </p>
+        </Figure>
         <h2>Brand</h2>
-        <figure class="logo-typeface">
+        <p>
+            Elim Springs was small enough to have not yet fully established a brand identity. I used this opportunity to
+            put together a series of lockups to work for all occasions, including a standalone logo, and vertically and
+            horizontally constrained lockups. Care was also given to light and dark backgrounds, and a monochrome
+            variant.
+        </p>
+        <Figure>
             <Image alt="Elim Springs' style guide" src="../../elim-springs/logo-typeface.png" align="left" width="876" height="463" />
-            <figcaption>
-                <p>
-                    Duis cupidatat labore qui irure. Nisi occaecat magna consectetur ipsum adipisicing duis ullamco nostrud tempor dolore duis. Officia cupidatat ipsum tempor ullamco labore. Exercitation aliquip cupidatat consectetur eiusmod mollit est aliqua cillum sit. Dolore occaecat quis elit veniam veniam ad nisi minim.
-                </p>
-            </figcaption>
-        </figure>
+            <p slot="caption">
+                I explored different typefaces for the logo, leaning heavily on <strong>serifed</strong> styles. The
+                goal was to balance a traditional look with a softer feel, while keeping it simple and understated.
+            </p>
+        </Figure>
         <Image alt="Elim Springs' style guide" src="../../elim-springs/brand.png" width="974" height="771" />
     </section>
     <section>
-        <h2>Results</h2>
+        <h2>Outcome</h2>
         <p>
-            Ullamco aute nostrud ex nostrud commodo esse non occaecat ea quis laborum enim ipsum. Eiusmod quis esse officia tempor officia quis aliqua incididunt voluptate dolor reprehenderit cupidatat est. Velit amet elit sunt Lorem incididunt consectetur eu enim do sint quis duis veniam commodo. Nostrud voluptate elit enim excepteur elit sit excepteur elit eu amet nostrud. Aliquip laborum incididunt esse ullamco aliqua tempor aute non. Enim ullamco duis anim labore commodo Lorem ex aliquip sunt et aliqua.
+            The above above prototype was delivered to the client and work has started on engineering. Unfortunately,
+            progress has stalled with the global pandemic in 2020, but we hope to continue in the near future.
+        </p>
+        <p>
+            This project helped me become more familiar with Figma, including the use of <strong>shared libaries</strong> for
+            components and <strong>AutoLayout</strong>. It was also encouraging to discover that in recent months SPAs
+            may have finally come of age&mdash;delivering a best-of-all-worlds solution for accessibility, user
+            experience and developer experience!
         </p>
     </section>
 </CaseStudy>
