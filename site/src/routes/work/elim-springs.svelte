@@ -50,26 +50,6 @@
     p {
         margin-top: 0;
     }
-
-    aside {
-        font-size: 1rem;
-        padding: 0.3rem 1.9rem;
-        border-radius: 4px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    aside::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--primary-accent-color);
-        opacity: 0.4;
-        z-index: -1;
-    }
 </style>
 
 <CaseStudy>
@@ -101,7 +81,7 @@
         </p>
         <h2>Process</h2>
         <p>
-            Given the promotional nature of the project, an strong <strong>visual design</strong> was paramount, and
+            Given the promotional nature of the project, a strong <strong>visual design</strong> was paramount, and
             was my initial focus. After a number of iterations we came to a compelling look-and-feel that reflected the
             values of the organization: approachable, traditional, and trustworthy.
         </p>
@@ -121,20 +101,20 @@
             a particularly dynamic checkout experience for donations.
         </p>
         <p>
-            Through experimentations, I settled on a left-side navigation that transitioned content in to view. This
-            keeps the user continually <strong>orientated</strong> and <strong>discoverability</strong> high. Best of
-            all, with server-side rendering (SSR) and static site generation (SSG) at the core of this solution, it is
-            usable even when JavaScript and styling are disabled, or otherwise unavailable.
+            Through experimentation, I settled on a left-side navigation that transitioned selected content in to view.
+            This keeps the user continually <strong>orientated</strong> and <strong>discoverability</strong> high. Best
+            of all, with server-side rendering (SSR) and static site generation (SSG) at the core of this solution, it
+            is usable even when JavaScript and styling are disabled, or otherwise unavailable.
         </p>
         <aside>
             <h3>A Word on SPAs</h3>
             <p>
-                Typically, the use of a SPA framework for a content-heavy site is not recommended and has been (rightly)
-                derided by many as detrimental to the web; it can often place developer experience (DX) over UX.
-                Although I was initially skeptical of SPA solutions, with the advent of modern solutions, such a Next.js
-                and Sapper, I realized one can have the best of both worlds: small page sizes, interactivity, and page
-                transitions, all while mainitaining <strong>accessibility</strong> and <strong>progressive enhancement</strong>.
-                Perfect!
+                Typically, the use of a <abbr title="Single Page Application">SPA</abbr> framework for a content-heavy
+                site is not recommended and has been (rightly) derided by many as detrimental to the web; it can often
+                place developer experience (DX) over UX. Although I was initially skeptical of SPA solutions in general,
+                with the advent of more inclusive approaches, such a Next.js and Sapper, I realized one can have the
+                best of both worlds: small page sizes, interactivity, and page transitions, all while mainitaining
+                <strong>accessibility</strong> and <strong>progressive enhancement</strong>. Perfect!
             </p>
         </aside>
         <h2>Project Highlights</h2>
@@ -164,7 +144,7 @@
         <h2>Brand</h2>
         <p>
             Elim Springs was small enough to have not yet fully established a brand identity. I used this opportunity to
-            put together a series of lockups to work for all occasions, including a standalone logo, and vertically and
+            pull together a series of lockups to work for all occasions, including a standalone logo, and vertically and
             horizontally constrained lockups. Care was also given to light and dark backgrounds, and a monochrome
             variant.
         </p>

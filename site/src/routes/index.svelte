@@ -111,7 +111,6 @@
                 </p>
             </Entry>
         </Section>
-
         <Section id="elimsprings" on:intersect={handleIntersect} intersectSelector=".entry">
             <Entry title="Elim Springs" logo="../elimsprings-logo.svg" href="/work/elim-springs">
                 <ul slot="byline">
@@ -124,18 +123,16 @@
                 </p>
             </Entry>
         </Section>
-
         <Section id="budgeting" on:intersect={handleIntersect} intersectSelector=".entry">
             <Entry title="Budgeting" logo="../budgeting-logo.svg" href="/work/budgeting">
                 <ul slot="byline">
-                    <li>UI and visual design</li>
+                    <li>UX, UI and visual design</li>
                 </ul>
                 <p slot="description">
-                    Speculative user experience for personal finance and budgeting for the web and desktop.
+                    Speculative UI/UX for personal finance and budgeting application for the web and desktop.
                 </p>
             </Entry>
         </Section>
-
         <Section id="boxesandarrows" on:intersect={handleIntersect} intersectSelector=".entry">
             <Entry title="Boxes &amp; Arrows" logo="../boxesandarrows-logo.svg" href="/work/boxes-and-arrows">
                 <ul slot="byline">
@@ -147,7 +144,6 @@
                 </p>
             </Entry>
         </Section>
-
         <Section id="projectx" on:intersect={handleIntersect} intersectSelector=".entry">
             <Entry title="Project X" href="/work/project-x">
                 <ul slot="byline">

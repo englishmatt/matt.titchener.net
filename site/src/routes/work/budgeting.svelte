@@ -6,6 +6,7 @@
     import Image from "../../components/Image.svelte";
     import Carousel from "../../components/Carousel.svelte";
     import CaseStudy from "../../components/CaseStudy.svelte";
+    import Figure from "../../components/Figure.svelte";
 </script>
 
 <style>
@@ -63,16 +64,35 @@
         </Carousel>
         <h1>
             <span>Case Study</span>
-            <span class="logo">Osher Lifelong Learning Institute <span class="subheading">at Colorado State University</span></span>
+            <span class="logo">Budgeting</span>
         </h1>
         <p class="lede">
-            Ullamco aute nostrud ex nostrud commodo esse non occaecat ea quis laborum enim ipsum. Eiusmod quis esse officia tempor officia quis aliqua incididunt voluptate dolor reprehenderit cupidatat est.
+            Speculative UI/UX for personal finance and budgeting application for the web and desktop.
         </p>
+        <h2>Opportunity</h2>
         <p>
-            Velit amet elit sunt Lorem incididunt consectetur eu enim do sint quis duis veniam commodo. Nostrud voluptate elit enim excepteur elit sit excepteur elit eu amet nostrud. Aliquip laborum incididunt esse ullamco aliqua tempor aute non. Enim ullamco duis anim labore commodo Lorem ex aliquip sunt et aliqua.
+            I set myself the challenge to design a personal finance and budgeting tool for use on the web and desktop.
+            Given my work experience in the finance industry I had an 'ok' feel for what a product like this might look like:
+            A <strong>simple-as-possible-but-no-simpler</strong> solution that would help individuals and families alike identify, track, and stick to a budget.
         </p>
-        <h3>Gray Boxing</h3>
-        <Carousel height="20rem">
+        <h2>Process</h2>
+        <p>
+            I started by considering how best to build a budget from scratch. This involved
+            forming a clear <strong>mental model</strong> for the user: a budget was
+            determined to be <em>a set of recurring transactions, both income and expense, over a fixed period of time</em>.
+            All other features would successfully hang off this central concept.
+        </p>
+        <h3>Visualizations</h3>
+        <Figure>
+            <Image src="../../budgeting/budgeting-sketch.jpg" alt="" align="left" />
+            <p slot="caption">
+                As I was working alone I did not generate much of the research and documentation I normally would. I worked
+                out some quick sketches to think through how best to <strong>visualize</strong> account balances and transactions:
+            </p>
+        </Figure>        
+        <h3>Grey Boxing</h3>
+        <p>I skipped much of the lower-fidelity work out as I was working solo and already a good <strong>product vision</strong>. I started <strong>gray boxing</strong> in <strong>Adobe&nbsp;XD</strong>:</p>
+        <Carousel height="30rem">
             <Image alt="" src="../../budgeting/wireframes/overview.png" width="1460" height="840" />
             <Image alt="" src="../../budgeting/wireframes/bank-accounts.png" width="1460" height="840" />
             <Image alt="" src="../../budgeting/wireframes/savings.png" width="1460" height="840" />
@@ -84,13 +104,25 @@
             <Image alt="" src="../../budgeting/wireframes/budget.png" width="1460" height="947" />
             <Image alt="" src="../../budgeting/wireframes/budget-empty.png" width="1460" height="840" />
         </Carousel>
+        <aside>
+            <h3>A Word on Grey Boxing</h3>
+            <p>
+                I have found the use of grey boxing&mdash;mid-fidelity layouts, sans colours,
+                images, and textures&mdash;more informative and useful than practically any other technique I know. It is useful to
+                quickly get a handle on a user workflow. When I'm short on time or need a more concrete answer as to whether
+                something “works” I turn to grey boxing. <abbr title="Your Mileage May Vary">YMMV</abbr>, but highly
+                recommend giving it a shot for your next project.
+            </p>
+        </aside>
         <h2>Pattern Library</h2>
         <Image alt="" src="../../budgeting/pattern-library.png" width="1460" height="1190" />
     </section>
     <section>
-        <h2>Results</h2>
+        <h2>Outcome</h2>
         <p>
-            Ullamco aute nostrud ex nostrud commodo esse non occaecat ea quis laborum enim ipsum. Eiusmod quis esse officia tempor officia quis aliqua incididunt voluptate dolor reprehenderit cupidatat est. Velit amet elit sunt Lorem incididunt consectetur eu enim do sint quis duis veniam commodo. Nostrud voluptate elit enim excepteur elit sit excepteur elit eu amet nostrud. Aliquip laborum incididunt esse ullamco aliqua tempor aute non. Enim ullamco duis anim labore commodo Lorem ex aliquip sunt et aliqua.
+            Budgeting was a challenge to myself on how best to create clarity in a complex domain: providing concise <strong>mental models</strong> for
+            budgeting; <strong>condensing information</strong> in to clear-to-understand visuals, including <strong>sparklines</strong>,
+            <strong>interactive charts</strong>, and the <strong>use of colour</strong>.
         </p>
     </section>
 </CaseStudy>

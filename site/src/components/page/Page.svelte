@@ -168,7 +168,7 @@
         --primary-accent-color: #ffce00;
         --primary-background-color: #436172;
         --secondary-background-color: #38505e;
-        --transform: translate(-61rem, -29rem) rotate(-25deg);
+        --transform: translate(-59rem, -29rem) rotate(-15deg);
         --default-copy-color: #fff;
     }
 
@@ -231,6 +231,15 @@
         line-height: 0;
         margin-left: 0.4rem;
         width: 0.9rem;
+    }
+
+    .page :global(article aside) {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 0.3rem 1.9rem;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-top: 1rem;
+        position: relative;
     }
 </style>
 
