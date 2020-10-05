@@ -140,7 +140,7 @@
                     <li>UI and visual design</li>
                 </ul>
                 <p slot="description">
-                    Awarding winning site redesign for Boxes and Arrows with final deliverable.
+                    Award-winning site redesign and front-end implementation for the Boxes and Arrows magazine site.
                 </p>
             </Entry>
         </Section>

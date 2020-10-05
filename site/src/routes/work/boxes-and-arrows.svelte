@@ -52,7 +52,7 @@
 
 <CaseStudy>
     <section>
-        <Carousel id="final" scrollOffset="30vh" height="50vw">
+        <Carousel id="final" scrollOffset="30vh" height="60vw">
             <Image alt="" src="../../boxes-and-arrows/front-page.jpg" width="1440" height="1024" />
             <Image alt="" src="../../boxes-and-arrows/article-page.jpg" width="1440" height="1024" />
             <Image alt="" src="../../boxes-and-arrows/topic-page.jpg" width="1440" height="1024" />
@@ -61,23 +61,39 @@
         </Carousel>
         <h1>
             <span>Case Study</span>
-            <span class="logo">Osher Lifelong Learning Institute <span class="subheading">at Colorado State University</span></span>
+            <span class="logo">Boxes and Arrows</span>
         </h1>
         <p class="lede">
-            Ullamco aute nostrud ex nostrud commodo esse non occaecat ea quis laborum enim ipsum. Eiusmod quis esse officia tempor officia quis aliqua incididunt voluptate dolor reprehenderit cupidatat est.
+            Award-winning site redesign and front-end implementation for the Boxes and Arrows online magazine.
         </p>
         <p>
-            Velit amet elit sunt Lorem incididunt consectetur eu enim do sint quis duis veniam commodo. Nostrud voluptate elit enim excepteur elit sit excepteur elit eu amet nostrud. Aliquip laborum incididunt esse ullamco aliqua tempor aute non. Enim ullamco duis anim labore commodo Lorem ex aliquip sunt et aliqua.
+            In 2004 my friend suggested we enter a design competition for the magazine site <i>Boxes and Arrows</i>.
+            Being of dubious nature I took some convincing, but after coming around we started collaborating in earnest.
         </p>
-        <h2>Design I... It... Iterations</h2>
-        <Carousel height="20rem">
+        <p>
+            Before the suggestion we enter the competition I had not heard of Boxes and Arrows, yet the site had an
+            establish community and a library of articles touching on Information Architecture, Interaction Design, and
+            more, stretching back to 2002. It was clear we had to take this seriously, and put our best work forward.
+        </p>
+        <h2>Design Iterations</h2>
+        <p>
+            After putting together an initial design, and just a couple of days before the competition deadline, we
+            realized we could do even better. We set to work, this time at double speed to have our reworked entry
+            ready in time. We submitted at the last minute and I didn't think much about it for the next few weeks.
+            It was quite the surprise then when Alex let me know we had won!
+        </p>
+        <Carousel height="30rem">
             <Image alt="" src="../../boxes-and-arrows/mockup-1.png" width="1440" height="1024" />
             <Image alt="" src="../../boxes-and-arrows/mockup-2.png" width="1440" height="1024" />
             <Image alt="" src="../../boxes-and-arrows/mockup-3.png" width="1440" height="1024" />
-            <Image alt="" src="../../boxes-and-arrows/mockup-4.png" width="1440" height="1024" />
         </Carousel>
-        <h2>Information Architecture</h2>
-        <Carousel height="20rem">
+        <h2>Analysis</h2>
+        <p>
+            We made contact with the site's caretakers, Christina Wodtke and Liz Danzico, and set about the
+            implementation process. Now that we had access to stakeholders, we were able to perform some additional
+            analysis regarding information architecture and content management for a periodical online publication:
+        </p>
+        <Carousel height="30rem">
             <Image alt="" src="../../boxes-and-arrows/information-architecture.png" width="1440" height="1024" />
             <Image alt="" src="../../boxes-and-arrows/issue-transitions-1.png" width="1440" height="1024" />
             <Image alt="" src="../../boxes-and-arrows/issue-transitions-2.png" width="1440" height="1024" />
@@ -85,19 +101,28 @@
         </Carousel>
         <h2>Style Guide</h2>
         <p>
-            Before Figma there was Adobe Photoshop and Illustrator. For the sake of maintaining reproduable styles across
-
+            In 2004 many of the tools we now have available for UX and UI were not available. We chose to capture the
+            style guide in PDF to best preserve the outlines, colours, and patterns we had determined. This was a
+            deliverable we could hand off to site editors and caretakers, in an attempt to preserve the look-and-feel
+            we had established:
         </p>
-        <Carousel height="20rem">
+        <Carousel height="30rem">
             <Image alt="" src="../../boxes-and-arrows/style-guide-1.png" width="1440" height="1024" />
             <Image alt="" src="../../boxes-and-arrows/style-guide-2.png" width="1440" height="1024" />
             <Image alt="" src="../../boxes-and-arrows/style-guide-3.png" width="1440" height="1024" />
         </Carousel>
     </section>
     <section>
-        <h2>Results</h2>
+        <h2>Outcome</h2>
         <p>
-            Ullamco aute nostrud ex nostrud commodo esse non occaecat ea quis laborum enim ipsum. Eiusmod quis esse officia tempor officia quis aliqua incididunt voluptate dolor reprehenderit cupidatat est. Velit amet elit sunt Lorem incididunt consectetur eu enim do sint quis duis veniam commodo. Nostrud voluptate elit enim excepteur elit sit excepteur elit eu amet nostrud. Aliquip laborum incididunt esse ullamco aliqua tempor aute non. Enim ullamco duis anim labore commodo Lorem ex aliquip sunt et aliqua.
+            Our work went live in 2007 and was available for 5 years, eventually retired for a more contemporary
+            approach in 2012. Additionally, our final design was featured in the the book <a href=""><i>Becoming a Digital Designer</i></a> by
+            Steven Heller.
+        </p>
+        <p>
+            During this project I learnt how important tangible <strong>design assets</strong> are as a means for
+            communication and documentation. Often as an end-user it's easy to forget the hours of unsee and unpublished
+            time spent producing deliverables used to explore, explain, experiment, and document.
         </p>
     </section>
 </CaseStudy>

@@ -142,7 +142,7 @@
         <Image src="../../osher/course-discovery.png" align="left" width="966" height="809" />
         <h3 slot="caption">Course Discovery</h3>
         <p slot="caption">
-            During the research phase it became clear that users often stuggled to find courses; the existing UX did
+            As we discovered it was clear that users often stuggled to find courses; the existing UX did
             not provided any course search or filtering functionality.
         </p>
         <p slot="caption">
@@ -161,8 +161,8 @@
         </p>
         <p slot="caption">
             Our approach meant we could reuse components and layouts, swapping out images, copy, and accent colours
-            to form a cohesive experience between each entity. The newly envisioned CSU Professional Development
-            experience is shown here.
+            to form a cohesive experience between each offering. The sister-site for the newly envisioned CSU
+            Professional Development experience is shown here.
         </p>
     </Figure>
     <Figure>
