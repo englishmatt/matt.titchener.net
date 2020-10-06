@@ -241,6 +241,27 @@
         margin-top: 1rem;
         position: relative;
     }
+
+    .page :global(article a) {
+        font-weight: 700;
+        transition: border 200ms;
+    }
+
+    /* TODO: Introduce a distinguishing style of visited links (currently they are styled the same was unvisited). */
+    .page :global(article a:link),
+    .page :global(article a:visited) {
+        color: var(--primary-accent-color);
+        text-decoration: none;
+    }
+
+    .page :global(article a:hover) {
+        border-bottom: 4px solid var(--primary-accent-color);
+    }
+
+    .page :global(article a[target="_blank"]::after) {
+        content: "🗗";
+        margin-left: 0.4rem;
+    }
 </style>
 
 <div class="page {sectionName}" bind:this={pageComponent}>
