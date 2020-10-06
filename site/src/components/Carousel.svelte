@@ -2,20 +2,21 @@
     export let inset = "0rem";
     export let scrollOffset = "0rem";
     export let height = "40vw";
+    export let captionHeight = "0rem";
 </script>
 
 <style>
     .carousel {
         display: flex;
-        height: var(--height);
+        height: calc(var(--height) + var(--caption-height));
         margin-left: calc((var(--content-left-margin) - var(--inset)) * -1);
         margin-top: calc(var(--scroll-offset) * -1);
         max-height: 65vh;
-        overflow: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
         padding-top: var(--scroll-offset);
         scrollbar-color: transparent transparent;
         scrollbar-width: thin;
-        white-space: nowrap;
         width: calc(100vw - (var(--inset) * 2) - var(--scrollbar-mask-width));
         clip-path: inset(var(--scroll-offset) 0 0 0);
     }
@@ -56,9 +57,11 @@
     }
 
     .carousel > :global(*) {
+        overflow: initial;
         flex: 0 0 auto;
         width: auto;
-        height: 100%;
+        height: calc(100% - var(--caption-height));
+        margin-bottom: var(--caption-height);
     }
 
     .carousel > :global(* + *) {
@@ -76,8 +79,35 @@
     .carousel > :global(:last-child) {
         margin-right: calc(var(--content-left-margin) - var(--inset));
     }
+
+    .carousel :global(figure) {
+        margin-top: 0;
+        height: 100%;
+        margin-bottom: 0;
+        width: min-content;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel :global(figure img) {
+        margin: 0;
+        width: auto;
+        height: calc(100% - var(--caption-height));
+        overflow: unset;
+    }
+
+    .carousel :global(figcaption) {
+        height: var(--caption-height);
+        padding-top: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .carousel :global(figcaption p) {
+        margin: 0;
+    }
 </style>
 
-<div {...$$restProps} class="carousel" style="--inset: {inset}; --scroll-offset: {scrollOffset}; --height: {height}">
+<div {...$$restProps} class="carousel" style="--inset: {inset}; --scroll-offset: {scrollOffset}; --height: {height}; --caption-height: {captionHeight}">
     <slot />
 </div>

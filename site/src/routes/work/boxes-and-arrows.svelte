@@ -6,6 +6,7 @@
     import Image from "../../components/Image.svelte";
     import Carousel from "../../components/Carousel.svelte";
     import CaseStudy from "../../components/CaseStudy.svelte";
+    import Figure from "../../components/Figure.svelte";
 </script>
 
 <style>
@@ -82,8 +83,11 @@
             ready in time. We submitted at the last minute and I didn't think much about it for the next few weeks.
             It was quite the surprise then when Alex let me know we had won!
         </p>
-        <Carousel height="30rem">
-            <Image alt="" src="../../boxes-and-arrows/mockup-1.png" width="1440" height="1024" />
+        <Carousel height="30rem" captionHeight="4rem">
+            <Figure>
+                <Image alt="" src="../../boxes-and-arrows/mockup-1.png" width="1440" height="1024" />
+                <p slot="caption">Magna nostrud irure aliqua ex magna dolor sint. Consectetur consectetur commodo aliqua commodo ut voluptate veniam.</p>
+            </Figure>
             <Image alt="" src="../../boxes-and-arrows/mockup-2.png" width="1440" height="1024" />
             <Image alt="" src="../../boxes-and-arrows/mockup-3.png" width="1440" height="1024" />
         </Carousel>

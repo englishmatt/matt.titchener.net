@@ -1,11 +1,22 @@
 <style>
     figure {
+        --caption-gutter: 2.2rem;
         margin: 0;
         overflow: auto;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        margin-top: 2rem;
     }
 
     figure > :global(*) {
         margin-right: var(--caption-gutter);
+    }
+
+    figure :global(img) {
+        width: calc(55% - (var(--caption-gutter) / 2));
+        margin-bottom: 1rem;
+        margin-top: 0.3rem;
     }
 
     figure > :global(:last-child) {
