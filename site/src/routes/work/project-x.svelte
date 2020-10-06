@@ -6,6 +6,7 @@
     import Image from "../../components/Image.svelte";
     import Carousel from "../../components/Carousel.svelte";
     import CaseStudy from "../../components/CaseStudy.svelte";
+    import Figure from "../../components/Figure.svelte";
 </script>
 
 <style>
@@ -29,20 +30,6 @@
     h1, h2 {
         color: var(--primary-accent-color);
         clear: both;
-    }
-
-    .style-guidelines :global(p::before) {
-        content: "\25C4";
-        display: inline-block;
-        padding-right: 0.5rem;
-        font-size: 0.7rem;
-        color: var(--primary-accent-color);
-        vertical-align: 18.8%;
-    }
-
-    .style-guidelines :global(img) {
-        margin-right: var(--caption-gutter);
-        width: 45%;
     }
 </style>
 
@@ -86,15 +73,13 @@
         <Image src="../../project-x/customer-life-cycle.png" alt="Customer life cycle" width="2439" height="1309" />
     </Carousel>
     <h2>Style Guidelines</h2>
-    <figure class="style-guidelines">
+    <Figure>
         <Image src="../../project-x/style-guidelines.png" alt="Style guidelines" align="left" />
-        <figcaption>
-            <p>
-                As the OLLI course registration was to be part of a series of affiliated sites, it was important that
-                the design language be extensible, and scale to various new challenges.
-            </p>
-        </figcaption>
-    </figure>
+        <p slot="caption">
+            As the OLLI course registration was to be part of a series of affiliated sites, it was important that
+            the design language be extensible, and scale to various new challenges.
+        </p>
+    </Figure>
     <h2>Results</h2>
     <p>
         Lorem in nostrud velit ipsum Lorem pariatur ex officia velit irure. Et aliquip amet Lorem officia occaecat ad 

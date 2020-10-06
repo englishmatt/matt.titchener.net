@@ -87,9 +87,8 @@
         <Figure>
             <Image src="../../budgeting/budgeting-sketch.jpg" alt="" align="left" />
             <p slot="caption">
-                As I was working alone I did not generate much of the research and documentation I normally would. I
-                worked out some quick sketches to think through how best to <strong>visualize</strong> account balances
-                and transactions:
+                I worked out some quick sketches to think through how best to <strong>visualize</strong> account balances
+                and transactions. There was a good opportunity to communicate accurately and efficiently with <strong>data visualisation</strong> which I wanted to explore.
             </p>
         </Figure>
         <h3>Grey Boxing</h3>
