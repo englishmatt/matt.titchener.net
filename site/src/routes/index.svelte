@@ -152,7 +152,8 @@
                     <li>UI and visual design</li>
                 </ul>
                 <p slot="description">
-                    Outreach, contact, and call-scheduling web application for remote volunteers nationwide.
+                    Content Relationship Manager, with outreach and call-scheduling for teams of remote volunteers distributed
+                    throughout the United States.
                 </p>
             </Entry>
         </Section>
