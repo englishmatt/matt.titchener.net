@@ -56,8 +56,8 @@
         <Carousel id="final" scrollOffset="30vh" height="50vw">
             <Image alt="" src="../../budgeting/overview.png" width="1460" height="830" />
             <div>
-                <Image alt="" src="../../budgeting/balance-over-time.png" width="960" height="325" />
-                <Image alt="" src="../../budgeting/transaction-histogram.png" width="960" height="237" />
+                <Image alt="" src="../../budgeting/balance-over-time.2x.png" width="960" height="325" />
+                <Image alt="" src="../../budgeting/transaction-histogram.2x.png" width="960" height="237" />
             </div>
             <Image alt="" src="../../budgeting/onboarding.png" width="1460" height="840" />
             <Image alt="" src="../../budgeting/income.png" width="1460" height="830" />
@@ -97,7 +97,6 @@
             started <strong>gray boxing</strong> in <strong>Adobe&nbsp;XD</strong>:
         </p>
         <Carousel height="30rem">
-            <Image alt="" src="../../budgeting/wireframes/overview.png" width="1460" height="840" />
             <Image alt="" src="../../budgeting/wireframes/bank-accounts.png" width="1460" height="840" />
             <Image alt="" src="../../budgeting/wireframes/savings.png" width="1460" height="840" />
             <Image alt="" src="../../budgeting/wireframes/savings-goals.png" width="1460" height="947" />
