@@ -75,7 +75,7 @@
         <p>
             Elim Springs, a small non-profit event management and venue agency based in Düsseldoft, Germany, were in
             need of a corporate web presence, brand, and online donation solution. In late-2019, I worked alongside
-            Elim Springs stakeholders to design and develop an appealing experience, that would simplify donations,
+            Elim Springs&rsquo; stakeholders to design and develop an appealing experience, that would simplify donations,
             provide clear event information, and a simple means to keep content up-to-date and relevant to their
             customers.
         </p>
