@@ -63,7 +63,7 @@
 
     /* Not using `::marker` as it's not fully supported yet, and does not provide the
        flexibility we need. */
-    li:before {
+    ul li:before {
         --dimension: 0.5rem;
         content: "";
         width: var(--dimension);
