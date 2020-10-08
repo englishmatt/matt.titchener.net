@@ -54,22 +54,59 @@
         font-size: 2.5rem;
         margin-bottom: 0;
     }
+
+    /* TODO: Consider moving bullet styling to main.css; used in TableOfContents component as well. */
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    li {
+        position: relative;
+    }
+
+    /* Not using `::marker` as it's not fully supported yet, and does not provide the
+       flexibility we need. */
+    ul li:before {
+        --dimension: 0.5rem;
+        content: "";
+        width: var(--dimension);
+        height: var(--dimension);
+        background-color: var(--primary-accent-color);
+        position: absolute;
+        top: calc(50% - (var(--dimension) / 2));
+        left: -1rem;
+    }
+
+    article sup a:link,
+    article sup a:visited {
+        font-weight: inherit;
+        opacity: 0.8;
+        color: var(--default-copy-color);
+    }
 </style>
 
 <article>
     <h1>Hello.</h1>
     <p>
-        I am a design technologist<sup><a href="#footnote-1">1</a></sup> based in southern California. I have been
-        designing, engineering, and thinking about digital products for 17 years. Over this time I have trended towards
-        an interest in <strong>web products</strong> and <strong>user experience</strong>, even in my
-        engineering roles. This is motived by my belief that:
+        I am a <strong>design technologist</strong><sup><a href="#footnote-1">1</a></sup> and live in sunny Murrieta, California. I have been
+        designing, developing, and thinking hard about digital products for 17 years. I have spent much of my career building
+        <strong>web products</strong> with a focus on <strong>accessibility</strong> and <strong>user experience
+        design</strong>, even in my engineering roles.
+    </p>
+    <p>
+        I am motived by the principles of <strong>universal design</strong> and believe that:
     </p>
     <ul>
+        <li>Good design is <em>useful</em> design;</li>
         <li>Attractive things work better<sup><a href="#footnote-2">2</a></sup>;</li>
         <li>You should always bet on the Web.</li>
     </ul>
-    <p>Like most, I thrive when given <strong>autonomy</strong>, <strong>mastery</strong>, and <strong>purpose</strong><sup><a href="#footnote-3">3</a></sup>.</p>
+    <p>
+        Like many, I thrive when working with <strong>autonomy</strong>, <strong>mastery</strong>, and <strong>purpose</strong><sup><a href="#footnote-3">3</a></sup>.
+    </p>
     <h2>Contact</h2>
+    <p>Despite being a grumpy Brit, if you send me an email or tweet I will get back to you as soon as I can.</p>
     <dl>
         <dt class="email">
             Email
@@ -86,7 +123,7 @@
     </dl>
     <footer>
         <ol>
-            <li id="#footnote-1">This role is sometimes called a <i>UX technologist</i> or <i>design engineer</i> depending on who you ask.</li>
+            <li id="#footnote-1">Sometimes called <i>UX technologist</i> or <i>design engineer</i> depending on who you ask.</li>
             <li id="#footnote-2">From Don Norman's book <a href="https://www.amazon.com/dp/0465051367" target="_blank" rel="noopener noreferrer"><i>Emotional Design: Why We Love (or Hate) Everyday Things</i></a></li>
             <li id="#footnote-3">From Dan Pink's book <a href="https://en.wikipedia.org/wiki/Drive:_The_Surprising_Truth_About_What_Motivates_Us" target="_blank" rel="noopener noreferrer"><i>Drive: The Surprising Truth About What Motivates Us</i></a></li>
         </ol>
