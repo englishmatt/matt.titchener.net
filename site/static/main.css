@@ -81,6 +81,10 @@ article .lede {
     opacity: 0.7;
 }
 
+sup {
+    line-height: 0;
+}
+
 @keyframes show-lede {
     from {
         opacity: 0;

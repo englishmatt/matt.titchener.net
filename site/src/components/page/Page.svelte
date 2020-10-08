@@ -211,7 +211,7 @@
         --transform: none;
     }
 
-    .page.work :global(article) {
+    .page :global(article) {
         width: var(--main-content-width);
         max-width: var(--max-main-content-width);
     }
@@ -242,25 +242,41 @@
         position: relative;
     }
 
-    .page :global(article a) {
-        font-weight: 700;
-        transition: border 200ms;
-    }
-
     /* TODO: Introduce a distinguishing style of visited links (currently they are styled the same was unvisited). */
     .page :global(article a:link),
     .page :global(article a:visited) {
+        --underline-width: 3px;
+        --underline-opacity: 1;
+        --link-mask-image: linear-gradient(to top, rgba(0, 0, 0, var(--underline-opacity)) calc(var(--underline-width) + 1px), black calc(var(--underline-width) + 1px));
+        --link-mask-size: 100%;
+        --link-mask-position: 50% 0;
+        --link-mask-repeat: no-repeat;
         color: var(--primary-accent-color);
+        font-weight: 700;
+        background-image: linear-gradient(to top, var(--primary-accent-color) var(--underline-width), transparent var(--underline-width));
+        background-position: 0 calc(100% + var(--underline-width));
+        background-size: 0 var(--underline-width);
+        background-repeat: no-repeat;
+        border-bottom: var(--underline-width) solid transparent;
+        -webkit-mask-image: var(--link-mask-image);
+        -webkit-mask-size: var(--link-mask-size);
+        -webkit-mask-position: var(--link-mask-position);
+        -webkit-mask-repeat: var(--link-mask-repeat);
+        mask-image:  var(--link-mask-image);
+        mask-size: var(--link-mask-size);
+        mask-position: var(--link-mask-position);
+        mask-repeat: var(--link-mask-repeat);
         text-decoration: none;
+        transition: background-size 200ms;
     }
 
     .page :global(article a:hover) {
-        border-bottom: 4px solid var(--primary-accent-color);
+        background-size: 100% var(--underline-width);
     }
 
     .page :global(article a[target="_blank"]::after) {
-        content: "🗗";
-        margin-left: 0.4rem;
+        content: "\00A0🗗";
+        font-weight: 400;
     }
 </style>
 

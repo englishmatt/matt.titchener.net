@@ -2,6 +2,93 @@
     <title>About &#183; Matt Titchener</title>
 </svelte:head>
 
-<h1>About</h1>
-<p>This is the 'about' page. There's not much here.</p>
-<h2>Contact</h2>
+<style>
+    article {
+        font-weight: 500;
+    }
+
+    dt {
+        --icon-mask-repeat: no-repeat;
+        --icon-mask-position: 0 50%;
+        --icon-mask-size: auto 100%;
+        float: left;
+        width: 2rem;
+        background-color: var(--default-copy-color);
+        text-indent: -1000%;
+        -webkit-mask-repeat: var(--icon-mask-repeat);
+        -webkit-mask-position: var(--icon-mask-position);
+        -webkit-mask-size: var(--icon-mask-size);
+        -webkit-mask-image: var(--icon-mask-image);
+        mask-repeat: var(--icon-mask-repeat);
+        mask-position: var(--icon-mask-position);
+        mask-size: var(--icon-mask-size);
+        mask-image: var(--icon-mask-image);
+    }
+
+    dd {
+        clear: right;
+        margin-bottom: 0.5rem
+    }
+
+    .email {
+        --icon-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M17.7127 6H6.28734L11.3643 10.181C11.7335 10.4851 12.2665 10.4851 12.6357 10.181L17.7127 6ZM4 6.70722V18H20V6.70722L13.9071 11.7249C12.7994 12.6372 11.2006 12.6372 10.0929 11.7249L4 6.70722ZM2 6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6Z' clip-rule='evenodd' /%3E%3C/svg%3E");
+    }
+
+    .twitter {
+        --icon-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='0 0 24 24'%3E%3Cpath d='M22,5.8a8.49,8.49,0,0,1-2.36.64,4.13,4.13,0,0,0,1.81-2.27,8.21,8.21,0,0,1-2.61,1,4.1,4.1,0,0,0-7,3.74A11.64,11.64,0,0,1,3.39,4.62a4.16,4.16,0,0,0-.55,2.07A4.09,4.09,0,0,0,4.66,10.1,4.05,4.05,0,0,1,2.8,9.59v.05a4.1,4.1,0,0,0,3.3,4A3.93,3.93,0,0,1,5,13.81a4.9,4.9,0,0,1-.77-.07,4.11,4.11,0,0,0,3.83,2.84A8.22,8.22,0,0,1,3,18.34a7.93,7.93,0,0,1-1-.06,11.57,11.57,0,0,0,6.29,1.85A11.59,11.59,0,0,0,20,8.45c0-.17,0-.35,0-.53A8.43,8.43,0,0,0,22,5.8Z'/%3E%3C/svg%3E");
+    }
+
+    ol {
+        padding: 0;
+    }
+
+    footer {
+        margin-top: 5rem;
+    }
+
+    footer ol {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+</style>
+
+<article>
+    <h1>Hello.</h1>
+    <p>
+        I am a design technologist<sup><a href="#footnote-1">1</a></sup> based in southern California. I have been
+        designing, engineering, and thinking about digital products for 17 years. Over this time I have trended towards
+        an interest in <strong>web products</strong> and <strong>user experience</strong>, even in my
+        engineering roles. This is motived by my belief that:
+    </p>
+    <ul>
+        <li>Attractive things work better<sup><a href="#footnote-2">2</a></sup>;</li>
+        <li>You should always bet on the Web.</li>
+    </ul>
+    <p>Like most, I thrive when given <strong>autonomy</strong>, <strong>mastery</strong>, and <strong>purpose</strong><sup><a href="#footnote-3">3</a></sup>.</p>
+    <h2>Contact</h2>
+    <dl>
+        <dt class="email">
+            Email
+        </dt>
+        <dd>
+            <a href="mailto:mattDELETE@THIStitchener.net">mattDELETE@THIStitchener.net</a>
+        </dd>
+        <dt class="twitter">
+            Twitter
+        </dt>
+        <dd>
+            <a href="https://twitter.com/englishmatt" target="_blank" rel="noopener noreferrer">@englishmatt</a>
+        </dd>
+    </dl>
+    <footer>
+        <ol>
+            <li id="#footnote-1">This role is sometimes called a <i>UX technologist</i> or <i>design engineer</i> depending on who you ask.</li>
+            <li id="#footnote-2">From Don Norman's book <a href="https://www.amazon.com/dp/0465051367" target="_blank" rel="noopener noreferrer"><i>Emotional Design: Why We Love (or Hate) Everyday Things</i></a></li>
+            <li id="#footnote-3">From Dan Pink's book <a href="https://en.wikipedia.org/wiki/Drive:_The_Surprising_Truth_About_What_Motivates_Us" target="_blank" rel="noopener noreferrer"><i>Drive: The Surprising Truth About What Motivates Us</i></a></li>
+        </ol>
+    </footer>
+</article>
