@@ -1,7 +1,0 @@
-{
-  "files.exclude": {
-    "site\\node_modules": true,
-    "site\\__sapper__": true,
-    "site\\src\\node_modules": true
-  }
-}
