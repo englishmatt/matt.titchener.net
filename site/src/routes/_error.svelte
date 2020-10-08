@@ -5,8 +5,8 @@
 
     switch (status) {
         case 404:
-            statusTitle = "Something’s missing.";
-            statusMessage = "You may have been sent here in error or, I suppose, this page may have been (re)moved. Sorry.";
+            statusTitle = "Something's missing. Sorry.";
+            statusMessage = "You may have been sent here in error or this page may have been (re)moved.";
             break;
         default:
             statusTitle = "Page failed successfully."
@@ -27,12 +27,12 @@
         animation-timing-function: cubic-bezier(.02, .02, 0, 1.01);
         max-width: var(--max-main-content-width);
         opacity: 0;
-        padding-top: 36%;
+        padding-top: 36vh;
         width: var(--main-content-width);
     }
 
     h1 {
-        font-size: 3.5em;
+        font-size: 3em;
         line-height: 1.1;
         font-weight: 700;
         margin: 0;
@@ -57,9 +57,9 @@
 </svelte:head>
 
 <div>
-    <small>{status} {error.message}</small>
     <h1>{statusTitle}</h1>
     <p class="lede">{statusMessage}</p>
+    <small>{status} {error.message}</small>
 </div>
 
 {#if dev && error.stack}

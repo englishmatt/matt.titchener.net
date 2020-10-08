@@ -193,9 +193,9 @@
     .page.error {
         --default-copy-color: #fff;
         --primary-accent-color: #fff;
-        --primary-background-color: #ff7373;
-        --secondary-background-color: #f6cdeb;
-        --transform: translate(-53rem, 10rem) rotate(4.5deg);
+        --primary-background-color: #ff5c5c;
+        --secondary-background-color: #bc2533;
+        --transform: translate(-33rem, 20rem) rotate(-4.5deg);
     }
 
     /* Elim Springs */
@@ -245,7 +245,7 @@
     /* TODO: Introduce a distinguishing style of visited links (currently they are styled the same was unvisited). */
     .page :global(article a:link),
     .page :global(article a:visited) {
-        --underline-width: 3px;
+        --underline-width: 2px;
         --underline-opacity: 1;
         --link-mask-image: linear-gradient(to top, rgba(0, 0, 0, var(--underline-opacity)) calc(var(--underline-width) + 1px), black calc(var(--underline-width) + 1px));
         --link-mask-size: 100%;
