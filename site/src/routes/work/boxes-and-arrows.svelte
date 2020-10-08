@@ -72,9 +72,9 @@
             Being of dubious nature I took some convincing, but after coming around we started collaborating in earnest.
         </p>
         <p>
-            Before the suggestion we enter the competition I had not heard of Boxes and Arrows, yet the site had an
-            establish community and a library of articles touching on Information Architecture, Interaction Design, and
-            more, stretching back to 2002. It was clear we had to take this seriously, and put our best work forward.
+            Before the competition I had not heard of Boxes and Arrows. The site had an establish community and a
+            library of articles stretching back to 2002, on everything from Information Architecture, Interaction
+            Design, to the psychology of colour. We had to take this seriously and put in our best effort!
         </p>
         <h2>Design Iterations</h2>
         <p>
@@ -98,7 +98,7 @@
             </Figure>
             <Figure>
                 <Image alt="Boxes and Arrows: screenshot of winning design" src="../../boxes-and-arrows/mockup-3.png" width="1440" height="1024" />
-                <p slot="caption">Our competition design was substantially reworked just a few days before the deadline.</p>
+                <p slot="caption">Our final entry was substantially reworked just a few days before the deadline.</p>
             </Figure>
         </Carousel>
         <h2>Analysis</h2>
@@ -135,8 +135,8 @@
         </p>
         <p>
             During this project I learnt how important tangible <strong>design assets</strong> are as a means for
-            communication and documentation. Often as an end-user it's easy to forget the hours of unsee and unpublished
-            time spent producing deliverables used to explore, explain, experiment, and document.
+            communication and documentation. Often, as an end-user it&rsquo;s easy to forget the hours spent producing
+            unpublished deliverables used to explore, explain, experiment, and document.
         </p>
     </section>
 </CaseStudy>
