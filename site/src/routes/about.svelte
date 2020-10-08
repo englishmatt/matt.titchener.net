@@ -105,15 +105,7 @@
     <p>
         Like many, I thrive when working with <strong>autonomy</strong>, <strong>mastery</strong>, and <strong>purpose</strong><sup><a href="#footnote-3">3</a></sup>.
     </p>
-    <h2>Contact</h2>
-    <p>Despite being a grumpy Brit, if you send me an email or tweet I will get back to you as soon as I can.</p>
     <dl>
-        <dt class="email">
-            Email
-        </dt>
-        <dd>
-            <a href="mailto:mattDELETE@THIStitchener.net">mattDELETE@THIStitchener.net</a>
-        </dd>
         <dt class="twitter">
             Twitter
         </dt>
