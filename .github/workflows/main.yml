@@ -30,4 +30,4 @@ jobs:
       with:
         ACCESS_TOKEN: ${{ secrets.gh_pages }}
         BRANCH: gh-pages
-        FOLDER: __sapper__/export
+        FOLDER: site/__sapper__/export
