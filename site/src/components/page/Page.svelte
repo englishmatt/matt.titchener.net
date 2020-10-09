@@ -19,13 +19,14 @@
     // receive an error class on the .page div.
     function getSectionName(urlPath, sectionName) {
         let name;
+        let normalizedPath = urlPath.replace(/\/$/, "");
 
         // Determine if we're navigating...
         if (oldUrlPath === urlPath) {
             name = sectionName;
         } else {
-            switch (urlPath) {
-                case "/":
+            switch (normalizedPath) {
+                case "":
                     name = "introduction";
                     break;
                 case "/about":
