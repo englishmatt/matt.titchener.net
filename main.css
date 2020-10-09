@@ -1,0 +1,98 @@
+:root {
+    /* Layout */
+    --main-content-right-margin: 3rem;
+    --max-main-content-width: calc(60rem + var(--main-content-right-margin));
+    --main-content-width: 63vw;
+
+    --content-left-margin: 8.5rem;
+    --section-padding-top: 4rem;
+    --site-header-height: 12rem;
+    --site-footer-height: 3rem;
+
+    --navigation-horizontal-padding: 1.2rem;
+    --scrollbar-width: 7px;     /* Only applies to browsers that support ::-webkit-scrollbar */
+    --scrollbar-mask-width: 1rem;
+    --lockin-offset: 6.3rem;
+
+    /* Colors */
+    --default-copy-color: rgba(0, 0, 0, 0.7);
+    --header-accent-color: rgba(0, 0, 0, 0.6);
+    --bus-route-color: rgba(0, 132, 255, 0.3);
+    --scrollbar-background-color: transparent;
+
+    /* Development */
+    --highlight-red: rgba(255, 0, 0, 0.1);
+    --highlight-yellow: rgba(255, 255, 0, 0.1);
+    --highlight-blue: rgba(0, 0, 255, 0.1);
+}
+
+html {
+    height: 100%;
+    font-synthesis: none;   /* Disable browser synthesis of font styles and weights if the typeface is missing */
+}
+
+html,
+body {
+    margin: 0;
+}
+
+body {
+    --background-transition-duration: 500ms;
+    font-family: 'Inter', 'Arial', sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+    font-size: 1.125rem;
+}
+
+body > .page {
+    overflow: visible;
+}
+
+:focus {
+    outline: none;
+}
+
+:not(:hover):focus {
+    outline: 4px solid var(--primary-accent-color);
+    mix-blend-mode: difference;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--default-copy-color) var(--scrollbar-background-color);
+}
+
+*::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbar-background-color);
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--default-copy-color);
+}
+
+article .lede {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    opacity: 0.7;
+}
+
+sup {
+    line-height: 0;
+}
+
+@keyframes show-lede {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-4rem);
+    }
+}
