@@ -9,7 +9,6 @@
     export let height = null;
     export let fadeInDuration = "300ms";
     export let alt;
-    export let align;   // The `img` element supports this out-of-the-box in most browsers, but it's deprecated in HTML5
 </script>
 
 <style>
@@ -79,8 +78,7 @@
         style="
             --width: {width ? width : 'initial'};
             --height: {height ? height : 'initial'};
-            --fade-in-duration: {fadeInDuration};
-            --align: {align};"
+            --fade-in-duration: {fadeInDuration};"
         {width}
         {height}
     />

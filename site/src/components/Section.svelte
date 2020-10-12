@@ -12,7 +12,7 @@
     function handleIntersection(entries) {
         entries.forEach(async (entry) => {
             if (entry.isIntersecting) {
-                activeSectionId = section.id; 
+                activeSectionId = section.id;
 
                 // We must check to see if the intersectingSectionId is also an empty string
                 // otherwise it will attempt to send us back to the base URL.
@@ -25,7 +25,7 @@
 
     onMount(() => {
         let observee = intersectSelector ? section.querySelector(intersectSelector) : section;
-        
+
         if (!!observee) {
             observer = new IntersectionObserver(handleIntersection, {
                 root: intersectionRoot,

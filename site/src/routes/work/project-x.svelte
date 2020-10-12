@@ -80,7 +80,7 @@
     </Carousel>
     <h2>Style Guidelines</h2>
     <Figure>
-        <Image src="../../project-x/style-guidelines.png" alt="Style guidelines" align="left" />
+        <Image alt="Style guidelines" src="../../project-x/style-guidelines.png" align="left" />
         <p slot="caption">
             I provided semantics for messaging and notifications throughout the application. These are useful when
             handing off to a visual designer.

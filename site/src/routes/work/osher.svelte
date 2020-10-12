@@ -139,7 +139,7 @@
     </Carousel>
     <h2>Feature Highlights</h2>
     <Figure>
-        <Image src="../../osher/course-discovery.png" align="left" width="966" height="809" />
+        <Image alt="" src="../../osher/course-discovery.png" align="left" width="966" height="809" />
         <h3 slot="caption">Course Discovery</h3>
         <p slot="caption">
             As we discovered it was clear that users often stuggled to find courses; the existing UX did
@@ -152,8 +152,8 @@
             by the underlying systems. Sometimes even the best solutions must be a compromise!
         </p>
     </Figure>
-    <Figure class="affiliates">
-        <Image src="../../osher/professional-development-front-page-cropped.png" alt="Professional Development front page" width="1400" height="700" align="left" />
+    <Figure>
+        <Image alt="Professional Development front page" src="../../osher/professional-development-front-page-cropped.png" width="1400" height="700" align="left" />
         <h3 slot="caption">Layouts &amp; Component Library</h3>
         <p slot="caption">
             As the OLLI site was part of a series of affiliated sites, it was important that the design

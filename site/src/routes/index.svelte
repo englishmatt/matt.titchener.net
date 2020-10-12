@@ -98,7 +98,7 @@
     <TableOfContents {currentSection} />
     <section id="entries" class="entries">
         <Section id="osher" on:intersect={handleIntersect} intersectSelector=".entry">
-            <Entry title="Osher Foundation" subtitle="at Colorado State University" logo="../osher-logo.svg" href="/work/osher">
+            <Entry title="Osher Lifelong Learning Institute" logo="../osher-logo.svg" href="/work/osher">
                 <ul slot="byline">
                     <li>Research</li>
                     <li>IA</li>

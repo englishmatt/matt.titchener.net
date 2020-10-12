@@ -1,6 +1,6 @@
 <script>
     import { stores } from "@sapper/app";
-    import { afterUpdate } from "svelte";
+    import { afterUpdate, tick } from "svelte";
     import { sectionClassName } from "../../stores.js";
 
     const { page } = stores();
@@ -8,6 +8,7 @@
     let oldUrlPath;
     let backgroundColor;
     let foregroundColor;
+    $: faviconSvg = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='66' height='66' fill='none'%3E%3Cpath fill='${encodeURIComponent(backgroundColor)}' d='M65.03 57.33a3.22 3.22 0 01-2.96 3.45l-53.4 4.16a3.23 3.23 0 01-3.46-2.96L1 8.62a3.22 3.22 0 012.95-3.45L57.36 1a3.23 3.23 0 013.47 2.95l4.2 53.37z'/%3E%3Cpath fill='${encodeURIComponent(foregroundColor)}' d='M11 14h44v6H11v-6zM36 51V35l-8 13h-3l-8-13-.03 16H11V24h5.26L26.5 40.78 36.7 24H42v27h-6z'/%3E%3C/svg%3E`;
 
     // TODO: This is a hack. As of Sapper 0.27.16 there's no easy way to pass values
     // from a component/route to _layout. Ideally, the `sectionName` would be set by the
@@ -22,13 +23,10 @@
         let normalizedPath = urlPath.replace(/\/$/, "");
 
         // Determine if we're navigating...
-        if (oldUrlPath === urlPath) {
+        if (oldUrlPath === urlPath || normalizedPath === "") {
             name = sectionName;
         } else {
             switch (normalizedPath) {
-                case "":
-                    name = "introduction";
-                    break;
                 case "/about":
                     name = "about";
                     break;
@@ -60,7 +58,8 @@
 
     $: sectionName = getSectionName($page.path, $sectionClassName);
 
-    afterUpdate(() => {
+    afterUpdate(async () => {
+        await tick();
         backgroundColor = pageComponent &&
             getComputedStyle(pageComponent, ":after")
                 .getPropertyValue("--secondary-background-color");
@@ -74,7 +73,7 @@
 <svelte:head>
     <link rel="icon"
         type="image/svg+xml"
-        href="/favicon.svg?background={encodeURIComponent(backgroundColor)}&foreground={encodeURIComponent(foregroundColor)}" />
+        href={faviconSvg} />
 </svelte:head>
 
 <style>

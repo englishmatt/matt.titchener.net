@@ -1,7 +1,7 @@
 <script>
     import Description from '../components/Description.svelte';
 
-    let className;
+    let className = null;
 
     // Represents the vertical entry-offset from the page; CSS value, so must include dimension units.
     export let entryOffset = "0rem";
