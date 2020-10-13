@@ -119,7 +119,7 @@
                     <li>UI and visual design</li>
                 </ul>
                 <p slot="description">
-                    Marketing and e-commerce experience for event management and venue agency baed in Düsseldorf,
+                    Marketing and e-commerce solution for event management and venue agency based in Düsseldorf,
                     Germany.
                 </p>
             </Entry>
