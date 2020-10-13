@@ -67,7 +67,7 @@
             <span class="logo">Budgeting</span>
         </h1>
         <p class="lede">
-            Speculative UI/UX for personal finance and budgeting application for the web and desktop.
+            Speculative user interface design for a personal finance and budgeting application for the web and desktop.
         </p>
         <h2>Opportunity</h2>
         <p>

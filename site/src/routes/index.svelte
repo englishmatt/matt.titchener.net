@@ -129,7 +129,8 @@
                     <li>UX, UI and visual design</li>
                 </ul>
                 <p slot="description">
-                    Speculative UI/UX for personal finance and budgeting application for the web and desktop.
+                    Speculative user interface design for a personal finance and budgeting application for the web and
+                    desktop.
                 </p>
             </Entry>
         </Section>
