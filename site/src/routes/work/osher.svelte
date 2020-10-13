@@ -1,5 +1,6 @@
 <svelte:head>
     <title>Osher &#183; Matt Titchener</title>
+    <meta name="description" content="Matt Titchener&rsquo;s case study for the site redesign of the Osher Lifeling Learning Institute at Colorado State University." />
 </svelte:head>
 
 <script>

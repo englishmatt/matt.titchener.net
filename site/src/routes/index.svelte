@@ -1,5 +1,6 @@
 <svelte:head>
     <title>Matt Titchener</title>
+    <meta name="description" content="Matt Titchener&rsquo;s UXD and visual design portfolio front page." />
 </svelte:head>
 
 <script>

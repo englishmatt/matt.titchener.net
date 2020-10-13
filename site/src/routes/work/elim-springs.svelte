@@ -1,5 +1,6 @@
 <svelte:head>
     <title>Elim Springs &#183; Matt Titchener</title>
+    <meta name="description" content="Matt Titchener&rsquo;s case study for Elim Spring&rsquo; site redesign." />
 </svelte:head>
 
 <script>

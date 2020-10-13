@@ -1,5 +1,6 @@
 <svelte:head>
     <title>About &#183; Matt Titchener</title>
+    <meta name="description" content="Matt Titchener&rsquo;s 'About' page including contact information." />
 </svelte:head>
 
 <style>

@@ -1,5 +1,6 @@
 <svelte:head>
     <title>Projext X &#183; Matt Titchener</title>
+    <meta name="description" content="Matt Titchener&rsquo;s case study for a custom contact relationship manager with functional requirements documentation." />
 </svelte:head>
 
 <script>

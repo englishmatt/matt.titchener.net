@@ -1,5 +1,6 @@
 <svelte:head>
     <title>Budgeting &#183; Matt Titchener</title>
+    <meta name="description" content="Matt Titchener&rsquo;s case study for a speculative user interface design for a personal finance and budgeting application for the web and desktop." />
 </svelte:head>
 
 <script>
