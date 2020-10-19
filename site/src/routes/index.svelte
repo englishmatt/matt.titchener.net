@@ -99,7 +99,7 @@
     <TableOfContents {currentSection} />
     <section id="entries" class="entries">
         <Section id="osher" on:intersect={handleIntersect} intersectSelector=".entry">
-            <Entry title="Osher Lifelong Learning Institute" logo="../osher-logo.svg" href="/work/osher">
+            <Entry title="Osher Lifelong Learning Institute" logo="../osher-logo.svg" href="/work/osher/">
                 <ul slot="byline">
                     <li>Research</li>
                     <li>IA</li>
@@ -113,7 +113,7 @@
             </Entry>
         </Section>
         <Section id="elimsprings" on:intersect={handleIntersect} intersectSelector=".entry">
-            <Entry title="Elim Springs" logo="../elimsprings-logo.svg" href="/work/elim-springs">
+            <Entry title="Elim Springs" logo="../elimsprings-logo.svg" href="/work/elim-springs/">
                 <ul slot="byline">
                     <li>Brand</li>
                     <li>UI and visual design</li>
@@ -125,7 +125,7 @@
             </Entry>
         </Section>
         <Section id="budgeting" on:intersect={handleIntersect} intersectSelector=".entry">
-            <Entry title="Budgeting" logo="../budgeting-logo.svg" href="/work/budgeting">
+            <Entry title="Budgeting" logo="../budgeting-logo.svg" href="/work/budgeting/">
                 <ul slot="byline">
                     <li>UX, UI and visual design</li>
                 </ul>
@@ -136,7 +136,7 @@
             </Entry>
         </Section>
         <Section id="boxesandarrows" on:intersect={handleIntersect} intersectSelector=".entry">
-            <Entry title="Boxes &amp; Arrows" logo="../boxesandarrows-logo.svg" href="/work/boxes-and-arrows">
+            <Entry title="Boxes &amp; Arrows" logo="../boxesandarrows-logo.svg" href="/work/boxes-and-arrows/">
                 <ul slot="byline">
                     <li>IA</li>
                     <li>UI and visual design</li>
@@ -147,7 +147,7 @@
             </Entry>
         </Section>
         <Section id="projectx" on:intersect={handleIntersect} intersectSelector=".entry">
-            <Entry title="Project X" href="/work/project-x">
+            <Entry title="Project X" href="/work/project-x/">
                 <ul slot="byline">
                     <li>Research</li>
                     <li>Workflows</li>
