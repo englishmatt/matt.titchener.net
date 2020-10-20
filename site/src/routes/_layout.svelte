@@ -28,7 +28,6 @@
         mask-position: var(--mask-position);
         overflow: auto;
         padding-left: var(--content-left-margin);
-        padding-right: var(--content-left-margin);
         padding-top: var(--site-header-height);
         width: 100%;
     }

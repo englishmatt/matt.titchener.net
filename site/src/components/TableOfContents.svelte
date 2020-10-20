@@ -9,7 +9,7 @@
         display: flex;
         flex-direction: column;
         list-style: none;
-        margin: 0 0 0 -1rem;
+        margin: -100% 0 0 -1rem;
         padding-left: calc(var(--navigation-horizontal-padding) * 2);
         position: sticky;
         top: 3rem;

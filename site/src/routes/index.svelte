@@ -69,7 +69,13 @@
     }
 
     .work {
+        --overlap: 24rem;
+        --work-mask-image: linear-gradient(to bottom, transparent, black 5rem);
         display: flex;
+        padding-top: var(--overlap);
+        margin-top: calc(var(--overlap) * -1);
+        -webkit-mask-image: var(--work-mask-image);
+        mask-image: var(--work-mask-image);
     }
 
     .work > :global(:nth-child(1)) {
