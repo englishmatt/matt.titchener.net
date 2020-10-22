@@ -281,6 +281,6 @@
     }
 </style>
 
-<div class="page {sectionName}" bind:this={pageComponent}>
+<div class="page {sectionName || ''}" bind:this={pageComponent}>
     <slot></slot>
 </div>
