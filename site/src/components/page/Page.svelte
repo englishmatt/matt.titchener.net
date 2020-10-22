@@ -6,8 +6,9 @@
     const { page } = stores();
     let pageComponent;
     let oldUrlPath;
-    let backgroundColor;
-    let foregroundColor;
+    // TODO: Figure out how to pull default favicon colours from the style sheet
+    let backgroundColor = "#ffcf00";
+    let foregroundColor = "rgba(0, 0, 0, 0.7)";
     $: faviconSvg = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='66' height='66' fill='none'%3E%3Cpath fill='${encodeURIComponent(backgroundColor)}' d='M65.03 57.33a3.22 3.22 0 01-2.96 3.45l-53.4 4.16a3.23 3.23 0 01-3.46-2.96L1 8.62a3.22 3.22 0 012.95-3.45L57.36 1a3.23 3.23 0 013.47 2.95l4.2 53.37z'/%3E%3Cpath fill='${encodeURIComponent(foregroundColor)}' d='M11 14h44v6H11v-6zM36 51V35l-8 13h-3l-8-13-.03 16H11V24h5.26L26.5 40.78 36.7 24H42v27h-6z'/%3E%3C/svg%3E`;
 
     // TODO: This is a hack. As of Sapper 0.27.16 there's no easy way to pass values
@@ -71,9 +72,7 @@
 </script>
 
 <svelte:head>
-    <link rel="icon"
-        type="image/svg+xml"
-        href={faviconSvg} />
+    <link rel="icon" type="image/svg+xml" href={faviconSvg} />
 </svelte:head>
 
 <style>
@@ -86,6 +85,8 @@
         --selection-color: var(--primary-accent-color);
         --selection-background-color: rgba(0, 0, 0, 0.4);
         color: var(--default-copy-color);
+        height: 100vh;
+        overflow: auto;
     }
 
     .page :global(::selection) {

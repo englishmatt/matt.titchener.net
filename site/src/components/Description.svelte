@@ -34,7 +34,6 @@
         font-size: 1.2rem;
         font-weight: 500;
         max-width: 29rem;
-        opacity: 0.9;
     }
 
     .description {
@@ -68,22 +67,26 @@
     }
 
     a {
+        --button-transition-duration: 200ms;
         display: inline-block;
         padding: 0.5rem 1rem;
         border: 2px solid var(--primary-accent-color);
         border-radius: 4px;
         text-decoration: none;
         color: var(--primary-accent-color);
-        transition: border-color var(--background-transition-duration),
-                    color var(--background-transition-duration),
-                    font-weight var(--background-transition-duration);
+        transition: background-color var(--button-transition-duration),
+                    color var(--button-transition-duration),
+                    font-weight var(--button-transition-duration);
         margin-top: 0.6rem;
+        outline-offset: -4px;
+        text-align: center;
+        font-weight: 500;
     }
 
     a::before {
         content: attr(data-content);
         display: block;
-        font-weight: 700;
+        font-weight: 600;
         height: 0;
         visibility: hidden;
     }
@@ -91,7 +94,7 @@
     a:hover {
         background-color: var(--primary-accent-color);
         color: var(--secondary-background-color);
-        font-weight: 700;
+        font-weight: 600;
     }
 </style>
 

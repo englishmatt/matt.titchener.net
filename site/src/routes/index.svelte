@@ -56,7 +56,7 @@
         animation-timing-function: cubic-bezier(.02, .02, 0, 1.01);
         opacity: 0;
         position: sticky;
-        top: 36%;
+        top: calc(36% + var(--site-header-height));
     }
 
     :global(main .projectx h3) {
@@ -76,6 +76,9 @@
         margin-top: calc(var(--overlap) * -1);
         -webkit-mask-image: var(--work-mask-image);
         mask-image: var(--work-mask-image);
+        /* 1 + 2 prevent `outline` pixels being inadvertently masked on the left-hand side. */
+        padding-left: 0.3rem;   /* 1 */
+        margin-left: -0.3rem;   /* 2 */
     }
 
     .work > :global(:nth-child(1)) {

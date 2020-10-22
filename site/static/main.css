@@ -12,7 +12,7 @@
     --navigation-horizontal-padding: 1.2rem;
     --scrollbar-width: 7px;     /* Only applies to browsers that support ::-webkit-scrollbar */
     --scrollbar-mask-width: 1rem;
-    --lockin-offset: 6.3rem;
+    --lettermark-offset: 6.3rem;
 
     /* Colors */
     --default-copy-color: rgba(0, 0, 0, 0.7);

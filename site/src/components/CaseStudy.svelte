@@ -5,7 +5,7 @@
 
     onMount(() => {
         // TODO: Probably a more idiomatically Svelte way to do this!
-        article.parentElement.scrollTo(0, 0);
+        document && document.querySelector("body > .page").scrollTo(0, 0);
     });
 </script>
 

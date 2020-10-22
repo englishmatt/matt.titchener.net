@@ -12,7 +12,7 @@
         margin: -100% 0 0 -1rem;
         padding-left: calc(var(--navigation-horizontal-padding) * 2);
         position: sticky;
-        top: 3rem;
+        top: calc(var(--site-header-height) + 3rem);
     }
 
     li {
