@@ -79,11 +79,11 @@
     .page {
         --primary-background-color: #ffe600;
         --secondary-background-color: #ffcf00;
-        --primary-accent-color: rgba(0, 132, 255, 1);
+        --primary-accent-color: rgb(0, 109, 207);;
         --transform: none;
         --timing-function: cubic-bezier(0.23, 1, 0.320, 1);
-        --selection-color: var(--primary-accent-color);
-        --selection-background-color: rgba(0, 0, 0, 0.4);
+        --selection-color: #fff;
+        --selection-background-color: rgba(0, 0, 0, 0.6);
         color: var(--default-copy-color);
         height: 100vh;
         overflow: auto;

@@ -36,7 +36,7 @@
     .logo a:visited,
     .logo a:active,
     .logo a:hover {
-        color: var(--default-copy-color);
+        color: var(--primary-accent-color);
         text-decoration: none;
         font-size: 2.42rem;
         position: sticky;
@@ -44,10 +44,21 @@
         display: block;
     }
 
+    .logo a:focus {
+        outline: none;
+    }
+
+    /* .logo a:focus:not(:hover) {
+        color: var(--primary-accent-color);
+    }
+
+    .logo a:focus:not(:hover) :global(svg) {
+        fill: var(--primary-accent-color);
+    } */
+
     .logo :global(svg) {
-        fill: var(--default-copy-color);
+        fill: var(--primary-accent-color);
         display: inline-block; /* Removes white space artifacts during layout */
-        transition: fill var(--background-transition-duration);
         line-height: 0;
         position: fixed;
         top: var(--header-top-padding);
@@ -66,6 +77,32 @@
 
     .name .ligature {
         letter-spacing: -0.07rem;
+    }
+
+    /* TODO: These global styles are hacky. */
+    :global(.page.work .logo .name) {
+        position: sticky;
+    }
+
+    :global(.no-js .page .logo a:link),
+    :global(.no-js .page .logo a:visited),
+    :global(.no-js .page .logo a:active),
+    :global(.no-js .page .logo a:hover),
+    :global(.page.introduction .logo a:link),
+    :global(.page.introduction .logo a:visited),
+    :global(.page.introduction .logo a:active),
+    :global(.page.introduction .logo a:hover),
+    :global(.page.about .logo a:link),
+    :global(.page.about .logo a:visited),
+    :global(.page.about .logo a:active),
+    :global(.page.about .logo a:hover) {
+        color: var(--default-copy-color);
+    }
+
+    :global(.no-js .page .logo svg),
+    :global(.page.introduction .logo svg),
+    :global(.page.about .logo svg) {
+        fill: var(--default-copy-color);
     }
 </style>
 

@@ -56,7 +56,7 @@
         animation-timing-function: cubic-bezier(.02, .02, 0, 1.01);
         opacity: 0;
         position: sticky;
-        top: calc(36% + var(--site-header-height));
+        top: calc(36% + 6rem);
     }
 
     :global(main .projectx h3) {
