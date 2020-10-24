@@ -27,7 +27,7 @@
         margin-top: 0
     }
 
-    figure + figure {
+    figure + :global(figure) {
         margin-top: 1.5rem;
     }
 
