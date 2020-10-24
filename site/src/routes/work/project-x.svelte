@@ -11,33 +11,19 @@
 </script>
 
 <style>
-    .logo {
+    .name {
         display: block;
         font-family: "Permanent Marker";
         font-weight: 400;
         text-transform: capitalize;
         font-size: 4rem;
     }
-
-    h1 {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-        margin-top: 5rem;
-        font-family: 'Montserrat', 'Inter', sans-serif;
-    }
-
-    h1, h2 {
-        color: var(--primary-accent-color);
-        clear: both;
-    }
 </style>
 
 <CaseStudy>
     <h1>
         <span>Case Study</span>
-        <span class="logo">Project X</span>
+        <span class="name">Project X</span>
     </h1>
     <p class="lede">
         Content Relationship Manager, with outreach and call-scheduling for teams of remote volunteers distributed

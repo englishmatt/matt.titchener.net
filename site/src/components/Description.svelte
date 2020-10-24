@@ -45,7 +45,7 @@
     }
 
     .byline {
-        font-family: 'Montserrat', 'Inter', sans-serif;
+        font-family: 'Montserrat', 'Inter V', sans-serif;
         font-size: 0.9rem;
         font-weight: 500;
         letter-spacing: 0.4px;

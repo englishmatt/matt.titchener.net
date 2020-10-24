@@ -9,6 +9,43 @@
     });
 </script>
 
+<style>
+    article :global(.logo) {
+        --mask-size: contain;
+        --mask-repeat: no-repeat;
+        --mask-position: 0 65%;
+        background-color: var(--default-copy-color);
+        -webkit-mask-image: var(--mask-image);
+        -webkit-mask-size: var(--mask-size);
+        -webkit-mask-repeat: var(--mask-repeat);
+        -webkit-mask-position: var(--mask-position);
+        mask-image: var(--mask-image);
+        mask-size: var(--mask-size);
+        mask-repeat: var(--mask-repeat);
+        mask-position: var(--mask-position);
+        height: 72px;
+        width: 30rem;           /* TODO: Either introduce media query at smaller screen widths
+                                   or calc() a smarter width value */
+        text-indent: -1000px;   /* TODO: Do more to visually hide text */
+        display: block;
+        margin-top: 1rem;
+    }
+
+    article :global(h1) {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        margin-top: 5rem;
+        font-family: 'Montserrat', 'Inter V', sans-serif;
+    }
+
+    article :global(h1, h2) {
+        color: var(--primary-accent-color);
+        clear: both;
+    }
+</style>
+
 <article bind:this={article}>
     <slot />
 </article>

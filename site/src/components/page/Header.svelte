@@ -25,7 +25,7 @@
         max-width: var(--max-main-content-width);
         position: relative;
         flex: 0 0 var(--main-content-width);
-        font-family: 'Montserrat';
+        font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
         font-weight: 700;
         padding-top: var(--header-top-padding);
