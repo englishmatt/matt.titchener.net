@@ -1,3 +1,42 @@
+/* TODO: Automate font-face declarations to pull in from Google Fonts */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+         url('../fonts/montserrat-v15-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+         url('../fonts/montserrat-v15-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter V';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: local('Inter V'), local('Inter-V'),
+         url('../fonts/inter-v3.15-latin-var.woff2') format('woff2');
+    unicode-range: U+0000-007F,U+00A0-0100,U+0131,U+0152-0154,U+02BB-02BD,U+02C6,U+02DA,U+02DC,U+2000-200C,U+2010-2028,U+202F-2060,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+FEFF;
+    font-named-instance: 'Regular';
+}
+
+@font-face {
+    font-family: 'Inter V';
+    font-style: oblique 0deg 10deg;
+    font-weight: 100 900;
+    font-display: swap;
+    src: local('Inter V'), local('Inter-V'),
+         url('../fonts/inter-v3.15-latin-var.woff2') format('woff2');
+    unicode-range: U+0000-007F,U+00A0-0100,U+0131,U+0152-0154,U+02BB-02BD,U+02C6,U+02DA,U+02DC,U+2000-200C,U+2010-2028,U+202F-2060,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+FEFF;
+    font-named-instance: 'Italic';
+}
+
 :root {
     /* Layout */
     --main-content-right-margin: 3rem;
@@ -38,7 +77,7 @@ body {
 
 body {
     --background-transition-duration: 500ms;
-    font-family: 'Inter', 'Arial', sans-serif;
+    font-family: 'Inter V', 'Roboto', 'Arial', sans-serif;
     text-rendering: optimizeLegibility;
     line-height: 1.6;
     font-size: 1.125rem;
