@@ -110,7 +110,7 @@
     <div class="description-body">
         <slot></slot>
         {#if !!href}
-            <a href={href} data-content="Read more">Read more</a>
+            <a href={href} rel="prefetch" data-content="Read more">Read more</a>
         {/if}
     </div>
 </section>

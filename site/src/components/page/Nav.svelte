@@ -66,7 +66,7 @@
 <!-- Represents the top-level navigation -->
 <nav>
 	<ul>
-		<li><a aria-current="{active === undefined || active === 'work' ? 'page' : undefined}" data-content="Work" href="#osher"><span>Work</span></a></li>
-		<li><a aria-current="{active === 'about' ? 'page' : undefined}" data-content="About" href="about/"><span>About</span></a></li>
+		<li><a aria-current="{active === undefined || active === 'work' ? 'page' : undefined}" data-content="Work" rel="prefetch" href="#osher"><span>Work</span></a></li>
+		<li><a aria-current="{active === 'about' ? 'page' : undefined}" data-content="About" rel="prefetch" href="about/"><span>About</span></a></li>
 	</ul>
 </nav>

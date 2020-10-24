@@ -86,7 +86,7 @@
 <article>
     <h1>Hello.</h1>
     <p>
-        I am a <strong>design technologist</strong><sup><a href="#footnote-1">1</a></sup> and live in sunny Murrieta, California. I have been
+        I am a <strong>design technologist</strong><sup>1</sup> and live in sunny Murrieta, California. I have been
         designing, developing, and thinking hard about digital products for 17 years. I have spent much of my career building
         <strong>web products</strong> with a focus on <strong>accessibility</strong> and <strong>user experience
         design</strong>, even in my engineering roles.
@@ -96,11 +96,11 @@
     </p>
     <ul>
         <li>Good design is <em>useful</em> design;</li>
-        <li>Attractive things work better<sup><a href="#footnote-2">2</a></sup>;</li>
+        <li>Attractive things work better<sup>2</sup>;</li>
         <li>You should always bet on the Web.</li>
     </ul>
     <p>
-        Like many, I thrive when working with <strong>autonomy</strong>, <strong>mastery</strong>, and <strong>purpose</strong><sup><a href="#footnote-3">3</a></sup>.
+        Like many, I thrive when working with <strong>autonomy</strong>, <strong>mastery</strong>, and <strong>purpose</strong><sup>3</sup>.
     </p>
     <dl>
         <dt class="twitter">
