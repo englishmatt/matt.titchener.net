@@ -48,14 +48,6 @@
         outline: none;
     }
 
-    /* .logo a:focus:not(:hover) {
-        color: var(--primary-accent-color);
-    }
-
-    .logo a:focus:not(:hover) :global(svg) {
-        fill: var(--primary-accent-color);
-    } */
-
     .logo :global(svg) {
         fill: var(--primary-accent-color);
         display: inline-block; /* Removes white space artifacts during layout */
@@ -80,7 +72,8 @@
     }
 
     /* TODO: These global styles are hacky. */
-    :global(.page.work .logo .name) {
+    :global(.page.work .logo .name),
+    :global(.page.about .logo .name) {
         position: sticky;
     }
 
