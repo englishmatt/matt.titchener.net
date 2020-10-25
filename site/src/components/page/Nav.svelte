@@ -43,12 +43,20 @@
 		display: block;
 		padding: 1rem 0;
 		box-sizing: border-box;
-		border-bottom: 4px solid transparent;
-		font-weight: 600;
 		white-space: nowrap;
+		text-align: center;
+		transition: border var(--navigation-transition-duration);
 	}
 
-	a[aria-current="page"] span {
+	a span,
+	:global(.page:not(.introduction) ul:hover) a[aria-current="page"] span {
+		border-bottom: 4px solid transparent;
+		font-weight: 600;
+	}
+
+	ul:hover li a:hover span,
+	:global(.page:not(.introduction)) a[aria-current="page"] span,
+	:global(.page:not(.introduction) ul:hover) li:hover a[aria-current="page"] span {
 		border-bottom: 4px solid var(--primary-accent-color);
 		font-weight: 700;
 	}

@@ -63,6 +63,10 @@
     --highlight-red: rgba(255, 0, 0, 0.1);
     --highlight-yellow: rgba(255, 255, 0, 0.1);
     --highlight-blue: rgba(0, 0, 255, 0.1);
+
+    /* Timing */
+    --navigation-transition-duration: 400ms;
+    --background-transition-duration: 500ms;
 }
 
 html {
@@ -76,7 +80,6 @@ body {
 }
 
 body {
-    --background-transition-duration: 500ms;
     font-family: 'Inter V', 'Roboto', 'Arial', sans-serif;
     text-rendering: optimizeLegibility;
     line-height: 1.6;
