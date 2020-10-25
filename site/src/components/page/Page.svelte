@@ -24,10 +24,13 @@
         let normalizedPath = urlPath.replace(/\/$/, "");
 
         // Determine if we're navigating...
-        if (oldUrlPath === urlPath || normalizedPath === "") {
+        if (oldUrlPath === urlPath) {
             name = sectionName;
         } else {
             switch (normalizedPath) {
+                case "":
+                    name = "introduction";
+                    break;
                 case "/about":
                     name = "about";
                     break;
