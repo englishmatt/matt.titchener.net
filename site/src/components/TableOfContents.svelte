@@ -12,11 +12,12 @@
         margin: -100% 0 0 -1rem;
         padding-left: calc(var(--navigation-horizontal-padding) * 2);
         position: sticky;
-        top: calc(var(--site-header-height) + 3rem);
+        top: calc(var(--site-header-height) + 9rem);
     }
 
     li {
         position: relative;
+        width: 100%;
     }
 
     /* Not using `::marker` as it's not fully supported yet, and does not provide the
@@ -40,6 +41,7 @@
         text-decoration: none;
         font-weight: 500;
         transition: font-weight var(--navigation-transition-duration), color var(--navigation-transition-duration);
+        width: 100%;
     }
 
     a span {

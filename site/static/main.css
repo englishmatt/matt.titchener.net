@@ -40,7 +40,7 @@
 :root {
     /* Layout */
     --main-content-right-margin: 3rem;
-    --max-main-content-width: calc(60rem + var(--main-content-right-margin));
+    --max-main-content-width: calc(50rem + var(--main-content-right-margin));
     --main-content-width: 63vw;
 
     --content-left-margin: 8.5rem;
@@ -83,7 +83,7 @@ body {
     font-family: 'Inter V', 'Roboto', 'Arial', sans-serif;
     text-rendering: optimizeLegibility;
     line-height: 1.6;
-    font-size: 1.125rem;
+    font-size: 1.2rem;
 }
 
 body > .page {

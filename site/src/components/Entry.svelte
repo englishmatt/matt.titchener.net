@@ -13,30 +13,28 @@
 
 <style>
     .entry {
-        --bus-route-width: 2px;
-        --bus-stop-air-gap: 3px;
-        --bus-stop-diameter: 1.2rem;
         --entry-offset: 0rem;
-        --lede-font-size: calc(2.2vw - 0.22rem);       /* Magic */
-        --line-height: 1.462;
-        --item-padding-bottom: 3rem;
-        align-items: center;
         box-sizing: border-box;
-        display: flex;
-        flex: 1;
         margin-top: var(--entry-offset);
         position: relative;
     }
 </style>
 
 <!-- Represents a single entry in a {Section} -->
-<div class="entry {className}" style="--entry-offset: {entryOffset}">
+<div class="entry {className || ''}" style="--entry-offset: {entryOffset}">
     <slot></slot>
 
     {#if title}
-        <Description {title} {logo} {href}>
-            <span slot="byline"><slot name="byline" /></span>
-            <slot name="description" />
-        </Description>
+        <!-- TODO: Would like to put the if-else inside the Description component, but Svelte does not allow it. -->
+        {#if $$slots.byline}
+            <Description {title} {logo} {href}>
+                <slot name="byline" slot="byline" />
+                <slot name="description" />
+            </Description>
+        {:else}
+            <Description {title} {logo} {href}>
+                <slot name="description" />
+            </Description>
+        {/if}
     {/if}
 </div>

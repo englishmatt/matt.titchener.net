@@ -29,7 +29,6 @@
         text-transform: uppercase;
         font-weight: 700;
         padding-top: var(--header-top-padding);
-        height: 5 0vh;
     }
 
     .logo a:link,

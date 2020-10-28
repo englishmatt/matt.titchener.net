@@ -7,7 +7,6 @@
 <style>
     h3 {
         font-size: 4rem;
-        margin-top: -0.7rem;
         margin-bottom: 1rem;
     }
 
@@ -103,14 +102,18 @@
         <h3 class:logo={!!logo}>{title}</h3>
     {/if}
 
-    <div class="byline">
-        <slot name="byline"></slot>
-    </div>
+    {#if $$slots.byline}
+        <div class="byline">
+            <slot name="byline"></slot>
+        </div>
+    {/if}
 
-    <div class="description-body">
-        <slot></slot>
-        {#if !!href}
-            <a href={href} rel="prefetch" data-content="Read more">Read more</a>
-        {/if}
-    </div>
+    {#if !!href || $$slots.default}
+        <div class="description-body">
+            <slot></slot>
+            {#if !!href}
+                <a href={href} rel="prefetch" data-content="Read more">Read more</a>
+            {/if}
+        </div>
+    {/if}
 </section>

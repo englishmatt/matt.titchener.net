@@ -42,7 +42,10 @@
 
 <figure>
     <slot></slot>
-    <figcaption>
-        <slot name="caption"></slot>
-    </figcaption>
+
+    {#if $$slots.caption}
+        <figcaption>
+            <slot name="caption"></slot>
+        </figcaption>
+    {/if}
 </figure>
