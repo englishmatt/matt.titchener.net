@@ -12,10 +12,8 @@
         box-sizing: border-box;
         height: 0;
         padding-left: var(--content-left-margin);
-        padding-right: var(--content-left-margin);
         position: relative;
         user-select: none;
-        width: 100%;
         z-index: 10;
         display: flex;
     }
@@ -24,7 +22,7 @@
         left: calc(var(--lettermark-offset) * -1);
         max-width: var(--max-main-content-width);
         position: relative;
-        flex: 0 0 var(--main-content-width);
+        flex: 1 0;
         font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
         font-weight: 700;

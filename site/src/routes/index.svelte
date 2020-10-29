@@ -86,7 +86,7 @@
     }
 
     .entries {
-        flex: 0 0 var(--main-content-width);
+        flex: 1 0;
         max-width: var(--max-main-content-width);
         order: 1;
     }

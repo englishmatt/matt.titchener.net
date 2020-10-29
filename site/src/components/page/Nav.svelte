@@ -7,8 +7,8 @@
 		padding-left: var(--navigation-horizontal-padding);
 		max-width: var(--max-main-content-width);
 		display: flex;
-		justify-content: flex-end;
 		padding-top: var(--header-top-padding);
+		flex: 0 0 14rem;
 	}
 
 	ul {
@@ -18,7 +18,6 @@
 		/* TODO: Introduce similar character width fallback typeface */
 		font-family: 'Montserrat', sans-serif;
 		padding: 0;
-		transform: translateX(100%);
 	}
 
 	a {
