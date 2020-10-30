@@ -41,7 +41,9 @@
     /* Layout */
     --main-content-right-margin: 3rem;
     --max-main-content-width: calc(50rem + var(--main-content-right-margin));
+    --min-main-content-width: 30rem;
     --main-content-width: 63vw;
+    --aux-content-width: 16rem;
 
     --content-left-margin: 8.5rem;
     --section-padding-top: 4rem;
