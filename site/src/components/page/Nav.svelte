@@ -8,7 +8,7 @@
 		max-width: var(--max-main-content-width);
 		display: flex;
 		padding-top: var(--header-top-padding);
-		flex: 0 0 14rem;
+		flex: 0 0 var(--aux-content-width);
 	}
 
 	ul {

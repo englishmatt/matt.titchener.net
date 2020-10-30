@@ -10,12 +10,15 @@
     header {
         --header-top-padding: 3.5rem;
         box-sizing: border-box;
+        display: flex;
         height: 0;
         padding-left: var(--content-left-margin);
         position: relative;
         user-select: none;
+        width: calc(100vw - var(--scrollbar-mask-width));   /* Prevents navigation shifting horizontally
+                                                               when navigating between a page with and without
+                                                               a vertical scrollbar */
         z-index: 10;
-        display: flex;
     }
 
     .logo {

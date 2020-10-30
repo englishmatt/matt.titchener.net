@@ -24,8 +24,6 @@
         mask-repeat: var(--mask-repeat);
         mask-position: var(--mask-position);
         height: 72px;
-        width: 30rem;           /* TODO: Either introduce media query at smaller screen widths
-                                   or calc() a smarter width value */
         text-indent: -1000px;   /* TODO: Do more to visually hide text */
     }
 

@@ -12,7 +12,7 @@
         padding-left: calc(var(--navigation-horizontal-padding) * 2);
         position: sticky;
         top: calc(var(--site-header-height) + 9rem);
-        flex: 0 0 14rem;
+        flex: 0 0 var(--aux-content-width);
     }
 
     li {

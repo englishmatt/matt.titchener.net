@@ -216,8 +216,8 @@
     }
 
     .page :global(article) {
-        width: var(--main-content-width);
         max-width: var(--max-main-content-width);
+        padding-right: 6rem;
     }
 
     .page :global(article > p:last-child),

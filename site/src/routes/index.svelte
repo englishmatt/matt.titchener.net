@@ -86,9 +86,11 @@
     }
 
     .entries {
+        box-sizing: border-box;
         flex: 1 0;
         max-width: var(--max-main-content-width);
         order: 1;
+        padding-right: 4rem;
     }
 </style>
 
