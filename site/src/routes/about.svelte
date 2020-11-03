@@ -87,9 +87,21 @@
     <h1>Hello.</h1>
     <p>
         I am a <strong>design technologist</strong><sup>1</sup> and live in sunny Murrieta, California. I have been
-        designing, developing, and thinking hard about digital products for 17 years. I have spent much of my career building
+        designing, developing, and thinking hard about digital products for over 15 years. I have spent much of my career building
         <strong>web products</strong> with a focus on <strong>accessibility</strong> and <strong>user experience
-        design</strong>, even in my engineering roles.
+        design</strong>.
+    </p>
+    <p>
+        I have been fortunate to pursue both <strong>design</strong> and <strong>software engineering</strong>
+        disiciplines, and find each liberally compliments the other: <a href="https://en.m.wikipedia.org/wiki/Domain-driven_design" target="_blank" rel="noopener noreferrer">domain-driven
+        design</a> (DDD) often informs the <abbr title="User Experience Design">UXD</abbr> through clarification of business
+        needs; <a href="https://en.m.wikipedia.org/wiki/User-centered_design" target="_blank" rel="noopener noreferrer">user-centered design</a> (UCD)
+        provides another angle on software architecture and clarity in code. Additionally, accessibility,
+        <abbr title="internationalisation">i18n</abbr>, and performance all become cross-cutting concerns.
+    </p>
+    <p>
+        Together, they form a <strong>holistic perspective</strong> and let me "fill in the gaps" on product and
+        engineering teams, when necessary.
     </p>
     <p>
         I am motived by the principles of <strong>universal design</strong> and believe that:
@@ -100,7 +112,7 @@
         <li>You should always bet on the Web.</li>
     </ul>
     <p>
-        Like many, I thrive when working with <strong>autonomy</strong>, <strong>mastery</strong>, and <strong>purpose</strong><sup>3</sup>.
+        Like many, I thrive with <strong>autonomy</strong>, <strong>mastery</strong>, and <strong>purpose</strong><sup>3</sup>.
     </p>
     <dl>
         <dt class="twitter">
