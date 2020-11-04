@@ -93,7 +93,7 @@
     </p>
     <p>
         I have been fortunate to pursue both <strong>design</strong> and <strong>software engineering</strong>
-        disiciplines, and find each liberally compliments the other: <a href="https://en.m.wikipedia.org/wiki/Domain-driven_design" target="_blank" rel="noopener noreferrer">domain-driven
+        disciplines, and find each liberally compliments the other: <a href="https://en.m.wikipedia.org/wiki/Domain-driven_design" target="_blank" rel="noopener noreferrer">domain-driven
         design</a> (DDD) often informs the <abbr title="User Experience Design">UXD</abbr> through clarification of business
         needs; <a href="https://en.m.wikipedia.org/wiki/User-centered_design" target="_blank" rel="noopener noreferrer">user-centered design</a> (UCD)
         provides another angle on software architecture and clarity in code. Additionally, accessibility,
