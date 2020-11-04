@@ -6,7 +6,7 @@
 <script>
     import Image from "../../components/Image.svelte";
     import Carousel from "../../components/Carousel.svelte";
-    import CaseStudy from "../../components/CaseStudy.svelte";
+    import Article from "../../components/Article.svelte";
     import Figure from "../../components/Figure.svelte";
 </script>
 
@@ -20,7 +20,7 @@
     }
 </style>
 
-<CaseStudy>
+<Article>
     <h1>
         <span>Case Study</span>
         <span class="name">Project X</span>
@@ -81,4 +81,4 @@
         required. While this project definitely took a strong waterfall approach, these techniques and deliverables
         transfer to other methodologies well, are something I have continued to practice to this day.
     </p>
-</CaseStudy>
+</Article>

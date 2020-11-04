@@ -6,7 +6,7 @@
 <script>
     import Image from "../../components/Image.svelte";
     import Carousel from "../../components/Carousel.svelte";
-    import CaseStudy from "../../components/CaseStudy.svelte";
+    import Article from "../../components/Article.svelte";
     import Figure from "../../components/Figure.svelte";
 </script>
 
@@ -20,7 +20,7 @@
     }
 </style>
 
-<CaseStudy>
+<Article>
     <section>
         <Carousel id="final" scrollOffset="30vh" height="50vw">
             <Image alt="" src="../../budgeting/overview.png" width="1460" height="830" />
@@ -98,4 +98,4 @@
             and the meaningful <strong>use of colour</strong>.
         </p>
     </section>
-</CaseStudy>
+</Article>

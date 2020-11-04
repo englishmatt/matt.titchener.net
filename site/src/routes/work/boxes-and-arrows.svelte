@@ -6,7 +6,7 @@
 <script>
     import Image from "../../components/Image.svelte";
     import Carousel from "../../components/Carousel.svelte";
-    import CaseStudy from "../../components/CaseStudy.svelte";
+    import Article from "../../components/Article.svelte";
     import Figure from "../../components/Figure.svelte";
 </script>
 
@@ -20,7 +20,7 @@
     }
 </style>
 
-<CaseStudy>
+<Article>
     <section>
         <Carousel id="final" scrollOffset="30vh" height="60vw">
             <Image alt="" src="../../boxes-and-arrows/front-page.jpg" width="1440" height="1024" />
@@ -108,4 +108,4 @@
             unpublished deliverables used to explore, explain, experiment, and document.
         </p>
     </section>
-</CaseStudy>
+</Article>

@@ -39,7 +39,7 @@
 
 :root {
     /* Layout */
-    --lede-sizing: calc((100vw - 40rem) / 20);
+    --lede-sizing: calc((100vw - 20rem) / 40);
     --sizing-70-40: calc((100vw - 40rem) / 30);
     --main-content-right-margin: 3rem;
     --max-main-content-width: calc(50rem + var(--main-content-right-margin));
@@ -47,7 +47,7 @@
     --main-content-width: 63vw;
     --aux-content-width: 17rem;
 
-    --unitless-min-content-left-margin: 2;  /* rem */
+    --unitless-min-content-left-margin: 1.5;  /* rem */
     --unitless-max-content-left-margin: 8.5;  /* rem */
     --unitless-content-left-margin-delta: calc(var(--unitless-max-content-left-margin) -
                                                var(--unitless-min-content-left-margin));
@@ -108,6 +108,12 @@ body {
     font-size: 1.2rem;
 }
 
+@media (max-width: 37rem) {
+    body {
+        font-size: 1rem;
+    }
+}
+
 body > .page {
     overflow: visible;
 }
@@ -157,5 +163,31 @@ sup {
     to {
         opacity: 1;
         transform: translateY(-4rem);
+    }
+}
+
+/* Target devices with touchscreens and have no other input devices e.g. phones/tablets;
+   because a touchscreen laptop has a mouse/touchpad it _should not_ be targetted.
+   See for more details: https://hover-pointer-media-query.glitch.me/ */
+@media (pointer: coarse) {
+    :root {
+        --scrollbar-mask-width: 0;
+    }
+
+    * {
+        scrollbar-width: unset;
+        scrollbar-color: unset;
+    }
+
+    *::-webkit-scrollbar {
+        width: unset;
+        height: unset;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: unset;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: unset;
     }
 }

@@ -7,7 +7,7 @@
     import Image from "../../components/Image.svelte";
     import MobileImage from "../../components/MobileImage.svelte";
     import Carousel from "../../components/Carousel.svelte";
-    import CaseStudy from "../../components/CaseStudy.svelte";
+    import Article from "../../components/Article.svelte";
     import Figure from "../../components/Figure.svelte";
 </script>
 
@@ -53,7 +53,7 @@
     } */
 </style>
 
-<CaseStudy>
+<Article>
     <Carousel id="final" scrollOffset="30vh" height="50vmax">
         <Image src="../../osher/front-page.png" alt="Osher front page (desktop layout)" width="1400" height="2514" />
         <MobileImage src="../../osher/front-page-mobile.png" alt="Osher front page (mobile layout)" width="1400" height="2514" />
@@ -156,4 +156,4 @@
         target audience for Osher offered a unique challenge and required <strong>collecting</strong> and <strong>documenting</strong>
         their needs clearly and with <strong>empathy</strong>.
     </p>
-</CaseStudy>
+</Article>

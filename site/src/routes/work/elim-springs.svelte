@@ -7,7 +7,7 @@
     import Image from "../../components/Image.svelte";
     import MobileImage from "../../components/MobileImage.svelte";
     import Carousel from "../../components/Carousel.svelte";
-    import CaseStudy from "../../components/CaseStudy.svelte";
+    import Article from "../../components/Article.svelte";
     import Figure from "../../components/Figure.svelte";
 </script>
 
@@ -21,7 +21,7 @@
     }
 </style>
 
-<CaseStudy>
+<Article>
     <section>
         <Carousel id="final" scrollOffset="30vh" height="50vw">
             <Image alt="" src="../../elim-springs/front-page.png" width="1440" height="1024" />
@@ -139,4 +139,4 @@
             experience and developer experience!
         </p>
     </section>
-</CaseStudy>
+</Article>

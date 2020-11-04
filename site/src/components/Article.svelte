@@ -7,9 +7,15 @@
         // TODO: Probably a more idiomatically Svelte way to do this!
         document && document.querySelector("body > .page").scrollTo(0, 0);
     });
+
+    export let fontweight = "unset";
 </script>
 
 <style>
+    article {
+        font-weight: var(--font-weight);
+    }
+
     article :global(.logo) {
         --mask-size: contain;
         --mask-repeat: no-repeat;
@@ -29,6 +35,7 @@
         text-indent: -1000px;   /* TODO: Do more to visually hide text */
         display: block;
         margin-top: 1rem;
+        max-width: 80vw;
     }
 
     article :global(h1) {
@@ -44,8 +51,14 @@
         color: var(--primary-accent-color);
         clear: both;
     }
+
+    @media (max-width: 50rem) {
+        article {
+            padding-right: 3rem;
+        }
+    }
 </style>
 
-<article bind:this={article}>
+<article bind:this={article} style="--font-weight: {fontweight}">
     <slot />
 </article>

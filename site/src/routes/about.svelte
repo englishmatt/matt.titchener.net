@@ -3,11 +3,11 @@
     <meta name="description" content="Matt Titchener&rsquo;s 'About' page including contact information." />
 </svelte:head>
 
-<style>
-    article {
-        font-weight: 500;
-    }
+<script>
+    import Article from '../components/Article.svelte';
+</script>
 
+<style>
     dt {
         --icon-mask-repeat: no-repeat;
         --icon-mask-position: 0 50%;
@@ -28,7 +28,8 @@
 
     dd {
         clear: right;
-        margin-bottom: 0.5rem
+        margin-bottom: 0.5rem;
+        margin-left: 2.5rem;
     }
 
     .twitter {
@@ -48,8 +49,11 @@
     }
 
     h1 {
+        color: inherit;
+        font-family: inherit;
         font-size: 2.5rem;
         margin-bottom: 0;
+        text-transform: inherit;
     }
 
     /* TODO: Consider moving bullet styling to main.css; used in TableOfContents component as well. */
@@ -64,7 +68,7 @@
 
     /* Not using `::marker` as it's not fully supported yet, and does not provide the
        flexibility we need. */
-    ul li:before {
+    ul:not(.personal-links) li:before {
         --dimension: 0.5rem;
         content: "";
         width: var(--dimension);
@@ -75,46 +79,42 @@
         left: -1rem;
     }
 
-    article sup a:link,
-    article sup a:visited {
-        font-weight: inherit;
-        opacity: 0.8;
-        color: var(--default-copy-color);
+    .personal-links {
+        padding-left: 2.5rem;
     }
 </style>
 
-<article>
+<Article fontweight="500">
     <h1>Hello.</h1>
     <p>
         I am a <strong>design technologist</strong><sup>1</sup> living in sunny Murrieta, California. I have been
-        designing, developing, and thinking hard about digital products for over 15 years. I have spent much of my
-        career building <strong>web products</strong> with a focus on <strong>accessibility</strong> and <strong>user
+        designing, developing, and thinking hard about digital products for over 15 years. I spend much of my
+        time building <strong>web products</strong> with a focus on <strong>accessibility</strong> and <strong>user
         experience design</strong>.
     </p>
     <p>
-        Over the years, I have been fortunate to pursue both <strong>digital design</strong> and <strong>software engineering</strong>,
+        Over the years, I have been pursued interests in both <strong>digital design</strong> and <strong>software engineering</strong>,
         and have found each liberally compliments the other: <a href="https://en.m.wikipedia.org/wiki/Domain-driven_design" target="_blank" rel="noopener noreferrer">domain-driven
         design</a> (DDD) (a software engineering practice I like to follow) often informs the <abbr title="User Experience Design">UXD</abbr> through hyper-clarification of business
         needs; <a href="https://en.m.wikipedia.org/wiki/User-centered_design" target="_blank" rel="noopener noreferrer">user-centered design</a> (UCD)
-        provides other angles on requirements and can influences systems architecture, for example. Additionally, <em>accessibility</em>,
-        <em><abbr title="internationalisation">i18n</abbr></em>, and <em>performance</em> are all cross-cutting.
+        provides creative angles for requirements and can, in turn, influence systems architecture.
     </p>
     <p>
-        Together, these form a <strong>holistic perspective</strong> and let me see the big picture, &ldquo;filling in the
-        gaps&rdquo; on product and engineering teams, when necessary.
+        Together, these form a <strong>holistic perspective</strong> and let me see the bigger picture, &ldquo;filling
+        in the gaps&rdquo; on product and engineering teams, when necessary.
     </p>
     <p>
-        I am motived by the principles of <strong>universal design</strong> and believe that:
+        I am motived by the principles of <strong>clean architecture</strong> and <strong>universal design</strong> and believe that:
     </p>
     <ul>
-        <li>Good design is <em>useful</em> design;</li>
+        <li>Good design is <em>useful</em>;</li>
         <li>Attractive things work better<sup>2</sup>;</li>
         <li>You should always bet on the Web.</li>
     </ul>
     <p>
         Like many, I thrive with <strong>autonomy</strong>, <strong>mastery</strong>, and <strong>purpose</strong><sup>3</sup>.
     </p>
-    <dl>
+    <dl class="contact-links">
         <dt class="twitter">
             Twitter
         </dt>
@@ -122,6 +122,11 @@
             <a href="https://twitter.com/englishmatt" target="_blank" rel="noopener noreferrer">@englishmatt</a>
         </dd>
     </dl>
+    <ul class="personal-links">
+        <li class="resume">
+            <a href="/Matt%20Titchener's%20Résumé.pdf" target="_blank" rel="noopener noreferrer">Résumé and <abbr title="Curriculum Vitae">CV</abbr></a>
+        </li>
+    </ul>
     <footer>
         <ol>
             <li id="#footnote-1">Also know as <i>UX technologist</i> or <i>design engineer</i>, depending on who you ask.</li>
@@ -129,4 +134,4 @@
             <li id="#footnote-3">From Dan Pink's book <a href="https://en.wikipedia.org/wiki/Drive:_The_Surprising_Truth_About_What_Motivates_Us" target="_blank" rel="noopener noreferrer"><i>Drive: The Surprising Truth About What Motivates Us</i></a></li>
         </ol>
     </footer>
-</article>
+</Article>

@@ -218,6 +218,7 @@
     .page :global(article) {
         max-width: var(--max-main-content-width);
         padding-right: 6rem;
+        transition: padding-right 300ms;
     }
 
     .page :global(article > p:last-child),

@@ -1,7 +1,7 @@
 <style>
     .lede {
         --unitless-max-font-size: 4.4;  /* rem */
-        --unitless-min-font-size: 3.3;  /* rem */
+        --unitless-min-font-size: 1.8;  /* rem */
         --font-size-delta: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
         box-sizing: border-box;
         font-family: 'Catamaran';
@@ -15,7 +15,7 @@
     }
 
     /* TODO: Convert to min(max()) when more support is available */
-    @media (min-width: 40rem)  {
+    @media (min-width: 20rem)  {
         .lede {
             font-size: calc((var(--unitless-min-font-size) * 1rem) +
                 (var(--font-size-delta) * var(--lede-sizing)));
