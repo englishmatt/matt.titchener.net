@@ -86,22 +86,22 @@
 <article>
     <h1>Hello.</h1>
     <p>
-        I am a <strong>design technologist</strong><sup>1</sup> and live in sunny Murrieta, California. I have been
-        designing, developing, and thinking hard about digital products for over 15 years. I have spent much of my career building
-        <strong>web products</strong> with a focus on <strong>accessibility</strong> and <strong>user experience
-        design</strong>.
+        I am a <strong>design technologist</strong><sup>1</sup> living in sunny Murrieta, California. I have been
+        designing, developing, and thinking hard about digital products for over 15 years. I have spent much of my
+        career building <strong>web products</strong> with a focus on <strong>accessibility</strong> and <strong>user
+        experience design</strong>.
     </p>
     <p>
-        I have been fortunate to pursue both <strong>design</strong> and <strong>software engineering</strong>
-        disciplines, and find each liberally compliments the other: <a href="https://en.m.wikipedia.org/wiki/Domain-driven_design" target="_blank" rel="noopener noreferrer">domain-driven
-        design</a> (DDD) often informs the <abbr title="User Experience Design">UXD</abbr> through clarification of business
+        Over the years, I have been fortunate to pursue both <strong>digital design</strong> and <strong>software engineering</strong>,
+        and have found each liberally compliments the other: <a href="https://en.m.wikipedia.org/wiki/Domain-driven_design" target="_blank" rel="noopener noreferrer">domain-driven
+        design</a> (DDD) (a software engineering practice I like to follow) often informs the <abbr title="User Experience Design">UXD</abbr> through hyper-clarification of business
         needs; <a href="https://en.m.wikipedia.org/wiki/User-centered_design" target="_blank" rel="noopener noreferrer">user-centered design</a> (UCD)
-        provides another angle on software architecture and clarity in code. Additionally, accessibility,
-        <abbr title="internationalisation">i18n</abbr>, and performance all become cross-cutting concerns.
+        provides other angles on requirements and can influences systems architecture, for example. Additionally, <em>accessibility</em>,
+        <em><abbr title="internationalisation">i18n</abbr></em>, and <em>performance</em> are all cross-cutting.
     </p>
     <p>
-        Together, they form a <strong>holistic perspective</strong> and let me "fill in the gaps" on product and
-        engineering teams, when necessary.
+        Together, these form a <strong>holistic perspective</strong> and let me see the big picture, &ldquo;filling in the
+        gaps&rdquo; on product and engineering teams, when necessary.
     </p>
     <p>
         I am motived by the principles of <strong>universal design</strong> and believe that:
@@ -124,7 +124,7 @@
     </dl>
     <footer>
         <ol>
-            <li id="#footnote-1">Sometimes called <i>UX technologist</i> or <i>design engineer</i> depending on who you ask.</li>
+            <li id="#footnote-1">Also know as <i>UX technologist</i> or <i>design engineer</i>, depending on who you ask.</li>
             <li id="#footnote-2">From Don Norman's book <a href="https://www.amazon.com/dp/0465051367" target="_blank" rel="noopener noreferrer"><i>Emotional Design: Why We Love (or Hate) Everyday Things</i></a></li>
             <li id="#footnote-3">From Dan Pink's book <a href="https://en.wikipedia.org/wiki/Drive:_The_Surprising_Truth_About_What_Motivates_Us" target="_blank" rel="noopener noreferrer"><i>Drive: The Surprising Truth About What Motivates Us</i></a></li>
         </ol>
