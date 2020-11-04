@@ -39,21 +39,28 @@
 
 :root {
     /* Layout */
+    --lede-sizing: calc((100vw - 40rem) / 20);
+    --sizing-70-40: calc((100vw - 40rem) / 30);
     --main-content-right-margin: 3rem;
     --max-main-content-width: calc(50rem + var(--main-content-right-margin));
     --min-main-content-width: 30rem;
     --main-content-width: 63vw;
-    --aux-content-width: 16rem;
+    --aux-content-width: 17rem;
 
-    --content-left-margin: 8.5rem;
+    --unitless-min-content-left-margin: 2;  /* rem */
+    --unitless-max-content-left-margin: 8.5;  /* rem */
+    --unitless-content-left-margin-delta: calc(var(--unitless-max-content-left-margin) -
+                                               var(--unitless-min-content-left-margin));
+    --content-left-margin: calc((var(--unitless-min-content-left-margin) * 1rem) + 
+                                (var(--unitless-content-left-margin-delta) * var(--sizing-70-40)));
     --section-padding-top: 4rem;
     --site-header-height: 12rem;
     --site-footer-height: 3rem;
+    --logo-scale-factor: 0.8;
 
     --navigation-horizontal-padding: 1.2rem;
     --scrollbar-width: 7px;     /* Only applies to browsers that support ::-webkit-scrollbar */
     --scrollbar-mask-width: 1rem;
-    --lettermark-offset: 6.3rem;
 
     /* Colors */
     --default-copy-color: rgba(0, 0, 0, 0.7);
@@ -69,6 +76,19 @@
     /* Timing */
     --navigation-transition-duration: 400ms;
     --background-transition-duration: 500ms;
+}
+
+@media (min-width: 70rem) {
+    :root {
+        --content-left-margin: calc(var(--unitless-max-content-left-margin) * 1rem);
+    }
+}
+
+@media (max-width: 40rem) {
+    :root {
+        --navigation-horizontal-padding: 1.4rem;
+        --content-left-margin: calc(var(--unitless-min-content-left-margin) * 1rem);
+    }
 }
 
 html {

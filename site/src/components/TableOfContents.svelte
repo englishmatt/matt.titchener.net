@@ -8,11 +8,14 @@
         display: flex;
         flex-direction: column;
         list-style: none;
-        margin: -100% 0 0 -1rem;
+        margin: -100vh 1rem 0 -1rem;
         padding-left: calc(var(--navigation-horizontal-padding) * 2);
         position: sticky;
         top: calc(var(--site-header-height) + 9rem);
         flex: 0 0 var(--aux-content-width);
+        box-sizing: border-box;
+        transition: flex-basis 300ms, opacity 200ms;
+        overflow: hidden;
     }
 
     li {
@@ -36,10 +39,13 @@
     a {
         color: var(--default-copy-color);
         display: inline-block;
-        padding: 0.2rem 1rem 0.2rem;
+        padding: 0.2rem 1rem;
         text-decoration: none;
         font-weight: 500;
-        transition: font-weight var(--navigation-transition-duration), color var(--navigation-transition-duration);
+        transition: font-weight var(--navigation-transition-duration),
+                    color var(--navigation-transition-duration),
+                    font-size var(--background-transition-duration),
+                    padding var(--background-transition-duration);
     }
 
     a span {
@@ -57,6 +63,20 @@
     li:hover a span,
     .active a span {
         opacity: 1;
+    }
+
+    @media (max-width: 60rem) {
+        a {
+            font-size: 1.1rem;
+            padding: 0.4rem 1rem;
+        }
+    }
+
+    @media (max-width: 50rem) {
+        ul {
+            flex-basis: 0;
+            opacity: 0;
+        }
     }
 </style>
 

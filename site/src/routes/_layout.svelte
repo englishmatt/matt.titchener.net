@@ -13,9 +13,11 @@
 <style>
     main {
         box-sizing: border-box;
-        padding-left: var(--content-left-margin);
         padding-top: var(--site-header-height);
-        width: 100%;
+        padding-left: var(--content-left-margin);
+        width: calc(100vw - var(--scrollbar-mask-width));   /* Prevents navigation shifting horizontally
+                                                               when navigating between a page with and without
+                                                               a vertical scrollbar */
     }
 </style>
 

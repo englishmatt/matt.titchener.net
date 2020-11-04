@@ -33,6 +33,12 @@
         max-width: 29rem;
     }
 
+    @media (max-width: 50rem) {
+        .description-body {
+            max-width: unset;
+        }
+    }
+
     .description {
         flex: 1;
     }

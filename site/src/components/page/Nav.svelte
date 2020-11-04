@@ -5,10 +5,10 @@
 <style>
 	nav {
 		padding-left: var(--navigation-horizontal-padding);
-		max-width: var(--max-main-content-width);
 		display: flex;
 		padding-top: var(--header-top-padding);
 		flex: 0 0 var(--aux-content-width);
+		box-sizing: border-box;
 	}
 
 	ul {
@@ -18,12 +18,15 @@
 		/* TODO: Introduce similar character width fallback typeface */
 		font-family: 'Montserrat', sans-serif;
 		padding: 0;
+		margin-top: 0.6rem;
+		transition: margin var(--background-transition-duration);
 	}
 
 	a {
 		display: block;
 		padding: 0 var(--navigation-horizontal-padding);
 		box-sizing: border-box;
+		transition: font-size var(--background-transition-duration);
 	}
 
 	a:link,
@@ -40,7 +43,7 @@
 
 	a span {
 		display: block;
-		padding: 1rem 0;
+		padding: 1.2rem 0 0.8rem;
 		box-sizing: border-box;
 		white-space: nowrap;
 		text-align: center;
@@ -67,6 +70,17 @@
 		font-weight: 700;
 		height: 0;
 		visibility: hidden;
+	}
+
+	@media (max-width: 60rem) {
+
+		ul {
+			margin-top: 0.84rem;
+		}
+
+		a {
+			font-size: 1rem;
+		}
 	}
 </style>
 

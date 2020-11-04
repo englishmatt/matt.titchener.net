@@ -76,9 +76,6 @@
         margin-top: calc(var(--overlap) * -1);
         -webkit-mask-image: var(--work-mask-image);
         mask-image: var(--work-mask-image);
-        /* 1 + 2 prevent `outline` pixels being inadvertently masked on the left-hand side. */
-        padding-left: 0.3rem;   /* 1 */
-        margin-left: -0.3rem;   /* 2 */
     }
 
     .work > :global(:nth-child(1)) {
@@ -91,6 +88,12 @@
         max-width: var(--max-main-content-width);
         order: 1;
         padding-right: 4rem;
+    }
+
+    @media (max-width: 50rem) {
+        .entries {
+            padding-right: 0;
+        }
     }
 </style>
 
