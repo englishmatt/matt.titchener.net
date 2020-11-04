@@ -13,6 +13,13 @@ const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) => (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning);
+const svgoSettings = {
+	plugins: [{
+	  removeViewBox: false
+	}, {
+	  removeDimensions: false
+	}]
+}
 
 export default {
 	client: {
@@ -23,9 +30,7 @@ export default {
 				'process.browser': true,
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
-			svgo({
-				removeDimensions: false
-			}),
+			svgo(svgoSettings),
 			svelte({
 				dev,
 				hydratable: true,
@@ -71,9 +76,7 @@ export default {
 				'process.browser': false,
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
-			svgo({
-				removeDimensions: false
-			}),
+			svgo(svgoSettings),
 			svelte({
 				generate: 'ssr',
 				dev
