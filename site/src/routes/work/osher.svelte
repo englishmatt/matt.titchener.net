@@ -76,7 +76,10 @@
         their reach throughout the community. To do so involved breaking the 1,000 membership threshold to access
         additional funding from the Bernard Osher Foundation. To this end, my project team and I were asked to reimagining what a new
         OLLI registration experience might look like, as part of a broader effort to refresh the Division's online
-        presence. This project included the following non-functional requirements, per CSU policy:
+        presence.
+    </p>
+    <p>
+        This project included the following non-functional requirements, per CSU policy:
     </p>
     <ul>
         <li><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> AA <strong>accessibility</strong> compliance</li>
@@ -88,7 +91,7 @@
         Early rounds of <strong>interviews</strong> with stakeholders, <abbr title="Subject Matter Experts">SME</abbr>s,
         and Osher members revealed that the user experience for <strong>course discovery</strong>, <strong>registration</strong>,
         and <strong>checkout</strong> were particularly cumbersome. These interviews helped identify the target
-        audience, revealed UX pain points, and let me synthesize a series of <strong>user workflows</strong>
+        audience, revealed UX pain points, and let me synthesise a series of <strong>user workflows</strong>
         (delivered as <abbr title="Business Process Model Notation">BPMN</abbr> diagrams, samples shown here):
     </p>
     <Carousel id="bpmn" scrollOffset="30vh" height="20rem">

@@ -56,6 +56,13 @@
         article {
             padding-right: 3rem;
         }
+
+        article :global(p) {
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+        }
     }
 </style>
 

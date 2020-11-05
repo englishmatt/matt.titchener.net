@@ -52,11 +52,11 @@
             recurring transactions, both income and expense, over a fixed period of time</em>. All other features would
             successfully hang off this central concept.
         </p>
-        <h3>Visualizations</h3>
+        <h3>Visualisations</h3>
         <Figure>
             <Image src="../../budgeting/budgeting-sketch.jpg" alt="" align="left" />
             <p slot="caption">
-                I worked out some quick sketches to think through how best to <strong>visualize</strong> account balances
+                I worked out some quick sketches to think through how best to <strong>visualise</strong> account balances
                 and transactions. There was a good opportunity to communicate accurately and efficiently with <strong>data visualisation</strong> which I wanted to explore.
             </p>
         </Figure>

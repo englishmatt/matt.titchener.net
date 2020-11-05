@@ -81,7 +81,7 @@
                 Typically, the use of a <abbr title="Single Page Application">SPA</abbr> framework for a content-heavy
                 site is not recommended and has been (rightly) derided by many as detrimental to the web; it can often
                 place developer experience (DX) over UX. Although I was initially skeptical of SPA solutions in general,
-                with the advent of more inclusive approaches, such a Next.js and Sapper, I realized one can have the
+                with the advent of more inclusive approaches, such a Next.js and Sapper, I realised one can have the
                 best of both worlds: small page sizes, interactivity, and page transitions, all while mainitaining
                 <strong>accessibility</strong> and <strong>progressive enhancement</strong>. Perfect!
             </p>

@@ -53,7 +53,7 @@
         <Image src="../../project-x/customer-record-quick-edit.png" alt="Customer life cycle" width="2439" height="1309" />
         <Image src="../../project-x/customer-record-first-contact.png" alt="Customer life cycle" width="2439" height="1309" />
     </Carousel>
-    <h2>User Journies &amp; Workflows</h2>
+    <h2>User Journeys &amp; Workflows</h2>
     <p>
         Alongside more standard wireframes, I included <strong>flow control</strong> to accurately capture user
         workflows as they were intended. Such an approach becomes particularly useful when <strong>handing off</strong>

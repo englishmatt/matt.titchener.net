@@ -142,6 +142,7 @@
             <Entry title="Budgeting" logo="../budgeting-logo.svg" href="/work/budgeting/">
                 <ul slot="byline">
                     <li>UX, UI and visual design</li>
+                    <li>Data Visualisation</li>
                 </ul>
                 <p slot="description">
                     Speculative user interface design for a personal finance and budgeting application for the web and
