@@ -280,7 +280,7 @@
         background-size: 100% var(--underline-width);
     }
 
-    .page :global(article a[target="_blank"]::after) {
+    .page :global(article a[target="_blank"]:not(.no-new-window-icon)::after) {
         content: "\00A0🗗";
         font-weight: 400;
     }
