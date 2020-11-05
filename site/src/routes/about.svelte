@@ -5,6 +5,8 @@
 
 <script>
     import Article from '../components/Article.svelte';
+
+    const fontWeight = "500";
 </script>
 
 <style>
@@ -84,7 +86,7 @@
     }
 </style>
 
-<Article fontweight="500">
+<Article fontweight={fontWeight}>
     <h1>Hello.</h1>
     <p>
         I am a <strong>design technologist</strong><sup>1</sup> living in sunny Murrieta, California. I have been
@@ -95,12 +97,12 @@
     <p>
         Over the years, I have been pursued interests in both <strong>digital design</strong> and <strong>software engineering</strong>,
         and have found each liberally compliments the other: <a href="https://en.m.wikipedia.org/wiki/Domain-driven_design" target="_blank" rel="noopener noreferrer">domain-driven
-        design</a> (DDD) (a software engineering practice I like to follow) often informs the <abbr title="User Experience Design">UXD</abbr> through hyper-clarification of business
+        design</a> (DDD) often informs the <abbr title="User Experience Design">UXD</abbr> through hyper-clarification of business
         needs; <a href="https://en.m.wikipedia.org/wiki/User-centered_design" target="_blank" rel="noopener noreferrer">user-centered design</a> (UCD)
-        provides creative angles for requirements and can, in turn, influence systems architecture.
+        provides a human empathy to functional requirements and can, in turn, influence software design.
     </p>
     <p>
-        Together, these form a <strong>holistic perspective</strong> and let me see the bigger picture, &ldquo;filling
+        Together, these form a <strong>holistic perspective</strong> and often help me see the bigger picture; &ldquo;filling
         in the gaps&rdquo; on product and engineering teams, when necessary.
     </p>
     <p>
@@ -124,10 +126,10 @@
     </dl>
     <ul class="personal-links">
         <li class="resume">
-            <a href="/Matt%20Titchener's%20Résumé.pdf" target="_blank" rel="noopener noreferrer">Résumé and <abbr title="Curriculum Vitae">CV</abbr></a>
+            <a href="/Matt%20Titchener%20-%20Résumé%20and%20CV.pdf" target="_blank" rel="external noopener noreferrer">Résumé and <abbr title="Curriculum Vitae">CV</abbr></a>
         </li>
     </ul>
-    <footer>
+    <footer style="font-weight: {fontWeight}">
         <ol>
             <li id="#footnote-1">Also know as <i>UX technologist</i> or <i>design engineer</i>, depending on who you ask.</li>
             <li id="#footnote-2">From Don Norman's book <a href="https://www.amazon.com/dp/0465051367" target="_blank" rel="noopener noreferrer"><i>Emotional Design: Why We Love (or Hate) Everyday Things</i></a></li>
