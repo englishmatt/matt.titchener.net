@@ -77,29 +77,6 @@
         text-transform: inherit;
     }
 
-    /* TODO: Consider moving bullet styling to main.css; used in TableOfContents component as well. */
-    ul {
-        padding-left: 0;
-        list-style: none;
-    }
-
-    li {
-        position: relative;
-    }
-
-    /* Not using `::marker` as it's not fully supported yet, and does not provide the
-       flexibility we need. */
-    ul:not(.personal-links) li:before {
-        --dimension: 0.5rem;
-        content: "";
-        width: var(--dimension);
-        height: var(--dimension);
-        background-color: var(--primary-accent-color);
-        position: absolute;
-        top: calc(50% - (var(--dimension) / 2));
-        left: -1rem;
-    }
-
     .personal-links .resume::before {
         content: "";
         display: inline-block;

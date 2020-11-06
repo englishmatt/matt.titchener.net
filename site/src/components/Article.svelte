@@ -58,12 +58,43 @@
         margin-bottom: 10rem;
     }
 
+    article :global(ul) {
+        padding-left: 0;
+        list-style: none;
+        transition: padding 300ms;
+    }
+
+    article :global(li) {
+        position: relative;
+    }
+
+    /* Not using `::marker` as it's not fully supported yet, and does not provide the
+       flexibility we need. */
+    article :global(ul li:before) {
+        --dimension: 0.5rem;
+        content: "";
+        width: var(--dimension);
+        height: var(--dimension);
+        background-color: var(--primary-accent-color);
+        position: absolute;
+        top: calc(50% - (var(--dimension) / 2));
+        left: -1rem;
+    }
+
     @media (max-width: 50rem) {
         article :global(p) {
             -webkit-hyphens: auto;
             -moz-hyphens: auto;
             -ms-hyphens: auto;
             hyphens: auto;
+        }
+
+        article :global(ul) {
+            padding-left: 1rem;
+        }
+
+        article :global(ol) {
+            list-style-position: inside;
         }
     }
 </style>
