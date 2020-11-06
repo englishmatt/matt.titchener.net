@@ -166,11 +166,10 @@
                 <ul slot="byline">
                     <li>Research</li>
                     <li>Workflows</li>
-                    <li>UI and visual design</li>
+                    <li>UX and Wireframes</li>
                 </ul>
                 <p slot="description">
-                    Content Relationship Manager, with outreach and call-scheduling for teams of remote volunteers distributed
-                    throughout the United States.
+                    Content Relationship Manager with outreach and call-scheduling for teams distributed throughout the United States.
                 </p>
             </Entry>
         </Section>

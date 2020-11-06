@@ -26,8 +26,7 @@
         <span class="name">Project X</span>
     </h1>
     <p class="lede">
-        Content Relationship Manager, with outreach and call-scheduling for teams of remote volunteers distributed
-        throughout the United States.
+        Content Relationship Manager with outreach and call-scheduling for teams distributed throughout the United States.
     </p>
     <h2>Opportunity</h2>
     <p>
