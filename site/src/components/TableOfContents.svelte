@@ -8,8 +8,8 @@
         display: flex;
         flex-direction: column;
         list-style: none;
-        margin: -100vh 1rem 0 -1rem;
-        padding-left: calc(var(--navigation-horizontal-padding) * 2);
+        margin: -100vh 0 0 -1rem;
+        padding-left: var(--navigation-horizontal-padding);
         position: sticky;
         top: calc(var(--site-header-height) + 9rem);
         flex: 0 0 var(--aux-content-width);

@@ -4,11 +4,9 @@
 
 <style>
 	nav {
-		padding-left: var(--navigation-horizontal-padding);
-		display: flex;
 		padding-top: var(--header-top-padding);
 		flex: 0 0 var(--aux-content-width);
-		box-sizing: border-box;
+		margin-right: -1rem;
 	}
 
 	ul {

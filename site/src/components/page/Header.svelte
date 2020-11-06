@@ -14,7 +14,7 @@
         box-sizing: border-box;
         display: flex;
         height: 0;
-        padding-left: var(--content-left-margin);
+        padding: 0 var(--content-right-margin) 0 var(--content-left-margin);
         position: relative;
         user-select: none;
         width: calc(100vw - var(--scrollbar-mask-width));   /* Prevents navigation shifting horizontally

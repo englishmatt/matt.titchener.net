@@ -216,17 +216,6 @@
         --transform: none;
     }
 
-    .page :global(article) {
-        max-width: var(--max-main-content-width);
-        padding-right: 6rem;
-        transition: padding-right 300ms;
-    }
-
-    .page :global(article > p:last-child),
-    .page :global(article > section:last-child > p:last-child) {
-        margin-bottom: 10rem;
-    }
-
     .page :global(article > p:last-child::after),
     .page :global(article > section:last-child > p:last-child::after) {
         background-color: var(--primary-accent-color);

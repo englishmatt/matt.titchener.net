@@ -45,14 +45,15 @@
     --max-main-content-width: calc(50rem + var(--main-content-right-margin));
     --min-main-content-width: 30rem;
     --main-content-width: 63vw;
-    --aux-content-width: 17rem;
+    --aux-content-width: 13rem;
 
     --unitless-min-content-left-margin: 1.5;  /* rem */
     --unitless-max-content-left-margin: 8.5;  /* rem */
     --unitless-content-left-margin-delta: calc(var(--unitless-max-content-left-margin) -
                                                var(--unitless-min-content-left-margin));
-    --content-left-margin: calc((var(--unitless-min-content-left-margin) * 1rem) + 
+    --content-left-margin: calc((var(--unitless-min-content-left-margin) * 1rem) +
                                 (var(--unitless-content-left-margin-delta) * var(--sizing-70-40)));
+    --content-right-margin: calc(var(--content-left-margin) - 1rem);    /* Art direction to optically align aux content */
     --section-padding-top: 4rem;
     --site-header-height: 12rem;
     --site-footer-height: 3rem;
@@ -166,6 +167,7 @@ sup {
     }
 }
 
+/* TODO: Review. This wasn't supported/working correctly on last check. */
 /* Target devices with touchscreens and have no other input devices e.g. phones/tablets;
    because a touchscreen laptop has a mouse/touchpad it _should not_ be targetted.
    See for more details: https://hover-pointer-media-query.glitch.me/ */

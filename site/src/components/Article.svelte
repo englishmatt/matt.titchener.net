@@ -14,6 +14,7 @@
 <style>
     article {
         font-weight: var(--font-weight);
+        max-width: var(--max-main-content-width);
     }
 
     article :global(.logo) {
@@ -52,11 +53,12 @@
         clear: both;
     }
 
-    @media (max-width: 50rem) {
-        article {
-            padding-right: 3rem;
-        }
+    article > :global(p:last-child),
+    article > :global(section:last-child > p:last-child) {
+        margin-bottom: 10rem;
+    }
 
+    @media (max-width: 50rem) {
         article :global(p) {
             -webkit-hyphens: auto;
             -moz-hyphens: auto;

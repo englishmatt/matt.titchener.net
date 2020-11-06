@@ -13,8 +13,7 @@
 <style>
     main {
         box-sizing: border-box;
-        padding-top: var(--site-header-height);
-        padding-left: var(--content-left-margin);
+        padding: var(--site-header-height) var(--content-right-margin) 0 var(--content-left-margin);
         width: calc(100vw - var(--scrollbar-mask-width));   /* Prevents navigation shifting horizontally
                                                                when navigating between a page with and without
                                                                a vertical scrollbar */
