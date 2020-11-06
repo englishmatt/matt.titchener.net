@@ -14,6 +14,8 @@ const filteredFiles = files.filter(file =>
 const to_cache = shell.concat(filteredFiles);
 const cached = new Set(to_cache);
 
+console.log(shell, files, routes);
+
 self.addEventListener('install', event => {
 	event.waitUntil(
 		caches
@@ -30,7 +32,9 @@ self.addEventListener('activate', event => {
 		caches.keys().then(async keys => {
 			// Delete old caches
 			for (const key of keys) {
-				if (key !== ASSETS) await caches.delete(key);
+				if (key !== ASSETS) {
+					await caches.delete(key);
+				}
 			}
 
 			self.clients.claim();
@@ -62,16 +66,14 @@ self.addEventListener('fetch', event => {
 		caches
 			.open(`offline${timestamp}`)
 			.then(async cache => {
-				try {
-                    let response = await cache.match(event.request);
-                    if (response) return response;
-
-					response = await fetch(event.request);
-					cache.put(event.request, response.clone());
+				let response = await cache.match(event.request);
+				if (response) {
 					return response;
-				} catch(err) {
-					throw err;
 				}
+
+				response = await fetch(event.request);
+				cache.put(event.request, response.clone());
+				return response;
 			})
 	);
 });
