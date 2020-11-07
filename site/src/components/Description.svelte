@@ -61,7 +61,7 @@
     }
 
     .byline :global(ul li) {
-        display: inline-block;
+        display: inline;
     }
 
     .byline :global(ul li:not(:first-of-type):before) {
