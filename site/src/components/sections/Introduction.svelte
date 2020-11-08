@@ -1,7 +1,7 @@
 <style>
     .lede {
         --unitless-max-font-size: 4.4;  /* rem */
-        --unitless-min-font-size: 1.8;  /* rem */
+        --unitless-min-font-size: 1.9;  /* rem */
         --font-size-delta: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
         box-sizing: border-box;
         font-family: 'Catamaran';

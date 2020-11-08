@@ -19,38 +19,6 @@
     h3 {
         margin-bottom: 1rem;
     }
-
-    /* TODO: Consider moving bullet styling to main.css; used in TableOfContents component as well. */
-    ul {
-        padding-left: 0;
-        list-style: none;
-    }
-
-    li {
-        position: relative;
-    }
-
-    /* Not using `::marker` as it's not fully supported yet, and does not provide the
-       flexibility we need. */
-    ul li:before {
-        --dimension: 0.5rem;
-        content: "";
-        width: var(--dimension);
-        height: var(--dimension);
-        background-color: var(--primary-accent-color);
-        position: absolute;
-        top: calc(50% - (var(--dimension) / 2));
-        left: -1rem;
-    }
-
-    /* .affiliates :global(p:first-of-type::before) {
-        content: "\25C4";
-        display: inline-block;
-        padding-right: 0.5rem;
-        font-size: 0.7rem;
-        color: var(--primary-accent-color);
-        vertical-align: 18.8%;
-    } */
 </style>
 
 <Article>

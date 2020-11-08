@@ -1,6 +1,6 @@
 <script>
-    import Nav from './Nav.svelte';
-    import lettermark from '../../../static/lettermark.svg';
+    import Nav from "./Nav.svelte";
+    import lettermark from "../../../static/lettermark.svg";
 
     export let active;
     export let hasFixedName = true;
@@ -8,8 +8,9 @@
 
 <style>
     header {
-        --sizing-70-40: calc((100vw - 40rem) / 30);
-        --lettermark-offset: calc(6.3em / 2.42);    /* 6.3 / logo.font-size (fixed at page load time); we can't use a CSS variable here. */
+        --sizing-70-20: calc((100vw - 20rem) / 50);
+        --lettermark-offset: calc(6.3em / 2.42); /* 6.3 / logo.font-size (fixed at page load time); we can't use a CSS
+                                                    variable here. */
         --header-top-padding: 3.5rem;
         box-sizing: border-box;
         display: flex;
@@ -17,25 +18,28 @@
         padding: 0 var(--content-right-margin) 0 var(--content-left-margin);
         position: relative;
         user-select: none;
-        width: calc(100vw - var(--scrollbar-mask-width));   /* Prevents navigation shifting horizontally
-                                                               when navigating between a page with and without
-                                                               a vertical scrollbar */
+        width: calc(100vw - var(--scrollbar-mask-width)); /* Prevents navigation shifting horizontally when navigating
+                                                             between a page with and without a vertical scrollbar */
         z-index: 10;
     }
 
     .logo {
         --unitless-max-font-size: 2.42;
-        --unitless-min-font-size: 2;
-        --font-size-delta: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
+        --unitless-min-font-size: 1.2;
+        --font-size-delta: calc(
+            var(--unitless-max-font-size) - var(--unitless-min-font-size)
+        );
         flex: 1 0;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-size: calc(var(--unitless-min-font-size) * 1rem);
         font-weight: 700;
         left: calc(var(--lettermark-offset) * -1);
         max-width: var(--max-main-content-width);
-        padding-top: var(--header-top-padding);
+        padding-top: calc(5% + 0.85rem); /* Implicit dependency on var(--header-top-padding); if this CSS variable
+                                            changes this padding-top calculation must also be adjusted. */
         position: relative;
         text-transform: uppercase;
+        transition: left 300ms;
     }
 
     .logo a {
@@ -56,17 +60,18 @@
 
     .logo :global(svg) {
         fill: var(--primary-accent-color);
-        display: inline-block; /* Removes white space artifacts during layout */
-        line-height: 0;
         position: fixed;
-        top: var(--header-top-padding);
-        width: calc(4.0625em / 2.42);  /* (65px / 16) / --unitless-font-size (fixed at page load time); we can't use a CSS variable here. */
-        height: calc(4.0625em / 2.42);
+        width: calc(
+            4.0625em / var(--unitless-max-font-size)
+        ); /* Intentionally using 'em's here for easy logo scaling. */
+        height: calc(
+            4em / var(--unitless-max-font-size)
+        ); /* Intentionally using 'em's here for easy logo scaling. */
     }
 
     .name {
         display: inline-block;
-        padding-top: 0.4rem;
+        padding-top: calc(0.4em / var(--unitless-max-font-size));
         margin-left: var(--lettermark-offset);
         position: fixed;
         width: 0;
@@ -119,16 +124,16 @@
     }
 
     /* TODO: Convert to min(max()) when more support is available */
-    @media (min-width: 40rem)  {
+    @media (min-width: 20rem) {
         .logo {
-            font-size: calc((var(--unitless-min-font-size) * 1rem) +
-                (var(--font-size-delta) * var(--sizing-70-40)));
+            font-size: calc((var(--unitless-min-font-size) * 1rem) + (var(--font-size-delta) * var(--sizing-70-20)));
         }
     }
 
     @media (min-width: 70rem) {
         .logo {
             font-size: calc(var(--unitless-max-font-size) * 1rem);
+            padding-top: var(--header-top-padding);
         }
     }
 </style>
@@ -136,7 +141,10 @@
 <!-- Represents the site header -->
 <header>
     <div class="logo">
-        <a href="#introduction">{@html lettermark} <span class="name" class:secondary={!hasFixedName}>Ma<span class="ligature">tt</span> Titchener</span></a>
+        <a href="#introduction">
+            {@html lettermark}
+            <span class="name" class:secondary={!hasFixedName}>Ma<span class="ligature">tt</span> Titchener</span>
+        </a>
     </div>
-    <Nav {active}/>
+    <Nav {active} />
 </header>
