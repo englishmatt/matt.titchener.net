@@ -4,7 +4,7 @@
         --unitless-min-font-size: 1.9;  /* rem */
         --font-size-delta: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
         box-sizing: border-box;
-        font-family: 'Catamaran';
+        font-family: 'Catamaran', 'Inter V', sans-serif;
         font-size: calc(var(--unitless-min-font-size) * 1rem);
         font-weight: 400;
         height: 0;

@@ -39,6 +39,13 @@
         max-width: 80vw;
     }
 
+    article :global(.lede) {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.5;
+        opacity: 0.7;
+    }
+
     article :global(h1) {
         text-transform: uppercase;
         font-weight: 700;

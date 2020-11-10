@@ -6,12 +6,12 @@
     div {
         background-color: var(--header-accent-color);
         box-sizing: border-box;
-        padding: 0.25rem var(--content-left-margin);
+        padding: var(--skip-to-content-height) var(--content-left-margin);
         left: 0;
         top: 0;
         width: 100%;
         position: fixed;
-        z-index: 2;
+        z-index: 11;
     }
 
     a {

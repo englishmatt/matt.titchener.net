@@ -46,6 +46,7 @@
     --min-main-content-width: 30rem;
     --main-content-width: 63vw;
     --aux-content-width: 13rem;
+    --skip-to-content-height: 0.25rem;
 
     --unitless-min-content-left-margin: 1.1;    /* rem */
     --unitless-max-content-left-margin: 8.5;    /* rem */
@@ -62,6 +63,7 @@
     --navigation-horizontal-padding: 1.2rem;
     --scrollbar-width: 7px;     /* Only applies to browsers that support ::-webkit-scrollbar */
     --scrollbar-mask-width: 1rem;
+    --outline-width: 4px;
 
     /* Colors */
     --default-copy-color: rgba(0, 0, 0, 0.7);
@@ -132,25 +134,6 @@ body > .page {
     scrollbar-color: var(--default-copy-color) var(--scrollbar-background-color);
 }
 
-*::-webkit-scrollbar {
-    width: var(--scrollbar-width);
-    height: var(--scrollbar-width);
-}
-
-*::-webkit-scrollbar-track {
-    background: var(--scrollbar-background-color);
-}
-*::-webkit-scrollbar-thumb {
-    background-color: var(--default-copy-color);
-}
-
-article .lede {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.5;
-    opacity: 0.7;
-}
-
 sup {
     line-height: 0;
 }
@@ -182,7 +165,7 @@ sup {
         scrollbar-color: unset;
     }
 
-    *::-webkit-scrollbar {
+    /* *::-webkit-scrollbar {
         width: unset;
         height: unset;
     }
@@ -192,5 +175,5 @@ sup {
     }
     *::-webkit-scrollbar-thumb {
         background-color: unset;
-    }
+    } */
 }

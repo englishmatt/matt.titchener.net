@@ -12,6 +12,9 @@
         --lettermark-offset: calc(6.3em / 2.42); /* 6.3 / logo.font-size (fixed at page load time); we can't use a CSS
                                                     variable here. */
         --header-top-padding: 3.5rem;
+        --unitless-max-font-size: 2.42;
+        --unitless-min-font-size: 1.2;
+        --font-size-delta: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
         box-sizing: border-box;
         display: flex;
         height: 0;
@@ -24,11 +27,6 @@
     }
 
     .logo {
-        --unitless-max-font-size: 2.42;
-        --unitless-min-font-size: 1.2;
-        --font-size-delta: calc(
-            var(--unitless-max-font-size) - var(--unitless-min-font-size)
-        );
         flex: 1 0;
         font-family: "Montserrat", sans-serif;
         font-size: calc(var(--unitless-min-font-size) * 1rem);
@@ -58,6 +56,10 @@
         outline: none;
     }
 
+    .logo a:focus:not(:hover) .name {
+        outline: var(--outline-width) solid var(--primary-accent-color);
+    }
+
     .logo :global(svg) {
         fill: var(--primary-accent-color);
         position: fixed;
@@ -74,7 +76,6 @@
         padding-top: calc(0.4em / var(--unitless-max-font-size));
         margin-left: var(--lettermark-offset);
         position: fixed;
-        width: 0;
     }
 
     .name.secondary {
