@@ -13,7 +13,7 @@
 
 <style>
     .contact-links,
-    .personal-links {
+    .icon-marker-list {
         --icon-width: 2rem;
         --icon-spacing: 0.5rem;
     }
@@ -26,7 +26,7 @@
         float: left;
     }
 
-    .personal-links li::before,
+    .icon-marker-list li::before,
     dt {
         --icon-mask-repeat: no-repeat;
         --icon-mask-position: 0 50%;
@@ -46,7 +46,7 @@
         height: var(--icon-width);
     }
 
-    .personal-links li,
+    .icon-marker-list li,
     dd {
         clear: right;
         margin-bottom: 1rem;
@@ -77,9 +77,15 @@
         text-transform: inherit;
     }
 
-    .personal-links .resume::before {
+    .icon-marker-list {
+        padding-left: 0;
+    }
+
+    .icon-marker-list .resume::before {
         content: "";
         display: inline-block;
+        left: 0;
+        position: static;
         vertical-align: bottom;
     }
 </style>
@@ -118,7 +124,7 @@
             <a class="no-new-window-icon" href="https://twitter.com/englishmatt" target="_blank" rel="noopener noreferrer">@englishmatt</a>
         </dd>
     </dl>
-    <ul class="personal-links">
+    <ul class="icon-marker-list">
         <li class="resume" style="--icon-mask-image: {resumeIcon}">
             <a class="no-new-window-icon" href="/Matt%20Titchener%20-%20Résumé%20and%20CV.pdf" target="_blank">Résumé and <abbr title="Curriculum Vitae">CV</abbr></a>
         </li>
