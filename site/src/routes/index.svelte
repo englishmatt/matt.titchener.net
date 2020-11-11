@@ -62,6 +62,7 @@
     :global(main .projectx h3) {
         font-family: "Permanent Marker";
         font-weight: 400;
+        white-space: nowrap;
     }
 
     :global(.entries > section:first-child) {
