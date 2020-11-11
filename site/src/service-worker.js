@@ -1,6 +1,14 @@
-import { timestamp, files, shell, routes } from '@sapper/service-worker';
+// Conditionally compile the service worker cache based on the
+// _HAS_SERVICE_WORKER_CACHE feature flag. See below for more details.
+//#if _HAS_SERVICE_WORKER_CACHE
+import { timestamp, files, shell } from '@sapper/service-worker';
+//#else
+import { timestamp } from '@sapper/service-worker';
+//#endif
 
 const ASSETS = `cache${timestamp}`;
+
+//#if _HAS_SERVICE_WORKER_CACHE
 // Exclude images, documents, and configuration files from the service worker; we don't want to download the entire
 // site to the user's device; it's a waste of bandwidth and storage.
 const fileExclusions = ["^\\/CNAME$", ".*\\.(jpg|jpeg|png|pdf)(\\?.*)?$"];
@@ -13,18 +21,16 @@ const filteredFiles = files.filter(file =>
 );
 const to_cache = shell.concat(filteredFiles);
 const cached = new Set(to_cache);
-
-console.log(shell, files, routes);
+//#endif
 
 self.addEventListener('install', event => {
-    event.waitUntil(
-        caches
-            .open(ASSETS)
-            .then(cache => cache.addAll(to_cache))
-            .then(() => {
-                self.skipWaiting();
-            })
-    );
+    event.waitUntil((async () => {
+        //#if _HAS_SERVICE_WORKER_CACHE
+        const cache = await caches.open(ASSETS);
+        await cache.addAll(to_cache);
+        //#endif
+        self.skipWaiting();
+    })());
 });
 
 self.addEventListener('activate', event => {
@@ -42,6 +48,10 @@ self.addEventListener('activate', event => {
     );
 });
 
+// Incapacitate the service worker if the _HAS_SERVICE_WORKER_CACHE feature flag
+// is falsey. The `install` and `activate` listener remain to tidy up if
+// necessary.
+//#if _HAS_SERVICE_WORKER_CACHE
 self.addEventListener('fetch', event => {
     if (event.request.method !== 'GET' || event.request.headers.has('range')) return;
 
@@ -77,3 +87,4 @@ self.addEventListener('fetch', event => {
             })
     );
 });
+//#endif
