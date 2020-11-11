@@ -54,7 +54,7 @@
                                                var(--unitless-min-content-left-margin));
     --content-left-margin: calc((var(--unitless-min-content-left-margin) * 1rem) +
                                 (var(--unitless-content-left-margin-delta) * var(--sizing-70-20)));
-    --content-right-margin: calc(var(--content-left-margin) - 1rem);    /* Art direction to optically align aux content */
+    --content-right-margin: calc(var(--content-left-margin) - var(--scrollbar-mask-width));
     --section-padding-top: 4rem;
     --site-header-height: 12rem;
     --site-footer-height: 3rem;
@@ -109,6 +109,7 @@ body {
     text-rendering: optimizeLegibility;
     line-height: 1.6;
     font-size: 1.2rem;
+    background-color: #333;
 }
 
 @media (max-width: 37rem) {
@@ -134,6 +135,20 @@ body > .page {
     scrollbar-color: var(--default-copy-color) var(--scrollbar-background-color);
 }
 
+@media (hover: hover) and (pointer: fine) {
+    *::-webkit-scrollbar {
+        width: var(--scrollbar-width);
+        height: var(--scrollbar-width);
+    }
+
+    *::-webkit-scrollbar-track {
+        background: var(--scrollbar-background-color);
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--default-copy-color);
+    }
+}
+
 sup {
     line-height: 0;
 }
@@ -154,7 +169,7 @@ sup {
 /* Target devices with touchscreens and have no other input devices e.g. phones/tablets;
    because a touchscreen laptop has a mouse/touchpad it _should not_ be targetted.
    See for more details: https://hover-pointer-media-query.glitch.me/ */
-@media (hover: none), (pointer: coarse) {
+@media (hover: none), (any-pointer: coarse) and (max-width: 50rem) {
     :root {
         --scrollbar-mask-width: 0px;
         --content-right-margin: var(--content-left-margin);
@@ -164,16 +179,4 @@ sup {
         scrollbar-width: unset;
         scrollbar-color: unset;
     }
-
-    /* *::-webkit-scrollbar {
-        width: unset;
-        height: unset;
-    }
-
-    *::-webkit-scrollbar-track {
-        background: unset;
-    }
-    *::-webkit-scrollbar-thumb {
-        background-color: unset;
-    } */
 }

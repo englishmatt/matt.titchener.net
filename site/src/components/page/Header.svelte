@@ -9,11 +9,10 @@
 <style>
     header {
         --sizing-70-20: calc((100vw - 20rem) / 50);
-        --lettermark-offset: calc(6.3em / 2.42); /* 6.3 / logo.font-size (fixed at page load time); we can't use a CSS
-                                                    variable here. */
-        --header-top-padding: 3.5rem;
+        --unitless-min-font-size: 1.33;
         --unitless-max-font-size: 2.42;
-        --unitless-min-font-size: 1.2;
+        --lettermark-offset: calc(6.3em / var(--unitless-max-font-size));
+        --header-top-padding: 3.5rem;
         --font-size-delta: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
         box-sizing: border-box;
         display: flex;

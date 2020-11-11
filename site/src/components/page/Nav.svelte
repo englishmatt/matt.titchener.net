@@ -100,36 +100,40 @@
 
     @media (max-width: 50rem) {
         nav {
+            --transition-navigation-duration: 180ms;
             flex: none;
             margin: 0;
-            transition: background-color 200ms;
-        }
-
-        nav ul {
-            display: none;
-        }
-
-        nav:focus-within {
-            --margin-offset: calc(var(--skip-to-content-height) * 2);
+            transition: background-color var(--transition-navigation-duration);
+            top: 0;
+            padding-top: calc(10% + 1.7rem);
             position: fixed;
             left: 0;
             width: 100vw;
             height: 100vh;
-            top: 0;
-            background-color: var(--primary-background-color);
             pointer-events: none;
             z-index: -1;
         }
 
-        nav:focus-within ul {
+        nav ul {
             display: block;
             flex-direction: column;
             box-sizing: border-box;
             left: 0;
-            margin-top: calc(10% + 1.7rem);
             position: fixed;
             width: 100vw;
-            height: 100vh;
+            opacity: 0;
+        }
+
+        /* Prevents navigation items from showing breifly when resizing to narrow viewport widths. */
+        :global(.page:hover) nav ul {
+            transition: opacity var(--transition-navigation-duration);
+        }
+
+        nav:focus-within {
+            background-color: var(--primary-background-color);
+        }
+
+        nav:focus-within ul {
             opacity: 1;
             pointer-events: all;
         }
@@ -139,7 +143,7 @@
             --mask-position: center center;
             --mask-repeat: no-repeat;
             --mask-size: auto 20%;
-            --half-rotation-duration: 180ms;
+            --half-rotation-duration: var(--transition-navigation-duration);
             --horizontal-padding: 1rem;
             -webkit-mask-repeat: var(--mask-repeat);
             -webkit-mask-position: var(--mask-position);
@@ -150,7 +154,7 @@
             content: "";
             position: fixed;
             right: calc(var(--content-right-margin) - var(--horizontal-padding));
-            top: calc(6vw - 1.2rem);     /* Implicit dependency on var(--header-top-padding); if this CSS variable
+            top: calc(6vw - 1rem);       /* Implicit dependency on var(--header-top-padding); if this CSS variable
                                             changes this padding-top calculation must also be adjusted. */
             width: 2rem;
             height: 2rem;
