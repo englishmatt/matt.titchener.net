@@ -17,6 +17,7 @@
         font-weight: 400;
         text-transform: capitalize;
         font-size: 4rem;
+        white-space: nowrap;
     }
 </style>
 
