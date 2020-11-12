@@ -2,10 +2,12 @@
     import { stores } from "@sapper/app";
     import { afterUpdate, tick } from "svelte";
     import { sectionClassName } from "../../stores.js";
+    import openWindowIcon from "../../../static/open-window.svg";
 
     const { page } = stores();
     let pageComponent;
     let oldUrlPath;
+    let externalIcon = `url("data:image/svg+xml,${encodeURIComponent(openWindowIcon)}")`;
     // TODO: Figure out how to pull default favicon colours from the style sheet
     let backgroundColor = "#ffcf00";
     let foregroundColor = "rgba(0, 0, 0, 0.7)";
@@ -270,11 +272,24 @@
     }
 
     .page :global(article a[target="_blank"]:not(.no-new-window-icon)::after) {
-        content: "\00A0🗗";
-        font-weight: 400;
+        --mask-position: right center;
+        --mask-repeat: no-repeat;
+        --mask-size: 100%;
+        -webkit-mask-position: var(--mask-position);
+        -webkit-mask-repeat: var(--mask-repeat);
+        -webkit-mask-image: var(--external-icon);
+        -webkit-mask-size: var(--mask-size);
+        mask-position: var(--mask-position);
+        mask-repeat: var(--mask-repeat);
+        mask-image: var(--external-icon);
+        mask-size: var(--mask-size);
+        background-color: currentColor;
+        margin-left: 0.2em;
+        padding: 0.4em;
+        content: "";
     }
 </style>
 
-<div class="page {sectionName || ''}" bind:this={pageComponent}>
+<div class="page {sectionName || ''}" bind:this={pageComponent} style="--external-icon: {externalIcon}">
     <slot></slot>
 </div>
