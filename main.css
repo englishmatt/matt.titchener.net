@@ -40,19 +40,21 @@
 :root {
     /* Layout */
     --lede-sizing: calc((100vw - 20rem) / 40);
-    --sizing-70-40: calc((100vw - 40rem) / 30);
+    --sizing-70-20: calc((100vw - 20rem) / 50);
     --main-content-right-margin: 3rem;
     --max-main-content-width: calc(50rem + var(--main-content-right-margin));
     --min-main-content-width: 30rem;
     --main-content-width: 63vw;
-    --aux-content-width: 17rem;
+    --aux-content-width: 13rem;
+    --skip-to-content-height: 0.25rem;
 
-    --unitless-min-content-left-margin: 1.5;  /* rem */
-    --unitless-max-content-left-margin: 8.5;  /* rem */
+    --unitless-min-content-left-margin: 1.1;    /* rem */
+    --unitless-max-content-left-margin: 8.5;    /* rem */
     --unitless-content-left-margin-delta: calc(var(--unitless-max-content-left-margin) -
                                                var(--unitless-min-content-left-margin));
-    --content-left-margin: calc((var(--unitless-min-content-left-margin) * 1rem) + 
-                                (var(--unitless-content-left-margin-delta) * var(--sizing-70-40)));
+    --content-left-margin: calc((var(--unitless-min-content-left-margin) * 1rem) +
+                                (var(--unitless-content-left-margin-delta) * var(--sizing-70-20)));
+    --content-right-margin: calc(var(--content-left-margin) - var(--scrollbar-mask-width));
     --section-padding-top: 4rem;
     --site-header-height: 12rem;
     --site-footer-height: 3rem;
@@ -61,6 +63,7 @@
     --navigation-horizontal-padding: 1.2rem;
     --scrollbar-width: 7px;     /* Only applies to browsers that support ::-webkit-scrollbar */
     --scrollbar-mask-width: 1rem;
+    --outline-width: 4px;
 
     /* Colors */
     --default-copy-color: rgba(0, 0, 0, 0.7);
@@ -84,7 +87,7 @@
     }
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 20rem) {
     :root {
         --navigation-horizontal-padding: 1.4rem;
         --content-left-margin: calc(var(--unitless-min-content-left-margin) * 1rem);
@@ -106,6 +109,7 @@ body {
     text-rendering: optimizeLegibility;
     line-height: 1.6;
     font-size: 1.2rem;
+    background-color: #333;
 }
 
 @media (max-width: 37rem) {
@@ -131,23 +135,18 @@ body > .page {
     scrollbar-color: var(--default-copy-color) var(--scrollbar-background-color);
 }
 
-*::-webkit-scrollbar {
-    width: var(--scrollbar-width);
-    height: var(--scrollbar-width);
-}
+@media (hover: hover) and (pointer: fine) {
+    *::-webkit-scrollbar {
+        width: var(--scrollbar-width);
+        height: var(--scrollbar-width);
+    }
 
-*::-webkit-scrollbar-track {
-    background: var(--scrollbar-background-color);
-}
-*::-webkit-scrollbar-thumb {
-    background-color: var(--default-copy-color);
-}
-
-article .lede {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.5;
-    opacity: 0.7;
+    *::-webkit-scrollbar-track {
+        background: var(--scrollbar-background-color);
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--default-copy-color);
+    }
 }
 
 sup {
@@ -166,28 +165,18 @@ sup {
     }
 }
 
+/* TODO: Review. This wasn't supported/working correctly on last check. */
 /* Target devices with touchscreens and have no other input devices e.g. phones/tablets;
    because a touchscreen laptop has a mouse/touchpad it _should not_ be targetted.
    See for more details: https://hover-pointer-media-query.glitch.me/ */
-@media (pointer: coarse) {
+@media (hover: none), (any-pointer: coarse) and (max-width: 50rem) {
     :root {
-        --scrollbar-mask-width: 0;
+        --scrollbar-mask-width: 0px;
+        --content-right-margin: var(--content-left-margin);
     }
 
     * {
         scrollbar-width: unset;
         scrollbar-color: unset;
-    }
-
-    *::-webkit-scrollbar {
-        width: unset;
-        height: unset;
-    }
-
-    *::-webkit-scrollbar-track {
-        background: unset;
-    }
-    *::-webkit-scrollbar-thumb {
-        background-color: unset;
     }
 }
