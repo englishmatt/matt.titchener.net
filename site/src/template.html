@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en-GB" class="no-js">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-		<!-- TODO: Consider dns-prefetch and preconnect headers -->
-		<!-- TODO: Dynamically adjust theme color based on background color.
-		     See for more info: https://gordonlesti.com/change-theme-color-via-javascript/ -->
-		<meta name="theme-color" content="#333333" />
-		<!-- TODO: Spike: Investigate how best to serve fonts -->
-		<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
-		<link rel="preload" href="/fonts/montserrat-v15-latin-600.woff2" as="font" crossorigin="anonymous" />
-		<link rel="preload" href="/fonts/montserrat-v15-latin-700.woff2" as="font" crossorigin="anonymous" />
-		<link rel="preload" href="/fonts/inter-v3.15-latin-var.woff2" as="font" crossorigin="anonymous" />
-		<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;800&display=block" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=block&text=ProjectX" rel="stylesheet" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <!-- TODO: Consider dns-prefetch and preconnect headers -->
+        <!-- TODO: Dynamically adjust theme color based on background color.
+             See for more info: https://gordonlesti.com/change-theme-color-via-javascript/ -->
+        <meta name="theme-color" content="#333333" />
+        <!-- TODO: Spike: Investigate how best to serve fonts -->
+        <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+        <link rel="preload" href="/fonts/montserrat-v15-latin-600.woff2" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/fonts/montserrat-v15-latin-700.woff2" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/fonts/inter-v3.15-latin-var.woff2" as="font" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;800&display=block" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=block&text=ProjectX" rel="stylesheet" />
 
-		%sapper.base%
+        %sapper.base%
 
-		<link rel="stylesheet" href="main.css" />
-		<!-- TODO: Add manifest -->
-		<!--<link rel="manifest" href="manifest.json" crossorigin="use-credentials">-->
+        <link rel="stylesheet" href="main.css" />
+        <!-- TODO: Add manifest -->
+        <!--<link rel="manifest" href="manifest.json" crossorigin="use-credentials">-->
 
-		<!-- Sapper generates a <style> tag containing critical CSS
-			 for the current page. CSS for the rest of the app is
-			 lazily loaded when it precaches secondary pages -->
-		%sapper.styles%
+        <!-- Sapper generates a <style> tag containing critical CSS
+            for the current page. CSS for the rest of the app is
+            lazily loaded when it precaches secondary pages -->
+            %sapper.styles%
 
-		<!-- This contains the contents of the <svelte:head> component, if
-			 the current page has one -->
-		%sapper.head%
-	</head>
-	<body>
-		<!-- The application will be rendered inside this element,
-			 because `src/client.js` references it -->
-		%sapper.html%
-
-		<!-- Sapper creates a <script> tag containing `src/client.js`
-			 and anything else it needs to hydrate the app and
-			 initialise the router -->
-		%sapper.scripts%
-	</body>
+        <!-- This contains the contents of the <svelte:head> component, if
+            the current page has one -->
+            %sapper.head%
+        <!-- Sapper creates a <script defer> tag containing `src/client.js`
+            and anything else it needs to hydrate the app and
+            initialise the router -->
+            %sapper.scripts%
+        </head>
+    <body>
+        <!-- The application will be rendered inside this element,
+             because `src/client.js` references it -->
+        %sapper.html%
+    </body>
 </html>
