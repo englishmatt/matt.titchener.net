@@ -47,8 +47,8 @@
     export let paddingTop = "calc(var(--site-header-height) + 6rem)";
     export let id = null;
     export let intersectSelector = null;
-    export let intersectionMargin = "-10% 0px -10% 0px";
-    export let intersectionThreshold = 1;
+    export let intersectionMargin = "-15% 0px -15% 0px";
+    export let intersectionThreshold = 0.5;
     export let intersectionRoot = null;
 </script>
 
