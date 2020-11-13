@@ -118,10 +118,6 @@ body {
     }
 }
 
-body > .page {
-    overflow: visible;
-}
-
 :focus {
     outline: none;
 }
@@ -173,10 +169,5 @@ sup {
     :root {
         --scrollbar-mask-width: 0px;
         --content-right-margin: var(--content-left-margin);
-    }
-
-    * {
-        scrollbar-width: unset;
-        scrollbar-color: unset;
     }
 }

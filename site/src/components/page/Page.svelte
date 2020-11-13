@@ -95,6 +95,12 @@
         overflow: auto;
     }
 
+    @media (max-width: 50rem) {
+        .page {
+            overflow-x: hidden;
+        }
+    }
+
     .page :global(::selection) {
         background-color: var(--selection-background-color);
         color: var(--selection-color);
