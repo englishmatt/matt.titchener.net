@@ -33,12 +33,6 @@
         max-width: 29rem;
     }
 
-    @media (max-width: 50rem) {
-        .description-body {
-            max-width: unset;
-        }
-    }
-
     .description {
         flex: 1;
     }
@@ -98,6 +92,46 @@
         background-color: var(--primary-accent-color);
         color: var(--secondary-background-color);
         font-weight: 600;
+    }
+
+    @media (max-width: 37rem) {
+        h3 {
+            font-size: 3rem;
+            margin-bottom: 0;
+        }
+
+        h3.logo {
+            height: 50px;
+        }
+
+        .description-body {
+            font-size: 1rem;
+        }
+
+        a {
+            display: block;
+        }
+
+        .byline {
+            font-size: 0.8rem;
+        }
+
+        a {
+            background-color: var(--primary-accent-color);
+            color: var(--secondary-background-color);
+            font-weight: 600;
+        }
+
+        a:hover {
+            background-color: transparent;
+            color: var(--primary-accent-color);
+        }
+    }
+
+    @media (max-width: 50rem) {
+        .description-body {
+            max-width: unset;
+        }
     }
 </style>
 
