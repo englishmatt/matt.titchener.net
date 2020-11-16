@@ -103,7 +103,7 @@
         and have found each liberally compliments the other: Software engineering through <a href="https://en.m.wikipedia.org/wiki/Domain-driven_design" target="_blank" rel="noopener noreferrer">Domain-Driven
         Design</a> (and other best practices) very often informs the <abbr title="User Experience Design">UXD</abbr> through its hyper-clarification of business
         needs; digital design employing <a href="https://en.m.wikipedia.org/wiki/User-centered_design" target="_blank" rel="noopener noreferrer">User-Centered Design</a>
-        routinely reminds us we&lsquo;re building things for <em>people</em> which does, in turn, influence software design&hellip;
+        routinely reminds us we&rsquo;re building things for <em>people</em> which does, in turn, influence software design&hellip;
     </p>
     <p>
         I am motived by the principles above, and believe that:
@@ -132,8 +132,8 @@
     <footer style="font-weight: {fontWeight}">
         <ol>
             <li id="#footnote-1">Also known as <i>UX technologist</i> or <i>design engineer</i>, depending on who you ask.</li>
-            <li id="#footnote-2">From Don Norman's book <a href="https://www.amazon.com/dp/0465051367" target="_blank" rel="noopener noreferrer"><i>Emotional Design: Why We Love (or Hate) Everyday Things</i></a></li>
-            <li id="#footnote-3">From Dan Pink's book <a href="https://en.wikipedia.org/wiki/Drive:_The_Surprising_Truth_About_What_Motivates_Us" target="_blank" rel="noopener noreferrer"><i>Drive: The Surprising Truth About What Motivates Us</i></a></li>
+            <li id="#footnote-2">From Don Norman&rsquo;s book <a href="https://www.amazon.com/dp/0465051367" target="_blank" rel="noopener noreferrer"><i>Emotional Design: Why We Love (or Hate) Everyday Things</i></a></li>
+            <li id="#footnote-3">From Dan Pink&rsquo;s book <a href="https://en.wikipedia.org/wiki/Drive:_The_Surprising_Truth_About_What_Motivates_Us" target="_blank" rel="noopener noreferrer"><i>Drive: The Surprising Truth About What Motivates Us</i></a></li>
         </ol>
     </footer>
 </Article>
