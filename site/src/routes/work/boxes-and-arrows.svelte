@@ -22,7 +22,7 @@
 
 <Article>
     <section>
-        <Carousel id="final" scrollOffset="30vh" height="60vw">
+        <Carousel id="final" scrollOffset="30vh" height="50vmax">
             <Image alt="" src="../../boxes-and-arrows/front-page.jpg" width="1440" height="1024" />
             <Image alt="" src="../../boxes-and-arrows/article-page.jpg" width="1440" height="1024" />
             <Image alt="" src="../../boxes-and-arrows/topic-page.jpg" width="1440" height="1024" />

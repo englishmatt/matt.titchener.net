@@ -22,7 +22,7 @@
 
 <Article>
     <section>
-        <Carousel id="final" scrollOffset="30vh" height="50vw">
+        <Carousel id="final" scrollOffset="30vh" height="50vmax">
             <Image alt="" src="../../budgeting/overview.png" width="1460" height="830" />
             <div>
                 <Image alt="" src="../../budgeting/balance-over-time.2x.png" width="960" height="325" />

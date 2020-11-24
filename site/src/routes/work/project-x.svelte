@@ -45,7 +45,7 @@
         the course of a few weeks, put together a document that captured my recommendations for <strong>UI design</strong>,
         <strong>user workflows</strong>, and other <strong>functional and non-functional requirements</strong>.
     </p>
-    <Carousel id="workflows" scrollOffset="30vh" height="50vw">
+    <Carousel id="workflows" scrollOffset="30vh" height="50vmax">
         <Image src="../../project-x/customer-list.png" alt="User journey" width="2439" height="1309" />
         <Image src="../../project-x/customer-record.png" alt="User workflow" width="2439" height="1309" />
         <Image src="../../project-x/customer-contact-history.png" alt="Customer life cycle" width="2439" height="1309" />
