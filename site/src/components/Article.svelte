@@ -60,6 +60,16 @@
         clear: both;
     }
 
+    article :global(h2) {
+        margin-top: 2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    article :global(h3) {
+        margin-top: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
     article > :global(p:last-child),
     article > :global(section:last-child > p:last-child) {
         margin-bottom: 10rem;
