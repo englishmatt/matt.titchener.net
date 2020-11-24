@@ -89,7 +89,7 @@
         <h2>Project Highlights</h2>
         <Figure>
             <Image alt="Elim Springs' style guide" src="../../elim-springs/typography.png" align="left" width="494" height="588" />
-            <h3>Style Guide</h3>
+            <h3 slot="caption">Style Guide</h3>
             <p slot="caption">
                 In recent years <strong>Figma</strong> has become an industry standard for good reason. Its use in this
                 project further emphasised its utility to me. Not only did it allow me to easily share the Elim Springs
@@ -99,7 +99,7 @@
         </Figure>
         <Figure>
             <Image alt="Elim Springs' style guide" src="../../elim-springs/buttons.png" align="left" width="478" heightg="714" />
-            <h3>Pattern Library</h3>
+            <h3 slot="caption">Pattern Library</h3>
             <p slot="caption">
                 In similar fashion to creating a style guide, Figma's shared components let me create an extensible
                 <strong>pattern library</strong>. Sweeping changes could be made across the prototype by simply editing

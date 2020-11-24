@@ -65,6 +65,13 @@
         margin-bottom: 10rem;
     }
 
+    @media (max-width: 37rem) {
+        article > :global(p:last-child),
+        article > :global(section:last-child > p:last-child) {
+            margin-bottom: 5rem;
+        }
+    }
+
     article :global(ul) {
         padding-left: 0;
         list-style: none;

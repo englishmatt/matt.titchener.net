@@ -122,7 +122,7 @@
         OLLI staff. As with many projects, many of the opportunities identified at the start the project will take time
         to gauge, with the next set of iterations still to come.
     </p>
-    <p class="closing">
+    <p>
         In addition to the above deliverables, this project helped me become a better UX researcher, specifically. The
         target audience for Osher offered a unique challenge and required <strong>collecting</strong> and <strong>documenting</strong>
         their needs clearly and with <strong>empathy</strong>.

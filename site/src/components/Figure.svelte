@@ -23,10 +23,6 @@
         margin-right: 0;
     }
 
-    figure > :global(:first-of-type) {
-        margin-top: 0
-    }
-
     figure + :global(figure) {
         margin-top: 1.5rem;
     }
@@ -37,6 +33,32 @@
 
     figcaption :global(p) {
         font-size: 1rem;
+    }
+
+    figcaption :global(:first-child) {
+        margin-top: 0;
+    }
+
+    @media (max-width: 70rem) {
+        figure {
+            display: flex;
+            flex-direction: column;
+            margin-top: 0;
+        }
+
+        figure :global(img) {
+            float: none;
+            width: 100%;
+            order: 2;
+        }
+
+        figure :global(figcaption) {
+            order: 1;
+        }
+
+        figure :global(p) {
+            font-size: inherit;
+        }
     }
 </style>
 
