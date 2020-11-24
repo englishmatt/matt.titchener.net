@@ -11,10 +11,12 @@
         height: calc(var(--height) + var(--caption-height));
         margin-left: calc((var(--content-left-margin) - var(--inset)) * -1);
         margin-top: calc(var(--scroll-offset) * -1);
+        margin-bottom: 2rem;
         max-height: 65vh;
         overflow-x: scroll;
         overflow-y: hidden;
         padding-top: var(--scroll-offset);
+        padding-bottom: 2px;
         scrollbar-color: transparent transparent;
         scrollbar-width: thin;
         width: calc(100vw - (var(--inset) * 2) - var(--scrollbar-mask-width));
