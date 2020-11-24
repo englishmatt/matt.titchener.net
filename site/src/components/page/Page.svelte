@@ -237,7 +237,7 @@
     }
 
     .page :global(article aside) {
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.2);
         padding: 0.3rem 1.9rem;
         border-radius: 4px;
         overflow: hidden;
@@ -293,6 +293,17 @@
         margin-left: 0.2em;
         padding: 0.4em;
         content: "";
+    }
+
+    @media (max-width: 37rem) {
+        .page :global(article aside) {
+            box-sizing: border-box;
+            margin-left: calc(var(--content-left-margin) * -1);
+            margin-right: calc(var(--content-right-margin) * -1);
+            padding-left: var(--content-left-margin);
+            padding-right: var(--content-right-margin);
+            width: calc(100vw - var(--scrollbar-mask-width));
+        }
     }
 </style>
 
