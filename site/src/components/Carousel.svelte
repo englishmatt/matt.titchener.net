@@ -23,6 +23,13 @@
         clip-path: inset(var(--scroll-offset) 0 0 0);
     }
 
+    /* Weird but true: this is the only way to consistently add padding to the far right side of the carousel. */
+    .carousel::after {
+       display: block;
+       content: "";
+       flex: 0 0 var(--content-right-margin);
+    }
+
     .carousel::-webkit-scrollbar-track {
         background: transparent;
     }
@@ -76,10 +83,6 @@
 
     .carousel > :global(:first-child) {
         margin-left: calc(var(--content-left-margin) - var(--inset));
-    }
-
-    .carousel > :global(:last-child) {
-        margin-right: calc(var(--content-left-margin) - var(--inset));
     }
 
     .carousel :global(figure) {
