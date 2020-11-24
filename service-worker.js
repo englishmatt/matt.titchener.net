@@ -1,1 +1,1 @@
-!function(){"use strict";self.addEventListener("install",e=>{e.waitUntil((async()=>{self.skipWaiting()})())}),self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(async e=>{for(const t of e)"cache1606199735855"!==t&&await caches.delete(t);self.clients.claim()}))})}();
+!function(){"use strict";self.addEventListener("install",e=>{e.waitUntil((async()=>{self.skipWaiting()})())}),self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(async e=>{for(const t of e)"cache1606200355232"!==t&&await caches.delete(t);self.clients.claim()}))})}();
