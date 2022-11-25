@@ -93,7 +93,7 @@
 <Article fontweight={fontWeight}>
     <h1>Hello.</h1>
     <p>
-        I am a <strong>design technologist</strong><sup>1</sup> living in sunny Murrieta, California. I have been
+        I am a <strong>design technologist</strong><sup>1</sup> living in sunny Winchester, California. I have been
         designing, developing, and thinking hard about digital products for over 15 years. I spend much of my
         time building <strong>web products</strong> with a focus on <strong>accessibility</strong> and <strong>user
         experience design</strong>.
