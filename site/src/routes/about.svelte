@@ -116,19 +116,6 @@
     <p>
         Like many, I thrive with <strong>autonomy</strong>, <strong>mastery</strong>, and <strong>purpose</strong><sup>3</sup>.
     </p>
-    <dl class="contact-links">
-        <dt class="twitter">
-            Twitter
-        </dt>
-        <dd>
-            <a class="no-new-window-icon" href="https://twitter.com/englishmatt" target="_blank" rel="noopener noreferrer">@englishmatt</a>
-        </dd>
-    </dl>
-    <ul class="icon-marker-list">
-        <li class="resume" style="--icon-mask-image: {resumeIcon}">
-            <a class="no-new-window-icon" href="/Matt%20Titchener%20-%20Résumé%20and%20CV.pdf" target="_blank">Résumé and <abbr title="Curriculum Vitae">CV</abbr></a>
-        </li>
-    </ul>
     <footer style="font-weight: {fontWeight}">
         <ol>
             <li id="#footnote-1">Also known as <i>UX technologist</i> or <i>design engineer</i>, depending on who you ask.</li>
